@@ -1,0 +1,132 @@
+<?xml version="1.0" ?>
+<rss version="2.0">
+
+<channel>
+
+<title>Random Pokemon Generator Feed</title>
+<description>Figure out what's happening.</description>
+<link>http://randompokemon.com/</link>
+
+
+
+<item>
+<title>Animated Sprites! (January 3rd, 2015)</title>
+<description>I just updated the generator with animated sprites - both normal and shiny.</description>
+<link>http://randompokemon.com/</link>
+</item>
+
+<item>
+<title>Expanded Pokedexes and Sprites Optional (June 21st, 2014)</title>
+<description>Pokemon Platinum has an expanded Pokedex compared to Pearl and Diamond. Black 2 / White 2 also have an expanded Pokedex compared to their predecessors. I added separate regions for these two Pokedexes so that it's easier to generate teams for these different games. (Please let me know of any mistakes!) Also, you can now toggle whether a Pokemon's sprite shows up. This can be helpful if you have a slow connection, but also fun - for instance, you can try drawing a random Pokemon from memory. Enjoy! </description>
+<link>http://randompokemon.com/</link>
+</item>
+
+
+<item>
+<title>Generation 6 sprites, shininess</title>
+<description>The generator now uses all new gen 6 sprites! The only exception should be for shinies. I am still waiting on Serebii.net to continue uploading the new shiny sprites. I also updated the shiny encounter rate to 1 in 4096, as in Pokemon X and Y.</description>
+<link>http://randompokemon.com/</link>
+</item>
+
+
+<item>
+<title>Generation 6 update</title>
+<description>I just updated the generator with the X and Y Pokedex! You can now filter by the new region, Kalos, or the new type, Fairy. Please tell me if you find any errors. Enjoy!</description>
+<link>http://randompokemon.com/</link>
+</item>
+
+
+<item>
+<title>May 2012 update</title>
+<description>I've been through a long couple of days. Due to incredible traffic to RPG, I needed to upgrade my hosting account; this is why the site was down for about 18 hours. To reduce the load on the server, I've simplified the parameters available. Finally, RPG now has its own domain name!</description>
+<link>http://randompokemon.com/</link>
+</item>
+
+
+<item>
+<title>3rd September 2011 Update</title>
+<description>Smogon put Black &amp; White tiers online earlier this week, so I just finished updating the tiers on the Random Pokemon Generator. My tiers are slightly different, though - whereas Smogon has not-fully-evolved Pokemon in tiers NU, I kept them in NFE. Enjoy!</description>
+<link>http://randompokemon.com/</link>
+</item>
+
+
+<item>
+<title>Spring Break 2011 Update</title>
+<description>With Pokemon Black and White released earlier this week, and spring break starting, I decided to update RPG with generation 5. Because they don't have tiers yet, I put all the evolved Pokemon into "untiered" (except for Reshiram and Zekrom, who I put into Ubers). All unevolved Pokemon went into (you guessed it) NFE. Enjoy!</description>
+<link>http://randompokemon.com/</link>
+</item>
+
+
+<item>
+<title>January 15, 2011 Update</title>
+<description>First, I made it possible for shiny Pokemon to be generated. They use the normal 8/65536 or 1/8192 chance. Second, I updated the sprites to the generation 5 versions. I'll put the generation 5 Pokemon up as soon as I have access to all the English names. Enjoy!</description>
+<link>http://randompokemon.com/</link>
+</item>
+
+
+<item>
+<title>December 20th (2010) Update</title>
+<description>In short, I simplified the random Pokemon generator. Let's look at the specifics:
+*Advanced options are hidden by default.
+*The page is now responsive, so as long as you have a smart browser, it will work at any browser size (even mobile devices like iPods).
+*The page should load quicker, because I simplified the code and images.
+
+Happy holidays and enjoy your random Pokemon generating!</description>
+<link>http://randompokemon.com/</link>
+</item>
+
+
+<item>
+<title>Better Internet Explorer Support</title>
+<description>I still hate IE, but now I've made newer IE browsers equal with all the other good browsers. Now, it can generate without reloading the page. </description>
+<link>http://randompokemon.com/</link>
+</item>
+
+<item>
+<title>Big Update</title>
+<description>*New parameters added - you can generate by type, tier, or region. 
+*I consolidated the versions - it will automatically choose which version to use. 
+*Internet Explorer still doesn't get the full experience, but I'm trying to improve it. 
+
+So, it's likely that I messed something up, so please tell me if you spot anything wrong.</description>
+<link>http://randompokemon.com/</link>
+</item>
+
+<item>
+<title>Mobile Version</title>
+<description>Now, you can randomly generate Pokémon on mobile devices! You can use the smart phone version or the compatible version (based on the pure PHP version). You will be automatically redirected if you're accessing the home page with a mobile phone. Enjoy!
+
+Note: please help the testing process by telling me what you think. I can't possibly test on all the thousands of mobile phones in existence.</description>
+<link>http://randompokemon.com/</link>
+</item>
+
+<item>
+<title>Older Versions, Sprite Toggle</title>
+<description>Today, it's all about compatibility. If your internet connection is slow, you can stop loading in the sprites. If your browser doesn't support JavaScript or AJAX, you can use one of the previous versions. Enjoy!</description>
+<link>http://randompokemon.com/</link>
+</item>
+
+<item>
+<title>Cool New Update</title>
+<description>I'm on vacation, doing all this on a netbook, but I felt like working on this. I added a new generation interface and new pages - feedback  and FAQ. Instead of going into detail, just have at it. I just want to say two things:
+
+    * It still requires JavaScript (but also that your browser isn't a dinousaur).
+    * There still may be bugs. I don't have the resources to test this out on every browser in existence, especially on my netbook. Please tell me about any errors.
+</description>
+<link>http://randompokemon.com/</link>
+</item>
+
+<item>
+<title>"RPG 2.0" is completed</title>
+<description>Now, Random Pokémon has been fully updated. I still have the same sections, and the generate from the same pool of Pokémon and natures, but now, it's faster, has a better layout, and the random is better.
+
+    * Faster - the randomness is generated server-side, not on your computer.
+    * Better layout - we now have a table and sprites on everything!
+    * Better random - the generation of Pokémon is dependent; generation of natures isn't. That means that it won't generate 2 of the same Pokémon. However, multiples of the same nature CAN be generated.
+</description>
+<link>http://randompokemon.com/</link>
+</item>
+
+</channel>
+
+</rss>

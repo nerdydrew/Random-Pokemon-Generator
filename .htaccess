@@ -1,0 +1,21 @@
+# Redirect www urls to non-www
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www\.randompokemon\.com [NC]
+RewriteRule (.*) http://randompokemon.com/$1 [R=301,L]
+
+# Redirect /random/ to random.php
+RewriteRule ^random/?$ /random.php [QSA,L]
+
+# Prevent hotlinking http://www.htaccesstools.com/hotlink-protection/
+#RewriteCond %{HTTP_REFERER} !^$
+#RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?randompokemon.com [NC]
+#RewriteRule \.(jpg|jpeg|png|gif)$ - [NC,F,L]
+
+# Cache sprites and other goodies
+ExpiresActive on
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType image/gif "access plus 1 year"
+
+ExpiresByType image/ico "access plus 1 year"
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 month"
