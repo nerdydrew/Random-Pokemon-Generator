@@ -19,3 +19,6 @@ ExpiresByType image/gif "access plus 1 year"
 ExpiresByType image/ico "access plus 1 year"
 ExpiresByType text/css "access plus 1 month"
 ExpiresByType application/javascript "access plus 1 month"
+
+# Hide the /.git/ directory.
+RedirectMatch 404 /\.git
