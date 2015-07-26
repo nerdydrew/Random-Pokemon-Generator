@@ -22,4 +22,4 @@ ExpiresByType application/javascript "access plus 1 month"
 
 # Hide the /.git/ and /setup/ directories from being accessed online.
 RedirectMatch 404 /\.git
-RedirectMatch 404 /\setup
+RedirectMatch 404 /setup
