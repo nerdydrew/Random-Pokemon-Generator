@@ -20,5 +20,6 @@ ExpiresByType image/ico "access plus 1 year"
 ExpiresByType text/css "access plus 1 month"
 ExpiresByType application/javascript "access plus 1 month"
 
-# Hide the /.git/ directory.
+# Hide the /.git/ and /setup/ directories from being accessed online.
 RedirectMatch 404 /\.git
+RedirectMatch 404 /\setup
