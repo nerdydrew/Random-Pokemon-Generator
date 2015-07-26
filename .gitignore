@@ -2,6 +2,8 @@
 /analytics.js
 /error_log
 
+.ftpquota
+
 **.png
 **.gif
 /favicon.ico
