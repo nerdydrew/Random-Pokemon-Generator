@@ -92,7 +92,11 @@ for ($i = $default['n_low']; $i <= $default['n_high']; $i++) {
 
 
 <footer>
-	<p><a href="http://feeds.feedburner.com/RandomPokemonGenerator">RSS</a> | <a href="mailto:hi@callmedrew.com">Contact</a> | Pok&eacute;mon is &copy; 1995-<?php echo date('Y'); ?> Nintendo. Website is &copy; <?php echo date('Y'); ?> <a href="http://callmedrew.com/">Drew Mitchell</a>.</p>
+	<p>
+		<a href="http://feeds.feedburner.com/RandomPokemonGenerator">RSS</a> | 
+		<a href="https://github.com/nerdydrew/Random-Pokemon-Generator">GitHub</a> | 
+		<a href="mailto:hi@callmedrew.com">Contact</a> |
+		 Pok&eacute;mon is &copy; 1995-<?php echo date('Y'); ?> Nintendo. Website is &copy; <?php echo date('Y'); ?> <a href="http://callmedrew.com/">Drew Mitchell</a>.</p>
 </footer>
 
 </body>

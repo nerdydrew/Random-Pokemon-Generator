@@ -7,7 +7,11 @@
 <description>Figure out what's happening.</description>
 <link>http://randompokemon.com/</link>
 
-
+<item>
+<title>Going Open Source (July 26th, 2015)</title>
+<description>I am now releasing this website on GitHub under the GNU General Public License 2.0. You are free to check out the code and contribute to the website.</description>
+<link>https://github.com/nerdydrew/Random-Pokemon-Generator</link>
+</item>
 
 <item>
 <title>Animated Sprites! (January 3rd, 2015)</title>
