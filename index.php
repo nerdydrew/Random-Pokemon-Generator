@@ -89,7 +89,7 @@ for ($i = $default['n_low']; $i <= $default['n_high']; $i++) {
 </form>
 
 <section id="results"></section>
-
+<div class="clear"></div>
 
 <footer>
 	<p>
