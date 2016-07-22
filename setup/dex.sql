@@ -1,10 +1,10 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.10.7
+-- version 4.0.10.14
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Jul 25, 2015 at 09:54 PM
--- Server version: 5.1.73-cll
+-- Host: localhost:3306
+-- Generation Time: Jul 21, 2016 at 10:31 PM
+-- Server version: 5.6.30
 -- PHP Version: 5.4.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -40,7 +40,15 @@ CREATE TABLE IF NOT EXISTS `dex` (
   `unova_b2w2` tinyint(1) NOT NULL DEFAULT '0',
   `kalos` tinyint(1) NOT NULL DEFAULT '0',
   `tier` set('Uber','NFE') DEFAULT NULL,
-  UNIQUE KEY `id` (`id`)
+  UNIQUE KEY `id` (`id`),
+  KEY `kanto` (`kanto`,`tier`) USING BTREE,
+  KEY `johto` (`johto`,`tier`),
+  KEY `hoenn` (`hoenn`,`tier`),
+  KEY `sinnoh` (`sinnoh`,`tier`),
+  KEY `sinnoh_pt` (`sinnoh_pt`,`tier`),
+  KEY `unova` (`unova`,`tier`),
+  KEY `unova_b2w2` (`unova_b2w2`,`tier`),
+  KEY `kalos` (`kalos`,`tier`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
