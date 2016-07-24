@@ -41,7 +41,7 @@ function generate_distinct_random_numbers($min, $max, $n) {
 	$numbers = array();
 	while (count($numbers) < $n) {
 		$number = mt_rand($min, $max);
-		if (strrpos($numbers, $number) === false) {
+		if (array_search($number, $numbers) === false) {
 			$numbers[] = $number;
 		}
 	}
