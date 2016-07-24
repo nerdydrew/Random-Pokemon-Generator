@@ -8,6 +8,12 @@
 <link>http://randompokemon.com/</link>
 
 <item>
+<title>Region-specific tier lists (July 24th, 2016)</title>
+<description>Some Pokemon gain evolutions in later generations, such as Magmar (who is fully evolved until Magmortar's debut in the Sinnoh region). In these cases, I made it so that when you generate random Pokemon by region, it uses the tier list specific to that region. I've also made a few improvements to generation speed here and there, so the website should load faster.</description>
+<link>http://randompokemon.com/</link>
+</item>
+
+<item>
 <title>Going Open Source (July 26th, 2015)</title>
 <description>I am now releasing this website on GitHub under the GNU General Public License 2.0. You are free to check out the code and contribute to the website.</description>
 <link>https://github.com/nerdydrew/Random-Pokemon-Generator</link>
@@ -88,9 +94,9 @@ Happy holidays and enjoy your random Pokemon generating!</description>
 
 <item>
 <title>Big Update</title>
-<description>*New parameters added - you can generate by type, tier, or region. 
-*I consolidated the versions - it will automatically choose which version to use. 
-*Internet Explorer still doesn't get the full experience, but I'm trying to improve it. 
+<description>*New parameters added - you can generate by type, tier, or region.
+*I consolidated the versions - it will automatically choose which version to use.
+*Internet Explorer still doesn't get the full experience, but I'm trying to improve it.
 
 So, it's likely that I messed something up, so please tell me if you spot anything wrong.</description>
 <link>http://randompokemon.com/</link>
