@@ -48,29 +48,28 @@ if ($ubers && $nfes) {
 	$paramArray[] = $tier_column . ' = "FE"';
 } else {
 	// We want to query for 2 of the 3 tiers, leaving out either Ubers or NFEs.
-	if (count($paramArray) == 0) {
-		// If there are no parameters so far, it's more efficient to take the
-		// union of two equalities rather than one inequality.
-		if ($ubers) {
-			$paramArray[] = '(' . $tier_column . ' = "FE" OR ' . $tier_column . ' = "Uber")';
-		} else if ($nfes) {
-			$paramArray[] = '(' . $tier_column . ' = "FE" OR ' . $tier_column . ' = "NFE")';
-		}
-	} else {
-		// If there already are some other parameters, it's more efficient to use
-		// the index for them remove the unwanted tier by inequality.
-		if ($ubers) {
-			$paramArray[] = '(' . $tier_column . ' != "NFE")';
-		} else if ($nfes) {
-			$paramArray[] = '(' . $tier_column . ' != "Uber")';
-		}
+	if ($ubers) {
+		$paramArray[] = '(' . $tier_column . ' != "NFE")';
+	} else if ($nfes) {
+		$paramArray[] = '(' . $tier_column . ' != "Uber")';
 	}
 }
 $parameters = (count($paramArray) > 0) ? "WHERE " . implode(" AND ", $paramArray) : "";
 
 // Connect to the database and execute the query.
 $connection = new mysqli($sql_host, $sql_username, $sql_password, $sql_database);
-$dbOutput = $connection->query("SELECT id, name FROM dex " . $parameters . " ORDER BY rand() LIMIT $n ");
+if ($parameters == "") {
+	// If we're generating from all Pokemon, it's much more efficient to generate
+	// IDs and then query them directly, rather than randomizing the whole database.
+	$max = $connection->query("SELECT COUNT(*) AS count FROM dex")->fetch_object()->count;
+	$ids_array = generate_distinct_random_numbers(1, $max, $n);
+	$ids_string = implode(", ", $ids_array);
+	$sql = "SELECT id, name FROM dex WHERE id IN (" . $ids_string . ")";
+} else {
+	$sql = "SELECT id, name FROM dex " . $parameters . " ORDER BY rand() LIMIT $n";
+}
+
+$dbOutput = $connection->query($sql);
 
 // Convert the results to an array.
 while($row = $dbOutput->fetch_assoc()) {

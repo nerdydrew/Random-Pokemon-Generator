@@ -7,7 +7,7 @@
 function get_or_set($get_key, $default, $possible_values = null) {
 	$using_boolean = ($default === true || $default === false);
 	$validate_from_list = ($possible_values != null);
-	
+
 	if (isset($_GET[$get_key]) && (!$validate_from_list || in_array($_GET[$get_key], $possible_values))) {
 		if ($using_boolean) {
 			return filter_var($_GET[$get_key], FILTER_VALIDATE_BOOLEAN);
@@ -31,9 +31,21 @@ function redirect($path) {
 		$protocol = (isset($_SERVER['HTTPS'])) ? 'https' : 'http';
 		$path = $protocol . '://' . $_SERVER['HTTP_HOST'] . $path;
 	}
-	
+
 	header('Location: ' . $path);
 	die();
+}
+
+// Most efficient for large ranges ($max-$min) and small $n values.
+function generate_distinct_random_numbers($min, $max, $n) {
+	$numbers = array();
+	while (count($numbers) < $n) {
+		$number = mt_rand($min, $max);
+		if (strrpos($numbers, $number) === false) {
+			$numbers[] = $number;
+		}
+	}
+	return $numbers;
 }
 
 

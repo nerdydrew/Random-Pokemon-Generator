@@ -40,20 +40,20 @@ function htmlifyListOfPokemon(generatedPokemonJson) {
 		output += htmlifyPokemon(generatedPokemon[i]);
 	}
 	output += '</ol>';
-	
+
 	return output;
 }
 
 // Converts JSON for a single Pokémon into an HTML list item.
 function htmlifyPokemon(pokemon) {
 	var title = (pokemon.shiny) ? 'Shiny ' + pokemon.name : pokemon.name;
-	
+
 	if (pokemon.sprite) {
 	var out = '<li title="' + title + '">';
 	} else {
 	var out = '<li class="imageless">';
 	}
-	
+
 	if (pokemon.nature) {
 		out += '<span class="nature">' + pokemon.nature + "</span> ";
 	}
@@ -64,8 +64,8 @@ function htmlifyPokemon(pokemon) {
 	if (pokemon.sprite) {
 		out += '<div class="wrapper"><img src="' + pokemon.sprite + '" alt="' + title + '" title="' + title + '" /></div>';
 	}
-	
+
 	out += '</li>';
-	
+
 	return out;
 }
