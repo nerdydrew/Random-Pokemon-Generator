@@ -33,31 +33,36 @@ $type = get_or_set("type", null, $type_list);
 
 // Construct the query, making an array of parameters.
 $paramArray = array();
-if ($region != null) {$paramArray[] = $region . " = 1";}
+if ($region != null) {
+	$paramArray[] = $region . " = 1";
+	$tier_column = $region . "_tier";
+} else {
+	$tier_column = "tier";
+}
 if ($type != null) {$paramArray[] = '(type1 = "' . $type . '" OR type2 = "' . $type . '")';}
 if ($ubers && $nfes) {
 	// If we want to get ubers and NFEs as well as fully evolved Pokemon,
 	// no need to add a parameter for that.
 } else if ($ubers == false && $nfes == false) {
 	// No Ubers and no NFEs - only fully evolved Pokemon.
-	$paramArray[] = 'tier = "FE"';
+	$paramArray[] = $tier_column . ' = "FE"';
 } else {
 	// We want to query for 2 of the 3 tiers, leaving out either Ubers or NFEs.
 	if (count($paramArray) == 0) {
 		// If there are no parameters so far, it's more efficient to take the
 		// union of two equalities rather than one inequality.
 		if ($ubers) {
-			$paramArray[] = '(tier = "FE" OR tier = "Uber")';
+			$paramArray[] = '(' . $tier_column . ' = "FE" OR ' . $tier_column . ' = "Uber")';
 		} else if ($nfes) {
-			$paramArray[] = '(tier = "FE" OR tier = "NFE")';
+			$paramArray[] = '(' . $tier_column . ' = "FE" OR ' . $tier_column . ' = "NFE")';
 		}
 	} else {
 		// If there already are some other parameters, it's more efficient to use
 		// the index for them remove the unwanted tier by inequality.
 		if ($ubers) {
-			$paramArray[] = '(tier != "NFE")';
+			$paramArray[] = '(' . $tier_column . ' != "NFE")';
 		} else if ($nfes) {
-			$paramArray[] = '(tier != "Uber")';
+			$paramArray[] = '(' . $tier_column . ' != "Uber")';
 		}
 	}
 }
