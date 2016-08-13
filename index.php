@@ -13,12 +13,13 @@ require_once 'utils.php';
 	<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
 	<link rel="alternate" type="application/rss+xml" title="Random Pok&eacute;mon Generator Feed" href="http://feeds.feedburner.com/RandomPokemonGenerator">
-	<link href="/favicon.ico" type="image/x-icon" rel="shortcut icon">
 
-	<link rel="apple-touch-icon" href="/touch-icon-iphone.png" /> 
-	<link rel="apple-touch-icon" sizes="76x76" href="/touch-icon-ipad.png" /> 
-	<link rel="apple-touch-icon" sizes="120x120" href="/touch-icon-iphone-retina.png" />
-	<link rel="apple-touch-icon" sizes="152x152" href="/touch-icon-ipad-retina.png" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="/manifest.json">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#FF4A4A">
+	<meta name="theme-color" content="#FFFFFF">
 	
 	<script src="analytics.js"></script>
 	<script>
