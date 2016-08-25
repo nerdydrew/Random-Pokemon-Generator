@@ -39,7 +39,7 @@ if ($region != null) {
 } else {
 	$tier_column = "tier";
 }
-if ($type != null) {$paramArray[] = '(type1 = "' . $type . '" OR type2 = "' . $type . '")';}
+if ($type != null) {$paramArray[] = $type . ' = true';}
 if ($ubers && $nfes) {
 	// If we want to get ubers and NFEs as well as fully evolved Pokemon,
 	// no need to add a parameter for that.
