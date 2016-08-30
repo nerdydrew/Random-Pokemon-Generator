@@ -69,21 +69,26 @@ if ($parameters == "") {
 	$sql = "SELECT id, name FROM dex " . $parameters . " ORDER BY rand() LIMIT $n";
 }
 
-$dbOutput = $connection->query($sql);
+$db_output = $connection->query($sql);
 
 // Convert the results to an array.
-while($row = $dbOutput->fetch_assoc()) {
+while($row = $db_output->fetch_assoc()) {
+	$output_row['id'] = $row['id'];
+	$output_row['name'] = $row['name'];
+
 	// Chance of being shiny. http://bulbapedia.bulbagarden.net/wiki/Shiny_Pok%C3%A9mon#Generation_VI
-	$row['shiny'] = (mt_rand(0,65535) < 16);
+	$output_row['shiny'] = (mt_rand(0,65535) < 16);
+
 	if ($sprites) {
-		$row['sprite'] = ($row['shiny'] ? $path_to_shiny_sprites : $path_to_sprites) . $row['id'] . $sprite_extention;
-	}
-	if ($natures) {
-		$row['nature'] = $nature_list[mt_rand(0, count($nature_list)-1)];
+		$output_row['sprite'] = ($row['shiny'] ? $path_to_shiny_sprites : $path_to_sprites) . $row['id'] . $sprite_extention;
 	}
 
-	$outputArray[] = $row;
+	if ($natures) {
+		$output_row['nature'] = $nature_list[mt_rand(0, count($nature_list)-1)];
+	}
+
+	$output_array[] = $output_row;
 }
 
 // Finally, convert the results to JSON.
-echo json_encode($outputArray);
+echo json_encode($output_array);
