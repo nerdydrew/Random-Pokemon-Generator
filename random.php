@@ -57,30 +57,47 @@ if ($ubers && $nfes) {
 $parameters = (count($paramArray) > 0) ? "WHERE " . implode(" AND ", $paramArray) : "";
 
 // Connect to the database and execute the query.
-$connection = new mysqli($sql_host, $sql_username, $sql_password, $sql_database);
+$connection = new mysqli(SQL_HOST, SQL_USERNAME, SQL_PASSWORD, SQL_DATABASE);
 if ($parameters == "") {
 	// If we're generating from all Pokemon, it's much more efficient to generate
 	// IDs and then query them directly, rather than randomizing the whole database.
 	$max = $connection->query("SELECT COUNT(*) AS count FROM dex")->fetch_object()->count;
 	$ids_array = generate_distinct_random_numbers(1, $max, $n);
 	$ids_string = implode(", ", $ids_array);
-	$sql = "SELECT id, name FROM dex WHERE id IN (" . $ids_string . ")";
+	$sql = "SELECT id, name, multiform FROM dex WHERE id IN (" . $ids_string . ")";
 } else {
-	$sql = "SELECT id, name FROM dex " . $parameters . " ORDER BY rand() LIMIT $n";
+	$sql = "SELECT id, name, multiform FROM dex " . $parameters . " ORDER BY rand() LIMIT $n";
 }
 
 $db_output = $connection->query($sql);
+$connection->close();
 
+$can_be_mega = true;
 // Convert the results to an array.
 while($row = $db_output->fetch_assoc()) {
 	$output_row['id'] = $row['id'];
 	$output_row['name'] = $row['name'];
+	$sprite_name = $row['id'];
+
+	if ($row['multiform']) {
+		$form = get_random_eligible_form($row['id'], $region, $type, $ubers, $nfes, $can_be_mega);
+		$output_row['name'] = $form['name'];
+		if ($form['sprite_suffix']) {
+			$sprite_name .= '-' . $form['sprite_suffix'];
+		}
+
+		// Yeah, this makes earlier Pokemon more likely to be megas than Pokemon
+		// later on in the list, but it's close enough for now.
+		if ($form['is_mega']) {
+			$can_be_mega = false;
+		}
+	}
 
 	// Chance of being shiny. http://bulbapedia.bulbagarden.net/wiki/Shiny_Pok%C3%A9mon#Generation_VI
 	$output_row['shiny'] = (mt_rand(0,65535) < 16);
 
 	if ($sprites) {
-		$output_row['sprite'] = ($row['shiny'] ? $path_to_shiny_sprites : $path_to_sprites) . $row['id'] . $sprite_extention;
+		$output_row['sprite'] = ($output_row['shiny'] ? $path_to_shiny_sprites : $path_to_sprites) . $sprite_name . $sprite_extention;
 	}
 
 	if ($natures) {

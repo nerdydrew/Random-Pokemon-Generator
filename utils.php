@@ -1,5 +1,7 @@
 <?php
 
+require_once 'config.php';
+
 //////// FUNCTIONS ////////
 
 // Safely $_GETs and returns the value of $get_key, falling back on the $default.
@@ -46,6 +48,45 @@ function generate_distinct_random_numbers($min, $max, $n) {
 		}
 	}
 	return $numbers;
+}
+
+function get_random_eligible_form($id, $region, $type, $ubers, $nfes, $can_be_mega) {
+	$connection = new mysqli(SQL_HOST, SQL_USERNAME, SQL_PASSWORD, SQL_DATABASE);
+	// Construct the query, making an array of parameters.
+	$param_array = array("id = " . $id);
+	if ($region != null) {
+		$param_array[] = $region . " = 1";
+		$tier_column = $region . "_tier";
+	} else {
+		$tier_column = "tier";
+	}
+	if ($type != null) {
+		$param_array[] = '(type1 = "' . $type . '" OR type2 = "' . $type . '")';
+	}
+	if ($ubers && $nfes) {
+		// If we want to get ubers and NFEs as well as fully evolved Pokemon,
+		// no need to add a parameter for that.
+	} else if ($ubers == false && $nfes == false) {
+		// No Ubers and no NFEs - only fully evolved Pokemon.
+		$param_array[] = $tier_column . ' = "FE"';
+	} else {
+		// We want to query for 2 of the 3 tiers, leaving out either Ubers or NFEs.
+		if ($ubers) {
+			$param_array[] = '(' . $tier_column . ' != "NFE")';
+		} else if ($nfes) {
+			$param_array[] = '(' . $tier_column . ' != "Uber")';
+		}
+	}
+	if (!$can_be_mega) {
+		$param_array[] = 'is_mega = false';
+	}
+	$parameters = implode(" AND ", $param_array);
+
+	$sql = "SELECT name, sprite_suffix, is_mega FROM forms WHERE " . $parameters . " ORDER BY rand() LIMIT 1";
+
+	$db_output = $connection->query($sql);
+	$connection->close();
+	return $db_output->fetch_assoc();
 }
 
 

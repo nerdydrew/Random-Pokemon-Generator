@@ -1,8 +1,8 @@
 <?php
-$sql_host = '';
-$sql_username = '';
-$sql_password = '';
-$sql_database = '';
+define('SQL_HOST', '');
+define('SQL_DATABASE', '');
+define('SQL_USERNAME', '');
+define('SQL_PASSWORD', '');
 
 // These directories should contain sprites named by PokéDex ID
 // without leading zeros (e.g. "25.gif").
