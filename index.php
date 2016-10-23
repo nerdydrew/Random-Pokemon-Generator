@@ -20,7 +20,7 @@ require_once 'utils.php';
 	<link rel="manifest" href="/manifest.json">
 	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#FF4A4A">
 	<meta name="theme-color" content="#FFFFFF">
-	
+
 	<script src="analytics.js"></script>
 	<script>
 		logToAnalytics();
@@ -36,8 +36,9 @@ require_once 'utils.php';
 
 <form action="/" method="get" id="controls">
 	<fieldset><label>Generate <select name="n" id="n"><?php
-for ($i = $default['n_low']; $i <= $default['n_high']; $i++) {
-	$selected_text = ($default['n']) ? ' selected' : '';
+	$default = new Parameters();
+for ($i = $default::$n_low; $i <= $default::$n_high; $i++) {
+	$selected_text = ($default->get_n()) ? ' selected' : '';
 	echo '<option value="' . $i . '"' . $selected_text . '>' . $i . '</option>';
 }
 		?></select>
@@ -52,7 +53,7 @@ for ($i = $default['n_low']; $i <= $default['n_high']; $i++) {
 		<option value="sinnoh_pt">Sinnoh (Plat.)</option>
 		<option value="unova">Unova</option>
 		<option value="unova_b2w2">Unova (B2W2)</option>
-		<option value="kalos">Kalos</option></select> 
+		<option value="kalos">Kalos</option></select>
 
 		<select name="type" id="type">
 		<option value="all">All Types</option>
@@ -78,12 +79,12 @@ for ($i = $default['n_low']; $i <= $default['n_high']; $i++) {
 	</fieldset>
 
 	<fieldset>
-		<label><input type="checkbox" id="ubers" name="ubers" value="true" <?php if($default['ubers']){echo 'checked';} ?>><abbr title="Overpowered Pok&eacute;mon not used in standard play.">Ubers</abbr></label>
+		<label><input type="checkbox" id="ubers" name="ubers" value="true" <?php if($default->get_ubers()){echo 'checked';} ?>><abbr title="Overpowered Pok&eacute;mon not used in standard play.">Ubers</abbr></label>
 
-		<label><input type="checkbox" id="nfes" name="nfes" value="true" <?php if($default['nfes']){echo 'checked';} ?>><abbr title="Pok&eacute;mon that are Not Fully Evolved.">NFEs</abbr></label>
+		<label><input type="checkbox" id="nfes" name="nfes" value="true" <?php if($default->get_nfes()){echo 'checked';} ?>><abbr title="Pok&eacute;mon that are Not Fully Evolved.">NFEs</abbr></label>
 
-		<label><input type="checkbox" id="sprites" name="sprites" value="true"<?php if($default['sprites']){echo 'checked';} ?>>Sprites</label>
-		<label><input type="checkbox" id="natures" name="natures" value="true"<?php if($default['natures']){echo 'checked';} ?>>Natures</label>
+		<label><input type="checkbox" id="sprites" name="sprites" value="true"<?php if($default->get_sprites()){echo 'checked';} ?>>Sprites</label>
+		<label><input type="checkbox" id="natures" name="natures" value="true"<?php if($default->get_natures()){echo 'checked';} ?>>Natures</label>
 
 		<input id="go" value="Generate!" type="button" onclick="generateRandom()">
 	</fieldset>
@@ -94,8 +95,8 @@ for ($i = $default['n_low']; $i <= $default['n_high']; $i++) {
 
 <footer>
 	<p>
-		<a href="http://feeds.feedburner.com/RandomPokemonGenerator">RSS</a> | 
-		<a href="https://github.com/nerdydrew/Random-Pokemon-Generator">GitHub</a> | 
+		<a href="http://feeds.feedburner.com/RandomPokemonGenerator">RSS</a> |
+		<a href="https://github.com/nerdydrew/Random-Pokemon-Generator">GitHub</a> |
 		<a href="mailto:hi@callmedrew.com">Contact</a> |
 		 Pok&eacute;mon is &copy; 1995-<?php echo date('Y'); ?> Nintendo. Website is &copy; <?php echo date('Y'); ?> <a href="http://callmedrew.com/">Drew Mitchell</a>.</p>
 </footer>

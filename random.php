@@ -10,46 +10,27 @@ header("Cache-Control: no-cache, no-store, must-revalidate"); // HTTP 1.1
 header("Pragma: no-cache"); // HTTP 1.0
 header("Expires: 0"); // Proxies
 
-// Validate all the data. First, make sure that n (the number of generated Pokémon)
-// is an integer between 1 and 6.
-if (!isset($_GET["n"])) {
-	// Redirect to the home page if n isn't set.
-	redirect('');
-} else {
-	$n = $_GET["n"];
-}
-if (!is_numeric($n) || $n > 6) {$n=6;}
-elseif ($n < 1) {$n=1;}
-$n = round($n); // ensure n is an integer
-
-// Get other options, validating and setting to defaults if not provided.
-$ubers = get_or_set("ubers", true);
-$nfes = get_or_set("nfes", true);
-$sprites = get_or_set("sprites", true);
-$natures = get_or_set("natures", false);
-$region = get_or_set("region", null, $region_list);
-$type = get_or_set("type", null, $type_list);
-
+$params = validate_parameters($_GET);
 
 // Construct the query, making an array of parameters.
 $paramArray = array();
-if ($region != null) {
-	$table = $region . "_dex";
+if ($params->get_region() != null) {
+	$table = $params->get_region() . "_dex";
 } else {
 	$table = 'national_dex';
 }
-if ($type != null) {$paramArray[] = $type . ' = true';}
-if ($ubers && $nfes) {
+if ($params->get_type() != null) {$paramArray[] = $params->get_type() . ' = true';}
+if ($params->get_ubers() && $params->get_nfes()) {
 	// If we want to get ubers and NFEs as well as fully evolved Pokemon,
 	// no need to add a parameter for that.
-} else if ($ubers == false && $nfes == false) {
+} else if ($params->get_ubers() == false && $params->get_nfes() == false) {
 	// No Ubers and no NFEs - only fully evolved Pokemon.
 	$paramArray[] = 'tier = "FE"';
 } else {
 	// We want to query for 2 of the 3 tiers, leaving out either Ubers or NFEs.
-	if ($ubers) {
+	if ($params->get_ubers()) {
 		$paramArray[] = '(tier != "NFE")';
-	} else if ($nfes) {
+	} else if ($params->get_nfes()) {
 		$paramArray[] = '(tier != "Uber")';
 	}
 }
@@ -57,15 +38,15 @@ $parameters = (count($paramArray) > 0) ? "WHERE " . implode(" AND ", $paramArray
 
 // Connect to the database and execute the query.
 $connection = new mysqli(SQL_HOST, SQL_USERNAME, SQL_PASSWORD, SQL_DATABASE);
-if ($parameters == "" && $region == null) {
+if ($parameters == "" && $params->get_region() == null) {
 	// If we're generating from all Pokemon, it's much more efficient to generate
 	// IDs and then query them directly, rather than randomizing the whole database.
 	$max = $connection->query("SELECT COUNT(*) AS count FROM " . $table)->fetch_object()->count;
-	$ids_array = generate_distinct_random_numbers(1, $max, $n);
+	$ids_array = generate_distinct_random_numbers(1, $max, $params->get_n());
 	$ids_string = implode(", ", $ids_array);
 	$sql = "SELECT id, name, multiform FROM national_dex WHERE id IN (" . $ids_string . ")";
 } else {
-	$sql = "SELECT id, name, multiform FROM " . $table . " " . $parameters . " ORDER BY rand() LIMIT $n";
+	$sql = "SELECT id, name, multiform FROM " . $table . " " . $parameters . " ORDER BY rand() LIMIT " . $params->get_n();
 }
 
 $db_output = $connection->query($sql);
@@ -79,7 +60,7 @@ while($row = $db_output->fetch_assoc()) {
 	$sprite_name = $row['id'];
 
 	if ($row['multiform']) {
-		$form = get_random_eligible_form($row['id'], $region, $type, $ubers, $nfes, $can_be_mega);
+		$form = get_random_eligible_form($row['id'], $params, $can_be_mega);
 		$output_row['name'] = $form['name'];
 		if ($form['sprite_suffix']) {
 			$sprite_name .= '-' . $form['sprite_suffix'];
@@ -95,11 +76,11 @@ while($row = $db_output->fetch_assoc()) {
 	// Chance of being shiny. http://bulbapedia.bulbagarden.net/wiki/Shiny_Pok%C3%A9mon#Generation_VI
 	$output_row['shiny'] = (mt_rand(0,65535) < 16);
 
-	if ($sprites) {
+	if ($params->get_sprites()) {
 		$output_row['sprite'] = ($output_row['shiny'] ? $path_to_shiny_sprites : $path_to_sprites) . $sprite_name . $sprite_extention;
 	}
 
-	if ($natures) {
+	if ($params->get_natures()) {
 		$output_row['nature'] = $nature_list[mt_rand(0, count($nature_list)-1)];
 	}
 

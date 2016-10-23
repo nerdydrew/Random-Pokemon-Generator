@@ -2,40 +2,131 @@
 
 require_once 'config.php';
 
-//////// FUNCTIONS ////////
+//////// CLASSES ////////
 
-// Safely $_GETs and returns the value of $get_key, falling back on the $default.
-// Can optionally validate the value from a list of $possible_values.
-function get_or_set($get_key, $default, $possible_values = null) {
-	$using_boolean = ($default === true || $default === false);
-	$validate_from_list = ($possible_values != null);
+class Parameters {
+	public static $n_low = 1;
+	public static $n_high = 6;
+	public static $region_list = array('kanto','johto','hoenn','sinnoh','sinnoh_pt','unova','unova_b2w2','kalos');
+	public static $type_list = array('bug','dark','dragon','electric','fairy','fighting','fire','flying','ghost','grass','ground','ice','normal','poison','psychic','rock','steel','water');
 
-	if (isset($_GET[$get_key]) && (!$validate_from_list || in_array($_GET[$get_key], $possible_values))) {
-		if ($using_boolean) {
-			return filter_var($_GET[$get_key], FILTER_VALIDATE_BOOLEAN);
-		} else {
-			return $_GET[$get_key];
-		}
-	} else {
-		return $default;
+	protected $n = 6;
+	protected $ubers = true;
+	protected $nfes = true;
+	protected $sprites = true;
+	protected $natures = false;
+	protected $region = null;
+	protected $type = null;
+
+	public function get_n() {
+		return $this->n;
 	}
+
+	public function set_n($n) {
+		if (is_numeric($n)) {
+			$n = (int) $n;
+			if ($n > $this::$n_high) {
+				$n = $this::$n_high;
+			} else if ($n < $this::$n_low) {
+				$n = $this::$n_low;
+			}
+			$this->n = $n;
+		}
+	}
+
+	public function get_ubers() {
+		return $this->ubers;
+	}
+
+	public function set_ubers($ubers) {
+		$ubers = filter_var($ubers, FILTER_VALIDATE_BOOLEAN);
+		if (!is_null($ubers)) {
+			$this->ubers = $ubers;
+		}
+	}
+
+	public function get_nfes() {
+		return $this->nfes;
+	}
+
+	public function set_nfes($nfes) {
+		$nfes = filter_var($nfes, FILTER_VALIDATE_BOOLEAN);
+		if (!is_null($nfes)) {
+			$this->nfes = $nfes;
+		}
+	}
+
+	public function get_sprites() {
+		return $this->sprites;
+	}
+
+	public function set_sprites($sprites) {
+		$sprites = filter_var($sprites, FILTER_VALIDATE_BOOLEAN);
+		if (!is_null($sprites)) {
+			$this->sprites = $sprites;
+		}
+	}
+
+	public function get_natures() {
+		return $this->natures;
+	}
+
+	public function set_natures($natures) {
+		$natures = filter_var($natures, FILTER_VALIDATE_BOOLEAN);
+		if (!is_null($natures)) {
+			$this->natures = $natures;
+		}
+	}
+
+	public function get_region() {
+		return $this->region;
+	}
+
+	public function set_region($region) {
+		if (in_array($region, $this::$region_list)) {
+			$this->region = $region;
+		}
+	}
+
+	public function get_type() {
+		return $this->type;
+	}
+
+	public function set_type($type) {
+		if (in_array($type, $this::$type_list)) {
+			$this->type = $type;
+		}
+	}
+
+
+
 }
 
-// Sets an HTTP header to redirect to the specified path (relative or absolute).
-// Note: must come before any HTML.
-function redirect($path) {
-	// Convert to absolute path if needed
-	if (substr($path, 0, 4) !== 'http') {
-		// If it's absolute, make sure it has a leading "/".
-		if (substr($path, 0, 1) !== "/" && strlen($path) > 0) {
-			$path = "/" . $path;
-		}
-		$protocol = (isset($_SERVER['HTTPS'])) ? 'https' : 'http';
-		$path = $protocol . '://' . $_SERVER['HTTP_HOST'] . $path;
+//////// FUNCTIONS ////////
+
+function validate_parameters($in_params) {
+	$params = new Parameters();
+	$params->set_n($in_params["n"]);
+	if (isset($in_params["ubers"])) {
+		$params->set_ubers($in_params["ubers"]);
+	}
+	if (isset($in_params["nfes"])) {
+		$params->set_nfes($in_params["nfes"]);
+	}
+	if (isset($in_params["sprites"])) {
+		$params->set_sprites($in_params["sprites"]);
+	}
+	if (isset($in_params["natures"])) {
+		$params->set_natures($in_params["natures"]);
+	}
+	if (isset($in_params["region"])) {
+		$params->set_region($in_params["region"]);
+	}
+	if (isset($in_params["type"])) {
+		$params->set_type($in_params["type"]);
 	}
 
-	header('Location: ' . $path);
-	die();
+	return $params;
 }
 
 // Most efficient for large ranges ($max-$min) and small $n values.
@@ -50,7 +141,12 @@ function generate_distinct_random_numbers($min, $max, $n) {
 	return $numbers;
 }
 
-function get_random_eligible_form($id, $region, $type, $ubers, $nfes, $can_be_mega) {
+function get_random_eligible_form($id, $params, $can_be_mega) {
+	$type = $params->get_type();
+	$region = $params->get_region();
+	$ubers = $params->get_ubers();
+	$nfes = $params->get_nfes();
+
 	$connection = new mysqli(SQL_HOST, SQL_USERNAME, SQL_PASSWORD, SQL_DATABASE);
 	// Construct the query, making an array of parameters.
 	$param_array = array("id = " . $id);
@@ -90,22 +186,6 @@ function get_random_eligible_form($id, $region, $type, $ubers, $nfes, $can_be_me
 }
 
 
-//////// LISTS for data validation, default values, and generation of natures ////////
+//////// LISTS for generation of natures ////////
 
 $nature_list = array('Adamant','Bashful','Bold','Brave','Calm','Careful','Docile','Gentle','Hardy','Hasty','Impish','Jolly','Lax','Lonely','Mild','Modest','Na&iuml;ve','Naughty','Quiet','Quirky','Rash','Relaxed','Sassy','Serious','Timid');
-
-$region_list = array('kanto','johto','hoenn','sinnoh','sinnoh_pt','unova','unova_b2w2','kalos');
-
-$type_list = array('bug','dark','dragon','electric','fairy','fighting','fire','flying','ghost','grass','ground','ice','normal','poison','psychic','rock','steel','water');
-
-$default = array(
-	'n_low' => '1',
-	'n_high' => '6',
-	'n' => '6',
-	'region' => null,
-	'type' => null,
-	'ubers' => true,
-	'nfes' => true,
-	'sprites' => true,
-	'natures' => false
-);
