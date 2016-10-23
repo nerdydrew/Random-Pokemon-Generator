@@ -34,10 +34,9 @@ $type = get_or_set("type", null, $type_list);
 // Construct the query, making an array of parameters.
 $paramArray = array();
 if ($region != null) {
-	$paramArray[] = $region . " = 1";
-	$tier_column = $region . "_tier";
+	$table = $region . "_dex";
 } else {
-	$tier_column = "tier";
+	$table = 'national_dex';
 }
 if ($type != null) {$paramArray[] = $type . ' = true';}
 if ($ubers && $nfes) {
@@ -45,28 +44,28 @@ if ($ubers && $nfes) {
 	// no need to add a parameter for that.
 } else if ($ubers == false && $nfes == false) {
 	// No Ubers and no NFEs - only fully evolved Pokemon.
-	$paramArray[] = $tier_column . ' = "FE"';
+	$paramArray[] = 'tier = "FE"';
 } else {
 	// We want to query for 2 of the 3 tiers, leaving out either Ubers or NFEs.
 	if ($ubers) {
-		$paramArray[] = '(' . $tier_column . ' != "NFE")';
+		$paramArray[] = '(tier != "NFE")';
 	} else if ($nfes) {
-		$paramArray[] = '(' . $tier_column . ' != "Uber")';
+		$paramArray[] = '(tier != "Uber")';
 	}
 }
 $parameters = (count($paramArray) > 0) ? "WHERE " . implode(" AND ", $paramArray) : "";
 
 // Connect to the database and execute the query.
 $connection = new mysqli(SQL_HOST, SQL_USERNAME, SQL_PASSWORD, SQL_DATABASE);
-if ($parameters == "") {
+if ($parameters == "" && $region == null) {
 	// If we're generating from all Pokemon, it's much more efficient to generate
 	// IDs and then query them directly, rather than randomizing the whole database.
-	$max = $connection->query("SELECT COUNT(*) AS count FROM dex")->fetch_object()->count;
+	$max = $connection->query("SELECT COUNT(*) AS count FROM " . $table)->fetch_object()->count;
 	$ids_array = generate_distinct_random_numbers(1, $max, $n);
 	$ids_string = implode(", ", $ids_array);
-	$sql = "SELECT id, name, multiform FROM dex WHERE id IN (" . $ids_string . ")";
+	$sql = "SELECT id, name, multiform FROM national_dex WHERE id IN (" . $ids_string . ")";
 } else {
-	$sql = "SELECT id, name, multiform FROM dex " . $parameters . " ORDER BY rand() LIMIT $n";
+	$sql = "SELECT id, name, multiform FROM " . $table . " " . $parameters . " ORDER BY rand() LIMIT $n";
 }
 
 $db_output = $connection->query($sql);
