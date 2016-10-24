@@ -6,16 +6,16 @@ require_once 'config.php';
 require_once 'utils.php';
 
 // HTTP headers to keep this page from being cached
-header("Cache-Control: no-cache, no-store, must-revalidate"); // HTTP 1.1
-header("Pragma: no-cache"); // HTTP 1.0
-header("Expires: 0"); // Proxies
+header('Cache-Control: no-cache, no-store, must-revalidate'); // HTTP 1.1
+header('Pragma: no-cache'); // HTTP 1.0
+header('Expires: 0'); // Proxies
 
 $params = validate_parameters($_GET);
 
 // Construct the query, making an array of parameters.
 $paramArray = array();
 if ($params->get_region() != null) {
-	$table = $params->get_region() . "_dex";
+	$table = $params->get_region() . '_dex';
 } else {
 	$table = 'national_dex';
 }
@@ -34,19 +34,19 @@ if ($params->get_ubers() && $params->get_nfes()) {
 		$paramArray[] = '(tier != "Uber")';
 	}
 }
-$parameters = (count($paramArray) > 0) ? "WHERE " . implode(" AND ", $paramArray) : "";
+$parameters = (count($paramArray) > 0) ? 'WHERE ' . implode(' AND ', $paramArray) : '';
 
 // Connect to the database and execute the query.
 $connection = new mysqli(SQL_HOST, SQL_USERNAME, SQL_PASSWORD, SQL_DATABASE);
-if ($parameters == "" && $params->get_region() == null) {
+if ($parameters == '' && $params->get_region() == null) {
 	// If we're generating from all Pokemon, it's much more efficient to generate
 	// IDs and then query them directly, rather than randomizing the whole database.
-	$max = $connection->query("SELECT COUNT(*) AS count FROM " . $table)->fetch_object()->count;
+	$max = $connection->query('SELECT COUNT(*) AS count FROM ' . $table)->fetch_object()->count;
 	$ids_array = generate_distinct_random_numbers(1, $max, $params->get_n());
-	$ids_string = implode(", ", $ids_array);
-	$sql = "SELECT id, name, multiform FROM national_dex WHERE id IN (" . $ids_string . ")";
+	$ids_string = implode(', ', $ids_array);
+	$sql = 'SELECT id, name, multiform FROM national_dex WHERE id IN (' . $ids_string . ')';
 } else {
-	$sql = "SELECT id, name, multiform FROM " . $table . " " . $parameters . " ORDER BY rand() LIMIT " . $params->get_n();
+	$sql = 'SELECT id, name, multiform FROM ' . $table . ' ' . $parameters . ' ORDER BY rand() LIMIT ' . $params->get_n();
 }
 
 $db_output = $connection->query($sql);

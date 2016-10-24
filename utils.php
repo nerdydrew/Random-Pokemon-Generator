@@ -106,24 +106,24 @@ class Parameters {
 
 function validate_parameters($in_params) {
 	$params = new Parameters();
-	$params->set_n($in_params["n"]);
-	if (isset($in_params["ubers"])) {
-		$params->set_ubers($in_params["ubers"]);
+	$params->set_n($in_params['n']);
+	if (isset($in_params['ubers'])) {
+		$params->set_ubers($in_params['ubers']);
 	}
-	if (isset($in_params["nfes"])) {
-		$params->set_nfes($in_params["nfes"]);
+	if (isset($in_params['nfes'])) {
+		$params->set_nfes($in_params['nfes']);
 	}
-	if (isset($in_params["sprites"])) {
-		$params->set_sprites($in_params["sprites"]);
+	if (isset($in_params['sprites'])) {
+		$params->set_sprites($in_params['sprites']);
 	}
-	if (isset($in_params["natures"])) {
-		$params->set_natures($in_params["natures"]);
+	if (isset($in_params['natures'])) {
+		$params->set_natures($in_params['natures']);
 	}
-	if (isset($in_params["region"])) {
-		$params->set_region($in_params["region"]);
+	if (isset($in_params['region'])) {
+		$params->set_region($in_params['region']);
 	}
-	if (isset($in_params["type"])) {
-		$params->set_type($in_params["type"]);
+	if (isset($in_params['type'])) {
+		$params->set_type($in_params['type']);
 	}
 
 	return $params;
@@ -149,12 +149,12 @@ function get_random_eligible_form($id, $params, $can_be_mega) {
 
 	$connection = new mysqli(SQL_HOST, SQL_USERNAME, SQL_PASSWORD, SQL_DATABASE);
 	// Construct the query, making an array of parameters.
-	$param_array = array("id = " . $id);
+	$param_array = array('id = ' . $id);
 	if ($region != null) {
-		$param_array[] = $region . " = 1";
-		$tier_column = $region . "_tier";
+		$param_array[] = $region . ' = 1';
+		$tier_column = $region . '_tier';
 	} else {
-		$tier_column = "tier";
+		$tier_column = 'tier';
 	}
 	if ($type != null) {
 		$param_array[] = '(type1 = "' . $type . '" OR type2 = "' . $type . '")';
@@ -176,9 +176,9 @@ function get_random_eligible_form($id, $params, $can_be_mega) {
 	if (!$can_be_mega) {
 		$param_array[] = 'is_mega = false';
 	}
-	$parameters = implode(" AND ", $param_array);
+	$parameters = implode(' AND ', $param_array);
 
-	$sql = "SELECT name, sprite_suffix, is_mega FROM forms WHERE " . $parameters . " ORDER BY rand() LIMIT 1";
+	$sql = 'SELECT name, sprite_suffix, is_mega FROM forms WHERE ' . $parameters . ' ORDER BY rand() LIMIT 1';
 
 	$db_output = $connection->query($sql);
 	$connection->close();
