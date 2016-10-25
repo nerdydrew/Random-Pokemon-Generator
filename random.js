@@ -6,10 +6,11 @@ function generateRandom() {
 	var nfes = document.getElementById('nfes').checked;
 	var natures = document.getElementById('natures').checked;
 	var sprites = document.getElementById('sprites').checked;
+	var forms = document.getElementById('forms').checked;
 	var region = document.getElementById('region').value;
 	var type = document.getElementById('type').value;
 
-	var url = "random?n="+n+"&ubers="+ubers+"&nfes="+nfes+"&natures="+natures+"&sprites="+sprites+"&region="+region+"&type="+type;
+	var url = "random?n="+n+"&ubers="+ubers+"&nfes="+nfes+"&natures="+natures+"&sprites="+sprites+"&forms="+forms+"&region="+region+"&type="+type;
 
 	if (window.XMLHttpRequest) {
 		var xmlhttp = new XMLHttpRequest();

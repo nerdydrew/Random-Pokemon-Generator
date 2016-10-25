@@ -10,11 +10,14 @@ class Parameters {
 	public static $region_list = array('kanto','johto','hoenn','sinnoh','sinnoh_pt','unova','unova_b2w2','kalos');
 	public static $type_list = array('bug','dark','dragon','electric','fairy','fighting','fire','flying','ghost','grass','ground','ice','normal','poison','psychic','rock','steel','water');
 
+	public static $nature_list = array('Adamant','Bashful','Bold','Brave','Calm','Careful','Docile','Gentle','Hardy','Hasty','Impish','Jolly','Lax','Lonely','Mild','Modest','Na&iuml;ve','Naughty','Quiet','Quirky','Rash','Relaxed','Sassy','Serious','Timid');
+
 	protected $n = 6;
 	protected $ubers = true;
 	protected $nfes = true;
 	protected $sprites = true;
 	protected $natures = false;
+	protected $forms = true;
 	protected $region = null;
 	protected $type = null;
 
@@ -78,6 +81,17 @@ class Parameters {
 		}
 	}
 
+	public function get_forms() {
+		return $this->forms;
+	}
+
+	public function set_forms($forms) {
+		$forms = filter_var($forms, FILTER_VALIDATE_BOOLEAN);
+		if (!is_null($forms)) {
+			$this->forms = $forms;
+		}
+	}
+
 	public function get_region() {
 		return $this->region;
 	}
@@ -124,7 +138,11 @@ class Parameters {
 			$table = 'national_dex';
 		}
 		if ($this->get_type() != null) {
-			$param_array[] = $this->get_type() . ' = true';
+			if ($this->get_forms()) {
+				$param_array[] = $this->get_type() . ' = true';
+			} else {
+				$param_array[] = '(type1 = "' . $this->get_type() . '" OR type2 = "' . $this->get_type() . '")';
+			}
 		}
 		$tier_parameter = $this->get_tier_sql('tier');
 		if ($tier_parameter != null) {
@@ -186,7 +204,7 @@ class Parameters {
 		while($row = $db_output->fetch_assoc()) {
 			$sprite_name = $row['id'];
 
-			if ($row['multiform']) {
+			if ($this->get_forms() && $row['multiform']) {
 				$form = $this->get_random_eligible_form($connection, $row['id'], $can_be_mega);
 				$row['name'] = $form['name'];
 				if ($form['sprite_suffix']) {
@@ -211,7 +229,7 @@ class Parameters {
 			}
 
 			if ($this->get_natures()) {
-				$row['nature'] = $nature_list[mt_rand(0, count($nature_list)-1)];
+				$row['nature'] = $this::$nature_list[mt_rand(0, count($this::$nature_list)-1)];
 			}
 
 			$pokemon_array[] = $row;
@@ -239,6 +257,9 @@ function validate_parameters($in_params) {
 	if (isset($in_params['natures'])) {
 		$params->set_natures($in_params['natures']);
 	}
+	if (isset($in_params['forms'])) {
+		$params->set_forms($in_params['forms']);
+	}
 	if (isset($in_params['region'])) {
 		$params->set_region($in_params['region']);
 	}
@@ -260,8 +281,3 @@ function generate_distinct_random_numbers($min, $max, $n) {
 	}
 	return $numbers;
 }
-
-
-//////// LISTS for generation of natures ////////
-
-$nature_list = array('Adamant','Bashful','Bold','Brave','Calm','Careful','Docile','Gentle','Hardy','Hasty','Impish','Jolly','Lax','Lonely','Mild','Modest','Na&iuml;ve','Naughty','Quiet','Quirky','Rash','Relaxed','Sassy','Serious','Timid');

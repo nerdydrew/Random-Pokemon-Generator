@@ -85,6 +85,7 @@ for ($i = $default::$n_low; $i <= $default::$n_high; $i++) {
 
 		<label><input type="checkbox" id="sprites" name="sprites" value="true"<?php if($default->get_sprites()){echo 'checked';} ?>>Sprites</label>
 		<label><input type="checkbox" id="natures" name="natures" value="true"<?php if($default->get_natures()){echo 'checked';} ?>>Natures</label>
+		<label><input type="checkbox" id="forms" name="forms" value="true"<?php if($default->get_forms()){echo 'checked';} ?>><abbr title="Allow alternate forms, such as Mega Evolutions.">Forms</abbr></label>
 
 		<input id="go" value="Generate!" type="button" onclick="generateRandom()">
 	</fieldset>
