@@ -98,19 +98,20 @@ class Parameters {
 		}
 	}
 
-	private function get_tier_sql($param_array, $tier_attribute) {
+	private function get_tier_sql($tier_attribute) {
 		if ($this->get_ubers() && $this->get_nfes()) {
 			// If we want to get ubers and NFEs as well as fully evolved Pokemon,
 			// no need to add a parameter for that.
+			return null;
 		} else if (!$this->get_ubers() && !$this->get_nfes()) {
 			// No Ubers and no NFEs - only fully evolved Pokemon.
-			$param_array[] = $tier_attribute . ' = "FE"';
+			return $tier_attribute . ' = "FE"';
 		} else {
 			// We want to query for 2 of the 3 tiers, leaving out either Ubers or NFEs.
 			if ($this->get_ubers()) {
-				$param_array[] = '(' . $tier_attribute . ' != "NFE")';
+				return '(' . $tier_attribute . ' != "NFE")';
 			} else if ($this->get_nfes()) {
-				$param_array[] = '(' . $tier_attribute . ' != "Uber")';
+				return '(' . $tier_attribute . ' != "Uber")';
 			}
 		}
 	}
@@ -125,7 +126,10 @@ class Parameters {
 		if ($this->get_type() != null) {
 			$param_array[] = $this->get_type() . ' = true';
 		}
-		$this->get_tier_sql($param_array, 'tier');
+		$tier_parameter = $this->get_tier_sql('tier');
+		if ($tier_parameter != null) {
+			$param_array[] = $tier_parameter;
+		}
 
 		$parameters = (count($param_array) > 0) ? 'WHERE ' . implode(' AND ', $param_array) : '';
 
@@ -153,7 +157,10 @@ class Parameters {
 		if ($this->get_type() != null) {
 			$param_array[] = '(type1 = "' . $this->get_type() . '" OR type2 = "' . $this->get_type() . '")';
 		}
-		$this->get_tier_sql($param_array, $tier_column);
+		$tier_parameter = $this->get_tier_sql($tier_column);
+		if ($tier_parameter != null) {
+			$param_array[] = $tier_parameter;
+		}
 
 		if (!$can_be_mega) {
 			$param_array[] = 'is_mega = false';
