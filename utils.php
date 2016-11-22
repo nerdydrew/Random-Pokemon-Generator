@@ -7,7 +7,7 @@ require_once 'config.php';
 class Parameters {
 	public static $n_low = 1;
 	public static $n_high = 6;
-	public static $region_list = array('kanto','johto','hoenn','sinnoh','sinnoh_pt','unova','unova_b2w2','kalos');
+	public static $region_list = array('kanto','johto','hoenn','sinnoh','sinnoh_pt','unova','unova_b2w2','kalos', 'alola');
 	public static $type_list = array('bug','dark','dragon','electric','fairy','fighting','fire','flying','ghost','grass','ground','ice','normal','poison','psychic','rock','steel','water');
 
 	public static $nature_list = array('Adamant','Bashful','Bold','Brave','Calm','Careful','Docile','Gentle','Hardy','Hasty','Impish','Jolly','Lax','Lonely','Mild','Modest','Na&iuml;ve','Naughty','Quiet','Quirky','Rash','Relaxed','Sassy','Serious','Timid');
@@ -225,7 +225,7 @@ class Parameters {
 			$row['shiny'] = (mt_rand(0,65535) < 16);
 
 			if ($this->get_sprites()) {
-				$row['sprite'] = ($row['shiny'] ? PATH_TO_SHINY_SPRITES : PATH_TO_SPRITES) . $sprite_name . SPRITE_EXTENTION;
+				$row['sprite'] = get_sprite_path($row, $sprite_name);
 			}
 
 			if ($this->get_natures()) {
@@ -241,6 +241,31 @@ class Parameters {
 }
 
 //////// FUNCTIONS ////////
+
+function get_sprite_path($row, $sprite_name) {
+	if ($row['shiny']) {
+		$animated_path = PATH_TO_SHINY_ANIMATED_SPRITES . $sprite_name . ANIMATED_SPRITE_EXTENTION;
+	} else {
+		$animated_path = PATH_TO_ANIMATED_SPRITES . $sprite_name . ANIMATED_SPRITE_EXTENTION;
+	}
+
+	if (file_exists(dirname(__FILE__) . $animated_path)) {
+		return $animated_path;
+	} else {
+		if ($row['shiny']) {
+			$regular_path = PATH_TO_SHINY_REGULAR_SPRITES . $sprite_name . REGULAR_SPRITE_EXTENTION;
+		} else {
+			$regular_path = PATH_TO_REGULAR_SPRITES . $sprite_name . REGULAR_SPRITE_EXTENTION;
+		}
+
+		if (file_exists(dirname(__FILE__) . $regular_path)) {
+			return $regular_path;
+		} else {
+			return DEFAULT_SPRITE;
+		}
+	}
+
+}
 
 function validate_parameters($in_params) {
 	$params = new Parameters();
