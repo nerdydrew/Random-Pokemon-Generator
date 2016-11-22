@@ -32,6 +32,7 @@ require_once 'utils.php';
 
 <header>
 	<h1>Random Pok&eacute;mon Generator</h1>
+	<h2>Now with Alola Pok&eacute;mon!</h2>
 </header>
 
 <form action="/" method="get" id="controls">
