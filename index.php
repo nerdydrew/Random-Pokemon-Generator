@@ -53,7 +53,8 @@ for ($i = $default::$n_low; $i <= $default::$n_high; $i++) {
 		<option value="sinnoh_pt">Sinnoh (Plat.)</option>
 		<option value="unova">Unova</option>
 		<option value="unova_b2w2">Unova (B2W2)</option>
-		<option value="kalos">Kalos</option></select>
+		<option value="kalos">Kalos</option>
+		<option value="alola">Alola</option></select>
 
 		<select name="type" id="type">
 		<option value="all">All Types</option>
