@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:8889
--- Generation Time: Nov 22, 2016 at 07:06 PM
+-- Generation Time: Dec 07, 2016 at 04:20 AM
 -- Server version: 5.5.42
 -- PHP Version: 5.6.10
 
@@ -712,7 +712,9 @@ INSERT INTO `forms` (`id`, `name`, `type1`, `type2`, `kanto_tier`, `johto_tier`,
 (103, 'Exeggutor', 'grass', 'psychic', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'FE', 'FE', '', 0),
 (103, 'Exeggutor Alola', 'grass', 'dragon', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'FE', 'FE', 'alola', 0),
 (105, 'Marowak', 'ground', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'FE', 'FE', '', 0),
-(105, 'Marowak Alola', 'fire', 'ghost', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'FE', 'FE', 'alola', 0);
+(105, 'Marowak Alola', 'fire', 'ghost', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'FE', 'FE', 'alola', 0),
+(658, 'Greninja', 'water', 'dark', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Uber', '', 0),
+(658, 'Ash''s Greninja', 'water', 'dark', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Uber', 'ash', 0);
 
 -- --------------------------------------------------------
 
@@ -2627,7 +2629,7 @@ INSERT INTO `national_dex` (`id`, `name`, `type1`, `type2`, `bug`, `dark`, `drag
 (655, 'Delphox', 'fire', 'psychic', 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 'FE', 0),
 (656, 'Froakie', 'water', NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 'NFE', 0),
 (657, 'Frogadier', 'water', NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 'NFE', 0),
-(658, 'Greninja', 'water', 'dark', 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 'FE', 0),
+(658, 'Greninja', 'water', 'dark', 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 'FE', 1),
 (659, 'Bunnelby', 'normal', NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 'NFE', 0),
 (660, 'Diggersby', 'normal', 'ground', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 'FE', 0),
 (661, 'Fletchling', 'normal', 'flying', 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 'NFE', 0),
@@ -3769,7 +3771,7 @@ INSERT INTO `unova_dex` (`id`, `name`, `type1`, `type2`, `bug`, `dark`, `dragon`
 -- Indexes for table `alola_dex`
 --
 ALTER TABLE `alola_dex`
-  ADD UNIQUE KEY `id` (`id`),
+  ADD PRIMARY KEY (`id`) USING BTREE,
   ADD KEY `unova` (`tier`) USING BTREE,
   ADD KEY `bug` (`bug`),
   ADD KEY `dark` (`dark`),
