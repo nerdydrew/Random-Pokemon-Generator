@@ -2629,7 +2629,7 @@ INSERT INTO `national_dex` (`id`, `name`, `type1`, `type2`, `bug`, `dark`, `drag
 (655, 'Delphox', 'fire', 'psychic', 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 'FE', 0),
 (656, 'Froakie', 'water', NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 'NFE', 0),
 (657, 'Frogadier', 'water', NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 'NFE', 0),
-(658, 'Greninja', 'water', 'dark', 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 'FE', 1),
+(658, 'Greninja', 'water', 'dark', 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 'Uber', 1),
 (659, 'Bunnelby', 'normal', NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 'NFE', 0),
 (660, 'Diggersby', 'normal', 'ground', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 'FE', 0),
 (661, 'Fletchling', 'normal', 'flying', 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 'NFE', 0),
