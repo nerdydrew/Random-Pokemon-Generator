@@ -10,8 +10,6 @@ class Parameters {
 	public static $region_list = array('kanto','johto','hoenn','sinnoh','sinnoh_pt','unova','unova_b2w2','kalos', 'alola');
 	public static $type_list = array('bug','dark','dragon','electric','fairy','fighting','fire','flying','ghost','grass','ground','ice','normal','poison','psychic','rock','steel','water');
 
-	public static $nature_list = array('Adamant','Bashful','Bold','Brave','Calm','Careful','Docile','Gentle','Hardy','Hasty','Impish','Jolly','Lax','Lonely','Mild','Modest','Na&iuml;ve','Naughty','Quiet','Quirky','Rash','Relaxed','Sassy','Serious','Timid');
-
 	protected $n = 6;
 	protected $ubers = true;
 	protected $nfes = true;
@@ -151,21 +149,10 @@ class Parameters {
 
 		$parameters = (count($param_array) > 0) ? 'WHERE ' . implode(' AND ', $param_array) : '';
 
-		// Connect to the database and execute the query.
-		if ($parameters == '' && $this->get_region() == null) {
-			// If we're generating from all Pokemon, it's much more efficient to generate
-			// IDs and then query them directly, rather than randomizing the whole database.
-			$max = $connection->query('SELECT COUNT(*) AS count FROM ' . $table)->fetch_object()->count;
-			$ids_array = generate_distinct_random_numbers(1, $max, $this->get_n());
-			$ids_string = implode(', ', $ids_array);
-			$sql = 'SELECT id, name, multiform FROM national_dex WHERE id IN (' . $ids_string . ') ORDER BY rand()';
-		} else {
-			$sql = 'SELECT id, name, multiform FROM ' . $table . ' ' . $parameters . ' ORDER BY rand() LIMIT ' . $this->get_n();
-		}
-		return $sql;
+		return 'SELECT id, name, multiform FROM ' . $table . ' ' . $parameters;
 	}
 
-	private function get_forms_sql($id, $can_be_mega) {
+	private function get_forms_sql($id) {
 		$param_array = array('id = ' . $id);
 		if ($this->get_region() != null) {
 			$tier_column = $this->get_region() . '_tier';
@@ -180,59 +167,32 @@ class Parameters {
 			$param_array[] = $tier_parameter;
 		}
 
-		if (!$can_be_mega) {
-			$param_array[] = 'is_mega = false';
-		}
 		$parameters = implode(' AND ', $param_array);
 
-		return 'SELECT name, sprite_suffix, is_mega FROM forms WHERE ' . $parameters . ' ORDER BY rand() LIMIT 1';
+		return 'SELECT id, name, sprite_suffix, is_mega FROM forms WHERE ' . $parameters;
 	}
 
-	private function get_random_eligible_form($connection, $id, $can_be_mega) {
-		$sql = $this->get_forms_sql($id, $can_be_mega);
+	private function get_eligible_forms($connection, $id) {
+		$sql = $this->get_forms_sql($id);
 		$db_output = $connection->query($sql);
-		return $db_output->fetch_assoc();
+		return $db_output->fetch_all(MYSQLI_ASSOC);
 	}
 
-	public function generate() {
+	// Generates a list of all Pokemon eligible to be generated based on the parameters.
+	public function get_list() {
 		$connection = new mysqli(SQL_HOST, SQL_USERNAME, SQL_PASSWORD, SQL_DATABASE);
 		$sql = $this->get_dex_sql($connection);
 		$db_output = $connection->query($sql);
 
-		$can_be_mega = true;
-
 		while($row = $db_output->fetch_assoc()) {
-			$sprite_name = $row['id'];
+			$this_pokemon = array('id' => $row['id'], 'name' => $row['name']);
 
 			if ($this->get_forms() && $row['multiform']) {
-				$form = $this->get_random_eligible_form($connection, $row['id'], $can_be_mega);
-				$row['name'] = $form['name'];
-				if ($form['sprite_suffix']) {
-					$sprite_name .= '-' . $form['sprite_suffix'];
-				}
-
-				// Yeah, this makes earlier Pokemon more likely to be megas than Pokemon
-				// later on in the list, but it's close enough for now.
-				if ($form['is_mega']) {
-					$can_be_mega = false;
-				}
-
-
-			}
-			unset($row['multiform']);
-
-			// Chance of being shiny. http://bulbapedia.bulbagarden.net/wiki/Shiny_Pok%C3%A9mon#Generation_VI
-			$row['shiny'] = (mt_rand(0,65535) < 16);
-
-			if ($this->get_sprites()) {
-				$row['sprite'] = get_sprite_path($row, $sprite_name);
+				$forms = $this->get_eligible_forms($connection, $row['id']);
+				$this_pokemon['forms'] = $forms;
 			}
 
-			if ($this->get_natures()) {
-				$row['nature'] = $this::$nature_list[mt_rand(0, count($this::$nature_list)-1)];
-			}
-
-			$pokemon_array[] = $row;
+			$pokemon_array[] = $this_pokemon;
 		}
 
 		$connection->close();
@@ -242,34 +202,11 @@ class Parameters {
 
 //////// FUNCTIONS ////////
 
-function get_sprite_path($row, $sprite_name) {
-	if ($row['shiny']) {
-		$animated_path = PATH_TO_SHINY_ANIMATED_SPRITES . $sprite_name . ANIMATED_SPRITE_EXTENTION;
-	} else {
-		$animated_path = PATH_TO_ANIMATED_SPRITES . $sprite_name . ANIMATED_SPRITE_EXTENTION;
-	}
-
-	if (file_exists(dirname(__FILE__) . $animated_path)) {
-		return $animated_path;
-	} else {
-		if ($row['shiny']) {
-			$regular_path = PATH_TO_SHINY_REGULAR_SPRITES . $sprite_name . REGULAR_SPRITE_EXTENTION;
-		} else {
-			$regular_path = PATH_TO_REGULAR_SPRITES . $sprite_name . REGULAR_SPRITE_EXTENTION;
-		}
-
-		if (file_exists(dirname(__FILE__) . $regular_path)) {
-			return $regular_path;
-		} else {
-			return DEFAULT_SPRITE;
-		}
-	}
-
-}
-
 function validate_parameters($in_params) {
 	$params = new Parameters();
-	$params->set_n($in_params['n']);
+	if (isset($in_params['n'])) {
+		$params->set_n($in_params['n']);
+	}
 	if (isset($in_params['ubers'])) {
 		$params->set_ubers($in_params['ubers']);
 	}
@@ -293,16 +230,4 @@ function validate_parameters($in_params) {
 	}
 
 	return $params;
-}
-
-// Most efficient for large ranges ($max-$min) and small $n values.
-function generate_distinct_random_numbers($min, $max, $n) {
-	$numbers = array();
-	while (count($numbers) < $n) {
-		$number = mt_rand($min, $max);
-		if (array_search($number, $numbers) === false) {
-			$numbers[] = $number;
-		}
-	}
-	return $numbers;
 }

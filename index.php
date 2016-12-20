@@ -21,7 +21,7 @@ require_once 'utils.php';
 	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#FF4A4A">
 	<meta name="theme-color" content="#FFFFFF">
 
-	<script src="analytics.js"></script>
+	<script src="config.js"></script>
 	<script>
 		logToAnalytics();
 	</script>
