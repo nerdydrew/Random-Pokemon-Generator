@@ -1,16 +1,13 @@
 // Called when the Generate button is clicked. Gets the form info
 // and initiates the AJAX request to generate random Pokémon.
 function generateRandom() {
-	var n = document.getElementById('n').value;
 	var ubers = document.getElementById('ubers').checked;
 	var nfes = document.getElementById('nfes').checked;
-	var natures = document.getElementById('natures').checked;
-	var sprites = document.getElementById('sprites').checked;
 	var forms = document.getElementById('forms').checked;
 	var region = document.getElementById('region').value;
 	var type = document.getElementById('type').value;
 
-	var url = "pokemon_list.php?n=" + n + "&ubers=" + ubers + "&nfes=" + nfes + "&natures=" + natures + "&sprites=" + sprites + "&forms=" + forms + "&region=" + region + "&type=" + type;
+	var url = "pokemon_list.php?ubers=" + ubers + "&nfes=" + nfes + "&forms=" + forms + "&region=" + region + "&type=" + type;
 
 	var xmlhttp = new XMLHttpRequest();
 
