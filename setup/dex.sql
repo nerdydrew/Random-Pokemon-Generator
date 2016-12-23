@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:8889
--- Generation Time: Dec 10, 2016 at 03:16 AM
+-- Generation Time: Dec 23, 2016 at 05:08 AM
 -- Server version: 5.5.42
 -- PHP Version: 5.6.10
 
@@ -54,7 +54,7 @@ CREATE TABLE `alola_dex` (
 INSERT INTO `alola_dex` (`id`, `name`, `type1`, `type2`, `bug`, `dark`, `dragon`, `electric`, `fairy`, `fighting`, `fire`, `flying`, `ghost`, `grass`, `ground`, `ice`, `normal`, `poison`, `psychic`, `rock`, `steel`, `water`, `tier`, `multiform`) VALUES
 (722, 'Rowlet', 'grass', 'flying', 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'NFE', 0),
 (723, 'Dartrix', 'grass', 'flying', 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'NFE', 0),
-(724, 'Decidueye', 'grass', 'ghost', 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'FE', 0),
+(724, 'Decidueye', 'grass', 'ghost', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'FE', 0),
 (725, 'Litten', 'fire', NULL, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'NFE', 0),
 (726, 'Torracat', 'fire', NULL, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'NFE', 0),
 (727, 'Incineroar', 'fire', 'dark', 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'FE', 0),
@@ -2695,7 +2695,7 @@ INSERT INTO `national_dex` (`id`, `name`, `type1`, `type2`, `bug`, `dark`, `drag
 (720, 'Hoopa', 'psychic', 'ghost', 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 'FE', 1),
 (722, 'Rowlet', 'grass', 'flying', 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'NFE', 0),
 (723, 'Dartrix', 'grass', 'flying', 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'NFE', 0),
-(724, 'Decidueye', 'grass', 'ghost', 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'FE', 0),
+(724, 'Decidueye', 'grass', 'ghost', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'FE', 0),
 (725, 'Litten', 'fire', NULL, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'NFE', 0),
 (726, 'Torracat', 'fire', NULL, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'NFE', 0),
 (727, 'Incineroar', 'fire', 'dark', 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'FE', 0),
