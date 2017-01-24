@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:8889
--- Generation Time: Dec 23, 2016 at 05:08 AM
+-- Generation Time: Jan 24, 2017 at 05:36 AM
 -- Server version: 5.5.42
 -- PHP Version: 5.6.10
 
@@ -353,7 +353,7 @@ INSERT INTO `alola_dex` (`id`, `name`, `type1`, `type2`, `bug`, `dark`, `dragon`
 (707, 'Klefki', 'steel', 'fairy', 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 'FE', 0),
 (708, 'Phantump', 'ghost', 'grass', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'NFE', 0),
 (709, 'Trevenant', 'ghost', 'grass', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'FE', 0),
-(718, 'Zygarde', 'dragon', 'ground', 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'FE', 0);
+(718, 'Zygarde', 'dragon', 'ground', 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'FE', 1);
 
 -- --------------------------------------------------------
 
@@ -714,7 +714,10 @@ INSERT INTO `forms` (`id`, `name`, `type1`, `type2`, `kanto_tier`, `johto_tier`,
 (105, 'Marowak', 'ground', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'FE', 'FE', '', 0),
 (105, 'Marowak Alola', 'fire', 'ghost', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'FE', 'FE', 'alola', 0),
 (658, 'Greninja', 'water', 'dark', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Uber', '', 0),
-(658, 'Ash''s Greninja', 'water', 'dark', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Uber', 'ash', 0);
+(658, 'Ash''s Greninja', 'water', 'dark', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Uber', 'ash', 0),
+(718, 'Zygarde Complete', 'dragon', 'ground', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'FE', 'FE', 'complete', 0),
+(718, 'Zygarde 10%', 'dragon', 'ground', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'FE', 'FE', '10', 0),
+(718, 'Zygarde', 'dragon', 'ground', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'FE', 'FE', '', 0);
 
 -- --------------------------------------------------------
 
@@ -2689,7 +2692,7 @@ INSERT INTO `national_dex` (`id`, `name`, `type1`, `type2`, `bug`, `dark`, `drag
 (715, 'Noivern', 'flying', 'dragon', 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'FE', 0),
 (716, 'Xerneas', 'fairy', NULL, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Uber', 0),
 (717, 'Yveltal', 'dark', 'flying', 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Uber', 0),
-(718, 'Zygarde', 'dragon', 'ground', 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'FE', 0),
+(718, 'Zygarde', 'dragon', 'ground', 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'FE', 1),
 (719, 'Diancie', 'rock', 'fairy', 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 'FE', 1),
 (721, 'Volcanion', 'fire', 'water', 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 'FE', 0),
 (720, 'Hoopa', 'psychic', 'ghost', 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 'FE', 1),
