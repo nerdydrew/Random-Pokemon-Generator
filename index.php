@@ -10,8 +10,6 @@ require_once 'utils.php';
 
 	<meta name="description" content="This tool generates random Pok&eacute;mon by region, type, and more.">
 
-	<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-
 	<link rel="alternate" type="application/rss+xml" title="Random Pok&eacute;mon Generator Feed" href="http://feeds.feedburner.com/RandomPokemonGenerator">
 
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -20,28 +18,21 @@ require_once 'utils.php';
 	<link rel="manifest" href="/manifest.json">
 	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#FF4A4A">
 	<meta name="theme-color" content="#FFFFFF">
-
-	<script src="config.js"></script>
-	<script>
-		logToAnalytics();
-	</script>
-	<script src="random.js"></script>
 </head>
 <body>
 
 
 <header>
 	<h1>Random Pok&eacute;mon Generator</h1>
-	<h2>Now with Alola Pok&eacute;mon!</h2>
 </header>
 
 <form action="/" method="get" id="controls">
 	<fieldset><label>Generate <select name="n" id="n"><?php
-	$default = new Parameters();
-for ($i = $default::$n_low; $i <= $default::$n_high; $i++) {
-	$selected_text = ($default->get_n()) ? ' selected' : '';
-	echo '<option value="' . $i . '"' . $selected_text . '>' . $i . '</option>';
-}
+		$default = new Parameters();
+		for ($i = $default::$n_low; $i <= $default::$n_high; $i++) {
+			$selected_text = ($default->get_n()) ? ' selected' : '';
+			echo '<option value="' . $i . '"' . $selected_text . '>' . $i . '</option>';
+		}
 		?></select>
 		Pok&eacute;mon.</label>
 
@@ -103,6 +94,12 @@ for ($i = $default::$n_low; $i <= $default::$n_high; $i++) {
 		<a href="mailto:hi@callmedrew.com">Contact</a> |
 		 Pok&eacute;mon is &copy; 1995-<?php echo date('Y'); ?> Nintendo. Website is &copy; <?php echo date('Y'); ?> <a href="http://callmedrew.com/">Drew Mitchell</a>.</p>
 </footer>
+
+<script src="config.js"></script>
+<script>
+	logToAnalytics();
+</script>
+<script src="random.js"></script>
 
 </body>
 </html>
