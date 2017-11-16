@@ -9,6 +9,6 @@ function logToAnalytics(url) {
 
 // These directories should contain sprites named by PokéDex ID
 // without leading zeros (e.g. "25.gif").
-define('PATH_TO_ANIMATED_SPRITES', '/sprites/animated/');
-define('PATH_TO_SHINY_ANIMATED_SPRITES', '/sprites/animated/shiny/');
-define('ANIMATED_SPRITE_EXTENTION', '.gif');
+define('PATH_TO_SPRITES', '/sprites/animated/');
+define('PATH_TO_SHINY_SPRITES', '/sprites/animated/shiny/');
+define('SPRITE_EXTENTION', '.gif');
