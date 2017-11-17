@@ -85,7 +85,6 @@ require_once 'utils.php';
 </form>
 
 <section id="results"></section>
-<div class="clear"></div>
 
 <footer>
 	<p>
