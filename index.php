@@ -6,17 +6,17 @@ require_once 'utils.php';
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Random Pok&eacute;mon Generator</title>
-	<link rel="stylesheet" type="text/css" href="/style.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 
 	<meta name="description" content="This tool generates random Pok&eacute;mon by region, type, and more.">
 
 	<link rel="alternate" type="application/rss+xml" title="Random Pok&eacute;mon Generator Feed" href="http://feeds.feedburner.com/RandomPokemonGenerator">
 
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-	<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-	<link rel="manifest" href="/manifest.json">
-	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#FF4A4A">
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="manifest.json">
+	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#FF4A4A">
 	<meta name="theme-color" content="#FFFFFF">
 </head>
 <body>
@@ -26,7 +26,7 @@ require_once 'utils.php';
 	<h1>Random Pok&eacute;mon Generator</h1>
 </header>
 
-<form action="/" method="get" id="controls">
+<form action="?" method="get" id="controls">
 	<fieldset><label>Generate <select name="n" id="n"><?php
 		$default = new Parameters();
 		for ($i = $default::$n_low; $i <= $default::$n_high; $i++) {
