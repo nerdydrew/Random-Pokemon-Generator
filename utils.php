@@ -7,7 +7,7 @@ require_once 'config.php';
 class Parameters {
 	public static $n_low = 1;
 	public static $n_high = 6;
-	public static $region_list = array('kanto','johto','hoenn','sinnoh','sinnoh_pt','unova','unova_b2w2','kalos', 'alola');
+	public static $region_list = array('kanto','johto','hoenn','sinnoh','sinnoh_pt','unova','unova_b2w2','kalos', 'alola', 'alola_usum');
 	public static $type_list = array('bug','dark','dragon','electric','fairy','fighting','fire','flying','ghost','grass','ground','ice','normal','poison','psychic','rock','steel','water');
 
 	protected $n = 6;
