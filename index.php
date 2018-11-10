@@ -24,7 +24,6 @@ require_once 'utils.php';
 
 <header>
 	<h1>Random Pok&eacute;mon Generator</h1>
-	<h2>Now updated for Ultra Sun and Ultra Moon!</h2>
 </header>
 
 <form action="?" method="get" id="controls">
