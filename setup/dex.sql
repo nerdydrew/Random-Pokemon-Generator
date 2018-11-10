@@ -1,12 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 4.7.3
--- https://www.phpmyadmin.net/
---
--- Host: localhost:8889
--- Generation Time: Nov 19, 2017 at 02:34 AM
--- Server version: 5.6.35
--- PHP Version: 7.1.8
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
@@ -792,7 +783,7 @@ INSERT INTO `alola_usum_dex` (`id`, `name`, `type1`, `type2`, `bug`, `dark`, `dr
 (714, 'Noibat', 'flying', 'dragon', 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'NFE', 0),
 (715, 'Noivern', 'flying', 'dragon', 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'FE', 0),
 (803, 'Poipole', 'poison', NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 'NFE', 0),
-(804, 'Naganadel', 'poison', 'dragon', 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 'FE', 0),
+(804, 'Naganadel', 'poison', 'dragon', 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 'Uber', 0),
 (805, 'Stakataka', 'rock', 'steel', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 'FE', 0),
 (806, 'Blacephalon', 'fire', 'ghost', 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'FE', 0),
 (807, 'Zeraora', 'electric', NULL, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'FE', 0);
@@ -3228,7 +3219,7 @@ INSERT INTO `national_dex` (`id`, `name`, `type1`, `type2`, `bug`, `dark`, `drag
 (801, 'Magearna', 'steel', 'fairy', 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 'FE', 0),
 (802, 'Marshadow', 'fighting', 'ghost', 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Uber', 0),
 (803, 'Poipole', 'poison', NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 'NFE', 0),
-(804, 'Naganadel', 'poison', 'dragon', 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 'FE', 0),
+(804, 'Naganadel', 'poison', 'dragon', 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 'Uber', 0),
 (805, 'Stakataka', 'rock', 'steel', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 'FE', 0),
 (806, 'Blacephalon', 'fire', 'ghost', 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'FE', 0),
 (807, 'Zeraora', 'electric', NULL, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'FE', 0);
