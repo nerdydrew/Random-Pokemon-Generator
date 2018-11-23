@@ -317,15 +317,12 @@
 		"forms": [
 			{
 				"name": "Basculin",
-				"types": ["water"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["water"]
 			},
 			{
 				"name": "Basculin",
 				"types": ["water"],
-				"sprite_suffix": "bluestriped",
-				"is_mega": "0"
+				"sprite_suffix": "bluestriped"
 			}
 		]
 	},
@@ -526,30 +523,25 @@
 			{
 				"name": "Deerling",
 				"is_nfe": true,
-				"types": ["normal", "grass"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["normal", "grass"]
 			},
 			{
 				"name": "Deerling",
 				"is_nfe": true,
 				"types": ["normal", "grass"],
-				"sprite_suffix": "autumn",
-				"is_mega": "0"
+				"sprite_suffix": "autumn"
 			},
 			{
 				"name": "Deerling",
 				"is_nfe": true,
 				"types": ["normal", "grass"],
-				"sprite_suffix": "summer",
-				"is_mega": "0"
+				"sprite_suffix": "summer"
 			},
 			{
 				"name": "Deerling",
 				"is_nfe": true,
 				"types": ["normal", "grass"],
-				"sprite_suffix": "winter",
-				"is_mega": "0"
+				"sprite_suffix": "winter"
 			}
 		]
 	},
@@ -560,27 +552,22 @@
 		"forms": [
 			{
 				"name": "Sawsbuck",
-				"types": ["normal", "grass"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["normal", "grass"]
 			},
 			{
 				"name": "Sawsbuck",
 				"types": ["normal", "grass"],
-				"sprite_suffix": "autumn",
-				"is_mega": "0"
+				"sprite_suffix": "autumn"
 			},
 			{
 				"name": "Sawsbuck",
 				"types": ["normal", "grass"],
-				"sprite_suffix": "summer",
-				"is_mega": "0"
+				"sprite_suffix": "summer"
 			},
 			{
 				"name": "Sawsbuck",
 				"types": ["normal", "grass"],
-				"sprite_suffix": "winter",
-				"is_mega": "0"
+				"sprite_suffix": "winter"
 			}
 		]
 	},
@@ -620,16 +607,13 @@
 			{
 				"name": "Frillish",
 				"is_nfe": true,
-				"types": ["water", "ghost"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["water", "ghost"]
 			},
 			{
 				"name": "Frillish",
 				"is_nfe": true,
 				"types": ["water", "ghost"],
-				"sprite_suffix": "f",
-				"is_mega": "0"
+				"sprite_suffix": "f"
 			}
 		]
 	},
@@ -641,14 +625,11 @@
 			{
 				"name": "Jellicent",
 				"types": ["water", "ghost"],
-				"sprite_suffix": "f",
-				"is_mega": "0"
+				"sprite_suffix": "f"
 			},
 			{
 				"name": "Jellicent",
-				"types": ["water", "ghost"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["water", "ghost"]
 			}
 		]
 	},
@@ -917,16 +898,13 @@
 			{
 				"name": "Tornadus",
 				"is_uber": true,
-				"types": ["flying"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["flying"]
 			},
 			{
 				"name": "Tornadus Therian",
 				"is_uber": true,
 				"types": ["flying"],
-				"sprite_suffix": "therian",
-				"is_mega": "0"
+				"sprite_suffix": "therian"
 			}
 		]
 	},
@@ -937,15 +915,12 @@
 		"forms": [
 			{
 				"name": "Thundurus",
-				"types": ["electric", "flying"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["electric", "flying"]
 			},
 			{
 				"name": "Thundurus Therian",
 				"types": ["electric", "flying"],
-				"sprite_suffix": "therian",
-				"is_mega": "0"
+				"sprite_suffix": "therian"
 			}
 		]
 	},
@@ -970,15 +945,12 @@
 			{
 				"name": "Landorus",
 				"is_uber": true,
-				"types": ["ground", "flying"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["ground", "flying"]
 			},
 			{
 				"name": "Landorus Therian",
 				"types": ["ground", "flying"],
-				"sprite_suffix": "therian",
-				"is_mega": "0"
+				"sprite_suffix": "therian"
 			}
 		]
 	},
@@ -990,22 +962,18 @@
 		"forms": [
 			{
 				"name": "Kyurem",
-				"types": ["dragon", "ice"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["dragon", "ice"]
 			},
 			{
 				"name": "Kyurem Black",
 				"types": ["dragon", "ice"],
-				"sprite_suffix": "black",
-				"is_mega": "0"
+				"sprite_suffix": "black"
 			},
 			{
 				"name": "Kyurem White",
 				"is_uber": true,
 				"types": ["dragon", "ice"],
-				"sprite_suffix": "white",
-				"is_mega": "0"
+				"sprite_suffix": "white"
 			}
 		]
 	},
@@ -1016,15 +984,12 @@
 		"forms": [
 			{
 				"name": "Keldeo",
-				"types": ["water", "fighting"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["water", "fighting"]
 			},
 			{
 				"name": "Keldeo",
 				"types": ["water", "fighting"],
-				"sprite_suffix": "resolute",
-				"is_mega": "0"
+				"sprite_suffix": "resolute"
 			}
 		]
 	},
@@ -1035,15 +1000,12 @@
 		"forms": [
 			{
 				"name": "Meloetta",
-				"types": ["normal", "psychic"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["normal", "psychic"]
 			},
 			{
 				"name": "Meloetta Pirouette",
 				"types": ["normal", "fighting"],
-				"sprite_suffix": "pirouette",
-				"is_mega": "0"
+				"sprite_suffix": "pirouette"
 			}
 		]
 	},
@@ -1056,37 +1018,31 @@
 			{
 				"name": "Genesect",
 				"is_uber": true,
-				"types": ["bug", "steel"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["bug", "steel"]
 			},
 			{
 				"name": "Genesect",
 				"is_uber": true,
 				"types": ["bug", "steel"],
-				"sprite_suffix": "burn",
-				"is_mega": "0"
+				"sprite_suffix": "burn"
 			},
 			{
 				"name": "Genesect",
 				"is_uber": true,
 				"types": ["bug", "steel"],
-				"sprite_suffix": "chill",
-				"is_mega": "0"
+				"sprite_suffix": "chill"
 			},
 			{
 				"name": "Genesect",
 				"is_uber": true,
 				"types": ["bug", "steel"],
-				"sprite_suffix": "douse",
-				"is_mega": "0"
+				"sprite_suffix": "douse"
 			},
 			{
 				"name": "Genesect",
 				"is_uber": true,
 				"types": ["bug", "steel"],
-				"sprite_suffix": "shock",
-				"is_mega": "0"
+				"sprite_suffix": "shock"
 			}
 		]
 	}

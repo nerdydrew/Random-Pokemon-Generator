@@ -919,27 +919,22 @@
 		"forms": [
 			{
 				"name": "Castform",
-				"types": ["normal"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["normal"]
 			},
 			{
 				"name": "Castform",
 				"types": ["water"],
-				"sprite_suffix": "rainy",
-				"is_mega": "0"
+				"sprite_suffix": "rainy"
 			},
 			{
 				"name": "Castform",
 				"types": ["ice"],
-				"sprite_suffix": "snowy",
-				"is_mega": "0"
+				"sprite_suffix": "snowy"
 			},
 			{
 				"name": "Castform",
 				"types": ["fire"],
-				"sprite_suffix": "sunny",
-				"is_mega": "0"
+				"sprite_suffix": "sunny"
 			}
 		]
 	},
@@ -1138,30 +1133,25 @@
 			{
 				"name": "Deoxys",
 				"is_uber": true,
-				"types": ["psychic"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["psychic"]
 			},
 			{
 				"name": "Deoxys Attack",
 				"is_uber": true,
 				"types": ["psychic"],
-				"sprite_suffix": "attack",
-				"is_mega": "0"
+				"sprite_suffix": "attack"
 			},
 			{
 				"name": "Deoxys Defense",
 				"is_uber": true,
 				"types": ["psychic"],
-				"sprite_suffix": "defense",
-				"is_mega": "0"
+				"sprite_suffix": "defense"
 			},
 			{
 				"name": "Deoxys Speed",
 				"is_uber": true,
 				"types": ["psychic"],
-				"sprite_suffix": "speed",
-				"is_mega": "0"
+				"sprite_suffix": "speed"
 			}
 		]
 	}

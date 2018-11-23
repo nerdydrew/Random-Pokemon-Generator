@@ -114,26 +114,22 @@
 			{
 				"name": "Oricorio",
 				"types": ["fire", "flying"],
-				"sprite_suffix": "baile",
-				"is_mega": "0"
+				"sprite_suffix": "baile"
 			},
 			{
 				"name": "Oricorio",
 				"types": ["electric", "flying"],
-				"sprite_suffix": "pom-pom",
-				"is_mega": "0"
+				"sprite_suffix": "pom-pom"
 			},
 			{
 				"name": "Oricorio",
 				"types": ["psychic", "flying"],
-				"sprite_suffix": "pau",
-				"is_mega": "0"
+				"sprite_suffix": "pau"
 			},
 			{
 				"name": "Oricorio",
 				"types": ["ghost", "flying"],
-				"sprite_suffix": "sensu",
-				"is_mega": "0"
+				"sprite_suffix": "sensu"
 			}
 		]
 	},
@@ -162,20 +158,17 @@
 			{
 				"name": "Lycanroc",
 				"types": ["rock"],
-				"sprite_suffix": "dusk",
-				"is_mega": "0"
+				"sprite_suffix": "dusk"
 			},
 			{
 				"name": "Lycanroc",
 				"types": ["rock"],
-				"sprite_suffix": "midday",
-				"is_mega": "0"
+				"sprite_suffix": "midday"
 			},
 			{
 				"name": "Lycanroc",
 				"types": ["rock"],
-				"sprite_suffix": "midnight",
-				"is_mega": "0"
+				"sprite_suffix": "midnight"
 			}
 		]
 	},
@@ -187,14 +180,12 @@
 			{
 				"name": "Wishiwashi School",
 				"types": ["water"],
-				"sprite_suffix": "school",
-				"is_mega": "0"
+				"sprite_suffix": "school"
 			},
 			{
 				"name": "Wishiwashi",
 				"types": ["water"],
-				"sprite_suffix": "solo",
-				"is_mega": "0"
+				"sprite_suffix": "solo"
 			}
 		]
 	},
@@ -348,110 +339,92 @@
 			{
 				"name": "Silvally",
 				"types": ["bug"],
-				"sprite_suffix": "bug",
-				"is_mega": "0"
+				"sprite_suffix": "bug"
 			},
 			{
 				"name": "Silvally",
 				"types": ["dark"],
-				"sprite_suffix": "dark",
-				"is_mega": "0"
+				"sprite_suffix": "dark"
 			},
 			{
 				"name": "Silvally",
 				"types": ["dragon"],
-				"sprite_suffix": "dragon",
-				"is_mega": "0"
+				"sprite_suffix": "dragon"
 			},
 			{
 				"name": "Silvally",
 				"types": ["electric"],
-				"sprite_suffix": "electric",
-				"is_mega": "0"
+				"sprite_suffix": "electric"
 			},
 			{
 				"name": "Silvally",
 				"types": ["fairy"],
-				"sprite_suffix": "fairy",
-				"is_mega": "0"
+				"sprite_suffix": "fairy"
 			},
 			{
 				"name": "Silvally",
 				"types": ["fighting"],
-				"sprite_suffix": "fighting",
-				"is_mega": "0"
+				"sprite_suffix": "fighting"
 			},
 			{
 				"name": "Silvally",
 				"types": ["fire"],
-				"sprite_suffix": "fire",
-				"is_mega": "0"
+				"sprite_suffix": "fire"
 			},
 			{
 				"name": "Silvally",
 				"types": ["flying"],
-				"sprite_suffix": "flying",
-				"is_mega": "0"
+				"sprite_suffix": "flying"
 			},
 			{
 				"name": "Silvally",
 				"types": ["ghost"],
-				"sprite_suffix": "ghost",
-				"is_mega": "0"
+				"sprite_suffix": "ghost"
 			},
 			{
 				"name": "Silvally",
 				"types": ["grass"],
-				"sprite_suffix": "grass",
-				"is_mega": "0"
+				"sprite_suffix": "grass"
 			},
 			{
 				"name": "Silvally",
 				"types": ["ground"],
-				"sprite_suffix": "ground",
-				"is_mega": "0"
+				"sprite_suffix": "ground"
 			},
 			{
 				"name": "Silvally",
 				"types": ["ice"],
-				"sprite_suffix": "ice",
-				"is_mega": "0"
+				"sprite_suffix": "ice"
 			},
 			{
 				"name": "Silvally",
 				"types": ["normal"],
-				"sprite_suffix": "normal",
-				"is_mega": "0"
+				"sprite_suffix": "normal"
 			},
 			{
 				"name": "Silvally",
 				"types": ["poison"],
-				"sprite_suffix": "poison",
-				"is_mega": "0"
+				"sprite_suffix": "poison"
 			},
 			{
 				"name": "Silvally",
 				"types": ["psychic"],
-				"sprite_suffix": "psychic",
-				"is_mega": "0"
+				"sprite_suffix": "psychic"
 			},
 			{
 				"name": "Silvally",
 				"types": ["rock"],
-				"sprite_suffix": "rock",
-				"is_mega": "0"
+				"sprite_suffix": "rock"
 			},
 			{
 				"name": "Silvally",
 				"types": ["steel"],
-				"sprite_suffix": "steel",
-				"is_mega": "0"
+				"sprite_suffix": "steel"
 			},
 			{
 				"name": "Silvally",
 				"types": ["water"],
-				"sprite_suffix": "water",
-				"is_mega": "0"
+				"sprite_suffix": "water"
 			}
 		]
 	},
@@ -463,50 +436,42 @@
 			{
 				"name": "Minior Core",
 				"types": ["rock", "flying"],
-				"sprite_suffix": "blue",
-				"is_mega": "0"
+				"sprite_suffix": "blue"
 			},
 			{
 				"name": "Minior Core",
 				"types": ["rock", "flying"],
-				"sprite_suffix": "green",
-				"is_mega": "0"
+				"sprite_suffix": "green"
 			},
 			{
 				"name": "Minior Core",
 				"types": ["rock", "flying"],
-				"sprite_suffix": "indigo",
-				"is_mega": "0"
+				"sprite_suffix": "indigo"
 			},
 			{
 				"name": "Minior",
 				"types": ["rock", "flying"],
-				"sprite_suffix": "meteor",
-				"is_mega": "0"
+				"sprite_suffix": "meteor"
 			},
 			{
 				"name": "Minior Core",
 				"types": ["rock", "flying"],
-				"sprite_suffix": "orange",
-				"is_mega": "0"
+				"sprite_suffix": "orange"
 			},
 			{
 				"name": "Minior Core",
 				"types": ["rock", "flying"],
-				"sprite_suffix": "red",
-				"is_mega": "0"
+				"sprite_suffix": "red"
 			},
 			{
 				"name": "Minior Core",
 				"types": ["rock", "flying"],
-				"sprite_suffix": "violet",
-				"is_mega": "0"
+				"sprite_suffix": "violet"
 			},
 			{
 				"name": "Minior Core",
 				"types": ["rock", "flying"],
-				"sprite_suffix": "yellow",
-				"is_mega": "0"
+				"sprite_suffix": "yellow"
 			}
 		]
 	},
@@ -684,16 +649,13 @@
 			{
 				"name": "Rattata",
 				"is_nfe": true,
-				"types": ["normal"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["normal"]
 			},
 			{
 				"name": "Rattata Alola",
 				"is_nfe": true,
 				"types": ["dark", "normal"],
-				"sprite_suffix": "alola",
-				"is_mega": "0"
+				"sprite_suffix": "alola"
 			}
 		]
 	},
@@ -704,15 +666,12 @@
 		"forms": [
 			{
 				"name": "Raticate",
-				"types": ["normal"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["normal"]
 			},
 			{
 				"name": "Raticate Alola",
 				"types": ["dark", "normal"],
-				"sprite_suffix": "alola",
-				"is_mega": "0"
+				"sprite_suffix": "alola"
 			}
 		]
 	},
@@ -740,15 +699,12 @@
 		"forms": [
 			{
 				"name": "Raichu",
-				"types": ["electric"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["electric"]
 			},
 			{
 				"name": "Raichu Alola",
 				"types": ["electric", "psychic"],
-				"sprite_suffix": "alola",
-				"is_mega": "0"
+				"sprite_suffix": "alola"
 			}
 		]
 	},
@@ -761,16 +717,13 @@
 			{
 				"name": "Sandshrew",
 				"is_nfe": true,
-				"types": ["ground"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["ground"]
 			},
 			{
 				"name": "Sandshrew Alola",
 				"is_nfe": true,
 				"types": ["ice", "steel"],
-				"sprite_suffix": "alola",
-				"is_mega": "0"
+				"sprite_suffix": "alola"
 			}
 		]
 	},
@@ -781,15 +734,12 @@
 		"forms": [
 			{
 				"name": "Sandslash",
-				"types": ["ground"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["ground"]
 			},
 			{
 				"name": "Sandslash Alola",
 				"types": ["ice", "steel"],
-				"sprite_suffix": "alola",
-				"is_mega": "0"
+				"sprite_suffix": "alola"
 			}
 		]
 	},
@@ -813,16 +763,13 @@
 			{
 				"name": "Vulpix",
 				"is_nfe": true,
-				"types": ["fire"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["fire"]
 			},
 			{
 				"name": "Vulpix Alola",
 				"is_nfe": true,
 				"types": ["ice"],
-				"sprite_suffix": "alola",
-				"is_mega": "0"
+				"sprite_suffix": "alola"
 			}
 		]
 	},
@@ -833,15 +780,12 @@
 		"forms": [
 			{
 				"name": "Ninetales",
-				"types": ["fire"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["fire"]
 			},
 			{
 				"name": "Ninetales Alola",
 				"types": ["ice", "fairy"],
-				"sprite_suffix": "alola",
-				"is_mega": "0"
+				"sprite_suffix": "alola"
 			}
 		]
 	},
@@ -888,16 +832,13 @@
 			{
 				"name": "Diglett",
 				"is_nfe": true,
-				"types": ["ground"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["ground"]
 			},
 			{
 				"name": "Diglett Alola",
 				"is_nfe": true,
 				"types": ["ground", "steel"],
-				"sprite_suffix": "alola",
-				"is_mega": "0"
+				"sprite_suffix": "alola"
 			}
 		]
 	},
@@ -908,15 +849,12 @@
 		"forms": [
 			{
 				"name": "Dugtrio",
-				"types": ["ground"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["ground"]
 			},
 			{
 				"name": "Dugtrio Alola",
 				"types": ["ground", "steel"],
-				"sprite_suffix": "alola",
-				"is_mega": "0"
+				"sprite_suffix": "alola"
 			}
 		]
 	},
@@ -929,16 +867,13 @@
 			{
 				"name": "Meowth",
 				"is_nfe": true,
-				"types": ["normal"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["normal"]
 			},
 			{
 				"name": "Meowth Alola",
 				"is_nfe": true,
 				"types": ["dark"],
-				"sprite_suffix": "alola",
-				"is_mega": "0"
+				"sprite_suffix": "alola"
 			}
 		]
 	},
@@ -949,15 +884,12 @@
 		"forms": [
 			{
 				"name": "Persian",
-				"types": ["normal"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["normal"]
 			},
 			{
 				"name": "Persian Alola",
 				"types": ["dark"],
-				"sprite_suffix": "alola",
-				"is_mega": "0"
+				"sprite_suffix": "alola"
 			}
 		]
 	},
@@ -1030,15 +962,13 @@
 		"forms": [
 			{
 				"name": "Alakazam",
-				"types": ["psychic"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["psychic"]
 			},
 			{
 				"name": "Alakazam Mega",
 				"types": ["psychic"],
 				"sprite_suffix": "mega",
-				"is_mega": "1"
+				"is_mega": true
 			}
 		]
 	},
@@ -1079,16 +1009,13 @@
 			{
 				"name": "Geodude",
 				"is_nfe": true,
-				"types": ["rock", "ground"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["rock", "ground"]
 			},
 			{
 				"name": "Geodude Alola",
 				"is_nfe": true,
 				"types": ["rock", "electric"],
-				"sprite_suffix": "alola",
-				"is_mega": "0"
+				"sprite_suffix": "alola"
 			}
 		]
 	},
@@ -1101,16 +1028,13 @@
 			{
 				"name": "Graveler",
 				"is_nfe": true,
-				"types": ["rock", "ground"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["rock", "ground"]
 			},
 			{
 				"name": "Graveler Alola",
 				"is_nfe": true,
 				"types": ["rock", "electric"],
-				"sprite_suffix": "alola",
-				"is_mega": "0"
+				"sprite_suffix": "alola"
 			}
 		]
 	},
@@ -1121,15 +1045,12 @@
 		"forms": [
 			{
 				"name": "Golem",
-				"types": ["rock", "ground"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["rock", "ground"]
 			},
 			{
 				"name": "Golem Alola",
 				"types": ["rock", "electric"],
-				"sprite_suffix": "alola",
-				"is_mega": "0"
+				"sprite_suffix": "alola"
 			}
 		]
 	},
@@ -1146,15 +1067,13 @@
 		"forms": [
 			{
 				"name": "Slowbro",
-				"types": ["water", "psychic"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["water", "psychic"]
 			},
 			{
 				"name": "Slowbro Mega",
 				"types": ["water", "psychic"],
 				"sprite_suffix": "mega",
-				"is_mega": "1"
+				"is_mega": true
 			}
 		]
 	},
@@ -1179,16 +1098,13 @@
 			{
 				"name": "Grimer",
 				"is_nfe": true,
-				"types": ["poison"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["poison"]
 			},
 			{
 				"name": "Grimer Alola",
 				"is_nfe": true,
 				"types": ["poison", "dark"],
-				"sprite_suffix": "alola",
-				"is_mega": "0"
+				"sprite_suffix": "alola"
 			}
 		]
 	},
@@ -1199,15 +1115,12 @@
 		"forms": [
 			{
 				"name": "Muk",
-				"types": ["poison"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["poison"]
 			},
 			{
 				"name": "Muk Alola",
 				"types": ["poison", "dark"],
-				"sprite_suffix": "alola",
-				"is_mega": "0"
+				"sprite_suffix": "alola"
 			}
 		]
 	},
@@ -1241,16 +1154,14 @@
 		"forms": [
 			{
 				"name": "Gengar",
-				"types": ["ghost", "poison"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["ghost", "poison"]
 			},
 			{
 				"name": "Gengar Mega",
 				"is_uber": true,
 				"types": ["ghost", "poison"],
 				"sprite_suffix": "mega",
-				"is_mega": "1"
+				"is_mega": true
 			}
 		]
 	},
@@ -1278,15 +1189,12 @@
 		"forms": [
 			{
 				"name": "Exeggutor",
-				"types": ["grass", "psychic"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["grass", "psychic"]
 			},
 			{
 				"name": "Exeggutor Alola",
 				"types": ["grass", "dragon"],
-				"sprite_suffix": "alola",
-				"is_mega": "0"
+				"sprite_suffix": "alola"
 			}
 		]
 	},
@@ -1303,15 +1211,12 @@
 		"forms": [
 			{
 				"name": "Marowak",
-				"types": ["ground"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["ground"]
 			},
 			{
 				"name": "Marowak Alola",
 				"types": ["fire", "ghost"],
-				"sprite_suffix": "alola",
-				"is_mega": "0"
+				"sprite_suffix": "alola"
 			}
 		]
 	},
@@ -1328,16 +1233,14 @@
 		"forms": [
 			{
 				"name": "Kangaskhan",
-				"types": ["normal"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["normal"]
 			},
 			{
 				"name": "Kangaskhan Mega",
 				"is_uber": true,
 				"types": ["normal"],
 				"sprite_suffix": "mega",
-				"is_mega": "1"
+				"is_mega": true
 			}
 		]
 	},
@@ -1388,15 +1291,13 @@
 		"forms": [
 			{
 				"name": "Pinsir",
-				"types": ["bug"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["bug"]
 			},
 			{
 				"name": "Pinsir Mega",
 				"types": ["bug", "flying"],
 				"sprite_suffix": "mega",
-				"is_mega": "1"
+				"is_mega": true
 			}
 		]
 	},
@@ -1418,15 +1319,13 @@
 		"forms": [
 			{
 				"name": "Gyarados",
-				"types": ["water", "flying"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["water", "flying"]
 			},
 			{
 				"name": "Gyarados Mega",
 				"types": ["water", "dark"],
 				"sprite_suffix": "mega",
-				"is_mega": "1"
+				"is_mega": true
 			}
 		]
 	},
@@ -1474,15 +1373,13 @@
 		"forms": [
 			{
 				"name": "Aerodactyl",
-				"types": ["rock", "flying"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["rock", "flying"]
 			},
 			{
 				"name": "Aerodactyl Mega",
 				"types": ["rock", "flying"],
 				"sprite_suffix": "mega",
-				"is_mega": "1"
+				"is_mega": true
 			}
 		]
 	},
@@ -1619,15 +1516,13 @@
 		"forms": [
 			{
 				"name": "Scizor",
-				"types": ["bug", "steel"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["bug", "steel"]
 			},
 			{
 				"name": "Scizor Mega",
 				"types": ["bug", "steel"],
 				"sprite_suffix": "mega",
-				"is_mega": "1"
+				"is_mega": true
 			}
 		]
 	},
@@ -1731,15 +1626,13 @@
 		"forms": [
 			{
 				"name": "Sableye",
-				"types": ["dark", "ghost"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["dark", "ghost"]
 			},
 			{
 				"name": "Sableye Mega",
 				"types": ["dark", "ghost"],
 				"sprite_suffix": "mega",
-				"is_mega": "1"
+				"is_mega": true
 			}
 		]
 	},
@@ -1756,15 +1649,13 @@
 		"forms": [
 			{
 				"name": "Sharpedo",
-				"types": ["water", "dark"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["water", "dark"]
 			},
 			{
 				"name": "Sharpedo Mega",
 				"types": ["water", "dark"],
 				"sprite_suffix": "mega",
-				"is_mega": "1"
+				"is_mega": true
 			}
 		]
 	},
@@ -1835,27 +1726,22 @@
 		"forms": [
 			{
 				"name": "Castform",
-				"types": ["normal"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["normal"]
 			},
 			{
 				"name": "Castform",
 				"types": ["water"],
-				"sprite_suffix": "rainy",
-				"is_mega": "0"
+				"sprite_suffix": "rainy"
 			},
 			{
 				"name": "Castform",
 				"types": ["ice"],
-				"sprite_suffix": "snowy",
-				"is_mega": "0"
+				"sprite_suffix": "snowy"
 			},
 			{
 				"name": "Castform",
 				"types": ["fire"],
-				"sprite_suffix": "sunny",
-				"is_mega": "0"
+				"sprite_suffix": "sunny"
 			}
 		]
 	},
@@ -1866,15 +1752,13 @@
 		"forms": [
 			{
 				"name": "Absol",
-				"types": ["dark"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["dark"]
 			},
 			{
 				"name": "Absol Mega",
 				"types": ["dark"],
 				"sprite_suffix": "mega",
-				"is_mega": "1"
+				"is_mega": true
 			}
 		]
 	},
@@ -1891,15 +1775,13 @@
 		"forms": [
 			{
 				"name": "Glalie",
-				"types": ["ice"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["ice"]
 			},
 			{
 				"name": "Glalie Mega",
 				"types": ["ice"],
 				"sprite_suffix": "mega",
-				"is_mega": "1"
+				"is_mega": true
 			}
 		]
 	},
@@ -1932,16 +1814,14 @@
 		"forms": [
 			{
 				"name": "Salamence",
-				"types": ["dragon", "flying"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["dragon", "flying"]
 			},
 			{
 				"name": "Salamence Mega",
 				"is_uber": true,
 				"types": ["dragon", "flying"],
 				"sprite_suffix": "mega",
-				"is_mega": "1"
+				"is_mega": true
 			}
 		]
 	},
@@ -1964,16 +1844,14 @@
 		"forms": [
 			{
 				"name": "Metagross",
-				"types": ["steel", "psychic"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["steel", "psychic"]
 			},
 			{
 				"name": "Metagross Mega",
 				"is_uber": true,
 				"types": ["steel", "psychic"],
 				"sprite_suffix": "mega",
-				"is_mega": "1"
+				"is_mega": true
 			}
 		]
 	},
@@ -2008,16 +1886,13 @@
 			{
 				"name": "Shellos",
 				"is_nfe": true,
-				"types": ["water"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["water"]
 			},
 			{
 				"name": "Shellos",
 				"is_nfe": true,
 				"types": ["water"],
-				"sprite_suffix": "east",
-				"is_mega": "0"
+				"sprite_suffix": "east"
 			}
 		]
 	},
@@ -2028,15 +1903,12 @@
 		"forms": [
 			{
 				"name": "Gastrodon",
-				"types": ["water", "ground"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["water", "ground"]
 			},
 			{
 				"name": "Gastrodon",
 				"types": ["water", "ground"],
-				"sprite_suffix": "east",
-				"is_mega": "0"
+				"sprite_suffix": "east"
 			}
 		]
 	},
@@ -2092,15 +1964,13 @@
 		"forms": [
 			{
 				"name": "Garchomp",
-				"types": ["dragon", "ground"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["dragon", "ground"]
 			},
 			{
 				"name": "Garchomp Mega",
 				"types": ["dragon", "ground"],
 				"sprite_suffix": "mega",
-				"is_mega": "1"
+				"is_mega": true
 			}
 		]
 	},
@@ -2123,16 +1993,14 @@
 		"forms": [
 			{
 				"name": "Lucario",
-				"types": ["fighting", "steel"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["fighting", "steel"]
 			},
 			{
 				"name": "Lucario Mega",
 				"is_uber": true,
 				"types": ["fighting", "steel"],
 				"sprite_suffix": "mega",
-				"is_mega": "1"
+				"is_mega": true
 			}
 		]
 	},
@@ -2427,20 +2295,16 @@
 				"name": "Zygarde Complete",
 				"is_uber": true,
 				"types": ["dragon", "ground"],
-				"sprite_suffix": "complete",
-				"is_mega": "0"
+				"sprite_suffix": "complete"
 			},
 			{
 				"name": "Zygarde 10%",
 				"types": ["dragon", "ground"],
-				"sprite_suffix": "10",
-				"is_mega": "0"
+				"sprite_suffix": "10"
 			},
 			{
 				"name": "Zygarde",
-				"types": ["dragon", "ground"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["dragon", "ground"]
 			}
 		]
 	}

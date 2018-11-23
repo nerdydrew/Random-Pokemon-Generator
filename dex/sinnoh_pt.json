@@ -367,171 +367,142 @@
 		"forms": [
 			{
 				"name": "Unown A",
-				"types": ["psychic"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["psychic"]
 			},
 			{
 				"name": "Unown B",
 				"types": ["psychic"],
-				"sprite_suffix": "b",
-				"is_mega": "0"
+				"sprite_suffix": "b"
 			},
 			{
 				"name": "Unown C",
 				"types": ["psychic"],
-				"sprite_suffix": "c",
-				"is_mega": "0"
+				"sprite_suffix": "c"
 			},
 			{
 				"name": "Unown D",
 				"types": ["psychic"],
-				"sprite_suffix": "d",
-				"is_mega": "0"
+				"sprite_suffix": "d"
 			},
 			{
 				"name": "Unown E",
 				"types": ["psychic"],
-				"sprite_suffix": "e",
-				"is_mega": "0"
+				"sprite_suffix": "e"
 			},
 			{
 				"name": "Unown F",
 				"types": ["psychic"],
-				"sprite_suffix": "f",
-				"is_mega": "0"
+				"sprite_suffix": "f"
 			},
 			{
 				"name": "Unown G",
 				"types": ["psychic"],
-				"sprite_suffix": "g",
-				"is_mega": "0"
+				"sprite_suffix": "g"
 			},
 			{
 				"name": "Unown H",
 				"types": ["psychic"],
-				"sprite_suffix": "h",
-				"is_mega": "0"
+				"sprite_suffix": "h"
 			},
 			{
 				"name": "Unown I",
 				"types": ["psychic"],
-				"sprite_suffix": "i",
-				"is_mega": "0"
+				"sprite_suffix": "i"
 			},
 			{
 				"name": "Unown J",
 				"types": ["psychic"],
-				"sprite_suffix": "j",
-				"is_mega": "0"
+				"sprite_suffix": "j"
 			},
 			{
 				"name": "Unown M",
 				"types": ["psychic"],
-				"sprite_suffix": "m",
-				"is_mega": "0"
+				"sprite_suffix": "m"
 			},
 			{
 				"name": "Unown K",
 				"types": ["psychic"],
-				"sprite_suffix": "k",
-				"is_mega": "0"
+				"sprite_suffix": "k"
 			},
 			{
 				"name": "Unown L",
 				"types": ["psychic"],
-				"sprite_suffix": "l",
-				"is_mega": "0"
+				"sprite_suffix": "l"
 			},
 			{
 				"name": "Unown N",
 				"types": ["psychic"],
-				"sprite_suffix": "n",
-				"is_mega": "0"
+				"sprite_suffix": "n"
 			},
 			{
 				"name": "Unown O",
 				"types": ["psychic"],
-				"sprite_suffix": "o",
-				"is_mega": "0"
+				"sprite_suffix": "o"
 			},
 			{
 				"name": "Unown P",
 				"types": ["psychic"],
-				"sprite_suffix": "p",
-				"is_mega": "0"
+				"sprite_suffix": "p"
 			},
 			{
 				"name": "Unown Q",
 				"types": ["psychic"],
-				"sprite_suffix": "q",
-				"is_mega": "0"
+				"sprite_suffix": "q"
 			},
 			{
 				"name": "Unown R",
 				"types": ["psychic"],
-				"sprite_suffix": "r",
-				"is_mega": "0"
+				"sprite_suffix": "r"
 			},
 			{
 				"name": "Unown S",
 				"types": ["psychic"],
-				"sprite_suffix": "s",
-				"is_mega": "0"
+				"sprite_suffix": "s"
 			},
 			{
 				"name": "Unown T",
 				"types": ["psychic"],
-				"sprite_suffix": "t",
-				"is_mega": "0"
+				"sprite_suffix": "t"
 			},
 			{
 				"name": "Unown U",
 				"types": ["psychic"],
-				"sprite_suffix": "u",
-				"is_mega": "0"
+				"sprite_suffix": "u"
 			},
 			{
 				"name": "Unown V",
 				"types": ["psychic"],
-				"sprite_suffix": "v",
-				"is_mega": "0"
+				"sprite_suffix": "v"
 			},
 			{
 				"name": "Unown W",
 				"types": ["psychic"],
-				"sprite_suffix": "w",
-				"is_mega": "0"
+				"sprite_suffix": "w"
 			},
 			{
 				"name": "Unown X",
 				"types": ["psychic"],
-				"sprite_suffix": "x",
-				"is_mega": "0"
+				"sprite_suffix": "x"
 			},
 			{
 				"name": "Unown Y",
 				"types": ["psychic"],
-				"sprite_suffix": "y",
-				"is_mega": "0"
+				"sprite_suffix": "y"
 			},
 			{
 				"name": "Unown Z",
 				"types": ["psychic"],
-				"sprite_suffix": "z",
-				"is_mega": "0"
+				"sprite_suffix": "z"
 			},
 			{
 				"name": "Unown !",
 				"types": ["psychic"],
-				"sprite_suffix": "exclamation",
-				"is_mega": "0"
+				"sprite_suffix": "exclamation"
 			},
 			{
 				"name": "Unown ?",
 				"types": ["psychic"],
-				"sprite_suffix": "question",
-				"is_mega": "0"
+				"sprite_suffix": "question"
 			}
 		]
 	},
@@ -934,23 +905,19 @@
 			{
 				"name": "Burmy Plant",
 				"is_nfe": true,
-				"types": ["bug"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["bug"]
 			},
 			{
 				"name": "Burmy Sandy",
 				"is_nfe": true,
 				"types": ["bug"],
-				"sprite_suffix": "sandy",
-				"is_mega": "0"
+				"sprite_suffix": "sandy"
 			},
 			{
 				"name": "Burmy Trash",
 				"is_nfe": true,
 				"types": ["bug"],
-				"sprite_suffix": "trash",
-				"is_mega": "0"
+				"sprite_suffix": "trash"
 			}
 		]
 	},
@@ -961,21 +928,17 @@
 		"forms": [
 			{
 				"name": "Wormadam Plant",
-				"types": ["bug", "grass"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["bug", "grass"]
 			},
 			{
 				"name": "Wormadam Sandy",
 				"types": ["bug", "ground"],
-				"sprite_suffix": "sandy",
-				"is_mega": "0"
+				"sprite_suffix": "sandy"
 			},
 			{
 				"name": "Wormadam Trash",
 				"types": ["bug", "steel"],
-				"sprite_suffix": "trash",
-				"is_mega": "0"
+				"sprite_suffix": "trash"
 			}
 		]
 	},
@@ -1024,15 +987,12 @@
 		"forms": [
 			{
 				"name": "Cherrim",
-				"types": ["grass"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["grass"]
 			},
 			{
 				"name": "Cherrim",
 				"types": ["grass"],
-				"sprite_suffix": "sunshine",
-				"is_mega": "0"
+				"sprite_suffix": "sunshine"
 			}
 		]
 	},
@@ -1045,16 +1005,13 @@
 			{
 				"name": "Shellos",
 				"is_nfe": true,
-				"types": ["water"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["water"]
 			},
 			{
 				"name": "Shellos",
 				"is_nfe": true,
 				"types": ["water"],
-				"sprite_suffix": "east",
-				"is_mega": "0"
+				"sprite_suffix": "east"
 			}
 		]
 	},
@@ -1065,15 +1022,12 @@
 		"forms": [
 			{
 				"name": "Gastrodon",
-				"types": ["water", "ground"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["water", "ground"]
 			},
 			{
 				"name": "Gastrodon",
 				"types": ["water", "ground"],
-				"sprite_suffix": "east",
-				"is_mega": "0"
+				"sprite_suffix": "east"
 			}
 		]
 	},
@@ -1229,15 +1183,12 @@
 		"forms": [
 			{
 				"name": "Hippowdon",
-				"types": ["ground"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["ground"]
 			},
 			{
 				"name": "Hippowdon",
 				"types": ["ground"],
-				"sprite_suffix": "f",
-				"is_mega": "0"
+				"sprite_suffix": "f"
 			}
 		]
 	},
@@ -1393,39 +1344,32 @@
 		"forms": [
 			{
 				"name": "Rotom",
-				"types": ["electric", "ghost"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["electric", "ghost"]
 			},
 			{
 				"name": "Rotom Fan",
 				"types": ["electric", "flying"],
-				"sprite_suffix": "fan",
-				"is_mega": "0"
+				"sprite_suffix": "fan"
 			},
 			{
 				"name": "Rotom Frost",
 				"types": ["electric", "ice"],
-				"sprite_suffix": "frost",
-				"is_mega": "0"
+				"sprite_suffix": "frost"
 			},
 			{
 				"name": "Rotom Heat",
 				"types": ["electric", "fire"],
-				"sprite_suffix": "heat",
-				"is_mega": "0"
+				"sprite_suffix": "heat"
 			},
 			{
 				"name": "Rotom Mow",
 				"types": ["electric", "grass"],
-				"sprite_suffix": "mow",
-				"is_mega": "0"
+				"sprite_suffix": "mow"
 			},
 			{
 				"name": "Rotom Wash",
 				"types": ["electric", "water"],
-				"sprite_suffix": "wash",
-				"is_mega": "0"
+				"sprite_suffix": "wash"
 			}
 		]
 	},
@@ -1475,16 +1419,13 @@
 			{
 				"name": "Giratina",
 				"is_uber": true,
-				"types": ["ghost", "dragon"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["ghost", "dragon"]
 			},
 			{
 				"name": "Giratina Origin",
 				"is_uber": true,
 				"types": ["ghost", "dragon"],
-				"sprite_suffix": "origin",
-				"is_mega": "0"
+				"sprite_suffix": "origin"
 			}
 		]
 	},
@@ -1518,16 +1459,13 @@
 		"forms": [
 			{
 				"name": "Shaymin",
-				"types": ["grass"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["grass"]
 			},
 			{
 				"name": "Shaymin Sky",
 				"is_uber": true,
 				"types": ["grass", "flying"],
-				"sprite_suffix": "sky",
-				"is_mega": "0"
+				"sprite_suffix": "sky"
 			}
 		]
 	},
@@ -1540,128 +1478,109 @@
 			{
 				"name": "Arceus",
 				"is_uber": true,
-				"types": ["normal"],
-				"sprite_suffix": "",
-				"is_mega": "0"
+				"types": ["normal"]
 			},
 			{
 				"name": "Arceus",
 				"is_uber": true,
 				"types": ["bug"],
-				"sprite_suffix": "bug",
-				"is_mega": "0"
+				"sprite_suffix": "bug"
 			},
 			{
 				"name": "Arceus",
 				"is_uber": true,
 				"types": ["dark"],
-				"sprite_suffix": "dark",
-				"is_mega": "0"
+				"sprite_suffix": "dark"
 			},
 			{
 				"name": "Arceus",
 				"is_uber": true,
 				"types": ["dragon"],
-				"sprite_suffix": "dragon",
-				"is_mega": "0"
+				"sprite_suffix": "dragon"
 			},
 			{
 				"name": "Arceus",
 				"is_uber": true,
 				"types": ["electric"],
-				"sprite_suffix": "electric",
-				"is_mega": "0"
+				"sprite_suffix": "electric"
 			},
 			{
 				"name": "Arceus",
 				"is_uber": true,
 				"types": ["fairy"],
-				"sprite_suffix": "fairy",
-				"is_mega": "0"
+				"sprite_suffix": "fairy"
 			},
 			{
 				"name": "Arceus",
 				"is_uber": true,
 				"types": ["fighting"],
-				"sprite_suffix": "fighting",
-				"is_mega": "0"
+				"sprite_suffix": "fighting"
 			},
 			{
 				"name": "Arceus",
 				"is_uber": true,
 				"types": ["fire"],
-				"sprite_suffix": "fire",
-				"is_mega": "0"
+				"sprite_suffix": "fire"
 			},
 			{
 				"name": "Arceus",
 				"is_uber": true,
 				"types": ["flying"],
-				"sprite_suffix": "flying",
-				"is_mega": "0"
+				"sprite_suffix": "flying"
 			},
 			{
 				"name": "Arceus",
 				"is_uber": true,
 				"types": ["ghost"],
-				"sprite_suffix": "ghost",
-				"is_mega": "0"
+				"sprite_suffix": "ghost"
 			},
 			{
 				"name": "Arceus",
 				"is_uber": true,
 				"types": ["grass"],
-				"sprite_suffix": "grass",
-				"is_mega": "0"
+				"sprite_suffix": "grass"
 			},
 			{
 				"name": "Arceus",
 				"is_uber": true,
 				"types": ["ground"],
-				"sprite_suffix": "ground",
-				"is_mega": "0"
+				"sprite_suffix": "ground"
 			},
 			{
 				"name": "Arceus",
 				"is_uber": true,
 				"types": ["ice"],
-				"sprite_suffix": "ice",
-				"is_mega": "0"
+				"sprite_suffix": "ice"
 			},
 			{
 				"name": "Arceus",
 				"is_uber": true,
 				"types": ["poison"],
-				"sprite_suffix": "poison",
-				"is_mega": "0"
+				"sprite_suffix": "poison"
 			},
 			{
 				"name": "Arceus",
 				"is_uber": true,
 				"types": ["psychic"],
-				"sprite_suffix": "psychic",
-				"is_mega": "0"
+				"sprite_suffix": "psychic"
 			},
 			{
 				"name": "Arceus",
 				"is_uber": true,
 				"types": ["rock"],
-				"sprite_suffix": "rock",
-				"is_mega": "0"
+				"sprite_suffix": "rock"
 			},
 			{
 				"name": "Arceus",
 				"is_uber": true,
 				"types": ["steel"],
-				"sprite_suffix": "steel",
-				"is_mega": "0"
+				"sprite_suffix": "steel"
 			},
 			{
 				"name": "Arceus",
 				"is_uber": true,
 				"types": ["water"],
-				"sprite_suffix": "water",
-				"is_mega": "0"
+				"sprite_suffix": "water"
 			}
 		]
 	}
