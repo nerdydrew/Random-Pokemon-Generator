@@ -158,7 +158,7 @@
 	},
 	{
 		"id": 29,
-		"name": "Nidoran F",
+		"name": "Nidoran ♀",
 		"is_nfe": true,
 		"types": ["poison"]
 	},
@@ -175,7 +175,7 @@
 	},
 	{
 		"id": 32,
-		"name": "Nidoran M",
+		"name": "Nidoran ♂",
 		"is_nfe": true,
 		"types": ["poison"]
 	},

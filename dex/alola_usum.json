@@ -2915,35 +2915,35 @@
 	},
 	{
 		"id": 669,
-		"name": "Flabebe",
+		"name": "Flabébé",
 		"is_nfe": true,
 		"types": ["fairy"],
 		"forms": [
 			{
-				"name": "Flabebe",
+				"name": "Flabébé",
 				"is_nfe": true,
 				"types": ["fairy"]
 			},
 			{
-				"name": "Flabebe",
+				"name": "Flabébé",
 				"is_nfe": true,
 				"types": ["fairy"],
 				"sprite_suffix": "blue"
 			},
 			{
-				"name": "Flabebe",
+				"name": "Flabébé",
 				"is_nfe": true,
 				"types": ["fairy"],
 				"sprite_suffix": "orange"
 			},
 			{
-				"name": "Flabebe",
+				"name": "Flabébé",
 				"is_nfe": true,
 				"types": ["fairy"],
 				"sprite_suffix": "white"
 			},
 			{
-				"name": "Flabebe",
+				"name": "Flabébé",
 				"is_nfe": true,
 				"types": ["fairy"],
 				"sprite_suffix": "yellow"
