@@ -1,106 +1,118 @@
-// Called when the Generate button is clicked. Gets the form info
-// and initiates the AJAX request to generate random Pokémon.
+// Called when the Generate button is clicked.
 function generateRandom() {
-	var ubers = document.getElementById('ubers').checked;
-	var nfes = document.getElementById('nfes').checked;
-	var forms = document.getElementById('forms').checked;
-	var region = document.getElementById('region').value;
-	var type = document.getElementById('type').value;
+	markLoading(true);
 
-	var url = "pokemon_list.php?ubers=" + ubers + "&nfes=" + nfes + "&forms=" + forms + "&region=" + region + "&type=" + type;
+	var options = getOptions();
 
-	var xmlhttp = new XMLHttpRequest();
-
-	xmlhttp.onreadystatechange = function() {
-		if (xmlhttp.readyState == 1) {
-			document.getElementById("controls").className = "loading";
-		}
-		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-			document.getElementById("controls").className = "";
-			var randomPokemon = generateRandomPokemon(xmlhttp.responseText);
-			document.getElementById("results").innerHTML = htmlifyListOfPokemon(randomPokemon);
-			logToAnalytics(url);
-		}
-	};
-	xmlhttp.open("GET", url, true);
-	xmlhttp.send();
+	getEligiblePokemon(options)
+	.then(eligible => chooseRandom(eligible, options))
+	.then(generated => htmlifyPokemonArray(generated, options))
+	.then(html => document.getElementById("results").innerHTML = html)
+	.finally(function() {
+		markLoading(false);
+		//TODO log to analytics with options.
+	});
 }
 
-function generateRandomPokemon(eligiblePokemonJson) {
-	var eligiblePokemon = JSON.parse(eligiblePokemonJson);
-	var n = document.getElementById('n').value;
-	var randomIndices = generateDistinctRandomNumbers(eligiblePokemon.length, n);
-	var forms = document.getElementById('forms').checked;
+function markLoading(isLoading) {
+	document.getElementById("controls").className = isLoading ? "loading" : "";
+}
 
-	// Keep track so that only one Pokemon can be mega.
-	var canBeMega = forms;
+function getOptions() {
+	return {
+		n: Number(document.getElementById('n').value),
+		region: document.getElementById('region').value,
+		type: document.getElementById('type').value,
+		ubers: document.getElementById('ubers').checked,
+		nfes: document.getElementById('nfes').checked,
+		sprites: document.getElementById('sprites').checked,
+		natures: document.getElementById('natures').checked,
+		forms: document.getElementById('forms').checked
+	};
+}
 
-	// Generate n random Pokemon.
-	var randomPokemon = [];
-	randomIndices.forEach(function(index) {
-		var pokemon = eligiblePokemon[index];
-		if (forms && pokemon.forms) {
-			// Pick a random form. Avoid megas, if possible.
-			pokemon = getRandomForm(pokemon.forms, false);
+function getEligiblePokemon(options) {
+	//TODO cache
+	return getPokemonInRegion(options)
+		.then(r => filterByOptions(r, options));
+}
 
-			if (pokemon.is_mega == 1) {
-				canBeMega = false;
+function getPokemonInRegion(options) {
+	return fetch("dex/" + options.region + ".json")
+		.then(r => r.json());
+}
+
+function filterByOptions(pokemonInRegion, options) {
+	return pokemonInRegion.filter(function (pokemon) {
+		if (options.forms && 'forms' in pokemon) {
+			// If we are generating with forms and this Pokémon has forms,
+			// filter on them instead of the top-level Pokémon.
+			pokemon.forms = filterByOptions(pokemon.forms, options);
+			return pokemon.forms.length > 0;
+		}
+
+		if (options.type != "all" && !pokemon.types.includes(options.type)) {
+			return false;
+		}
+
+		if (!options.ubers && pokemon.is_uber) {
+			return false;
+		}
+
+		if (!options.nfes && pokemon.is_nfe) {
+			return false;
+		}
+
+		return true;
+	});
+}
+
+// Chooses N random Pokémon from the array of eligibles without replacement.
+function chooseRandom(eligiblePokemon, options) {
+	var chosenArray = [];
+
+	// Deep copy so that we can modify the array as needed.
+	var eligiblePokemon = JSON.parse(JSON.stringify(eligiblePokemon));
+
+	while (eligiblePokemon.length > 0 && chosenArray.length < options.n) {
+		var chosen = removeRandomElement(eligiblePokemon);
+
+		if (options.forms && chosen.forms) {
+			// Choose a random form and merge its values with the top level.
+			var randomForm = removeRandomElement(chosen.forms);
+			chosen = Object.assign(chosen, randomForm);
+
+			// If we generated a mega, we can't choose any more.
+			if (chosen.is_mega) {
+				eligiblePokemon = removeMegas(eligiblePokemon);
 			}
 		}
 
-		randomPokemon.push(pokemon);
-
-	});
-
-	if (forms && canBeMega) {
-		// Choose a mega if one hasn't already been generated.
-		var potentialIndices = getPotentialMegaIndices(eligiblePokemon, randomIndices);
-		if (potentialIndices.length > 0) {
-			var chosenIndex = getRandomElement(potentialIndices);
-			var chosenPokemon = eligiblePokemon[randomIndices[chosenIndex]];
-			randomPokemon[chosenIndex] = getRandomForm(chosenPokemon.forms, true);
-		}
+		chosenArray.push(chosen);
 	}
 
-	return randomPokemon;
+	// Megas are more likely to appear at the start of the array,
+	// so we shuffle for good measure.
+	return shuffle(chosenArray);
 }
 
-// Returns a list of indices for the given pokemonList of Pokemon that have mega forms.
-function getPotentialMegaIndices(eligiblePokemon, randomIndices) {
-	var indices = [];
-	for (var i=0; i<randomIndices.length; i++) {
-		var forms = eligiblePokemon[randomIndices[i]].forms;
-		if (forms) {
-			forms.forEach(function(form) {
-				if (form.is_mega == 1) {
-					indices.push(i);
-				}
-			})
+// Filters megas from the array. Doesn't mutate the original array.
+function removeMegas(pokemonArray) {
+	return pokemonArray.filter(function (pokemon) {
+		if ("forms" in pokemon) {
+			pokemon.forms = pokemon.forms.filter(form => !form.is_mega);
+			return pokemon.forms.length > 0;
+		} else {
+			return true; // always keep if no forms
 		}
-	}
-	return indices;
-}
-
-// Returns a random form from the list. Either tries to get or avoids getting a mega,
-// depending on favorMegas. An example where we can't avoid a mega: if an Ampharos
-// is generated for Dragon types.
-function getRandomForm(forms, favorMegas) {
-	var preferredMegaValue = favorMegas ? 1 : 0;
-	var nonMegaForms = forms.filter(function(form) {
-		return (form.is_mega == preferredMegaValue);
 	});
-	if (nonMegaForms.length > 0) {
-		return getRandomElement(nonMegaForms);
-	} else {
-		return getRandomElement(forms);
-	}
 }
 
 // Converts a JSON array of Pokémon into an HTML ordered list.
-function htmlifyListOfPokemon(generatedPokemon) {
+function htmlifyPokemonArray(generatedPokemon, options) {
 	var output = '<ol>';
 	for (i=0; i<generatedPokemon.length; i++) {
-		output += htmlifyPokemon(generatedPokemon[i]);
+		output += htmlifyPokemon(generatedPokemon[i], options);
 	}
 	output += '</ol>';
 
@@ -108,28 +120,26 @@ function htmlifyListOfPokemon(generatedPokemon) {
 }
 
 // Converts JSON for a single Pokémon into an HTML list item.
-function htmlifyPokemon(pokemon) {
+function htmlifyPokemon(pokemon, options) {
 	// http://bulbapedia.bulbagarden.net/wiki/Shiny_Pok%C3%A9mon#Generation_VI
 	var shiny = Math.floor(Math.random() * 65536) < 16;
-	var sprites = document.getElementById('sprites').checked;
-	var natures = document.getElementById('natures').checked;
 
-	var title = shiny ? 'Shiny ' + pokemon.name : pokemon.name;
+	var title = (shiny ? "Shiny " : "") + pokemon.name;
 
-	if (sprites) {
+	if (options.sprites) {
 		var out = '<li title="' + title + '">';
 	} else {
 		var out = '<li class="imageless">';
 	}
 
-	if (natures) {
+	if (options.natures) {
 		out += '<span class="nature">' + generateNature() + "</span> ";
 	}
 	out += pokemon.name;
 	if (shiny) {
 		out += ' <span class="shiny">&#9733;</span>';
 	}
-	if (sprites) {
+	if (options.sprites) {
 		var sprite = getSpritePath(pokemon, shiny);
 		out += '<div class="wrapper"><img src="' + sprite + '" alt="' + title + '" title="' + title + '" /></div>';
 	}
@@ -149,51 +159,30 @@ function getSpritePath(pokemon, shiny) {
 }
 
 function generateNature() {
-	return getRandomElement(natures_list);
+	return getRandomElement(NATURES);
 }
 
-var natures_list = ['Adamant', 'Bashful', 'Bold', 'Brave', 'Calm', 'Careful', 'Docile', 'Gentle', 'Hardy', 'Hasty', 'Impish', 'Jolly', 'Lax', 'Lonely', 'Mild', 'Modest', 'Na&iuml;ve', 'Naughty', 'Quiet', 'Quirky', 'Rash', 'Relaxed', 'Sassy', 'Serious', 'Timid'];
-
-// Generates up to n random numbers from [0, range).
-function generateDistinctRandomNumbers(range, n) {
-	if (range > 10 * n) {  // 10 is an arbitrarily chosen value
-		return generateDistinctRandomNumbersLarge(range, n);
-	} else {
-		return generateDistinctRandomNumbersSmall(range, n);
-	}
-}
-
-// Generate distinct random numbers where the possible range is closer
-// to the number of elements (n) to generate.
-function generateDistinctRandomNumbersSmall(range, n) {
-	// Instantiate array of valid numbers
-	var valid_numbers = [];
-	for (var i=0; i<range; i++) {
-		valid_numbers.push(i);
-	}
-
-	var generated_numbers = [];
-	while (generated_numbers.length < n && valid_numbers.length > 0) {
-		var random_index = Math.floor(Math.random()*valid_numbers.length);
-		generated_numbers.push(valid_numbers[random_index]);
-		valid_numbers.splice(random_index, 1);
-	}
-	return generated_numbers;
-}
-
-// Generate distinct random numbers where the possible range is much
-// larger than the number of elements (n) to generate.
-function generateDistinctRandomNumbersLarge(range, n) {
-	var numbers = [];
-	while(numbers.length < n) {
-	    var random = Math.floor(Math.random() * range);
-	    if (numbers.indexOf(random) < 0) {
-			numbers.push(random);
-		}
-	}
-	return numbers;
-}
+const NATURES = ['Adamant', 'Bashful', 'Bold', 'Brave', 'Calm', 'Careful', 'Docile', 'Gentle', 'Hardy', 'Hasty', 'Impish', 'Jolly', 'Lax', 'Lonely', 'Mild', 'Modest', 'Na&iuml;ve', 'Naughty', 'Quiet', 'Quirky', 'Rash', 'Relaxed', 'Sassy', 'Serious', 'Timid'];
 
 function getRandomElement(arr) {
-	return arr[Math.floor(Math.random()*arr.length)];
+	return arr[randomInteger(arr.length)];
+}
+
+function removeRandomElement(arr) {
+	return arr.splice(randomInteger(arr.length), 1)[0];
+}
+
+// Modern Fisher-Yates shuffle.
+function shuffle(arr) {
+	for (var i = arr.length - 1; i > 0; i--) {
+		var j = randomInteger(i + 1);
+		var temp = arr[i];
+		arr[i] = arr[j];
+		arr[j] = temp;
+	}
+	return arr;
+}
+
+function randomInteger(maxExclusive) {
+	return Math.floor(Math.random() * maxExclusive);
 }
