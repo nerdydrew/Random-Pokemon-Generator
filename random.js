@@ -39,17 +39,15 @@ function getEligiblePokemon(options) {
 	var optionsJson = JSON.stringify(options);
 
 	if (cachedOptionsJson == optionsJson) {
-		return new Promise(function (resolve, reject) {
-			resolve(cachedEligiblePokemon);
-		});
+		return Promise.resolve(cachedEligiblePokemon);
 	} else {
 		return getPokemonInRegion(options)
-		.then(pokemonInRegion => filterByOptions(pokemonInRegion, options))
-		.then(function (eligiblePokemon) {
-			cachedOptionsJson = optionsJson;
-			cachedEligiblePokemon = eligiblePokemon;
-			return eligiblePokemon;
-		});
+			.then(pokemonInRegion => filterByOptions(pokemonInRegion, options))
+			.then(function (eligiblePokemon) {
+				cachedOptionsJson = optionsJson;
+				cachedEligiblePokemon = eligiblePokemon;
+				return eligiblePokemon;
+			});
 	}
 }
 
