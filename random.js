@@ -55,11 +55,11 @@ function filterByOptions(pokemonInRegion, options) {
 			return false;
 		}
 
-		if (!options.ubers && pokemon.is_uber) {
+		if (!options.ubers && pokemon.isUber) {
 			return false;
 		}
 
-		if (!options.nfes && pokemon.is_nfe) {
+		if (!options.nfes && pokemon.isNfe) {
 			return false;
 		}
 
@@ -83,7 +83,7 @@ function chooseRandom(eligiblePokemon, options) {
 			chosen = Object.assign(chosen, randomForm);
 
 			// If we generated a mega, we can't choose any more.
-			if (chosen.is_mega) {
+			if (chosen.isMega) {
 				eligiblePokemon = removeMegas(eligiblePokemon);
 			}
 		}
@@ -100,7 +100,7 @@ function chooseRandom(eligiblePokemon, options) {
 function removeMegas(pokemonArray) {
 	return pokemonArray.filter(function (pokemon) {
 		if ("forms" in pokemon) {
-			pokemon.forms = pokemon.forms.filter(form => !form.is_mega);
+			pokemon.forms = pokemon.forms.filter(form => !form.isMega);
 			return pokemon.forms.length > 0;
 		} else {
 			return true; // always keep if no forms
@@ -152,8 +152,8 @@ function htmlifyPokemon(pokemon, options) {
 function getSpritePath(pokemon, shiny) {
 	var path = shiny ? PATH_TO_SHINY_SPRITES : PATH_TO_SPRITES;
 	var name = pokemon.id;
-	if (pokemon.sprite_suffix) {
-		name = name + '-' + pokemon.sprite_suffix;
+	if (pokemon.spriteSuffix) {
+		name = name + '-' + pokemon.spriteSuffix;
 	}
 	return path + name + SPRITE_EXTENTION;
 }

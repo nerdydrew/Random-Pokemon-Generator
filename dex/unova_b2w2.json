@@ -2,7 +2,7 @@
 	{
 		"id": 19,
 		"name": "Rattata",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["normal"]
 	},
 	{
@@ -13,7 +13,7 @@
 	{
 		"id": 27,
 		"name": "Sandshrew",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["ground"]
 	},
 	{
@@ -24,7 +24,7 @@
 	{
 		"id": 35,
 		"name": "Clefairy",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["normal"]
 	},
 	{
@@ -35,7 +35,7 @@
 	{
 		"id": 37,
 		"name": "Vulpix",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["fire"]
 	},
 	{
@@ -46,7 +46,7 @@
 	{
 		"id": 39,
 		"name": "Jigglypuff",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["normal"]
 	},
 	{
@@ -57,19 +57,19 @@
 	{
 		"id": 41,
 		"name": "Zubat",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["poison", "flying"]
 	},
 	{
 		"id": 42,
 		"name": "Golbat",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["poison", "flying"]
 	},
 	{
 		"id": 54,
 		"name": "Psyduck",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["water"]
 	},
 	{
@@ -80,7 +80,7 @@
 	{
 		"id": 58,
 		"name": "Growlithe",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["fire"]
 	},
 	{
@@ -91,19 +91,19 @@
 	{
 		"id": 81,
 		"name": "Magnemite",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["electric", "steel"]
 	},
 	{
 		"id": 82,
 		"name": "Magneton",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["electric", "steel"]
 	},
 	{
 		"id": 86,
 		"name": "Seel",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["water"]
 	},
 	{
@@ -114,7 +114,7 @@
 	{
 		"id": 88,
 		"name": "Grimer",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["poison"]
 	},
 	{
@@ -125,19 +125,19 @@
 	{
 		"id": 95,
 		"name": "Onix",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["rock", "ground"]
 	},
 	{
 		"id": 108,
 		"name": "Lickitung",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["normal"]
 	},
 	{
 		"id": 109,
 		"name": "Koffing",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["poison"]
 	},
 	{
@@ -148,13 +148,13 @@
 	{
 		"id": 114,
 		"name": "Tangela",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["grass"]
 	},
 	{
 		"id": 120,
 		"name": "Staryu",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["water"]
 	},
 	{
@@ -165,13 +165,13 @@
 	{
 		"id": 125,
 		"name": "Electabuzz",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["electric"]
 	},
 	{
 		"id": 126,
 		"name": "Magmar",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["fire"]
 	},
 	{
@@ -192,7 +192,7 @@
 	{
 		"id": 133,
 		"name": "Eevee",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["normal"]
 	},
 	{
@@ -218,25 +218,25 @@
 	{
 		"id": 173,
 		"name": "Cleffa",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["normal"]
 	},
 	{
 		"id": 174,
 		"name": "Igglybuff",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["normal"]
 	},
 	{
 		"id": 179,
 		"name": "Mareep",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["electric"]
 	},
 	{
 		"id": 180,
 		"name": "Flaaffy",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["electric"]
 	},
 	{
@@ -247,7 +247,7 @@
 	{
 		"id": 183,
 		"name": "Marill",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["water"]
 	},
 	{
@@ -258,7 +258,7 @@
 	{
 		"id": 191,
 		"name": "Sunkern",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["grass"]
 	},
 	{
@@ -269,7 +269,7 @@
 	{
 		"id": 193,
 		"name": "Yanma",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["bug", "flying"]
 	},
 	{
@@ -290,7 +290,7 @@
 	{
 		"id": 207,
 		"name": "Gligar",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["ground", "flying"]
 	},
 	{
@@ -311,19 +311,19 @@
 	{
 		"id": 215,
 		"name": "Sneasel",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["dark", "ice"]
 	},
 	{
 		"id": 220,
 		"name": "Swinub",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["ice", "ground"]
 	},
 	{
 		"id": 221,
 		"name": "Piloswine",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["ice", "ground"]
 	},
 	{
@@ -334,7 +334,7 @@
 	{
 		"id": 223,
 		"name": "Remoraid",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["water"]
 	},
 	{
@@ -360,25 +360,25 @@
 	{
 		"id": 239,
 		"name": "Elekid",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["electric"]
 	},
 	{
 		"id": 240,
 		"name": "Magby",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["fire"]
 	},
 	{
 		"id": 246,
 		"name": "Larvitar",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["rock", "ground"]
 	},
 	{
 		"id": 247,
 		"name": "Pupitar",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["rock", "ground"]
 	},
 	{
@@ -389,7 +389,7 @@
 	{
 		"id": 278,
 		"name": "Wingull",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["water", "flying"]
 	},
 	{
@@ -400,13 +400,13 @@
 	{
 		"id": 287,
 		"name": "Slakoth",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["normal"]
 	},
 	{
 		"id": 288,
 		"name": "Vigoroth",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["normal"]
 	},
 	{
@@ -417,19 +417,19 @@
 	{
 		"id": 298,
 		"name": "Azurill",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["normal"]
 	},
 	{
 		"id": 299,
 		"name": "Nosepass",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["rock"]
 	},
 	{
 		"id": 300,
 		"name": "Skitty",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["normal"]
 	},
 	{
@@ -440,13 +440,13 @@
 	{
 		"id": 304,
 		"name": "Aron",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["steel", "rock"]
 	},
 	{
 		"id": 305,
 		"name": "Lairon",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["steel", "rock"]
 	},
 	{
@@ -457,13 +457,13 @@
 	{
 		"id": 315,
 		"name": "Roselia",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["grass", "poison"]
 	},
 	{
 		"id": 320,
 		"name": "Wailmer",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["water"]
 	},
 	{
@@ -474,7 +474,7 @@
 	{
 		"id": 322,
 		"name": "Numel",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["fire", "ground"]
 	},
 	{
@@ -485,7 +485,7 @@
 	{
 		"id": 325,
 		"name": "Spoink",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["psychic"]
 	},
 	{
@@ -496,13 +496,13 @@
 	{
 		"id": 328,
 		"name": "Trapinch",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["ground"]
 	},
 	{
 		"id": 329,
 		"name": "Vibrava",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["ground", "dragon"]
 	},
 	{
@@ -513,7 +513,7 @@
 	{
 		"id": 333,
 		"name": "Swablu",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["normal", "flying"]
 	},
 	{
@@ -544,7 +544,7 @@
 	{
 		"id": 341,
 		"name": "Corphish",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["water"]
 	},
 	{
@@ -555,7 +555,7 @@
 	{
 		"id": 343,
 		"name": "Baltoy",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["ground", "psychic"]
 	},
 	{
@@ -575,24 +575,24 @@
 			{
 				"name": "Castform",
 				"types": ["water"],
-				"sprite_suffix": "rainy"
+				"spriteSuffix": "rainy"
 			},
 			{
 				"name": "Castform",
 				"types": ["ice"],
-				"sprite_suffix": "snowy"
+				"spriteSuffix": "snowy"
 			},
 			{
 				"name": "Castform",
 				"types": ["fire"],
-				"sprite_suffix": "sunny"
+				"spriteSuffix": "sunny"
 			}
 		]
 	},
 	{
 		"id": 353,
 		"name": "Shuppet",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["ghost"]
 	},
 	{
@@ -613,13 +613,13 @@
 	{
 		"id": 363,
 		"name": "Spheal",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["ice", "water"]
 	},
 	{
 		"id": 364,
 		"name": "Sealeo",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["ice", "water"]
 	},
 	{
@@ -630,13 +630,13 @@
 	{
 		"id": 374,
 		"name": "Beldum",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["steel", "psychic"]
 	},
 	{
 		"id": 375,
 		"name": "Metang",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["steel", "psychic"]
 	},
 	{
@@ -647,7 +647,7 @@
 	{
 		"id": 406,
 		"name": "Budew",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["grass", "poison"]
 	},
 	{
@@ -658,7 +658,7 @@
 	{
 		"id": 415,
 		"name": "Combee",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["bug", "flying"]
 	},
 	{
@@ -669,7 +669,7 @@
 	{
 		"id": 418,
 		"name": "Buizel",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["water"]
 	},
 	{
@@ -680,7 +680,7 @@
 	{
 		"id": 425,
 		"name": "Drifloon",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["ghost", "flying"]
 	},
 	{
@@ -691,7 +691,7 @@
 	{
 		"id": 427,
 		"name": "Buneary",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["normal"]
 	},
 	{
@@ -702,7 +702,7 @@
 	{
 		"id": 436,
 		"name": "Bronzor",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["steel", "psychic"]
 	},
 	{
@@ -713,7 +713,7 @@
 	{
 		"id": 447,
 		"name": "Riolu",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["fighting"]
 	},
 	{
@@ -724,7 +724,7 @@
 	{
 		"id": 451,
 		"name": "Skorupi",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["poison", "bug"]
 	},
 	{
@@ -735,7 +735,7 @@
 	{
 		"id": 453,
 		"name": "Croagunk",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["poison", "fighting"]
 	},
 	{
@@ -751,7 +751,7 @@
 	{
 		"id": 458,
 		"name": "Mantyke",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["water", "flying"]
 	},
 	{
@@ -822,13 +822,13 @@
 	{
 		"id": 495,
 		"name": "Snivy",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["grass"]
 	},
 	{
 		"id": 496,
 		"name": "Servine",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["grass"]
 	},
 	{
@@ -839,13 +839,13 @@
 	{
 		"id": 498,
 		"name": "Tepig",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["fire"]
 	},
 	{
 		"id": 499,
 		"name": "Pignite",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["fire", "fighting"]
 	},
 	{
@@ -856,13 +856,13 @@
 	{
 		"id": 501,
 		"name": "Oshawott",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["water"]
 	},
 	{
 		"id": 502,
 		"name": "Dewott",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["water"]
 	},
 	{
@@ -873,7 +873,7 @@
 	{
 		"id": 504,
 		"name": "Patrat",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["normal"]
 	},
 	{
@@ -884,13 +884,13 @@
 	{
 		"id": 506,
 		"name": "Lillipup",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["normal"]
 	},
 	{
 		"id": 507,
 		"name": "Herdier",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["normal"]
 	},
 	{
@@ -901,7 +901,7 @@
 	{
 		"id": 509,
 		"name": "Purrloin",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["dark"]
 	},
 	{
@@ -912,7 +912,7 @@
 	{
 		"id": 511,
 		"name": "Pansage",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["grass"]
 	},
 	{
@@ -923,7 +923,7 @@
 	{
 		"id": 513,
 		"name": "Pansear",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["fire"]
 	},
 	{
@@ -934,7 +934,7 @@
 	{
 		"id": 515,
 		"name": "Panpour",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["water"]
 	},
 	{
@@ -945,7 +945,7 @@
 	{
 		"id": 517,
 		"name": "Munna",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["psychic"]
 	},
 	{
@@ -956,13 +956,13 @@
 	{
 		"id": 519,
 		"name": "Pidove",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["normal", "flying"]
 	},
 	{
 		"id": 520,
 		"name": "Tranquill",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["normal", "flying"]
 	},
 	{
@@ -973,7 +973,7 @@
 	{
 		"id": 522,
 		"name": "Blitzle",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["electric"]
 	},
 	{
@@ -984,13 +984,13 @@
 	{
 		"id": 524,
 		"name": "Roggenrola",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["rock"]
 	},
 	{
 		"id": 525,
 		"name": "Boldore",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["rock"]
 	},
 	{
@@ -1001,7 +1001,7 @@
 	{
 		"id": 527,
 		"name": "Woobat",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["psychic", "flying"]
 	},
 	{
@@ -1012,7 +1012,7 @@
 	{
 		"id": 529,
 		"name": "Drilbur",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["ground"]
 	},
 	{
@@ -1028,13 +1028,13 @@
 	{
 		"id": 532,
 		"name": "Timburr",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["fighting"]
 	},
 	{
 		"id": 533,
 		"name": "Gurdurr",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["fighting"]
 	},
 	{
@@ -1045,13 +1045,13 @@
 	{
 		"id": 535,
 		"name": "Tympole",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["water"]
 	},
 	{
 		"id": 536,
 		"name": "Palpitoad",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["water", "ground"]
 	},
 	{
@@ -1072,13 +1072,13 @@
 	{
 		"id": 540,
 		"name": "Sewaddle",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["bug", "grass"]
 	},
 	{
 		"id": 541,
 		"name": "Swadloon",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["bug", "grass"]
 	},
 	{
@@ -1089,13 +1089,13 @@
 	{
 		"id": 543,
 		"name": "Venipede",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["bug", "poison"]
 	},
 	{
 		"id": 544,
 		"name": "Whirlipede",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["bug", "poison"]
 	},
 	{
@@ -1106,7 +1106,7 @@
 	{
 		"id": 546,
 		"name": "Cottonee",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["grass"]
 	},
 	{
@@ -1117,7 +1117,7 @@
 	{
 		"id": 548,
 		"name": "Petilil",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["grass"]
 	},
 	{
@@ -1137,20 +1137,20 @@
 			{
 				"name": "Basculin",
 				"types": ["water"],
-				"sprite_suffix": "bluestriped"
+				"spriteSuffix": "bluestriped"
 			}
 		]
 	},
 	{
 		"id": 551,
 		"name": "Sandile",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["ground", "dark"]
 	},
 	{
 		"id": 552,
 		"name": "Krokorok",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["ground", "dark"]
 	},
 	{
@@ -1161,7 +1161,7 @@
 	{
 		"id": 554,
 		"name": "Darumaka",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["fire"]
 	},
 	{
@@ -1177,7 +1177,7 @@
 	{
 		"id": 557,
 		"name": "Dwebble",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["bug", "rock"]
 	},
 	{
@@ -1188,7 +1188,7 @@
 	{
 		"id": 559,
 		"name": "Scraggy",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["dark", "fighting"]
 	},
 	{
@@ -1204,7 +1204,7 @@
 	{
 		"id": 562,
 		"name": "Yamask",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["ghost"]
 	},
 	{
@@ -1215,7 +1215,7 @@
 	{
 		"id": 564,
 		"name": "Tirtouga",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["water", "rock"]
 	},
 	{
@@ -1226,7 +1226,7 @@
 	{
 		"id": 566,
 		"name": "Archen",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["rock", "flying"]
 	},
 	{
@@ -1237,7 +1237,7 @@
 	{
 		"id": 568,
 		"name": "Trubbish",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["poison"]
 	},
 	{
@@ -1248,7 +1248,7 @@
 	{
 		"id": 570,
 		"name": "Zorua",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["dark"]
 	},
 	{
@@ -1259,7 +1259,7 @@
 	{
 		"id": 572,
 		"name": "Minccino",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["normal"]
 	},
 	{
@@ -1270,13 +1270,13 @@
 	{
 		"id": 574,
 		"name": "Gothita",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["psychic"]
 	},
 	{
 		"id": 575,
 		"name": "Gothorita",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["psychic"]
 	},
 	{
@@ -1287,13 +1287,13 @@
 	{
 		"id": 577,
 		"name": "Solosis",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["psychic"]
 	},
 	{
 		"id": 578,
 		"name": "Duosion",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["psychic"]
 	},
 	{
@@ -1304,7 +1304,7 @@
 	{
 		"id": 580,
 		"name": "Ducklett",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["water", "flying"]
 	},
 	{
@@ -1315,13 +1315,13 @@
 	{
 		"id": 582,
 		"name": "Vanillite",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["ice"]
 	},
 	{
 		"id": 583,
 		"name": "Vanillish",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["ice"]
 	},
 	{
@@ -1332,31 +1332,31 @@
 	{
 		"id": 585,
 		"name": "Deerling",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["normal", "grass"],
 		"forms": [
 			{
 				"name": "Deerling",
-				"is_nfe": true,
+				"isNfe": true,
 				"types": ["normal", "grass"]
 			},
 			{
 				"name": "Deerling",
-				"is_nfe": true,
+				"isNfe": true,
 				"types": ["normal", "grass"],
-				"sprite_suffix": "autumn"
+				"spriteSuffix": "autumn"
 			},
 			{
 				"name": "Deerling",
-				"is_nfe": true,
+				"isNfe": true,
 				"types": ["normal", "grass"],
-				"sprite_suffix": "summer"
+				"spriteSuffix": "summer"
 			},
 			{
 				"name": "Deerling",
-				"is_nfe": true,
+				"isNfe": true,
 				"types": ["normal", "grass"],
-				"sprite_suffix": "winter"
+				"spriteSuffix": "winter"
 			}
 		]
 	},
@@ -1372,17 +1372,17 @@
 			{
 				"name": "Sawsbuck",
 				"types": ["normal", "grass"],
-				"sprite_suffix": "autumn"
+				"spriteSuffix": "autumn"
 			},
 			{
 				"name": "Sawsbuck",
 				"types": ["normal", "grass"],
-				"sprite_suffix": "summer"
+				"spriteSuffix": "summer"
 			},
 			{
 				"name": "Sawsbuck",
 				"types": ["normal", "grass"],
-				"sprite_suffix": "winter"
+				"spriteSuffix": "winter"
 			}
 		]
 	},
@@ -1394,7 +1394,7 @@
 	{
 		"id": 588,
 		"name": "Karrablast",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["bug"]
 	},
 	{
@@ -1405,7 +1405,7 @@
 	{
 		"id": 590,
 		"name": "Foongus",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["grass", "poison"]
 	},
 	{
@@ -1416,19 +1416,19 @@
 	{
 		"id": 592,
 		"name": "Frillish",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["water", "ghost"],
 		"forms": [
 			{
 				"name": "Frillish",
-				"is_nfe": true,
+				"isNfe": true,
 				"types": ["water", "ghost"]
 			},
 			{
 				"name": "Frillish",
-				"is_nfe": true,
+				"isNfe": true,
 				"types": ["water", "ghost"],
-				"sprite_suffix": "f"
+				"spriteSuffix": "f"
 			}
 		]
 	},
@@ -1440,7 +1440,7 @@
 			{
 				"name": "Jellicent",
 				"types": ["water", "ghost"],
-				"sprite_suffix": "f"
+				"spriteSuffix": "f"
 			},
 			{
 				"name": "Jellicent",
@@ -1456,7 +1456,7 @@
 	{
 		"id": 595,
 		"name": "Joltik",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["bug", "electric"]
 	},
 	{
@@ -1467,7 +1467,7 @@
 	{
 		"id": 597,
 		"name": "Ferroseed",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["grass", "steel"]
 	},
 	{
@@ -1478,13 +1478,13 @@
 	{
 		"id": 599,
 		"name": "Klink",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["steel"]
 	},
 	{
 		"id": 600,
 		"name": "Klang",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["steel"]
 	},
 	{
@@ -1495,13 +1495,13 @@
 	{
 		"id": 602,
 		"name": "Tynamo",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["electric"]
 	},
 	{
 		"id": 603,
 		"name": "Eelektrik",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["electric"]
 	},
 	{
@@ -1512,7 +1512,7 @@
 	{
 		"id": 605,
 		"name": "Elgyem",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["psychic"]
 	},
 	{
@@ -1523,13 +1523,13 @@
 	{
 		"id": 607,
 		"name": "Litwick",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["ghost", "fire"]
 	},
 	{
 		"id": 608,
 		"name": "Lampent",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["ghost", "fire"]
 	},
 	{
@@ -1540,13 +1540,13 @@
 	{
 		"id": 610,
 		"name": "Axew",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["dragon"]
 	},
 	{
 		"id": 611,
 		"name": "Fraxure",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["dragon"]
 	},
 	{
@@ -1557,7 +1557,7 @@
 	{
 		"id": 613,
 		"name": "Cubchoo",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["ice"]
 	},
 	{
@@ -1573,7 +1573,7 @@
 	{
 		"id": 616,
 		"name": "Shelmet",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["bug"]
 	},
 	{
@@ -1589,7 +1589,7 @@
 	{
 		"id": 619,
 		"name": "Mienfoo",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["fighting"]
 	},
 	{
@@ -1605,7 +1605,7 @@
 	{
 		"id": 622,
 		"name": "Golett",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["ground", "ghost"]
 	},
 	{
@@ -1616,7 +1616,7 @@
 	{
 		"id": 624,
 		"name": "Pawniard",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["dark", "steel"]
 	},
 	{
@@ -1632,7 +1632,7 @@
 	{
 		"id": 627,
 		"name": "Rufflet",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["normal", "flying"]
 	},
 	{
@@ -1643,7 +1643,7 @@
 	{
 		"id": 629,
 		"name": "Vullaby",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["dark", "flying"]
 	},
 	{
@@ -1664,13 +1664,13 @@
 	{
 		"id": 633,
 		"name": "Deino",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["dark", "dragon"]
 	},
 	{
 		"id": 634,
 		"name": "Zweilous",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["dark", "dragon"]
 	},
 	{
@@ -1681,7 +1681,7 @@
 	{
 		"id": 636,
 		"name": "Larvesta",
-		"is_nfe": true,
+		"isNfe": true,
 		"types": ["bug", "fire"]
 	},
 	{
@@ -1707,19 +1707,19 @@
 	{
 		"id": 641,
 		"name": "Tornadus",
-		"is_uber": true,
+		"isUber": true,
 		"types": ["flying"],
 		"forms": [
 			{
 				"name": "Tornadus",
-				"is_uber": true,
+				"isUber": true,
 				"types": ["flying"]
 			},
 			{
 				"name": "Tornadus Therian",
-				"is_uber": true,
+				"isUber": true,
 				"types": ["flying"],
-				"sprite_suffix": "therian"
+				"spriteSuffix": "therian"
 			}
 		]
 	},
@@ -1727,54 +1727,54 @@
 		"id": 642,
 		"name": "Thundurus",
 		"types": ["electric", "flying"],
-		"is_uber": true,
+		"isUber": true,
 		"forms": [
 			{
 				"name": "Thundurus",
 				"types": ["electric", "flying"],
-				"is_uber": true
+				"isUber": true
 			},
 			{
 				"name": "Thundurus Therian",
 				"types": ["electric", "flying"],
-				"sprite_suffix": "therian"
+				"spriteSuffix": "therian"
 			}
 		]
 	},
 	{
 		"id": 643,
 		"name": "Reshiram",
-		"is_uber": true,
+		"isUber": true,
 		"types": ["dragon", "fire"]
 	},
 	{
 		"id": 644,
 		"name": "Zekrom",
-		"is_uber": true,
+		"isUber": true,
 		"types": ["dragon", "electric"]
 	},
 	{
 		"id": 645,
 		"name": "Landorus",
-		"is_uber": true,
+		"isUber": true,
 		"types": ["ground", "flying"],
 		"forms": [
 			{
 				"name": "Landorus",
-				"is_uber": true,
+				"isUber": true,
 				"types": ["ground", "flying"]
 			},
 			{
 				"name": "Landorus Therian",
 				"types": ["ground", "flying"],
-				"sprite_suffix": "therian"
+				"spriteSuffix": "therian"
 			}
 		]
 	},
 	{
 		"id": 646,
 		"name": "Kyurem",
-		"is_uber": true,
+		"isUber": true,
 		"types": ["dragon", "ice"],
 		"forms": [
 			{
@@ -1784,13 +1784,13 @@
 			{
 				"name": "Kyurem Black",
 				"types": ["dragon", "ice"],
-				"sprite_suffix": "black"
+				"spriteSuffix": "black"
 			},
 			{
 				"name": "Kyurem White",
-				"is_uber": true,
+				"isUber": true,
 				"types": ["dragon", "ice"],
-				"sprite_suffix": "white"
+				"spriteSuffix": "white"
 			}
 		]
 	},
@@ -1806,7 +1806,7 @@
 			{
 				"name": "Keldeo",
 				"types": ["water", "fighting"],
-				"sprite_suffix": "resolute"
+				"spriteSuffix": "resolute"
 			}
 		]
 	},
@@ -1822,44 +1822,44 @@
 			{
 				"name": "Meloetta Pirouette",
 				"types": ["normal", "fighting"],
-				"sprite_suffix": "pirouette"
+				"spriteSuffix": "pirouette"
 			}
 		]
 	},
 	{
 		"id": 649,
 		"name": "Genesect",
-		"is_uber": true,
+		"isUber": true,
 		"types": ["bug", "steel"],
 		"forms": [
 			{
 				"name": "Genesect",
-				"is_uber": true,
+				"isUber": true,
 				"types": ["bug", "steel"]
 			},
 			{
 				"name": "Genesect",
-				"is_uber": true,
+				"isUber": true,
 				"types": ["bug", "steel"],
-				"sprite_suffix": "burn"
+				"spriteSuffix": "burn"
 			},
 			{
 				"name": "Genesect",
-				"is_uber": true,
+				"isUber": true,
 				"types": ["bug", "steel"],
-				"sprite_suffix": "chill"
+				"spriteSuffix": "chill"
 			},
 			{
 				"name": "Genesect",
-				"is_uber": true,
+				"isUber": true,
 				"types": ["bug", "steel"],
-				"sprite_suffix": "douse"
+				"spriteSuffix": "douse"
 			},
 			{
 				"name": "Genesect",
-				"is_uber": true,
+				"isUber": true,
 				"types": ["bug", "steel"],
-				"sprite_suffix": "shock"
+				"spriteSuffix": "shock"
 			}
 		]
 	}
