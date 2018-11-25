@@ -10,7 +10,7 @@ function generateRandom() {
 	.then(html => document.getElementById("results").innerHTML = html)
 	.finally(function() {
 		markLoading(false);
-		//TODO log to analytics with options.
+		logOptionsToAnalytics(options);
 	});
 }
 
