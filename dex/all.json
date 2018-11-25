@@ -5706,7 +5706,6 @@
 		"forms": [
 			{
 				"name": "Hoopa",
-				"is_uber": true,
 				"types": ["psychic", "ghost"]
 			},
 			{

@@ -984,6 +984,7 @@
 		"id": 360,
 		"name": "Wynaut",
 		"is_nfe": true,
+		"is_uber": true,
 		"types": ["psychic"]
 	},
 	{

@@ -1727,10 +1727,12 @@
 		"id": 642,
 		"name": "Thundurus",
 		"types": ["electric", "flying"],
+		"is_uber": true,
 		"forms": [
 			{
 				"name": "Thundurus",
-				"types": ["electric", "flying"]
+				"types": ["electric", "flying"],
+				"is_uber": true
 			},
 			{
 				"name": "Thundurus Therian",
