@@ -78,9 +78,10 @@ function chooseRandom(eligiblePokemon, options) {
 		var chosen = removeRandomElement(eligiblePokemon);
 
 		if (options.forms && chosen.forms) {
-			// Choose a random form and merge its values with the top level.
+			// Choose a random form, getting its ID from the top level.
 			var randomForm = removeRandomElement(chosen.forms);
-			chosen = Object.assign(chosen, randomForm);
+			randomForm.id = chosen.id;
+			chosen = randomForm;
 
 			// If we generated a mega, we can't choose any more.
 			if (chosen.isMega) {
