@@ -20,14 +20,14 @@ function markLoading(isLoading) {
 
 function getOptions() {
 	return {
-		n: Number(document.getElementById('n').value),
-		region: document.getElementById('region').value,
-		type: document.getElementById('type').value,
-		ubers: document.getElementById('ubers').checked,
-		nfes: document.getElementById('nfes').checked,
-		sprites: document.getElementById('sprites').checked,
-		natures: document.getElementById('natures').checked,
-		forms: document.getElementById('forms').checked
+		n: Number(document.getElementById("n").value),
+		region: document.getElementById("region").value,
+		type: document.getElementById("type").value,
+		ubers: document.getElementById("ubers").checked,
+		nfes: document.getElementById("nfes").checked,
+		sprites: document.getElementById("sprites").checked,
+		natures: document.getElementById("natures").checked,
+		forms: document.getElementById("forms").checked
 	};
 }
 
@@ -44,7 +44,7 @@ function getPokemonInRegion(options) {
 
 function filterByOptions(pokemonInRegion, options) {
 	return pokemonInRegion.filter(function (pokemon) {
-		if (options.forms && 'forms' in pokemon) {
+		if (options.forms && "forms" in pokemon) {
 			// If we are generating with forms and this Pokémon has forms,
 			// filter on them instead of the top-level Pokémon.
 			pokemon.forms = filterByOptions(pokemon.forms, options);
@@ -111,11 +111,11 @@ function removeMegas(pokemonArray) {
 
 // Converts a JSON array of Pokémon into an HTML ordered list.
 function htmlifyPokemonArray(generatedPokemon, options) {
-	var output = '<ol>';
+	var output = "<ol>";
 	for (i=0; i<generatedPokemon.length; i++) {
 		output += htmlifyPokemon(generatedPokemon[i], options);
 	}
-	output += '</ol>';
+	output += "</ol>";
 
 	return output;
 }
@@ -145,7 +145,7 @@ function htmlifyPokemon(pokemon, options) {
 		out += '<div class="wrapper"><img src="' + sprite + '" alt="' + title + '" title="' + title + '" /></div>';
 	}
 
-	out += '</li>';
+	out += "</li>";
 
 	return out;
 }
@@ -154,7 +154,7 @@ function getSpritePath(pokemon, shiny) {
 	var path = shiny ? PATH_TO_SHINY_SPRITES : PATH_TO_SPRITES;
 	var name = pokemon.id;
 	if (pokemon.spriteSuffix) {
-		name = name + '-' + pokemon.spriteSuffix;
+		name = name + "-" + pokemon.spriteSuffix;
 	}
 	return path + name + SPRITE_EXTENTION;
 }
@@ -163,7 +163,7 @@ function generateNature() {
 	return getRandomElement(NATURES);
 }
 
-const NATURES = ['Adamant', 'Bashful', 'Bold', 'Brave', 'Calm', 'Careful', 'Docile', 'Gentle', 'Hardy', 'Hasty', 'Impish', 'Jolly', 'Lax', 'Lonely', 'Mild', 'Modest', 'Na&iuml;ve', 'Naughty', 'Quiet', 'Quirky', 'Rash', 'Relaxed', 'Sassy', 'Serious', 'Timid'];
+const NATURES = ["Adamant", "Bashful", "Bold", "Brave", "Calm", "Careful", "Docile", "Gentle", "Hardy", "Hasty", "Impish", "Jolly", "Lax", "Lonely", "Mild", "Modest", "Na&iuml;ve", "Naughty", "Quiet", "Quirky", "Rash", "Relaxed", "Sassy", "Serious", "Timid"];
 
 function getRandomElement(arr) {
 	return arr[randomInteger(arr.length)];
