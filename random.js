@@ -5,9 +5,11 @@ function generateRandom() {
 	var options = getOptions();
 
 	getEligiblePokemon(options)
-	.then(eligible => chooseRandom(eligible, options))
-	.then(generated => htmlifyPokemonArray(generated, options))
-	.then(html => document.getElementById("results").innerHTML = html)
+	.then(function (eligible) {return chooseRandom(eligible, options)})
+	.then(function(generated) {return htmlifyPokemonArray(generated, options)})
+	.then(function(html) {
+		document.getElementById("results").innerHTML = html;
+	})
 	.finally(function() {
 		markLoading(false);
 		logOptionsToAnalytics(options);
@@ -42,7 +44,9 @@ function getEligiblePokemon(options) {
 		return Promise.resolve(cachedEligiblePokemon);
 	} else {
 		return getPokemonInRegion(options)
-			.then(pokemonInRegion => filterByOptions(pokemonInRegion, options))
+			.then(function (pokemonInRegion) {
+				return filterByOptions(pokemonInRegion, options);
+			})
 			.then(function (eligiblePokemon) {
 				cachedOptionsJson = optionsJson;
 				cachedEligiblePokemon = eligiblePokemon;
@@ -53,7 +57,7 @@ function getEligiblePokemon(options) {
 
 function getPokemonInRegion(options) {
 	return fetch("dex/" + options.region + ".json")
-		.then(r => r.json());
+		.then(function (r) {return r.json()});
 }
 
 function filterByOptions(pokemonInRegion, options) {
@@ -115,7 +119,7 @@ function chooseRandom(eligiblePokemon, options) {
 function removeMegas(pokemonArray) {
 	return pokemonArray.filter(function (pokemon) {
 		if ("forms" in pokemon) {
-			pokemon.forms = pokemon.forms.filter(form => !form.isMega);
+			pokemon.forms = pokemon.forms.filter(function (form) {return !form.isMega});
 			return pokemon.forms.length > 0;
 		} else {
 			return true; // always keep if no forms
