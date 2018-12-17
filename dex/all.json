@@ -6389,5 +6389,16 @@
 		"id": 807,
 		"name": "Zeraora",
 		"types": ["electric"]
+	},
+	{
+		"id": 808,
+		"name": "Meltan",
+		"isNfe": true,
+		"types": ["steel"]
+	},
+	{
+		"id": 809,
+		"name": "Melmetal",
+		"types": ["steel"]
 	}
 ]
