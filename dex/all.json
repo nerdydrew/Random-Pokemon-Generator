@@ -5658,6 +5658,7 @@
 	{
 		"id": 718,
 		"name": "Zygarde",
+		"isUber": true,
 		"types": ["dragon", "ground"],
 		"forms": [
 			{
@@ -5673,6 +5674,7 @@
 			},
 			{
 				"name": "Zygarde",
+				"isUber": true,
 				"types": ["dragon", "ground"]
 			}
 		]
