@@ -105,6 +105,9 @@ function chooseRandom(eligiblePokemon, options) {
 			if (chosen.isMega) {
 				eligiblePokemon = removeMegas(eligiblePokemon);
 			}
+			if (chosen.isGigantamax) {
+				eligiblePokemon = removeGigantamaxes(eligiblePokemon);
+			}
 		}
 
 		chosenArray.push(chosen);
@@ -120,6 +123,18 @@ function removeMegas(pokemonArray) {
 	return pokemonArray.filter(function (pokemon) {
 		if ("forms" in pokemon) {
 			pokemon.forms = pokemon.forms.filter(function (form) {return !form.isMega});
+			return pokemon.forms.length > 0;
+		} else {
+			return true; // always keep if no forms
+		}
+	});
+}
+
+// Filters Gigantamax forms from the array. Doesn't mutate the original array.
+function removeGigantamaxes(pokemonArray) {
+	return pokemonArray.filter(function (pokemon) {
+		if ("forms" in pokemon) {
+			pokemon.forms = pokemon.forms.filter(function (form) {return !form.isGigantamax});
 			return pokemon.forms.length > 0;
 		} else {
 			return true; // always keep if no forms
