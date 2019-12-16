@@ -7741,6 +7741,25 @@
 		"types": [
 			"poison",
 			"dragon"
+		],
+		"forms": [
+			{
+				"name": "Eternatus",
+				"isUber": true,
+				"types": [
+					"poison",
+					"dragon"
+				]
+			},
+			{
+				"name": "Eternatus Eternamax",
+				"isUber": true,
+				"types": [
+					"poison",
+					"dragon"
+				],
+				"spriteSuffix": "eternamax"
+			}
 		]
 	}
 ]

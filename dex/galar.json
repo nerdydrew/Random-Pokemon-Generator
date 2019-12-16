@@ -3427,6 +3427,22 @@
 		"name": "Rapidash",
 		"types": [
 			"fire"
+		],
+		"forms": [
+			{
+				"name": "Rapidash",
+				"types": [
+					"fire"
+				]
+			},
+			{
+				"name": "Rapidash Galar",
+				"types": [
+					"psychic",
+					"fairy"
+				],
+				"spriteSuffix": "galar"
+			}
 		]
 	},
 	{
@@ -4305,6 +4321,25 @@
 		"types": [
 			"poison",
 			"dragon"
+		],
+		"forms": [
+			{
+				"name": "Eternatus",
+				"isUber": true,
+				"types": [
+					"poison",
+					"dragon"
+				]
+			},
+			{
+				"name": "Eternatus Eternamax",
+				"isUber": true,
+				"types": [
+					"poison",
+					"dragon"
+				],
+				"spriteSuffix": "eternamax"
+			}
 		]
 	}
 ]
