@@ -1439,8 +1439,7 @@
 				"name": "Wishiwashi",
 				"types": [
 					"water"
-				],
-				"spriteSuffix": "solo"
+				]
 			}
 		]
 	},
@@ -4096,8 +4095,7 @@
 				"name": "Silvally",
 				"types": [
 					"normal"
-				],
-				"spriteSuffix": "normal"
+				]
 			},
 			{
 				"name": "Silvally",

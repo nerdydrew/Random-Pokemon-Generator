@@ -113,8 +113,7 @@
 		"forms": [
 			{
 				"name": "Oricorio",
-				"types": ["fire", "flying"],
-				"spriteSuffix": "baile"
+				"types": ["fire", "flying"]
 			},
 			{
 				"name": "Oricorio",
@@ -162,8 +161,7 @@
 			},
 			{
 				"name": "Lycanroc",
-				"types": ["rock"],
-				"spriteSuffix": "midday"
+				"types": ["rock"]
 			},
 			{
 				"name": "Lycanroc",
@@ -184,8 +182,7 @@
 			},
 			{
 				"name": "Wishiwashi",
-				"types": ["water"],
-				"spriteSuffix": "solo"
+				"types": ["water"]
 			}
 		]
 	},
@@ -398,8 +395,7 @@
 			},
 			{
 				"name": "Silvally",
-				"types": ["normal"],
-				"spriteSuffix": "normal"
+				"types": ["normal"]
 			},
 			{
 				"name": "Silvally",
@@ -460,8 +456,7 @@
 			},
 			{
 				"name": "Minior Core",
-				"types": ["rock", "flying"],
-				"spriteSuffix": "red"
+				"types": ["rock", "flying"]
 			},
 			{
 				"name": "Minior Core",
