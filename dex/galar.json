@@ -597,6 +597,7 @@
 	{
 		"id": 278,
 		"name": "Wingull",
+		"isNfe": true,
 		"types": [
 			"water",
 			"flying"
@@ -605,7 +606,6 @@
 	{
 		"id": 279,
 		"name": "Pelipper",
-		"isNfe": true,
 		"types": [
 			"water",
 			"flying"
