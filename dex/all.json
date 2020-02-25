@@ -4666,12 +4666,14 @@
 		"forms": [
 			{
 				"name": "Yamask",
+				"isNfe": true,
 				"types": [
 					"ghost"
 				]
 			},
 			{
 				"name": "Yamask Galar",
+				"isNfe": true,
 				"types": [
 					"ground",
 					"ghost"
