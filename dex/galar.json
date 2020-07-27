@@ -4340,5 +4340,56 @@
 				"spriteSuffix": "eternamax"
 			}
 		]
+	},
+	{
+		"id": 891,
+		"name": "Kubfu",
+		"isNfe": true,
+		"types": [
+			"fighting"
+		]
+	},
+	{
+		"id": 892,
+		"name": "Urshifu",
+		"types": [
+			"fighting",
+			"dark"
+		],
+		"forms": [
+			{
+				"name": "Urshifu Single Strike",
+				"types": [
+					"fighting",
+					"dark"
+				]
+			},
+			{
+				"name": "Urshifu Rapid Strike",
+				"types": [
+					"fighting",
+					"water"
+				],
+				"spriteSuffix": "rs"
+			},
+			{
+				"name": "Urshifu Single Strike",
+				"types": [
+					"fighting",
+					"dark"
+				],
+				"spriteSuffix": "rs-gigantamax",
+				"isGigantamax": true
+			},
+			{
+				"name": "Urshifu Rapid Strike Gigantamax",
+				"types": [
+					"fighting",
+					"water"
+				],
+				"spriteSuffix": "rs-gigantamax",
+				"isGigantamax": true
+			}
+		]
 	}
 ]
