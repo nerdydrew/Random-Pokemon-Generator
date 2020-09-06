@@ -1,4 +1,4 @@
-// Called when the Generate button is clicked.
+/** Called when the Generate button is clicked. */
 function generateRandom() {
 	markLoading(true);
 
@@ -85,7 +85,7 @@ function filterByOptions(pokemonInRegion, options) {
 	});
 }
 
-// Chooses N random Pokémon from the array of eligibles without replacement.
+/** Chooses N random Pokémon from the array of eligibles without replacement. */
 function chooseRandom(eligiblePokemon, options) {
 	var chosenArray = [];
 
@@ -118,7 +118,7 @@ function chooseRandom(eligiblePokemon, options) {
 	return shuffle(chosenArray);
 }
 
-// Filters megas from the array. Doesn't mutate the original array.
+/** Filters megas from the array. Doesn't mutate the original array. */
 function removeMegas(pokemonArray) {
 	return pokemonArray.filter(function (pokemon) {
 		if ("forms" in pokemon) {
@@ -130,7 +130,7 @@ function removeMegas(pokemonArray) {
 	});
 }
 
-// Filters Gigantamax forms from the array. Doesn't mutate the original array.
+/** Filters Gigantamax forms from the array. Doesn't mutate the original array. */
 function removeGigantamaxes(pokemonArray) {
 	return pokemonArray.filter(function (pokemon) {
 		if ("forms" in pokemon) {
@@ -142,7 +142,7 @@ function removeGigantamaxes(pokemonArray) {
 	});
 }
 
-// Converts a JSON array of Pokémon into an HTML ordered list.
+/** Converts a JSON array of Pokémon into an HTML ordered list. */
 function htmlifyPokemonArray(generatedPokemon, options) {
 	var output = "<ol>";
 	for (i=0; i<generatedPokemon.length; i++) {
@@ -153,7 +153,7 @@ function htmlifyPokemonArray(generatedPokemon, options) {
 	return output;
 }
 
-// Converts JSON for a single Pokémon into an HTML list item.
+/** Converts JSON for a single Pokémon into an HTML list item. */
 function htmlifyPokemon(pokemon, options) {
 	// http://bulbapedia.bulbagarden.net/wiki/Shiny_Pok%C3%A9mon#Generation_VI
 	var shiny = Math.floor(Math.random() * 65536) < 16;
@@ -206,7 +206,7 @@ function removeRandomElement(arr) {
 	return arr.splice(randomInteger(arr.length), 1)[0];
 }
 
-// Modern Fisher-Yates shuffle.
+/** Modern Fisher-Yates shuffle. */
 function shuffle(arr) {
 	for (var i = arr.length - 1; i > 0; i--) {
 		var j = randomInteger(i + 1);
