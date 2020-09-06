@@ -3,6 +3,7 @@ function generateRandom() {
 	markLoading(true);
 
 	var options = getOptions();
+	persistOptions(options);
 
 	getEligiblePokemon(options)
 	.then(function (eligible) {return chooseRandom(eligible, options)})
@@ -31,6 +32,17 @@ function getOptions() {
 		natures: document.getElementById("natures").checked,
 		forms: document.getElementById("forms").checked
 	};
+}
+
+function setOptions(options) {
+	document.getElementById("n").value = options.n; //TODO number toString?
+	document.getElementById("region").value = options.region;
+	document.getElementById("type").value = options.type;
+	document.getElementById("ubers").checked = options.ubers;
+	document.getElementById("nfes").checked = options.nfes;
+	document.getElementById("sprites").checked = options.sprites;
+	document.getElementById("natures").checked = options.natures;
+	document.getElementById("forms").checked = options.forms;
 }
 
 // Cache the results of getEligiblePokemon by options.
@@ -220,3 +232,19 @@ function shuffle(arr) {
 function randomInteger(maxExclusive) {
 	return Math.floor(Math.random() * maxExclusive);
 }
+
+const STORAGE_OPTIONS_KEY = "options";
+
+function persistOptions(options) {
+	var optionsJson = JSON.stringify(options);
+	window.localStorage.setItem(STORAGE_OPTIONS_KEY, optionsJson);
+}
+
+function loadOptions() {
+	var optionsJson = window.localStorage.getItem(STORAGE_OPTIONS_KEY);
+	if (optionsJson) {
+		setOptions(JSON.parse(optionsJson));
+	}
+}
+
+document.addEventListener("DOMContentLoaded", loadOptions);
