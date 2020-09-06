@@ -69,7 +69,7 @@ function filterByOptions(pokemonInRegion, options) {
 			return pokemon.forms.length > 0;
 		}
 
-		if (options.type != "all" && !pokemon.types.includes(options.type)) {
+		if (options.type != "all" && pokemon.types.indexOf(options.type) < 0) {
 			return false;
 		}
 
