@@ -25,6 +25,12 @@
 				"types": ["grass", "poison"],
 				"spriteSuffix": "mega",
 				"isMega": true
+			},
+			{
+				"name": "Venusaur Gigantamax",
+				"types": ["grass", "poison"],
+				"spriteSuffix": "gigantamax",
+				"isGigantamax": true
 			}
 		]
 	},
@@ -98,6 +104,12 @@
 				"types": ["water"],
 				"spriteSuffix": "mega",
 				"isMega": true
+			},
+			{
+				"name": "Blastoise Gigantamax",
+				"types": ["water"],
+				"spriteSuffix": "gigantamax",
+				"isGigantamax": true
 			}
 		]
 	},
@@ -6861,6 +6873,22 @@
 		"name": "Rillaboom",
 		"types": [
 			"grass"
+		],
+		"forms": [
+			{
+				"name": "Rillaboom",
+				"types": [
+					"grass"
+				]
+			},
+			{
+				"name": "Rillaboom Gigantamax",
+				"types": [
+					"grass"
+				],
+				"spriteSuffix": "gigantamax",
+				"isGigantamax": true
+			}
 		]
 	},
 	{
@@ -6884,6 +6912,22 @@
 		"name": "Cinderace",
 		"types": [
 			"fire"
+		],
+		"forms": [
+			{
+				"name": "Cinderace",
+				"types": [
+					"fire"
+				]
+			},
+			{
+				"name": "Cinderace Gigantamax",
+				"types": [
+					"fire"
+				],
+				"spriteSuffix": "gigantamax",
+				"isGigantamax": true
+			}
 		]
 	},
 	{
@@ -6907,6 +6951,22 @@
 		"name": "Inteleon",
 		"types": [
 			"water"
+		],
+		"forms": [
+			{
+				"name": "Inteleon",
+				"types": [
+					"water"
+				]
+			},
+			{
+				"name": "Inteleon Gigantamax",
+				"types": [
+					"water"
+				],
+				"spriteSuffix": "gigantamax",
+				"isGigantamax": true
+			}
 		]
 	},
 	{
@@ -7852,12 +7912,12 @@
 				"spriteSuffix": "rs"
 			},
 			{
-				"name": "Urshifu Single Strike",
+				"name": "Urshifu Single Strike Gigantamax",
 				"types": [
 					"fighting",
 					"dark"
 				],
-				"spriteSuffix": "rs-gigantamax",
+				"spriteSuffix": "ss-gigantamax",
 				"isGigantamax": true
 			},
 			{
@@ -7868,6 +7928,31 @@
 				],
 				"spriteSuffix": "rs-gigantamax",
 				"isGigantamax": true
+			}
+		]
+	},
+	{
+		"id": 893,
+		"name": "Zarude",
+		"types": [
+			"dark",
+			"grass"
+		],
+		"forms": [
+			{
+				"name": "Zarude",
+				"types": [
+					"dark",
+					"grass"
+				]
+			},
+			{
+				"name": "Zarude Dada",
+				"types": [
+					"dark",
+					"grass"
+				],
+				"spriteSuffix": "dada"
 			}
 		]
 	}
