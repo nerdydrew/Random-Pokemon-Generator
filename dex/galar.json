@@ -3895,7 +3895,7 @@
 			"ghost"
 		],
 		"forms": [
-{
+			{
 				"name": "Rotom",
 				"types": [
 					"electric",
@@ -4453,11 +4453,17 @@
 		"id": 79,
 		"name": "Slowpoke",
 		"isNfe": true,
-		"types": ["water", "psychic"],
+		"types": [
+			"water",
+			"psychic"
+		],
 		"forms": [
 			{
 				"name": "Slowpoke Galar",
-				"types": ["water", "psychic"],
+				"types": [
+					"water",
+					"psychic"
+				],
 				"spriteSuffix": "galar",
 				"isNfe": true
 			}
@@ -4466,11 +4472,17 @@
 	{
 		"id": 80,
 		"name": "Slowbro",
-		"types": ["water", "psychic"],
+		"types": [
+			"water",
+			"psychic"
+		],
 		"forms": [
 			{
 				"name": "Slowbro Galar",
-				"types": ["water", "psychic"],
+				"types": [
+					"water",
+					"psychic"
+				],
 				"spriteSuffix": "galar"
 			}
 		]
@@ -4478,11 +4490,17 @@
 	{
 		"id": 199,
 		"name": "Slowking",
-		"types": ["water", "psychic"],
+		"types": [
+			"water",
+			"psychic"
+		],
 		"forms": [
 			{
 				"name": "Slowking Galar",
-				"types": ["water", "psychic"],
+				"types": [
+					"water",
+					"psychic"
+				],
 				"spriteSuffix": "galar"
 			}
 		]
@@ -4490,11 +4508,17 @@
 	{
 		"id": 144,
 		"name": "Articuno",
-		"types": ["ice", "flying"],
+		"types": [
+			"ice",
+			"flying"
+		],
 		"forms": [
 			{
 				"name": "Articuno Galar",
-				"types": ["psychic", "flying"],
+				"types": [
+					"psychic",
+					"flying"
+				],
 				"spriteSuffix": "galar"
 			}
 		]
@@ -4502,11 +4526,17 @@
 	{
 		"id": 145,
 		"name": "Zapdos",
-		"types": ["electric", "flying"],
+		"types": [
+			"electric",
+			"flying"
+		],
 		"forms": [
 			{
 				"name": "Zapdos Galar",
-				"types": ["fighting", "flying"],
+				"types": [
+					"fighting",
+					"flying"
+				],
 				"spriteSuffix": "galar"
 			}
 		]
@@ -4514,11 +4544,17 @@
 	{
 		"id": 146,
 		"name": "Moltres",
-		"types": ["fire", "flying"],
+		"types": [
+			"fire",
+			"flying"
+		],
 		"forms": [
 			{
 				"name": "Moltres Galar",
-				"types": ["dark", "flying"],
+				"types": [
+					"dark",
+					"flying"
+				],
 				"spriteSuffix": "galar"
 			}
 		]
