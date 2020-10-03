@@ -1,3 +1,7 @@
+const PATH_TO_SPRITES = 'sprites/png/normal/';
+const PATH_TO_SHINY_SPRITES = 'sprites/png/shiny/';
+const SPRITE_EXTENTION = '.png';
+
 /** Called when the Generate button is clicked. */
 function generateRandom() {
 	markLoading(true);
