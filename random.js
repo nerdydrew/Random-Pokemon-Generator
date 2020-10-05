@@ -17,7 +17,6 @@ function generateRandom() {
 	})
 	.finally(function() {
 		markLoading(false);
-		logOptionsToAnalytics(options);
 	});
 }
 
