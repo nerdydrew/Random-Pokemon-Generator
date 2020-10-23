@@ -4450,6 +4450,67 @@
 		]
 	},
 	{
+		"id": 894,
+		"name": "Regieleki",
+		"types": [
+			"electric"
+		]
+	},
+	{
+		"id": 895,
+		"name": "Regidrago",
+		"types": [
+			"dragon"
+		]
+	},
+	{
+		"id": 896,
+		"name": "Glastrier",
+		"types": [
+			"ice"
+		]
+	},
+	{
+		"id": 897,
+		"name": "Spectrier",
+		"types": [
+			"ghost"
+		]
+	},
+	{
+		"id": 898,
+		"name": "Calyrex",
+		"types": [
+			"psychic",
+			"grass"
+		],
+		"forms": [
+			{
+				"name": "Calyrex",
+				"types": [
+					"psychic",
+					"grass"
+				]
+			},
+			{
+				"name": "Calyrex Ice Rider",
+				"types": [
+					"psychic",
+					"ice"
+				],
+				"spriteSuffix": "ice"
+			},
+			{
+				"name": "Calyrex Shadow Rider",
+				"types": [
+					"psychic",
+					"shadow"
+				],
+				"spriteSuffix": "shadow"
+			}
+		]
+	},
+	{
 		"id": 79,
 		"name": "Slowpoke",
 		"isNfe": true,
