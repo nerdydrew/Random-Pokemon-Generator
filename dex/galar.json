@@ -5628,5 +5628,903 @@
 		"types": [
 			"normal"
 		]
+	},
+	{
+		"id": 29,
+		"name": "Nidoran ♀",
+		"isNfe": true,
+		"types": [
+			"poison"
+		]
+	},
+	{
+		"id": 30,
+		"name": "Nidorina",
+		"isNfe": true,
+		"types": [
+			"poison"
+		]
+	},
+	{
+		"id": 31,
+		"name": "Nidoqueen",
+		"types": [
+			"poison",
+			"ground"
+		]
+	},
+	{
+		"id": 32,
+		"name": "Nidoran ♂",
+		"isNfe": true,
+		"types": [
+			"poison"
+		]
+	},
+	{
+		"id": 33,
+		"name": "Nidorino",
+		"isNfe": true,
+		"types": [
+			"poison"
+		]
+	},
+	{
+		"id": 34,
+		"name": "Nidoking",
+		"types": [
+			"poison",
+			"ground"
+		]
+	},
+	{
+		"id": 41,
+		"name": "Zubat",
+		"isNfe": true,
+		"types": [
+			"poison",
+			"flying"
+		]
+	},
+	{
+		"id": 42,
+		"name": "Golbat",
+		"isNfe": true,
+		"types": [
+			"poison",
+			"flying"
+		]
+	},
+	{
+		"id": 125,
+		"name": "Electabuzz",
+		"isNfe": true,
+		"types": [
+			"electric"
+		]
+	},
+	{
+		"id": 126,
+		"name": "Magmar",
+		"isNfe": true,
+		"types": [
+			"fire"
+		]
+	},
+	{
+		"id": 147,
+		"name": "Dratini",
+		"isNfe": true,
+		"types": [
+			"dragon"
+		]
+	},
+	{
+		"id": 148,
+		"name": "Dragonair",
+		"isNfe": true,
+		"types": [
+			"dragon"
+		]
+	},
+	{
+		"id": 149,
+		"name": "Dragonite",
+		"types": [
+			"dragon",
+			"flying"
+		]
+	},
+	{
+		"id": 169,
+		"name": "Crobat",
+		"types": [
+			"poison",
+			"flying"
+		]
+	},
+	{
+		"id": 239,
+		"name": "Elekid",
+		"isNfe": true,
+		"types": [
+			"electric"
+		]
+	},
+	{
+		"id": 240,
+		"name": "Magby",
+		"isNfe": true,
+		"types": [
+			"fire"
+		]
+	},
+	{
+		"id": 304,
+		"name": "Aron",
+		"isNfe": true,
+		"types": [
+			"steel",
+			"rock"
+		]
+	},
+	{
+		"id": 305,
+		"name": "Lairon",
+		"isNfe": true,
+		"types": [
+			"steel",
+			"rock"
+		]
+	},
+	{
+		"id": 306,
+		"name": "Aggron",
+		"types": [
+			"steel",
+			"rock"
+		],
+		"forms": [
+			{
+				"name": "Aggron",
+				"types": [
+					"steel",
+					"rock"
+				]
+			},
+			{
+				"name": "Aggron Mega",
+				"types": [
+					"steel"
+				],
+				"spriteSuffix": "mega",
+				"isMega": true
+			}
+		]
+	},
+	{
+		"id": 333,
+		"name": "Swablu",
+		"isNfe": true,
+		"types": [
+			"normal",
+			"flying"
+		]
+	},
+	{
+		"id": 334,
+		"name": "Altaria",
+		"types": [
+			"dragon",
+			"flying"
+		],
+		"forms": [
+			{
+				"name": "Altaria",
+				"types": [
+					"dragon",
+					"flying"
+				]
+			},
+			{
+				"name": "Altaria Mega",
+				"types": [
+					"dragon",
+					"fairy"
+				],
+				"spriteSuffix": "mega",
+				"isMega": true
+			}
+		]
+	},
+	{
+		"id": 345,
+		"name": "Lileep",
+		"isNfe": true,
+		"types": [
+			"rock",
+			"grass"
+		]
+	},
+	{
+		"id": 346,
+		"name": "Cradily",
+		"types": [
+			"rock",
+			"grass"
+		]
+	},
+	{
+		"id": 359,
+		"name": "Absol",
+		"types": [
+			"dark"
+		],
+		"forms": [
+			{
+				"name": "Absol",
+				"types": [
+					"dark"
+				]
+			},
+			{
+				"name": "Absol Mega",
+				"types": [
+					"dark"
+				],
+				"spriteSuffix": "mega",
+				"isMega": true
+			}
+		]
+	},
+	{
+		"id": 363,
+		"name": "Spheal",
+		"isNfe": true,
+		"types": [
+			"ice",
+			"water"
+		]
+	},
+	{
+		"id": 364,
+		"name": "Sealeo",
+		"isNfe": true,
+		"types": [
+			"ice",
+			"water"
+		]
+	},
+	{
+		"id": 365,
+		"name": "Walrein",
+		"types": [
+			"ice",
+			"water"
+		]
+	},
+	{
+		"id": 369,
+		"name": "Relicanth",
+		"types": [
+			"water",
+			"rock"
+		]
+	},
+	{
+		"id": 374,
+		"name": "Beldum",
+		"isNfe": true,
+		"types": [
+			"steel",
+			"psychic"
+		]
+	},
+	{
+		"id": 375,
+		"name": "Metang",
+		"isNfe": true,
+		"types": [
+			"steel",
+			"psychic"
+		]
+	},
+	{
+		"id": 376,
+		"name": "Metagross",
+		"types": [
+			"steel",
+			"psychic"
+		],
+		"forms": [
+			{
+				"name": "Metagross",
+				"types": [
+					"steel",
+					"psychic"
+				]
+			},
+			{
+				"name": "Metagross Mega",
+				"isUber": true,
+				"types": [
+					"steel",
+					"psychic"
+				],
+				"spriteSuffix": "mega",
+				"isMega": true
+			}
+		]
+	},
+	{
+		"id": 443,
+		"name": "Gible",
+		"isNfe": true,
+		"types": [
+			"dragon",
+			"ground"
+		]
+	},
+	{
+		"id": 444,
+		"name": "Gabite",
+		"isNfe": true,
+		"types": [
+			"dragon",
+			"ground"
+		]
+	},
+	{
+		"id": 445,
+		"name": "Garchomp",
+		"types": [
+			"dragon",
+			"ground"
+		],
+		"forms": [
+			{
+				"name": "Garchomp",
+				"types": [
+					"dragon",
+					"ground"
+				]
+			},
+			{
+				"name": "Garchomp Mega",
+				"types": [
+					"dragon",
+					"ground"
+				],
+				"spriteSuffix": "mega",
+				"isMega": true
+			}
+		]
+	},
+	{
+		"id": 466,
+		"name": "Electivire",
+		"types": [
+			"electric"
+		]
+	},
+	{
+		"id": 467,
+		"name": "Magmortar",
+		"types": [
+			"fire"
+		]
+	},
+	{
+		"id": 531,
+		"name": "Audino",
+		"types": [
+			"normal"
+		],
+		"forms": [
+			{
+				"name": "Audino",
+				"types": [
+					"normal"
+				]
+			},
+			{
+				"name": "Audino Mega",
+				"types": [
+					"normal",
+					"fairy"
+				],
+				"spriteSuffix": "mega",
+				"isMega": true
+			}
+		]
+	},
+	{
+		"id": 615,
+		"name": "Cryogonal",
+		"types": [
+			"ice"
+		]
+	},
+	{
+		"id": 696,
+		"name": "Tyrunt",
+		"isNfe": true,
+		"types": [
+			"rock",
+			"dragon"
+		]
+	},
+	{
+		"id": 697,
+		"name": "Tyrantrum",
+		"types": [
+			"rock",
+			"dragon"
+		]
+	},
+	{
+		"id": 698,
+		"name": "Amaura",
+		"isNfe": true,
+		"types": [
+			"rock",
+			"ice"
+		]
+	},
+	{
+		"id": 699,
+		"name": "Aurorus",
+		"types": [
+			"rock",
+			"ice"
+		]
+	},
+	{
+		"id": 703,
+		"name": "Carbink",
+		"types": [
+			"rock",
+			"fairy"
+		]
+	},
+	{
+		"id": 243,
+		"name": "Raikou",
+		"types": [
+			"electric"
+		]
+	},
+	{
+		"id": 244,
+		"name": "Entei",
+		"types": [
+			"fire"
+		]
+	},
+	{
+		"id": 245,
+		"name": "Suicune",
+		"types": [
+			"water"
+		]
+	},
+	{
+		"id": 249,
+		"name": "Lugia",
+		"isUber": true,
+		"types": [
+			"psychic",
+			"flying"
+		]
+	},
+	{
+		"id": 250,
+		"name": "Ho-oh",
+		"isUber": true,
+		"types": [
+			"fire",
+			"flying"
+		]
+	},
+	{
+		"id": 377,
+		"name": "Regirock",
+		"types": [
+			"rock"
+		]
+	},
+	{
+		"id": 378,
+		"name": "Regice",
+		"types": [
+			"ice"
+		]
+	},
+	{
+		"id": 379,
+		"name": "Registeel",
+		"types": [
+			"steel"
+		]
+	},
+	{
+		"id": 380,
+		"name": "Latias",
+		"types": [
+			"dragon",
+			"psychic"
+		],
+		"forms": [
+			{
+				"name": "Latias",
+				"types": [
+					"dragon",
+					"psychic"
+				]
+			},
+			{
+				"name": "Latias Mega",
+				"types": [
+					"dragon",
+					"psychic"
+				],
+				"spriteSuffix": "mega",
+				"isMega": true
+			}
+		]
+	},
+	{
+		"id": 381,
+		"name": "Latios",
+		"types": [
+			"dragon",
+			"psychic"
+		],
+		"forms": [
+			{
+				"name": "Latios",
+				"types": [
+					"dragon",
+					"psychic"
+				]
+			},
+			{
+				"name": "Latios Mega",
+				"types": [
+					"dragon",
+					"psychic"
+				],
+				"spriteSuffix": "mega",
+				"isMega": true
+			}
+		]
+	},
+	{
+		"id": 382,
+		"name": "Kyogre",
+		"isUber": true,
+		"types": [
+			"water"
+		],
+		"forms": [
+			{
+				"name": "Kyogre",
+				"isUber": true,
+				"types": [
+					"water"
+				]
+			},
+			{
+				"name": "Kyogre Primal",
+				"isUber": true,
+				"types": [
+					"water"
+				],
+				"spriteSuffix": "primal"
+			}
+		]
+	},
+	{
+		"id": 383,
+		"name": "Groudon",
+		"isUber": true,
+		"types": [
+			"ground"
+		],
+		"forms": [
+			{
+				"name": "Groudon",
+				"isUber": true,
+				"types": [
+					"ground"
+				]
+			},
+			{
+				"name": "Groudon Primal",
+				"isUber": true,
+				"types": [
+					"ground",
+					"fire"
+				],
+				"spriteSuffix": "primal"
+			}
+		]
+	},
+	{
+		"id": 384,
+		"name": "Rayquaza",
+		"isUber": true,
+		"types": [
+			"dragon",
+			"flying"
+		],
+		"forms": [
+			{
+				"name": "Rayquaza",
+				"isUber": true,
+				"types": [
+					"dragon",
+					"flying"
+				]
+			},
+			{
+				"name": "Rayquaza Mega",
+				"isUber": true,
+				"types": [
+					"dragon",
+					"flying"
+				],
+				"spriteSuffix": "mega",
+				"isMega": true
+			}
+		]
+	},
+	{
+		"id": 480,
+		"name": "Uxie",
+		"types": [
+			"psychic"
+		]
+	},
+	{
+		"id": 481,
+		"name": "Mesprit",
+		"types": [
+			"psychic"
+		]
+	},
+	{
+		"id": 482,
+		"name": "Azelf",
+		"types": [
+			"psychic"
+		]
+	},
+	{
+		"id": 483,
+		"name": "Dialga",
+		"isUber": true,
+		"types": [
+			"steel",
+			"dragon"
+		]
+	},
+	{
+		"id": 484,
+		"name": "Palkia",
+		"isUber": true,
+		"types": [
+			"water",
+			"dragon"
+		]
+	},
+	{
+		"id": 485,
+		"name": "Heatran",
+		"types": [
+			"fire",
+			"steel"
+		]
+	},
+	{
+		"id": 486,
+		"name": "Regigigas",
+		"types": [
+			"normal"
+		]
+	},
+	{
+		"id": 487,
+		"name": "Giratina",
+		"isUber": true,
+		"types": [
+			"ghost",
+			"dragon"
+		],
+		"forms": [
+			{
+				"name": "Giratina",
+				"isUber": true,
+				"types": [
+					"ghost",
+					"dragon"
+				]
+			},
+			{
+				"name": "Giratina Origin",
+				"isUber": true,
+				"types": [
+					"ghost",
+					"dragon"
+				],
+				"spriteSuffix": "origin"
+			}
+		]
+	},
+	{
+		"id": 488,
+		"name": "Cresselia",
+		"types": [
+			"psychic"
+		]
+	},
+	{
+		"id": 641,
+		"name": "Tornadus",
+		"types": [
+			"flying"
+		],
+		"forms": [
+			{
+				"name": "Tornadus",
+				"types": [
+					"flying"
+				]
+			},
+			{
+				"name": "Tornadus Therian",
+				"types": [
+					"flying"
+				],
+				"spriteSuffix": "therian"
+			}
+		]
+	},
+	{
+		"id": 642,
+		"name": "Thundurus",
+		"types": [
+			"electric",
+			"flying"
+		],
+		"forms": [
+			{
+				"name": "Thundurus",
+				"types": [
+					"electric",
+					"flying"
+				]
+			},
+			{
+				"name": "Thundurus Therian",
+				"types": [
+					"electric",
+					"flying"
+				],
+				"spriteSuffix": "therian"
+			}
+		]
+	},
+	{
+		"id": 645,
+		"name": "Landorus",
+		"isUber": true,
+		"types": [
+			"ground",
+			"flying"
+		],
+		"forms": [
+			{
+				"name": "Landorus",
+				"isUber": true,
+				"types": [
+					"ground",
+					"flying"
+				]
+			},
+			{
+				"name": "Landorus Therian",
+				"types": [
+					"ground",
+					"flying"
+				],
+				"spriteSuffix": "therian"
+			}
+		]
+	},
+	{
+		"id": 716,
+		"name": "Xerneas",
+		"isUber": true,
+		"types": [
+			"fairy"
+		]
+	},
+	{
+		"id": 717,
+		"name": "Yveltal",
+		"isUber": true,
+		"types": [
+			"dark",
+			"flying"
+		]
+	},
+	{
+		"id": 718,
+		"name": "Zygarde",
+		"isUber": true,
+		"types": [
+			"dragon",
+			"ground"
+		],
+		"forms": [
+			{
+				"name": "Zygarde Complete",
+				"isUber": true,
+				"types": [
+					"dragon",
+					"ground"
+				],
+				"spriteSuffix": "complete"
+			},
+			{
+				"name": "Zygarde 10%",
+				"types": [
+					"dragon",
+					"ground"
+				],
+				"spriteSuffix": "10"
+			},
+			{
+				"name": "Zygarde",
+				"isUber": true,
+				"types": [
+					"dragon",
+					"ground"
+				]
+			}
+		]
+	},
+	{
+		"id": 785,
+		"name": "Tapu Koko",
+		"types": [
+			"electric",
+			"fairy"
+		]
+	},
+	{
+		"id": 786,
+		"name": "Tapu Lele",
+		"types": [
+			"psychic",
+			"fairy"
+		]
+	},
+	{
+		"id": 787,
+		"name": "Tapu Bulu",
+		"types": [
+			"grass",
+			"fairy"
+		]
+	},
+	{
+		"id": 788,
+		"name": "Tapu Fini",
+		"types": [
+			"water",
+			"fairy"
+		]
 	}
 ]
