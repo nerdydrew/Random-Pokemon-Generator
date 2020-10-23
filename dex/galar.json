@@ -4572,23 +4572,6 @@
 		"name": "Lopunny",
 		"types": [
 			"normal"
-		],
-		"forms": [
-			{
-				"name": "Lopunny",
-				"types": [
-					"normal"
-				]
-			},
-			{
-				"name": "Lopunny Mega",
-				"types": [
-					"normal",
-					"fighting"
-				],
-				"spriteSuffix": "mega",
-				"isMega": true
-			}
 		]
 	},
 	{
@@ -4733,22 +4716,6 @@
 		"name": "Alakazam",
 		"types": [
 			"psychic"
-		],
-		"forms": [
-			{
-				"name": "Alakazam",
-				"types": [
-					"psychic"
-				]
-			},
-			{
-				"name": "Alakazam Mega",
-				"types": [
-					"psychic"
-				],
-				"spriteSuffix": "mega",
-				"isMega": true
-			}
 		]
 	},
 	{
@@ -5040,24 +5007,6 @@
 		"types": [
 			"water",
 			"dark"
-		],
-		"forms": [
-			{
-				"name": "Sharpedo",
-				"types": [
-					"water",
-					"dark"
-				]
-			},
-			{
-				"name": "Sharpedo Mega",
-				"types": [
-					"water",
-					"dark"
-				],
-				"spriteSuffix": "mega",
-				"isMega": true
-			}
 		]
 	},
 	{
@@ -5112,24 +5061,6 @@
 		"types": [
 			"bug",
 			"steel"
-		],
-		"forms": [
-			{
-				"name": "Scizor",
-				"types": [
-					"bug",
-					"steel"
-				]
-			},
-			{
-				"name": "Scizor Mega",
-				"types": [
-					"bug",
-					"steel"
-				],
-				"spriteSuffix": "mega",
-				"isMega": true
-			}
 		]
 	},
 	{
@@ -5137,23 +5068,6 @@
 		"name": "Pinsir",
 		"types": [
 			"bug"
-		],
-		"forms": [
-			{
-				"name": "Pinsir",
-				"types": [
-					"bug"
-				]
-			},
-			{
-				"name": "Pinsir Mega",
-				"types": [
-					"bug",
-					"flying"
-				],
-				"spriteSuffix": "mega",
-				"isMega": true
-			}
 		]
 	},
 	{
@@ -5162,24 +5076,6 @@
 		"types": [
 			"bug",
 			"fighting"
-		],
-		"forms": [
-			{
-				"name": "Heracross",
-				"types": [
-					"bug",
-					"fighting"
-				]
-			},
-			{
-				"name": "Heracross Mega",
-				"types": [
-					"bug",
-					"fighting"
-				],
-				"spriteSuffix": "mega",
-				"isMega": true
-			}
 		]
 	},
 	{
@@ -5439,23 +5335,6 @@
 		"name": "Kangaskhan",
 		"types": [
 			"normal"
-		],
-		"forms": [
-			{
-				"name": "Kangaskhan",
-				"types": [
-					"normal"
-				]
-			},
-			{
-				"name": "Kangaskhan Mega",
-				"isUber": true,
-				"types": [
-					"normal"
-				],
-				"spriteSuffix": "mega",
-				"isMega": true
-			}
 		]
 	},
 	{
@@ -5783,23 +5662,6 @@
 		"types": [
 			"steel",
 			"rock"
-		],
-		"forms": [
-			{
-				"name": "Aggron",
-				"types": [
-					"steel",
-					"rock"
-				]
-			},
-			{
-				"name": "Aggron Mega",
-				"types": [
-					"steel"
-				],
-				"spriteSuffix": "mega",
-				"isMega": true
-			}
 		]
 	},
 	{
@@ -5817,24 +5679,6 @@
 		"types": [
 			"dragon",
 			"flying"
-		],
-		"forms": [
-			{
-				"name": "Altaria",
-				"types": [
-					"dragon",
-					"flying"
-				]
-			},
-			{
-				"name": "Altaria Mega",
-				"types": [
-					"dragon",
-					"fairy"
-				],
-				"spriteSuffix": "mega",
-				"isMega": true
-			}
 		]
 	},
 	{
@@ -5859,22 +5703,6 @@
 		"name": "Absol",
 		"types": [
 			"dark"
-		],
-		"forms": [
-			{
-				"name": "Absol",
-				"types": [
-					"dark"
-				]
-			},
-			{
-				"name": "Absol Mega",
-				"types": [
-					"dark"
-				],
-				"spriteSuffix": "mega",
-				"isMega": true
-			}
 		]
 	},
 	{
@@ -5935,25 +5763,6 @@
 		"types": [
 			"steel",
 			"psychic"
-		],
-		"forms": [
-			{
-				"name": "Metagross",
-				"types": [
-					"steel",
-					"psychic"
-				]
-			},
-			{
-				"name": "Metagross Mega",
-				"isUber": true,
-				"types": [
-					"steel",
-					"psychic"
-				],
-				"spriteSuffix": "mega",
-				"isMega": true
-			}
 		]
 	},
 	{
@@ -5980,24 +5789,6 @@
 		"types": [
 			"dragon",
 			"ground"
-		],
-		"forms": [
-			{
-				"name": "Garchomp",
-				"types": [
-					"dragon",
-					"ground"
-				]
-			},
-			{
-				"name": "Garchomp Mega",
-				"types": [
-					"dragon",
-					"ground"
-				],
-				"spriteSuffix": "mega",
-				"isMega": true
-			}
 		]
 	},
 	{
@@ -6019,23 +5810,6 @@
 		"name": "Audino",
 		"types": [
 			"normal"
-		],
-		"forms": [
-			{
-				"name": "Audino",
-				"types": [
-					"normal"
-				]
-			},
-			{
-				"name": "Audino Mega",
-				"types": [
-					"normal",
-					"fairy"
-				],
-				"spriteSuffix": "mega",
-				"isMega": true
-			}
 		]
 	},
 	{
@@ -6153,24 +5927,6 @@
 		"types": [
 			"dragon",
 			"psychic"
-		],
-		"forms": [
-			{
-				"name": "Latias",
-				"types": [
-					"dragon",
-					"psychic"
-				]
-			},
-			{
-				"name": "Latias Mega",
-				"types": [
-					"dragon",
-					"psychic"
-				],
-				"spriteSuffix": "mega",
-				"isMega": true
-			}
 		]
 	},
 	{
@@ -6179,24 +5935,6 @@
 		"types": [
 			"dragon",
 			"psychic"
-		],
-		"forms": [
-			{
-				"name": "Latios",
-				"types": [
-					"dragon",
-					"psychic"
-				]
-			},
-			{
-				"name": "Latios Mega",
-				"types": [
-					"dragon",
-					"psychic"
-				],
-				"spriteSuffix": "mega",
-				"isMega": true
-			}
 		]
 	},
 	{
@@ -6257,26 +5995,6 @@
 		"types": [
 			"dragon",
 			"flying"
-		],
-		"forms": [
-			{
-				"name": "Rayquaza",
-				"isUber": true,
-				"types": [
-					"dragon",
-					"flying"
-				]
-			},
-			{
-				"name": "Rayquaza Mega",
-				"isUber": true,
-				"types": [
-					"dragon",
-					"flying"
-				],
-				"spriteSuffix": "mega",
-				"isMega": true
-			}
 		]
 	},
 	{
@@ -6525,6 +6243,390 @@
 		"types": [
 			"water",
 			"fairy"
+		]
+	},
+	{
+		"id": 124,
+		"name": "Jynx",
+		"types": [
+			"ice",
+			"psychic"
+		]
+	},
+	{
+		"id": 138,
+		"name": "Omanyte",
+		"isNfe": true,
+		"types": [
+			"rock",
+			"water"
+		]
+	},
+	{
+		"id": 139,
+		"name": "Omastar",
+		"types": [
+			"rock",
+			"water"
+		]
+	},
+	{
+		"id": 140,
+		"name": "Kabuto",
+		"isNfe": true,
+		"types": [
+			"rock",
+			"water"
+		]
+	},
+	{
+		"id": 141,
+		"name": "Kabutops",
+		"types": [
+			"rock",
+			"water"
+		]
+	},
+	{
+		"id": 142,
+		"name": "Aerodactyl",
+		"types": [
+			"rock",
+			"flying"
+		]
+	},
+	{
+		"id": 238,
+		"name": "Smoochum",
+		"isNfe": true,
+		"types": [
+			"ice",
+			"psychic"
+		]
+	},
+	{
+		"id": 252,
+		"name": "Treecko",
+		"isNfe": true,
+		"types": [
+			"grass"
+		]
+	},
+	{
+		"id": 253,
+		"name": "Grovyle",
+		"isNfe": true,
+		"types": [
+			"grass"
+		]
+	},
+	{
+		"id": 254,
+		"name": "Sceptile",
+		"types": [
+			"grass"
+		]
+	},
+	{
+		"id": 255,
+		"name": "Torchic",
+		"isNfe": true,
+		"types": [
+			"fire"
+		]
+	},
+	{
+		"id": 256,
+		"name": "Combusken",
+		"isNfe": true,
+		"types": [
+			"fire",
+			"fighting"
+		]
+	},
+	{
+		"id": 257,
+		"name": "Blaziken",
+		"isUber": true,
+		"types": [
+			"fire",
+			"fighting"
+		]
+	},
+	{
+		"id": 258,
+		"name": "Mudkip",
+		"isNfe": true,
+		"types": [
+			"water"
+		]
+	},
+	{
+		"id": 259,
+		"name": "Marshtomp",
+		"isNfe": true,
+		"types": [
+			"water",
+			"ground"
+		]
+	},
+	{
+		"id": 260,
+		"name": "Swampert",
+		"types": [
+			"water",
+			"ground"
+		]
+	},
+	{
+		"id": 347,
+		"name": "Anorith",
+		"isNfe": true,
+		"types": [
+			"rock",
+			"bug"
+		]
+	},
+	{
+		"id": 348,
+		"name": "Armaldo",
+		"types": [
+			"rock",
+			"bug"
+		]
+	},
+	{
+		"id": 371,
+		"name": "Bagon",
+		"isNfe": true,
+		"types": [
+			"dragon"
+		]
+	},
+	{
+		"id": 372,
+		"name": "Shelgon",
+		"isNfe": true,
+		"types": [
+			"dragon"
+		]
+	},
+	{
+		"id": 373,
+		"name": "Salamence",
+		"types": [
+			"dragon",
+			"flying"
+		]
+	},
+	{
+		"id": 442,
+		"name": "Spiritomb",
+		"types": [
+			"ghost",
+			"dark"
+		]
+	},
+	{
+		"id": 494,
+		"name": "Victini",
+		"types": [
+			"psychic",
+			"fire"
+		]
+	},
+	{
+		"id": 564,
+		"name": "Tirtouga",
+		"isNfe": true,
+		"types": [
+			"water",
+			"rock"
+		]
+	},
+	{
+		"id": 565,
+		"name": "Carracosta",
+		"types": [
+			"water",
+			"rock"
+		]
+	},
+	{
+		"id": 566,
+		"name": "Archen",
+		"isNfe": true,
+		"types": [
+			"rock",
+			"flying"
+		]
+	},
+	{
+		"id": 567,
+		"name": "Archeops",
+		"types": [
+			"rock",
+			"flying"
+		]
+	},
+	{
+		"id": 649,
+		"name": "Genesect",
+		"isUber": true,
+		"types": [
+			"bug",
+			"steel"
+		],
+		"forms": [
+			{
+				"name": "Genesect",
+				"isUber": true,
+				"types": [
+					"bug",
+					"steel"
+				]
+			},
+			{
+				"name": "Genesect",
+				"isUber": true,
+				"types": [
+					"bug",
+					"steel"
+				],
+				"spriteSuffix": "burn"
+			},
+			{
+				"name": "Genesect",
+				"isUber": true,
+				"types": [
+					"bug",
+					"steel"
+				],
+				"spriteSuffix": "chill"
+			},
+			{
+				"name": "Genesect",
+				"isUber": true,
+				"types": [
+					"bug",
+					"steel"
+				],
+				"spriteSuffix": "douse"
+			},
+			{
+				"name": "Genesect",
+				"isUber": true,
+				"types": [
+					"bug",
+					"steel"
+				],
+				"spriteSuffix": "shock"
+			}
+		]
+	},
+	{
+		"id": 719,
+		"name": "Diancie",
+		"types": [
+			"rock",
+			"fairy"
+		]
+	},
+	{
+		"id": 721,
+		"name": "Volcanion",
+		"types": [
+			"fire",
+			"water"
+		]
+	},
+	{
+		"id": 793,
+		"name": "Nihilego",
+		"types": [
+			"rock",
+			"poison"
+		]
+	},
+	{
+		"id": 794,
+		"name": "Buzzwole",
+		"types": [
+			"bug",
+			"fighting"
+		]
+	},
+	{
+		"id": 795,
+		"name": "Pheromosa",
+		"isUber": true,
+		"types": [
+			"bug",
+			"fighting"
+		]
+	},
+	{
+		"id": 796,
+		"name": "Xurkitree",
+		"types": [
+			"electric"
+		]
+	},
+	{
+		"id": 797,
+		"name": "Celesteela",
+		"types": [
+			"steel",
+			"flying"
+		]
+	},
+	{
+		"id": 798,
+		"name": "Kartana",
+		"types": [
+			"grass",
+			"steel"
+		]
+	},
+	{
+		"id": 799,
+		"name": "Guzzlord",
+		"types": [
+			"dark",
+			"dragon"
+		]
+	},
+	{
+		"id": 803,
+		"name": "Poipole",
+		"isNfe": true,
+		"types": [
+			"poison"
+		]
+	},
+	{
+		"id": 804,
+		"name": "Naganadel",
+		"isUber": true,
+		"types": [
+			"poison",
+			"dragon"
+		]
+	},
+	{
+		"id": 805,
+		"name": "Stakataka",
+		"types": [
+			"rock",
+			"steel"
+		]
+	},
+	{
+		"id": 806,
+		"name": "Blacephalon",
+		"types": [
+			"fire",
+			"ghost"
 		]
 	}
 ]
