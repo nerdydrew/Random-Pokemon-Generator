@@ -7913,6 +7913,7 @@
 			},
 			{
 				"name": "Urshifu Single Strike Gigantamax",
+				"isUber": true,
 				"types": [
 					"fighting",
 					"dark"
@@ -7922,6 +7923,7 @@
 			},
 			{
 				"name": "Urshifu Rapid Strike Gigantamax",
+				"isUber": true,
 				"types": [
 					"fighting",
 					"water"
@@ -8001,6 +8003,7 @@
 			},
 			{
 				"name": "Calyrex Ice Rider",
+				"isUber": true,
 				"types": [
 					"psychic",
 					"ice"
@@ -8009,6 +8012,7 @@
 			},
 			{
 				"name": "Calyrex Shadow Rider",
+				"isUber": true,
 				"types": [
 					"psychic",
 					"shadow"
