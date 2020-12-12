@@ -4,19 +4,33 @@
 <channel>
 
 <title>Random Pokemon Generator Feed</title>
-<description>Figure out what's happening.</description>
-<link>http://randompokemon.com/</link>
+<description>Learn about updates to the website.</description>
+<link>https://randompokemon.com/</link>
+
+<item>
+<title>Updated for Crown Tundra</title>
+<pubDate>Fri, 23 Oct 2020 07:37:00 EST</pubDate>
+<description>I added the new Pokemon from Crown Tundra to the Galar dex.</description>
+<link>https://randompokemon.com/</link>
+</item>
+
+<item>
+<title>Updated for Isle of Armor</title>
+<pubDate>Sat, 3 Oct 2020 02:28:00 EDT</pubDate>
+<description>I added the new Pokemon from Isle of Armor to the Galar dex.</description>
+<link>https://randompokemon.com/</link>
+</item>
 
 <item>
 <title>Sword and Shield Update</title>
-<pubDate>Sun, 17 Nov 2016 01:00:00 EST</pubDate>
+<pubDate>Sun, 17 Nov 2019 01:00:00 EST</pubDate>
 <description>I just added the the new Pokemon from Sword and Shield. So far, I wasn't able to find animated sprites, so if you find any, or if you find any other problem with the site, please let me know!</description>
 <link>https://randompokemon.com/</link>
 </item>
 
 <item>
 <title>Ultra Sun and Ultra Moon Update</title>
-<pubDate>Sat, 18 Nov 2016 21:00:00 EST</pubDate>
+<pubDate>Sat, 18 Nov 2017 21:00:00 EST</pubDate>
 <description>I just added the the new Pokemon from Ultra Sun and Moon, as well as the option to only generate Pokemon from the USUM Alola region. I couldn't find animated sprites for the new Pokemon yet, so I used the non-animated versions. If you find any problems with the site, or if you know where to find animated sprites for the newly released Pokemon, don't hesitate to tell me.</description>
 <link>http://randompokemon.com/</link>
 </item>
