@@ -1,4 +1,5 @@
-html,div,dl,dt,dd,ul,ol,li,pre,form,label,fieldset,p,blockquote,input{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;margin:0;padding:0}
+html,div,dl,dt,dd,ul,ol,li,pre,form,label,fieldset,p,blockquote,input{margin:0;padding:0}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;margin:0;padding:0}
 html{background:#FFF;color:#333;font:.875em/1.5 "Helvetica Neue",Arial,sans-serif;text-align:center}
 body{max-width:40em;margin:0 auto;padding:.5em}
 
@@ -46,8 +47,8 @@ footer{font-size:.875em;padding:3em 0;color:#666;clear:both}
 @media screen and (max-width:308px){#results li{float:none;width:auto}}
 
 @media screen and (prefers-color-scheme: dark) {
-	html{background:#222;color:#DDD}
-	h2,footer{color:#AAA}
+	html{background:#222;color:#FFF}
+	h2,footer{color:#CCC}
 	#controls,#controls:before{border-color:#FFF}
 
 	a{color:#DDD;border-bottom-color:#777}
