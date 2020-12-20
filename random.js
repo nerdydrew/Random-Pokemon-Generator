@@ -9,15 +9,20 @@ function generateRandom() {
 	var options = getOptions();
 	persistOptions(options);
 
-	getEligiblePokemon(options)
-	.then(function (eligible) {return chooseRandom(eligible, options)})
-	.then(function(generated) {return htmlifyPokemonArray(generated, options)})
-	.then(function(html) {
-		document.getElementById("results").innerHTML = html;
-	})
-	.finally(function() {
-		markLoading(false);
-	});
+	getEligiblePokemon(
+		options,
+		function(eligiblePokemon) {
+			var results = document.getElementById("results");
+			if (eligiblePokemon) {
+				var generatedPokemon = chooseRandom(eligiblePokemon, options);
+				var html = htmlifyPokemonArray(generatedPokemon, options);
+				results.innerHTML = html;
+			} else {
+				results.innerHTML = "An error occurred while generating Pokémon.";
+			}
+			markLoading(false);
+		}
+	);
 }
 
 function markLoading(isLoading) {
@@ -38,7 +43,7 @@ function getOptions() {
 }
 
 function setOptions(options) {
-	document.getElementById("n").value = options.n; //TODO number toString?
+	document.getElementById("n").value = options.n;
 	document.getElementById("region").value = options.region;
 	document.getElementById("type").value = options.type;
 	document.getElementById("ubers").checked = options.ubers;
@@ -52,27 +57,30 @@ function setOptions(options) {
 var cachedOptionsJson;
 var cachedEligiblePokemon;
 
-function getEligiblePokemon(options) {
+function getEligiblePokemon(options, callback) {
 	var optionsJson = JSON.stringify(options);
 
 	if (cachedOptionsJson == optionsJson) {
-		return Promise.resolve(cachedEligiblePokemon);
+		callback(cachedEligiblePokemon);
 	} else {
-		return getPokemonInRegion(options)
-			.then(function (pokemonInRegion) {
-				return filterByOptions(pokemonInRegion, options);
-			})
-			.then(function (eligiblePokemon) {
-				cachedOptionsJson = optionsJson;
-				cachedEligiblePokemon = eligiblePokemon;
-				return eligiblePokemon;
-			});
+		var request = new XMLHttpRequest();
+		request.onreadystatechange = function() {
+			if (request.readyState == XMLHttpRequest.DONE) {
+				if (request.status == 200) {
+					var pokemonInRegion = JSON.parse(request.responseText);
+					var eligiblePokemon = filterByOptions(pokemonInRegion, options);
+					cachedOptionsJson = optionsJson;
+					cachedEligiblePokemon = eligiblePokemon;
+					callback(eligiblePokemon);
+				} else {
+					console.error(request);
+					callback(null);
+				}
+			}
+		};
+		request.open("GET", "dex/" + options.region + ".json");
+		request.send();
 	}
-}
-
-function getPokemonInRegion(options) {
-	return fetch("dex/" + options.region + ".json")
-		.then(function (r) {return r.json()});
 }
 
 function filterByOptions(pokemonInRegion, options) {
@@ -160,7 +168,7 @@ function removeGigantamaxes(pokemonArray) {
 /** Converts a JSON array of Pokémon into an HTML ordered list. */
 function htmlifyPokemonArray(generatedPokemon, options) {
 	var output = "<ol>";
-	for (i=0; i<generatedPokemon.length; i++) {
+	for (var i=0; i<generatedPokemon.length; i++) {
 		output += htmlifyPokemon(generatedPokemon[i], options);
 	}
 	output += "</ol>";
@@ -175,10 +183,11 @@ function htmlifyPokemon(pokemon, options) {
 
 	var title = (shiny ? "Shiny " : "") + pokemon.name;
 
+	var out;
 	if (options.sprites) {
-		var out = '<li title="' + title + '">';
+		out = '<li title="' + title + '">';
 	} else {
-		var out = '<li class="imageless">';
+		out = '<li class="imageless">';
 	}
 
 	if (options.natures) {
