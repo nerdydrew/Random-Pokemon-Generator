@@ -18,7 +18,7 @@ function generateRandom() {
 				var html = htmlifyPokemonArray(generatedPokemon, options);
 				results.innerHTML = html;
 			} else {
-				results.innerHTML = "An error occurred while generating Pokémon.";
+				results.innerHTML = "An error occurred while generating Pok&eacute;mon.";
 			}
 			markLoading(false);
 		}
