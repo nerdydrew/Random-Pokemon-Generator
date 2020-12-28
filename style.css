@@ -29,7 +29,7 @@ header{margin:1em 0}
 .loading{background:url(loading.gif) no-repeat 95% center}
 
 
-#results li{display:inline-block;width:33%;margin-bottom:1.5em;list-style:none}
+#results li{display:inline-block;width:33%;margin-bottom:1.5em;list-style:none;animation: .5s ease-out 0s 1 fadeIn}
 #results .nature{color:#888}#results .shiny{color:#F4D04D}
 #results .wrapper{height:120px;width:172px;margin:0 auto;line-height:172px;overflow:visible;position:relative} /* Image wrapper */
 #results .wrapper img{position:absolute;
@@ -54,3 +54,5 @@ footer{font-size:.875em;padding:3em 0;color:#666;clear:both}
 	a{color:#DDD;border-bottom-color:#777}
 	a:hover{color:#FFF}
 }
+
+@keyframes fadeIn { from {opacity:0} to {opacity:1} }
