@@ -182,20 +182,22 @@ function htmlifyPokemon(pokemon, options) {
 	var shiny = Math.floor(Math.random() * 65536) < 16;
 
 	var title = (shiny ? "Shiny " : "") + pokemon.name;
-
-	var out;
-	if (options.sprites) {
-		out = '<li title="' + title + '">';
-	} else {
-		out = '<li class="imageless">';
+	var classes = "";
+	if (shiny) {
+		classes += "shiny ";
 	}
+	if (!options.sprites) {
+		classes += "imageless ";
+	}
+
+	var out = '<li title="' + title + '" class="' + classes + '">';
 
 	if (options.natures) {
 		out += '<span class="nature">' + generateNature() + "</span> ";
 	}
 	out += pokemon.name;
 	if (shiny) {
-		out += ' <span class="shiny">&#9733;</span>';
+		out += ' <span class="star">&#9733;</span>';
 	}
 	if (options.sprites) {
 		var sprite = getSpritePath(pokemon, shiny);

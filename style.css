@@ -30,8 +30,10 @@ header{margin:1em 0}
 	border-radius:1em;border:.25em solid;border-color:currentColor transparent;
 	animation:1.25s linear infinite rotate, .5s ease-out 0s 1 fadeIn}
 
-#results li{display:inline-block;height:calc(1.5em + 128px);width:33%;margin-bottom:1.5em;position:relative;list-style:none;animation:.5s ease-out 0s 1 fadeIn}
-#results .nature{color:#888}#results .shiny{color:#F4D04D}
+#results li{display:inline-block;height:calc(3em + 128px);width:33%;margin-bottom:1em;position:relative;list-style:none;animation:.5s ease-out 0s 1 fadeIn}
+#results .nature{color:#888}#results .star{color:#F4D04D}
+#results li.shiny:after{content:"\2605";position:absolute;top:50%;left:50%;font-size:0;
+	animation:.5s steps(15) .25s 1 rotateStar, .05s alternate steps(4) .25s 10 shine}
 #results img{position:absolute;bottom:0;left:50%;transform:translateX(-50%)}
 #results li.imageless{font-weight:700;margin:2em 0;height:auto}
 
@@ -55,3 +57,11 @@ footer{font-size:.875em;padding:3em 0;color:#666;clear:both}
 
 @keyframes fadeIn { from {opacity:0} to {opacity:1} }
 @keyframes rotate { from {transform:rotate(0deg)} to {transform:rotate(360deg)} }
+@keyframes shine {
+	from{color:#F8F838;font-size:1.4em;text-shadow:2px 0 #F88008, -2px 0 #F88008, 0 2px #F88008, 0 -2px #F88008}
+	to  {color:#F8F8F8;font-size:1.5em;text-shadow:2px 0 #F8F838, -2px 0 #F8F838, 0 2px #F8F838, 0 -2px #F8F838}
+}
+@keyframes rotateStar {
+	from{transform:rotate( .5turn) translate(40px) rotate(-.5turn)}
+	to  {transform:rotate(-.4turn) translate(50px) rotate( .4turn)}
+}
