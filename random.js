@@ -199,7 +199,7 @@ function htmlifyPokemon(pokemon, options) {
 	}
 	if (options.sprites) {
 		var sprite = getSpritePath(pokemon, shiny);
-		out += '<div class="wrapper"><img src="' + sprite + '" alt="' + title + '" title="' + title + '" /></div>';
+		out += ' <img src="' + sprite + '" alt="' + title + '" title="' + title + '" />';
 	}
 
 	out += "</li>";
