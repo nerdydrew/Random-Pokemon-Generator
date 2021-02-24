@@ -7,9 +7,12 @@ const logInvalidKey = "[INVALID KEY]: Invalid Key '{x}'"; //, see {wiki}"; //TOD
 const logNoAmount = "[NO AMOUNT GIVEN]: Can't generate Pokemon without knowing how many to generate. Please add '{x}=(1-6)' to your request.";
 
 var QUERY_MAP = null;
-var API_CALL = "FALSE";
+
 var apiObj = null;
 
+if (typeof API_CALL === 'undefined') {
+	API_CALL = true;
+}
 /** Called when the Generate button is clicked. */
 function generateRandom() {
 	markLoading(true);
@@ -175,7 +178,6 @@ function apiCall(map, query) {
 	}
 	return apiObj;
 }
-module.exports = { apiCall};
 
 function markLoading(isLoading) {
 	document.getElementById("controls").className = isLoading ? "loading" : "";
@@ -433,4 +435,6 @@ function loadOptions() {
 //only do that if this is not an api call
 if(API_CALL === false) {
 	document.addEventListener("DOMContentLoaded", loadOptions);
+} else {
+		module.exports = { apiCall};
 }

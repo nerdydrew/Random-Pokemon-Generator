@@ -1,6 +1,6 @@
 const values = require('./values')
-const randomizer = require("../random")
 function getRandomPokemonJson(queryparam) {
+    const randomizer = require("../random")
     let map = getValuesFromConstantValues();
     //api obj contains error and data properties
     let apiObj = randomizer.apiCall(map, queryparam);
