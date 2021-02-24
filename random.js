@@ -2,8 +2,19 @@ const PATH_TO_SPRITES = 'sprites/png/normal/';
 const PATH_TO_SHINY_SPRITES = 'sprites/png/shiny/';
 const SPRITE_EXTENTION = '.png';
 
+const logInvalidRange = "[INVALID RANGE]: Invalid Value for key '{x}', value '{y}'  not in range [{z}]";
+const logInvalidKey = "[INVALID KEY]: Invalid Key '{x}'"; //, see {wiki}"; //TODO wiki entry maybe
+const logNoAmount = "[NO AMOUNT GIVEN]: Can't generate Pokemon without knowing how many to generate. Please add '{x}=(1-6)' to your request.";
+const QUERY_MAP = new Map();
 
-
+if (location.search !== "") {
+	// getValuesFromIndexPage();
+	// parseGETtoOptions();
+	generateRandomByGET();
+} else {
+	// do nothing
+	
+}
 
 /** Called when the Generate button is clicked. */
 function generateRandom() {
@@ -27,51 +38,95 @@ function generateRandom() {
 		}
 	);
 }
+
+// grabs the value from the option input field
 function grabValue(e) {
 	return e.value;
 }
+//parse the input values from the index page into object that can be used for GET-parsing
+// the index of this object is the value of "key" which is referred to the "optionobject" key value
+// additional: each object has two keys (shortkey and longkey (name))
+// this objects will then be saved into a map so that they can be looked up
+
 function getValuesFromIndexPage() {
-	const QUERY_AMOUNT = {
+	let QUERY_AMOUNT = {
+		"key" : "n",
 		"keys": ["number","n"],
 		"values" : [].slice.call(document.querySelectorAll("#n>option")).map(grabValue)
-	}
-	const QUERY_REGION = {
+	};
+	QUERY_AMOUNT.keys.forEach(k => {QUERY_MAP.set(k, QUERY_AMOUNT)});
+	let QUERY_REGION = {
+		"key" : "region", 
 		"keys": ["region","r"],
 		"values" : [].slice.call(document.querySelectorAll("#region>option")).map(grabValue)
-	}
-	const QUERY_TYPE = {
+	};
+	QUERY_REGION.keys.forEach(k => {QUERY_MAP.set(k, QUERY_REGION)});
+	let QUERY_TYPE = {
+		"key" : "type",
 		"keys": ["type","t"],
 		"values" : [].slice.call(document.querySelectorAll("#type>option")).map(grabValue)
-	}
-	const BOOLEAN_OPTIONS = ["yes","true","no","false"]
-	const QUERY_CHECK_UBERS = {
+	};
+	QUERY_TYPE.keys.forEach(k => {QUERY_MAP.set(k, QUERY_TYPE)});
+	let BOOLEAN_OPTIONS = ["yes","true","no","false"];
+	let QUERY_CHECK_UBERS = {
+		"key" : "ubers",
 		"keys": ["ubers","u"],
 		"values" : BOOLEAN_OPTIONS
-	}
-	const QUERY_CHECK_NFES = {
+	};
+	QUERY_CHECK_UBERS.keys.forEach(k => {QUERY_MAP.set(k, QUERY_CHECK_UBERS)});
+	let QUERY_CHECK_NFES = {
+		"key" : ["nfes"],
 		"keys": ["nfes","nf"],
 		"values" : BOOLEAN_OPTIONS
-	}
-	const QUERY_CHECK_SPRITES = {
+	};
+	QUERY_CHECK_NFES.keys.forEach(k => {QUERY_MAP.set(k, QUERY_CHECK_NFES)});
+	let QUERY_CHECK_SPRITES = {
+		"key": "sprites",
 		"keys": ["sprites","s"],
 		"values" : BOOLEAN_OPTIONS
-	}
-	const QUERY_CHECK_NATURES = {
+	};
+	QUERY_CHECK_SPRITES.keys.forEach(k => {QUERY_MAP.set(k, QUERY_CHECK_SPRITES)});
+	let QUERY_CHECK_NATURES = {
+		"key" : "natures",
 		"keys": ["natures","na"],
 		"values" : BOOLEAN_OPTIONS
-	}
-	const QUERY_CHECK_FORMS = {
+	};
+	QUERY_CHECK_NATURES.keys.forEach(k => {QUERY_MAP.set(k, QUERY_CHECK_NATURES)});
+	let QUERY_CHECK_FORMS = {
+		"key" : "forms",
 		"keys": ["forms","f"],
 		"values" : BOOLEAN_OPTIONS
+	};
+	QUERY_CHECK_FORMS.keys.forEach(k => {QUERY_MAP.set(k, QUERY_CHECK_FORMS)});
+}
+
+// check if get param is valid or not
+// returnobject contains (loggingString for invalid keys and values, optionmodel)
+function checkGETParam(key, value, returnobject) {
+	// check if param is valid
+	if ((queryInstance = QUERY_MAP.get(key)) !== (null || undefined) ) {
+		let isInRange = queryInstance.values.includes(value);
+		if (isInRange) {
+			// add option to optionmodel
+			returnobject.optionmodel[queryInstance.key] = value;
+		} else {
+			returnobject.invalidvalue = logInvalidRange.replace("{x}", key).replace("{y}", value).replace("{z}", queryInstance.values);
+			returnobject.invalidvalue += "\n";
+		}
+	}
+	else {
+		console.log("key is not valid");
+		returnobject.invalidkey = logInvalidKey.replace("{x}", key);
+		returnobject.invalidkey += "\n";
 	}
 }
 function parseGETtoOptions() {
 	// everything which is not given is false
 	
-	optionmodel = {
+	let optionmodel = {
 		n : "",
-		region : "",
-		type : "",
+		region : "all",
+		type : "all",
 		ubers : "false",
 		nfes : "false",
 		sprites : "false",
@@ -84,22 +139,48 @@ function parseGETtoOptions() {
 		// natures : "true",
 		// forms : "true",
 	}
-	
-	// return {
-	// 	n: Number(document.getElementById("n").value),
-	// 	region: document.getElementById("region").value,
-	// 	type: document.getElementById("type").value,
-	// 	ubers: document.getElementById("ubers").checked,
-	// 	nfes: document.getElementById("nfes").checked,
-	// 	sprites: document.getElementById("sprites").checked,
-	// 	natures: document.getElementById("natures").checked,
-	// 	forms: document.getElementById("forms").checked
-	// };	
+	let params = new URLSearchParams(location.search);
+
+	//check if the important request parameter 'amount' n or number is given:
+	let containsAmount = params.has("n") || params.has("number");
+	if (containsAmount === false) {
+		document.querySelector("#results").innerHTML = logNoAmount.replace("{x}", "n");
+	}
+
+	//for logging if the value given through get is not an option (invalid)
+	let loggingStringInvalidValue = "";
+	//for logging if the key is not an option (invalid)
+	let loggingStringInvalidKey = "";
+
+	let returnobject = {
+		invalidkey : loggingStringInvalidKey,
+		invalidvalue :  loggingStringInvalidValue,
+		optionmodel : optionmodel
+	};
+
+	for (let [key, value] of params) {
+		checkGETParam(key, value, returnobject);
+	}
+	if (returnobject.invalidkey === "" && returnobject.invalidvalue === "") {
+		// we have no errors, only then do something
+		return returnobject.optionmodel;
+
+	} else {
+		document.querySelector("#results").innerHTML = returnobject.invalidkey + returnobject.invalidvalue;
+		return null;
+	}
 }
 /**Called when the Webpage is called via GET-Query */
 function generateRandomByGET() {
 
 	//parseOptions - Think about XSS
+	getValuesFromIndexPage();
+	options = parseGETtoOptions();
+	if (options === null) {
+		//nothing to do here
+		return;
+	}
+
 	getEligiblePokemon(
 		options,
 		function(eligiblePokemon) {
@@ -109,6 +190,7 @@ function generateRandomByGET() {
 				console.log(generatedPokemon)
 				//var html = htmlifyPokemonArray(generatedPokemon, options);
 				//results.innerHTML = html;
+				// here we need the result as json
 			} else {
 				results.innerHTML = "An error occurred while generating Pok&eacute;mon.";
 			}
