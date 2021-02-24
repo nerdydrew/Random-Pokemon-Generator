@@ -10,19 +10,6 @@ var QUERY_MAP = null;
 var API_CALL = "FALSE";
 var apiObj = null;
 
-function activateGET() {
-	if (location.search !== "") {
-		QUERY_MAP = getValuesFromIndexPage();
-		// parseGETtoOptions();
-		//prints the result on client side into the console.log
-		generateRandomByGET(location.search)
-	} else {
-		// do nothing
-		
-	}
-}
-
-
 /** Called when the Generate button is clicked. */
 function generateRandom() {
 	markLoading(true);
@@ -46,69 +33,7 @@ function generateRandom() {
 	);
 }
 
-// grabs the value from the option input field
-function grabValue(e) {
-	return e.value;
-}
-//parse the input values from the index page into object that can be used for GET-parsing
-// the index of this object is the value of "key" which is referred to the "optionobject" key value
-// additional: each object has two keys (shortkey and longkey (name))
-// this objects will then be saved into a map so that they can be looked up
 
-function getValuesFromIndexPage() {
-	let QUERY_MAP = new Map();
-	let QUERY_AMOUNT = {
-		"key" : "n",
-		"keys": ["number","n"],
-		"values" : [].slice.call(document.querySelectorAll("#n>option")).map(grabValue)
-	};
-	QUERY_AMOUNT.keys.forEach(k => {QUERY_MAP.set(k, QUERY_AMOUNT)});
-	let QUERY_REGION = {
-		"key" : "region", 
-		"keys": ["region","r"],
-		"values" : [].slice.call(document.querySelectorAll("#region>option")).map(grabValue)
-	};
-	QUERY_REGION.keys.forEach(k => {QUERY_MAP.set(k, QUERY_REGION)});
-	let QUERY_TYPE = {
-		"key" : "type",
-		"keys": ["type","t"],
-		"values" : [].slice.call(document.querySelectorAll("#type>option")).map(grabValue)
-	};
-	QUERY_TYPE.keys.forEach(k => {QUERY_MAP.set(k, QUERY_TYPE)});
-	let BOOLEAN_OPTIONS = ["yes","true","no","false"];
-	let QUERY_CHECK_UBERS = {
-		"key" : "ubers",
-		"keys": ["ubers","u"],
-		"values" : BOOLEAN_OPTIONS
-	};
-	QUERY_CHECK_UBERS.keys.forEach(k => {QUERY_MAP.set(k, QUERY_CHECK_UBERS)});
-	let QUERY_CHECK_NFES = {
-		"key" : ["nfes"],
-		"keys": ["nfes","nf"],
-		"values" : BOOLEAN_OPTIONS
-	};
-	QUERY_CHECK_NFES.keys.forEach(k => {QUERY_MAP.set(k, QUERY_CHECK_NFES)});
-	let QUERY_CHECK_SPRITES = {
-		"key": "sprites",
-		"keys": ["sprites","s"],
-		"values" : BOOLEAN_OPTIONS
-	};
-	QUERY_CHECK_SPRITES.keys.forEach(k => {QUERY_MAP.set(k, QUERY_CHECK_SPRITES)});
-	let QUERY_CHECK_NATURES = {
-		"key" : "natures",
-		"keys": ["natures","na"],
-		"values" : BOOLEAN_OPTIONS
-	};
-	QUERY_CHECK_NATURES.keys.forEach(k => {QUERY_MAP.set(k, QUERY_CHECK_NATURES)});
-	let QUERY_CHECK_FORMS = {
-		"key" : "forms",
-		"keys": ["forms","f"],
-		"values" : BOOLEAN_OPTIONS
-	};
-	
-	QUERY_CHECK_FORMS.keys.forEach(k => {QUERY_MAP.set(k, QUERY_CHECK_FORMS)});
-	return QUERY_MAP;
-}
 
 // check if get param is valid or not
 // returnobject contains (loggingString for invalid keys and values, optionmodel)
@@ -130,7 +55,7 @@ function checkGETParam(key, value, returnobject) {
 		returnobject.invalidkey += "\n";
 	}
 }
-function parseGETtoOptions(query) {
+function parseAPIParamsToOptions(query) {
 	// everything which is not given is false
 	
 	let optionmodel = {
@@ -194,10 +119,10 @@ function parseGETtoOptions(query) {
  *  callable through api interface
  *  callable through GET request on client side (only client.log output)
 */
-function generateRandomByGET(query) {
+function generateRandomByAPI(query) {
 
 	//getValuesFromIndexPage();
-	options = parseGETtoOptions(query);
+	options = parseAPIParamsToOptions(query);
 	if (options === null) {
 		//nothing to do here
 		return;
@@ -237,7 +162,9 @@ function apiCall(map, query) {
 		error : null
 	}
 
-	generateRandomByGET(query);
+	generateRandomByAPI(query);
+
+	// create name_list if only the names are interesting
 	apiObj.data.map(e => {apiObj.name_List.push(e.name)})
 	// remove unnecessary objects
 	if (apiObj.error === null) {
@@ -503,6 +430,7 @@ function loadOptions() {
 	}
 }
 
+//only do that if this is not an api call
 if(API_CALL === false) {
 	document.addEventListener("DOMContentLoaded", loadOptions);
 }
