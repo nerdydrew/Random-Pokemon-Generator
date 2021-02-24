@@ -2,6 +2,9 @@ const PATH_TO_SPRITES = 'sprites/png/normal/';
 const PATH_TO_SHINY_SPRITES = 'sprites/png/shiny/';
 const SPRITE_EXTENTION = '.png';
 
+
+
+
 /** Called when the Generate button is clicked. */
 function generateRandom() {
 	markLoading(true);
@@ -23,6 +26,96 @@ function generateRandom() {
 			markLoading(false);
 		}
 	);
+}
+function grabValue(e) {
+	return e.value;
+}
+function getValuesFromIndexPage() {
+	const QUERY_AMOUNT = {
+		"keys": ["number","n"],
+		"values" : [].slice.call(document.querySelectorAll("#n>option")).map(grabValue)
+	}
+	const QUERY_REGION = {
+		"keys": ["region","r"],
+		"values" : [].slice.call(document.querySelectorAll("#region>option")).map(grabValue)
+	}
+	const QUERY_TYPE = {
+		"keys": ["type","t"],
+		"values" : [].slice.call(document.querySelectorAll("#type>option")).map(grabValue)
+	}
+	const BOOLEAN_OPTIONS = ["yes","true","no","false"]
+	const QUERY_CHECK_UBERS = {
+		"keys": ["ubers","u"],
+		"values" : BOOLEAN_OPTIONS
+	}
+	const QUERY_CHECK_NFES = {
+		"keys": ["nfes","nf"],
+		"values" : BOOLEAN_OPTIONS
+	}
+	const QUERY_CHECK_SPRITES = {
+		"keys": ["sprites","s"],
+		"values" : BOOLEAN_OPTIONS
+	}
+	const QUERY_CHECK_NATURES = {
+		"keys": ["natures","na"],
+		"values" : BOOLEAN_OPTIONS
+	}
+	const QUERY_CHECK_FORMS = {
+		"keys": ["forms","f"],
+		"values" : BOOLEAN_OPTIONS
+	}
+}
+function parseGETtoOptions() {
+	// everything which is not given is false
+	
+	optionmodel = {
+		n : "",
+		region : "",
+		type : "",
+		ubers : "false",
+		nfes : "false",
+		sprites : "false",
+		natures : "false",
+		forms : "false",
+		// default values 
+		// ubers : "true",
+		// nfes : "true",
+		// sprites : "false",
+		// natures : "true",
+		// forms : "true",
+	}
+	
+	// return {
+	// 	n: Number(document.getElementById("n").value),
+	// 	region: document.getElementById("region").value,
+	// 	type: document.getElementById("type").value,
+	// 	ubers: document.getElementById("ubers").checked,
+	// 	nfes: document.getElementById("nfes").checked,
+	// 	sprites: document.getElementById("sprites").checked,
+	// 	natures: document.getElementById("natures").checked,
+	// 	forms: document.getElementById("forms").checked
+	// };	
+}
+/**Called when the Webpage is called via GET-Query */
+function generateRandomByGET() {
+
+	//parseOptions - Think about XSS
+	getEligiblePokemon(
+		options,
+		function(eligiblePokemon) {
+			var results = document.getElementById("results");
+			if (eligiblePokemon) {
+				var generatedPokemon = chooseRandom(eligiblePokemon, options);
+				console.log(generatedPokemon)
+				//var html = htmlifyPokemonArray(generatedPokemon, options);
+				//results.innerHTML = html;
+			} else {
+				results.innerHTML = "An error occurred while generating Pok&eacute;mon.";
+			}
+			markLoading(false);
+		}
+	);
+
 }
 
 function markLoading(isLoading) {
