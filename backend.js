@@ -1,6 +1,8 @@
 const http = require('http');
 const fs = require('fs');
-const api = require('api')
+const api = require('./api/api')
+
+
 let path = ".";
 const server = http.createServer(function (req, res) {
     path = "." + req.url;
@@ -27,12 +29,13 @@ const server = http.createServer(function (req, res) {
          res.end();
     
     // JSON Files
-    } else if (req.url === '/api') {
-         res.setHeader('Content-Type', 'text/html');
+    } else if (req.url.match(/api\?/g)) {
+         res.setHeader('Content-Type', 'application/json');
          res.statusCode = 200; // 200 = OK
-         res.write("This is the api backend");
+         let splits = req.url.split("?");
+         let return_json = JSON.stringify(api.getRandomPokemonJson(splits[1]), null, 1);
+         res.write(return_json);
          res.end();
-    
     } else if (req.url.match(/\.json/g)) {
         fs.access(path, fs.constants.F_OK | fs.constants.R_OK, (err) => {
             console.log(`${path} ${err ? 'does not exist' : 'exists'}`);

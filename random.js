@@ -5,16 +5,23 @@ const SPRITE_EXTENTION = '.png';
 const logInvalidRange = "[INVALID RANGE]: Invalid Value for key '{x}', value '{y}'  not in range [{z}]";
 const logInvalidKey = "[INVALID KEY]: Invalid Key '{x}'"; //, see {wiki}"; //TODO wiki entry maybe
 const logNoAmount = "[NO AMOUNT GIVEN]: Can't generate Pokemon without knowing how many to generate. Please add '{x}=(1-6)' to your request.";
-const QUERY_MAP = new Map();
 
-if (location.search !== "") {
-	// getValuesFromIndexPage();
-	// parseGETtoOptions();
-	generateRandomByGET();
-} else {
-	// do nothing
-	
+var QUERY_MAP = null;
+var API_CALL = "FALSE";
+var apiObj = null;
+
+function activateGET() {
+	if (location.search !== "") {
+		QUERY_MAP = getValuesFromIndexPage();
+		// parseGETtoOptions();
+		//prints the result on client side into the console.log
+		generateRandomByGET(location.search)
+	} else {
+		// do nothing
+		
+	}
 }
+
 
 /** Called when the Generate button is clicked. */
 function generateRandom() {
@@ -49,6 +56,7 @@ function grabValue(e) {
 // this objects will then be saved into a map so that they can be looked up
 
 function getValuesFromIndexPage() {
+	let QUERY_MAP = new Map();
 	let QUERY_AMOUNT = {
 		"key" : "n",
 		"keys": ["number","n"],
@@ -97,7 +105,9 @@ function getValuesFromIndexPage() {
 		"keys": ["forms","f"],
 		"values" : BOOLEAN_OPTIONS
 	};
+	
 	QUERY_CHECK_FORMS.keys.forEach(k => {QUERY_MAP.set(k, QUERY_CHECK_FORMS)});
+	return QUERY_MAP;
 }
 
 // check if get param is valid or not
@@ -120,7 +130,7 @@ function checkGETParam(key, value, returnobject) {
 		returnobject.invalidkey += "\n";
 	}
 }
-function parseGETtoOptions() {
+function parseGETtoOptions(query) {
 	// everything which is not given is false
 	
 	let optionmodel = {
@@ -139,12 +149,18 @@ function parseGETtoOptions() {
 		// natures : "true",
 		// forms : "true",
 	}
-	let params = new URLSearchParams(location.search);
+	let params = new URLSearchParams(query);
 
 	//check if the important request parameter 'amount' n or number is given:
 	let containsAmount = params.has("n") || params.has("number");
 	if (containsAmount === false) {
-		document.querySelector("#results").innerHTML = logNoAmount.replace("{x}", "n");
+		if (API_CALL) {
+			apiObj.error = logNoAmount.replace("{x}", "n");
+			return null;
+		} else {
+			document.querySelector("#results").innerHTML = logNoAmount.replace("{x}", "n");
+			return null;
+		}
 	}
 
 	//for logging if the value given through get is not an option (invalid)
@@ -164,18 +180,24 @@ function parseGETtoOptions() {
 	if (returnobject.invalidkey === "" && returnobject.invalidvalue === "") {
 		// we have no errors, only then do something
 		return returnobject.optionmodel;
-
+		
 	} else {
-		document.querySelector("#results").innerHTML = returnobject.invalidkey + returnobject.invalidvalue;
+		if (API_CALL) {
+			apiObj.error = returnobject.invalidkey + returnobject.invalidvalue;
+		} else {
+			document.querySelector("#results").innerHTML = returnobject.invalidkey + returnobject.invalidvalue;
+		}
 		return null;
 	}
 }
-/**Called when the Webpage is called via GET-Query */
-function generateRandomByGET() {
+/** Called when the Webpage is called via GET-Query 
+ *  callable through api interface
+ *  callable through GET request on client side (only client.log output)
+*/
+function generateRandomByGET(query) {
 
-	//parseOptions - Think about XSS
-	getValuesFromIndexPage();
-	options = parseGETtoOptions();
+	//getValuesFromIndexPage();
+	options = parseGETtoOptions(query);
 	if (options === null) {
 		//nothing to do here
 		return;
@@ -184,21 +206,49 @@ function generateRandomByGET() {
 	getEligiblePokemon(
 		options,
 		function(eligiblePokemon) {
-			var results = document.getElementById("results");
 			if (eligiblePokemon) {
 				var generatedPokemon = chooseRandom(eligiblePokemon, options);
 				console.log(generatedPokemon)
-				//var html = htmlifyPokemonArray(generatedPokemon, options);
-				//results.innerHTML = html;
-				// here we need the result as json
+				apiObj.data = generatedPokemon;
 			} else {
-				results.innerHTML = "An error occurred while generating Pok&eacute;mon.";
+				if (API_CALL) {
+					apiObj.error = "An error occurred while generating Pok&eacute;mon.";
+				} else {
+					var results = document.getElementById("results");
+					results.innerHTML = "An error occurred while generating Pok&eacute;mon.";
+				}
 			}
-			markLoading(false);
+			if (API_CALL === false) {
+				markLoading(false);
+			}
 		}
 	);
-
 }
+
+
+//wrapper to prevent direct call of same method
+// so logging and debugging is easier.
+function apiCall(map, query) {
+	API_CALL = true;
+	QUERY_MAP = map;
+	apiObj = {
+		name_List : [],
+		data : [],
+		error : null
+	}
+
+	generateRandomByGET(query);
+	apiObj.data.map(e => {apiObj.name_List.push(e.name)})
+	// remove unnecessary objects
+	if (apiObj.error === null) {
+		delete apiObj.error;
+	} else {
+		delete apiObj.data;
+		delete apiObj.name_List;
+	}
+	return apiObj;
+}
+module.exports = { apiCall};
 
 function markLoading(isLoading) {
 	document.getElementById("controls").className = isLoading ? "loading" : "";
@@ -238,23 +288,40 @@ function getEligiblePokemon(options, callback) {
 	if (cachedOptionsJson == optionsJson) {
 		callback(cachedEligiblePokemon);
 	} else {
-		var request = new XMLHttpRequest();
-		request.onreadystatechange = function() {
-			if (request.readyState == XMLHttpRequest.DONE) {
-				if (request.status == 200) {
-					var pokemonInRegion = JSON.parse(request.responseText);
-					var eligiblePokemon = filterByOptions(pokemonInRegion, options);
-					cachedOptionsJson = optionsJson;
-					cachedEligiblePokemon = eligiblePokemon;
-					callback(eligiblePokemon);
-				} else {
-					console.error(request);
-					callback(null);
+		if(API_CALL === false) {
+			var request = new XMLHttpRequest();
+			request.onreadystatechange = function() {
+				if (request.readyState == XMLHttpRequest.DONE) {
+					if (request.status == 200) {
+						var pokemonInRegion = JSON.parse(request.responseText);
+						var eligiblePokemon = filterByOptions(pokemonInRegion, options);
+						cachedOptionsJson = optionsJson;
+						cachedEligiblePokemon = eligiblePokemon;
+						callback(eligiblePokemon);
+					} else {
+						console.error(request);
+						callback(null);
+					}
 				}
+			};
+			request.open("GET", "dex/" + options.region + ".json");
+			request.send();
+		} else {
+			// backend - use filereader
+			const fs= require("fs")
+			let path = "./dex/" + options.region + ".json";
+			let data = fs.readFileSync(path);
+			if (data === (null || undefined)) {
+				apiObj.errorRando = "Error on getting EligiblePokemon. error: " + err
+			} else {
+				var pokemonInRegion = JSON.parse(data);
+				var eligiblePokemon = filterByOptions(pokemonInRegion, options);
+				cachedOptionsJson = optionsJson;
+				cachedEligiblePokemon = eligiblePokemon;
+				callback(eligiblePokemon);
 			}
-		};
-		request.open("GET", "dex/" + options.region + ".json");
-		request.send();
+
+		}
 	}
 }
 
@@ -436,4 +503,6 @@ function loadOptions() {
 	}
 }
 
-document.addEventListener("DOMContentLoaded", loadOptions);
+if(API_CALL === false) {
+	document.addEventListener("DOMContentLoaded", loadOptions);
+}
