@@ -261,6 +261,57 @@
 		"name": "Gyarados",
 		"types": ["water", "flying"]
 	},
+		{
+		"id": 152,
+		"name": "Chikorita",
+		"isNfe": true,
+		"types": ["grass"]
+	},
+	{
+		"id": 153,
+		"name": "Bayleef",
+		"isNfe": true,
+		"types": ["grass"]
+	},
+	{
+		"id": 154,
+		"name": "Meganium",
+		"types": ["grass"]
+	},
+	{
+		"id": 155,
+		"name": "Cyndaquil",
+		"isNfe": true,
+		"types": ["fire"]
+	},
+	{
+		"id": 156,
+		"name": "Quilava",
+		"isNfe": true,
+		"types": ["fire"]
+	},
+	{
+		"id": 157,
+		"name": "Typhlosion",
+		"types": ["fire"]
+	},
+	{
+		"id": 158,
+		"name": "Totodile",
+		"isNfe": true,
+		"types": ["water"]
+	},
+	{
+		"id": 159,
+		"name": "Croconaw",
+		"isNfe": true,
+		"types": ["water"]
+	},
+	{
+		"id": 160,
+		"name": "Feraligatr",
+		"types": ["water"]
+	},
 	{
 		"id": 169,
 		"name": "Crobat",
