@@ -8,6 +8,14 @@
 <link>https://randompokemon.com/</link>
 
 <item>
+<title>Updated with Permalinks</title>
+<pubDate>Mon, 26 Apr 2021 21:09:00 EDT</pubDate>
+<description>Generating now updates the URL with your current settings, which means you can easily share permanent links for others to generate Pokemon with the same settings. For example, https://randompokemon.com?n=1 opens the website with the number of Pokemon to generate set to 1.</description>
+<link>https://randompokemon.com/</link>
+<guid>2021-04-26</guid>
+</item>
+
+<item>
 <title>Updated for Crown Tundra</title>
 <pubDate>Fri, 23 Oct 2020 07:37:00 EST</pubDate>
 <description>I added the new Pokemon from Crown Tundra to the Galar dex.</description>
