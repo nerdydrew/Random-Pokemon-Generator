@@ -43,14 +43,37 @@ function getOptions() {
 }
 
 function setOptions(options) {
-	document.getElementById("n").value = options.n;
-	document.getElementById("region").value = options.region;
-	document.getElementById("type").value = options.type;
-	document.getElementById("ubers").checked = options.ubers;
-	document.getElementById("nfes").checked = options.nfes;
-	document.getElementById("sprites").checked = options.sprites;
-	document.getElementById("natures").checked = options.natures;
-	document.getElementById("forms").checked = options.forms;
+	if ("n" in options) {
+		document.getElementById("n").value = Number(options.n);
+	}
+	if ("region" in options) {
+		document.getElementById("region").value = options.region;
+	}
+	if ("type" in options) {
+		document.getElementById("type").value = options.type;
+	}
+	if ("ubers" in options) {
+		document.getElementById("ubers").checked = parseBoolean(options.ubers);
+	}
+	if ("nfes" in options) {
+		document.getElementById("nfes").checked = parseBoolean(options.nfes);
+	}
+	if ("sprites" in options) {
+		document.getElementById("sprites").checked = parseBoolean(options.sprites);
+	}
+	if ("natures" in options) {
+		document.getElementById("natures").checked = parseBoolean(options.natures);
+	}
+	if ("forms" in options) {
+		document.getElementById("forms").checked = parseBoolean(options.forms);
+	}
+}
+
+function parseBoolean(boolean) {
+	if (typeof boolean == "string") {
+		return boolean.toLowerCase() == "true";
+	}
+	return !!boolean;
 }
 
 // Cache the results of getEligiblePokemon by options.
@@ -249,16 +272,53 @@ function randomInteger(maxExclusive) {
 
 const STORAGE_OPTIONS_KEY = "options";
 
+/** Stores the current options in local storage and in the URL. */
 function persistOptions(options) {
 	var optionsJson = JSON.stringify(options);
 	window.localStorage.setItem(STORAGE_OPTIONS_KEY, optionsJson);
+
+	window.history.replaceState({}, "", "?" + convertOptionsToUrlParams(options));
 }
 
+/** Loads options from either the URL or local storage. */
 function loadOptions() {
-	var optionsJson = window.localStorage.getItem(STORAGE_OPTIONS_KEY);
-	if (optionsJson) {
-		setOptions(JSON.parse(optionsJson));
+	if (urlHasOptions()) {
+		setOptions(convertUrlParamsToOptions());
+	} else {
+		var optionsJson = window.localStorage.getItem(STORAGE_OPTIONS_KEY);
+		if (optionsJson) {
+			setOptions(JSON.parse(optionsJson));
+		}
 	}
+}
+
+/** Returns whether or not the URL specifies any options as parameters. */
+function urlHasOptions() {
+	const questionIndex = window.location.href.indexOf("?");
+	return questionIndex >= 0 && questionIndex + 1 < window.location.href.length;
+}
+
+/** Parses options from the URL parameters. */
+function convertUrlParamsToOptions() {
+	const questionIndex = window.location.href.indexOf("?");
+	const paramString = window.location.href.substring(questionIndex + 1);
+	const options = {};
+	const parameterPairs = paramString.split("&");
+	for (let i=0; i<parameterPairs.length; i++) { // woo IE
+		const splitParam = parameterPairs[i].split("=");
+		const value = splitParam[1];
+		if (value) {
+			options[decodeURIComponent(splitParam[0])] = decodeURIComponent(value);
+		}
+	}
+	return options;
+}
+
+/** Returns URL parameters for the given settings, excluding the leading "?". */
+function convertOptionsToUrlParams(options) {
+	return Object.keys(options).map(function(key) {
+		return encodeURIComponent(key) + "=" + encodeURIComponent(options[key])
+	}).join("&");
 }
 
 document.addEventListener("DOMContentLoaded", loadOptions);
