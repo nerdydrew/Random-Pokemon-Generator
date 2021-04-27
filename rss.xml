@@ -1,5 +1,6 @@
 <?xml version="1.0" ?>
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:link href="https://randompokemon.com/rss.xml" rel="self" type="application/rss+xml" />
 
 <channel>
 
@@ -12,7 +13,7 @@
 <pubDate>Mon, 26 Apr 2021 21:09:00 EDT</pubDate>
 <description>Generating now updates the URL with your current settings, which means you can easily share permanent links for others to generate Pokemon with the same settings. For example, https://randompokemon.com?n=1 opens the website with the number of Pokemon to generate set to 1.</description>
 <link>https://randompokemon.com/</link>
-<guid>2021-04-26</guid>
+<guid isPermaLink="false">2021-04-26</guid>
 </item>
 
 <item>
