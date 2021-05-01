@@ -67,6 +67,9 @@ function setOptions(options) {
 	if ("forms" in options) {
 		document.getElementById("forms").checked = parseBoolean(options.forms);
 	}
+	if ("generate" in options) {
+		generateRandom();
+	}
 }
 
 function setDropdownIfValid(selectID, value) {
@@ -314,9 +317,12 @@ function convertUrlParamsToOptions() {
 	const parameterPairs = paramString.split("&");
 	for (let i=0; i<parameterPairs.length; i++) { // woo IE
 		const splitParam = parameterPairs[i].split("=");
+		const key = decodeURIComponent(splitParam[0]);
 		const value = splitParam[1];
 		if (value) {
-			options[decodeURIComponent(splitParam[0])] = decodeURIComponent(value);
+			options[key] = decodeURIComponent(value);
+		} else {
+			options[key] = null;
 		}
 	}
 	return options;
