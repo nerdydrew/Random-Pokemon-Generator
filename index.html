@@ -22,9 +22,9 @@
 	<h1>Random Pok&eacute;mon Generator</h1>
 </header>
 
-<form action="?" method="get" id="controls">
+<form action="?" method="get" id="controls" onsubmit="generateRandom(); return false;">
 	<fieldset>
-		<label>Generate <select name="n" id="n">
+		<label>Generate <select name="n" id="n" required>
 			<option value="1">1</option>
 			<option value="2">2</option>
 			<option value="3">3</option>
@@ -33,7 +33,7 @@
 			<option value="6" selected>6</option>
 		</select> Pok&eacute;mon.</label>
 
-		<select name="region" id="region">
+		<select name="region" id="region" required>
 			<option value="all">All Regions</option>
 			<option value="kanto" title="Generation 1 (Red, Blue, and Yellow)">Kanto</option>
 			<option value="johto" title="Generation 2 (Gold, Silver, and Crystal)">Johto</option>
@@ -48,7 +48,7 @@
 			<option value="galar" title="Generation 8 (Sword and Shield)">Galar</option>
 		</select>
 
-		<select name="type" id="type">
+		<select name="type" id="type" required>
 			<option value="all">All Types</option>
 			<option value="bug">Bug</option>
 			<option value="dark">Dark</option>
@@ -80,7 +80,7 @@
 		<label><input type="checkbox" id="natures" name="natures" value="true">Natures</label>
 		<label><input type="checkbox" id="forms" name="forms" value="true" checked><abbr title="Allow alternate forms, such as Mega Evolutions.">Forms</abbr></label>
 
-		<input value="Generate" type="button" onclick="generateRandom()">
+		<input value="Generate" type="submit" />
 	</fieldset>
 </form>
 

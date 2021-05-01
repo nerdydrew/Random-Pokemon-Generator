@@ -31,7 +31,7 @@ function markLoading(isLoading) {
 
 function getOptions() {
 	return {
-		n: Number(document.getElementById("n").value),
+		n: parseInt(document.getElementById("n").value),
 		region: document.getElementById("region").value,
 		type: document.getElementById("type").value,
 		ubers: document.getElementById("ubers").checked,
@@ -44,13 +44,13 @@ function getOptions() {
 
 function setOptions(options) {
 	if ("n" in options) {
-		document.getElementById("n").value = Number(options.n);
+		setDropdownIfValid("n", parseInt(options.n));
 	}
 	if ("region" in options) {
-		document.getElementById("region").value = options.region;
+		setDropdownIfValid("region", options.region);
 	}
 	if ("type" in options) {
-		document.getElementById("type").value = options.type;
+		setDropdownIfValid("type", options.type);
 	}
 	if ("ubers" in options) {
 		document.getElementById("ubers").checked = parseBoolean(options.ubers);
@@ -66,6 +66,14 @@ function setOptions(options) {
 	}
 	if ("forms" in options) {
 		document.getElementById("forms").checked = parseBoolean(options.forms);
+	}
+}
+
+function setDropdownIfValid(selectID, value) {
+	const select = document.getElementById(selectID);
+	const option = select.querySelector("[value='" + value + "']");
+	if (option) {
+		select.value = option.value;
 	}
 }
 
