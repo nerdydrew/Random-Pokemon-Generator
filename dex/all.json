@@ -395,6 +395,7 @@
 			},
 			{
 				"name": "Pikachu Gigantamax",
+				"isNfe": true,
 				"types": [
 					"electric"
 				],
