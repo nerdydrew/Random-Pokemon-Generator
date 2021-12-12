@@ -34,7 +34,7 @@ function getOptions() {
 		n: parseInt(document.getElementById("n").value),
 		region: document.getElementById("region").value,
 		type: document.getElementById("type").value,
-		ubers: document.getElementById("ubers").checked,
+		legendaries: document.getElementById("legendaries").checked,
 		nfes: document.getElementById("nfes").checked,
 		sprites: document.getElementById("sprites").checked,
 		natures: document.getElementById("natures").checked,
@@ -52,8 +52,8 @@ function setOptions(options) {
 	if ("type" in options) {
 		setDropdownIfValid("type", options.type);
 	}
-	if ("ubers" in options) {
-		document.getElementById("ubers").checked = parseBoolean(options.ubers);
+	if ("legendaries" in options) {
+		document.getElementById("legendaries").checked = parseBoolean(options.legendaries);
 	}
 	if ("nfes" in options) {
 		document.getElementById("nfes").checked = parseBoolean(options.nfes);
@@ -119,6 +119,12 @@ function getEligiblePokemon(options, callback) {
 
 function filterByOptions(pokemonInRegion, options) {
 	return pokemonInRegion.filter(function (pokemon) {
+		// Legendary status is independent of form, so check this before
+		// checking forms.
+		if (!options.legendaries && pokemon.isLegendary) {
+			return false;
+		}
+
 		if (options.forms && "forms" in pokemon) {
 			// If we are generating with forms and this Pokémon has forms,
 			// filter on them instead of the top-level Pokémon.
@@ -127,10 +133,6 @@ function filterByOptions(pokemonInRegion, options) {
 		}
 
 		if (options.type != "all" && pokemon.types.indexOf(options.type) < 0) {
-			return false;
-		}
-
-		if (!options.ubers && pokemon.isUber) {
 			return false;
 		}
 

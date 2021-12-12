@@ -8,6 +8,14 @@
 <link>https://randompokemon.com/</link>
 
 <item>
+<title>Filtering by Legendaries instead of Ubers</title>
+<pubDate>Sun, 12 Dec 2021 15:10:00 EST</pubDate>
+<description>I removed the ability to filter by the uber tier, replacing it with a legendary filter. This avoids the problem of my data falling out of date and is probably more useful.</description>
+<link>https://randompokemon.com/</link>
+<guid isPermaLink="false">2021-12-12</guid>
+</item>
+
+<item>
 <title>Updated with Permalinks</title>
 <pubDate>Mon, 26 Apr 2021 21:09:00 EDT</pubDate>
 <description>Generating now updates the URL with your current settings, which means you can easily share permanent links for others to generate Pokemon with the same settings. For example, https://randompokemon.com?n=1 opens the website with the number of Pokemon to generate set to 1.</description>

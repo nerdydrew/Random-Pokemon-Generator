@@ -3413,7 +3413,6 @@
 		"forms": [
 			{
 				"name": "Aegislash",
-				"isUber": true,
 				"types": [
 					"steel",
 					"ghost"
@@ -3421,7 +3420,6 @@
 			},
 			{
 				"name": "Aegislash",
-				"isUber": true,
 				"types": [
 					"steel",
 					"ghost"
@@ -4031,7 +4029,8 @@
 		"isNfe": true,
 		"types": [
 			"normal"
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 773,
@@ -4165,7 +4164,8 @@
 				],
 				"spriteSuffix": "water"
 			}
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 246,
@@ -4296,59 +4296,54 @@
 	{
 		"id": 888,
 		"name": "Zacian",
-		"isUber": true,
 		"types": [
 			"fairy"
 		],
 		"forms": [
 			{
 				"name": "Zacian",
-				"isUber": true,
 				"types": [
 					"fairy"
 				]
 			},
 			{
 				"name": "Zacian",
-				"isUber": true,
 				"types": [
 					"fairy",
 					"steel"
 				],
 				"spriteSuffix": "c"
 			}
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 889,
 		"name": "Zamazenta",
-		"isUber": true,
 		"types": [
 			"fighting"
 		],
 		"forms": [
 			{
 				"name": "Zamazenta",
-				"isUber": true,
 				"types": [
 					"fighting"
 				]
 			},
 			{
 				"name": "Zamazenta",
-				"isUber": true,
 				"types": [
 					"fighting",
 					"steel"
 				],
 				"spriteSuffix": "c"
 			}
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 890,
 		"name": "Eternatus",
-		"isUber": true,
 		"types": [
 			"poison",
 			"dragon"
@@ -4356,7 +4351,6 @@
 		"forms": [
 			{
 				"name": "Eternatus",
-				"isUber": true,
 				"types": [
 					"poison",
 					"dragon"
@@ -4364,14 +4358,14 @@
 			},
 			{
 				"name": "Eternatus Eternamax",
-				"isUber": true,
 				"types": [
 					"poison",
 					"dragon"
 				],
 				"spriteSuffix": "eternamax"
 			}
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 891,
@@ -4379,7 +4373,8 @@
 		"isNfe": true,
 		"types": [
 			"fighting"
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 892,
@@ -4406,7 +4401,6 @@
 			},
 			{
 				"name": "Urshifu Single Strike Gigantamax",
-				"isUber": true,
 				"types": [
 					"fighting",
 					"dark"
@@ -4416,7 +4410,6 @@
 			},
 			{
 				"name": "Urshifu Rapid Strike Gigantamax",
-				"isUber": true,
 				"types": [
 					"fighting",
 					"water"
@@ -4424,7 +4417,8 @@
 				"spriteSuffix": "rs-gigantamax",
 				"isGigantamax": true
 			}
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 893,
@@ -4449,35 +4443,40 @@
 				],
 				"spriteSuffix": "dada"
 			}
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 894,
 		"name": "Regieleki",
 		"types": [
 			"electric"
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 895,
 		"name": "Regidrago",
 		"types": [
 			"dragon"
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 896,
 		"name": "Glastrier",
 		"types": [
 			"ice"
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 897,
 		"name": "Spectrier",
 		"types": [
 			"ghost"
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 898,
@@ -4496,7 +4495,6 @@
 			},
 			{
 				"name": "Calyrex Ice Rider",
-				"isUber": true,
 				"types": [
 					"psychic",
 					"ice"
@@ -4505,14 +4503,14 @@
 			},
 			{
 				"name": "Calyrex Shadow Rider",
-				"isUber": true,
 				"types": [
 					"psychic",
 					"shadow"
 				],
 				"spriteSuffix": "shadow"
 			}
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 79,
@@ -4586,7 +4584,8 @@
 				],
 				"spriteSuffix": "galar"
 			}
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 145,
@@ -4604,7 +4603,8 @@
 				],
 				"spriteSuffix": "galar"
 			}
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 146,
@@ -4622,7 +4622,8 @@
 				],
 				"spriteSuffix": "galar"
 			}
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 427,
@@ -5575,7 +5576,7 @@
 	},
 	{
 		"id": 29,
-		"name": "Nidoran ♀",
+		"name": "Nidoran \u2640",
 		"isNfe": true,
 		"types": [
 			"poison"
@@ -5599,7 +5600,7 @@
 	},
 	{
 		"id": 32,
-		"name": "Nidoran ♂",
+		"name": "Nidoran \u2642",
 		"isNfe": true,
 		"types": [
 			"poison"
@@ -5931,60 +5932,66 @@
 		"name": "Raikou",
 		"types": [
 			"electric"
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 244,
 		"name": "Entei",
 		"types": [
 			"fire"
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 245,
 		"name": "Suicune",
 		"types": [
 			"water"
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 249,
 		"name": "Lugia",
-		"isUber": true,
 		"types": [
 			"psychic",
 			"flying"
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 250,
 		"name": "Ho-oh",
-		"isUber": true,
 		"types": [
 			"fire",
 			"flying"
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 377,
 		"name": "Regirock",
 		"types": [
 			"rock"
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 378,
 		"name": "Regice",
 		"types": [
 			"ice"
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 379,
 		"name": "Registeel",
 		"types": [
 			"steel"
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 380,
@@ -5992,7 +5999,8 @@
 		"types": [
 			"dragon",
 			"psychic"
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 381,
@@ -6000,106 +6008,106 @@
 		"types": [
 			"dragon",
 			"psychic"
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 382,
 		"name": "Kyogre",
-		"isUber": true,
 		"types": [
 			"water"
 		],
 		"forms": [
 			{
 				"name": "Kyogre",
-				"isUber": true,
 				"types": [
 					"water"
 				]
 			},
 			{
 				"name": "Kyogre Primal",
-				"isUber": true,
 				"types": [
 					"water"
 				],
 				"spriteSuffix": "primal"
 			}
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 383,
 		"name": "Groudon",
-		"isUber": true,
 		"types": [
 			"ground"
 		],
 		"forms": [
 			{
 				"name": "Groudon",
-				"isUber": true,
 				"types": [
 					"ground"
 				]
 			},
 			{
 				"name": "Groudon Primal",
-				"isUber": true,
 				"types": [
 					"ground",
 					"fire"
 				],
 				"spriteSuffix": "primal"
 			}
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 384,
 		"name": "Rayquaza",
-		"isUber": true,
 		"types": [
 			"dragon",
 			"flying"
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 480,
 		"name": "Uxie",
 		"types": [
 			"psychic"
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 481,
 		"name": "Mesprit",
 		"types": [
 			"psychic"
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 482,
 		"name": "Azelf",
 		"types": [
 			"psychic"
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 483,
 		"name": "Dialga",
-		"isUber": true,
 		"types": [
 			"steel",
 			"dragon"
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 484,
 		"name": "Palkia",
-		"isUber": true,
 		"types": [
 			"water",
 			"dragon"
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 485,
@@ -6107,19 +6115,20 @@
 		"types": [
 			"fire",
 			"steel"
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 486,
 		"name": "Regigigas",
 		"types": [
 			"normal"
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 487,
 		"name": "Giratina",
-		"isUber": true,
 		"types": [
 			"ghost",
 			"dragon"
@@ -6127,7 +6136,6 @@
 		"forms": [
 			{
 				"name": "Giratina",
-				"isUber": true,
 				"types": [
 					"ghost",
 					"dragon"
@@ -6135,21 +6143,22 @@
 			},
 			{
 				"name": "Giratina Origin",
-				"isUber": true,
 				"types": [
 					"ghost",
 					"dragon"
 				],
 				"spriteSuffix": "origin"
 			}
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 488,
 		"name": "Cresselia",
 		"types": [
 			"psychic"
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 641,
@@ -6171,7 +6180,8 @@
 				],
 				"spriteSuffix": "therian"
 			}
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 642,
@@ -6196,12 +6206,12 @@
 				],
 				"spriteSuffix": "therian"
 			}
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 645,
 		"name": "Landorus",
-		"isUber": true,
 		"types": [
 			"ground",
 			"flying"
@@ -6209,7 +6219,6 @@
 		"forms": [
 			{
 				"name": "Landorus",
-				"isUber": true,
 				"types": [
 					"ground",
 					"flying"
@@ -6223,29 +6232,29 @@
 				],
 				"spriteSuffix": "therian"
 			}
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 716,
 		"name": "Xerneas",
-		"isUber": true,
 		"types": [
 			"fairy"
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 717,
 		"name": "Yveltal",
-		"isUber": true,
 		"types": [
 			"dark",
 			"flying"
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 718,
 		"name": "Zygarde",
-		"isUber": true,
 		"types": [
 			"dragon",
 			"ground"
@@ -6253,7 +6262,6 @@
 		"forms": [
 			{
 				"name": "Zygarde Complete",
-				"isUber": true,
 				"types": [
 					"dragon",
 					"ground"
@@ -6270,13 +6278,13 @@
 			},
 			{
 				"name": "Zygarde",
-				"isUber": true,
 				"types": [
 					"dragon",
 					"ground"
 				]
 			}
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 785,
@@ -6284,7 +6292,8 @@
 		"types": [
 			"electric",
 			"fairy"
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 786,
@@ -6292,7 +6301,8 @@
 		"types": [
 			"psychic",
 			"fairy"
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 787,
@@ -6300,7 +6310,8 @@
 		"types": [
 			"grass",
 			"fairy"
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 788,
@@ -6308,7 +6319,8 @@
 		"types": [
 			"water",
 			"fairy"
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 124,
@@ -6412,7 +6424,6 @@
 	{
 		"id": 257,
 		"name": "Blaziken",
-		"isUber": true,
 		"types": [
 			"fire",
 			"fighting"
@@ -6498,7 +6509,8 @@
 		"types": [
 			"psychic",
 			"fire"
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 564,
@@ -6537,7 +6549,6 @@
 	{
 		"id": 649,
 		"name": "Genesect",
-		"isUber": true,
 		"types": [
 			"bug",
 			"steel"
@@ -6545,7 +6556,6 @@
 		"forms": [
 			{
 				"name": "Genesect",
-				"isUber": true,
 				"types": [
 					"bug",
 					"steel"
@@ -6553,7 +6563,6 @@
 			},
 			{
 				"name": "Genesect",
-				"isUber": true,
 				"types": [
 					"bug",
 					"steel"
@@ -6562,7 +6571,6 @@
 			},
 			{
 				"name": "Genesect",
-				"isUber": true,
 				"types": [
 					"bug",
 					"steel"
@@ -6571,7 +6579,6 @@
 			},
 			{
 				"name": "Genesect",
-				"isUber": true,
 				"types": [
 					"bug",
 					"steel"
@@ -6580,14 +6587,14 @@
 			},
 			{
 				"name": "Genesect",
-				"isUber": true,
 				"types": [
 					"bug",
 					"steel"
 				],
 				"spriteSuffix": "shock"
 			}
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 719,
@@ -6595,7 +6602,8 @@
 		"types": [
 			"rock",
 			"fairy"
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 721,
@@ -6603,7 +6611,8 @@
 		"types": [
 			"fire",
 			"water"
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 793,
@@ -6624,7 +6633,6 @@
 	{
 		"id": 795,
 		"name": "Pheromosa",
-		"isUber": true,
 		"types": [
 			"bug",
 			"fighting"
@@ -6672,7 +6680,6 @@
 	{
 		"id": 804,
 		"name": "Naganadel",
-		"isUber": true,
 		"types": [
 			"poison",
 			"dragon"
