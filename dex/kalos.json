@@ -3916,6 +3916,23 @@
 		"types": [
 			"water",
 			"dark"
+		],
+		"forms": [
+			{
+				"name": "Greninja",
+				"types": [
+					"water",
+					"dark"
+				]
+			},
+			{
+				"name": "Ash's Greninja",
+				"types": [
+					"water",
+					"dark"
+				],
+				"spriteSuffix": "ash"
+			}
 		]
 	},
 	{
