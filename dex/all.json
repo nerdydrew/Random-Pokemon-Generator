@@ -5821,7 +5821,24 @@
 			"steel",
 			"dragon"
 		],
-		"isLegendary": true
+		"isLegendary": true,
+		"forms": [
+			{
+				"name": "Dialga",
+				"types": [
+					"steel",
+					"dragon"
+				]
+			},
+			{
+				"name": "Dialga",
+				"types": [
+					"steel",
+					"dragon"
+				],
+				"spriteSuffix": "origin"
+			}
+		]
 	},
 	{
 		"id": 484,
@@ -5830,7 +5847,24 @@
 			"water",
 			"dragon"
 		],
-		"isLegendary": true
+		"isLegendary": true,
+		"forms": [
+			{
+				"name": "Palkia",
+				"types": [
+					"water",
+					"dragon"
+				]
+			},
+			{
+				"name": "Palkia",
+				"types": [
+					"water",
+					"dragon"
+				],
+				"spriteSuffix": "origin"
+			}
+		]
 	},
 	{
 		"id": 485,
@@ -6547,6 +6581,13 @@
 					"water"
 				],
 				"spriteSuffix": "bluestriped"
+			},
+			{
+				"name": "Basculin",
+				"types": [
+					"water"
+				],
+				"spriteSuffix": "whitestriped"
 			}
 		]
 	},
