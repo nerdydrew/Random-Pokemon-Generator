@@ -2823,6 +2823,7 @@
 	{
 		"id": 211,
 		"name": "Qwilfish",
+		"isNfe": true,
 		"types": [
 			"water",
 			"poison"
@@ -2908,6 +2909,7 @@
 	{
 		"id": 217,
 		"name": "Ursaring",
+		"isNfe": true,
 		"types": [
 			"normal"
 		]
@@ -3079,6 +3081,7 @@
 	{
 		"id": 234,
 		"name": "Stantler",
+		"isNfe": true,
 		"types": [
 			"normal"
 		]
@@ -6527,6 +6530,7 @@
 	{
 		"id": 550,
 		"name": "Basculin",
+		"isNfe": true,
 		"types": [
 			"water"
 		],
@@ -10932,6 +10936,97 @@
 					"shadow"
 				],
 				"spriteSuffix": "shadow"
+			}
+		],
+		"isLegendary": true
+	},
+	{
+		"id": 899,
+		"name": "Wyrdeer",
+		"types": [
+			"normal",
+			"psychic"
+		]
+	},
+	{
+		"id": 900,
+		"name": "Kleavor",
+		"types": [
+			"bug",
+			"rock"
+		]
+	},
+	{
+		"id": 901,
+		"name": "Ursaluna",
+		"types": [
+			"ground",
+			"normal"
+		]
+	},
+	{
+		"id": 902,
+		"name": "Basculegion",
+		"types": [
+			"water",
+			"ghost"
+		],
+		"forms": [
+			{
+				"name": "Basculegion",
+				"types": [
+					"water",
+					"ghost"
+				]
+			},
+			{
+				"name": "Basculegion",
+				"types": [
+					"water",
+					"ghost"
+				],
+				"spriteSuffix": "f"
+			}
+		]
+	},
+	{
+		"id": 903,
+		"name": "Sneasler",
+		"types": [
+			"fighting",
+			"poison"
+		]
+	},
+	{
+		"id": 904,
+		"name": "Overqwil",
+		"types": [
+			"dark",
+			"poison"
+		]
+	},
+	{
+		"id": 905,
+		"name": "Enamorus",
+		"types": [
+			"fairy",
+			"flying"
+		],
+		"forms": [
+			{
+				"name": "Enamorus",
+				"types": [
+					"fairy",
+					"flying"
+				]
+			},
+			{
+				"name": "Enamorus Therian",
+				"types": [
+					"fairy",
+					"flying"
+				],
+				"spriteSuffix": "therian"
 			}
 		],
 		"isLegendary": true
