@@ -8,6 +8,14 @@
 <link>https://randompokemon.com/</link>
 
 <item>
+<title>Pokemon Legends: Arceus</title>
+<pubDate>Sat, 29 Jan 2022 21:05:00 EST</pubDate>
+<description>I added the new Pokemon from Pokemon Legends: Arceus and the Hisui region.</description>
+<link>https://randompokemon.com/</link>
+<guid isPermaLink="false">2022-01-29</guid>
+</item>
+
+<item>
 <title>Filtering by Legendaries instead of Ubers</title>
 <pubDate>Sun, 12 Dec 2021 15:10:00 EST</pubDate>
 <description>I removed the ability to filter by the uber tier, replacing it with a legendary filter. This avoids the problem of my data falling out of date and is probably more useful.</description>
