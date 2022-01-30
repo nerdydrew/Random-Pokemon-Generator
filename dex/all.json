@@ -831,6 +831,24 @@
 		"isNfe": true,
 		"types": [
 			"fire"
+		],
+		"forms": [
+			{
+				"name": "Growlithe",
+				"types": [
+					"fire"
+				],
+				"isNfe": true
+			},
+			{
+				"name": "Growlithe Hisui",
+				"types": [
+					"fire",
+					"rock"
+				],
+				"isNfe": true,
+				"spriteSuffix": "hisui"
+			}
 		]
 	},
 	{
@@ -838,6 +856,22 @@
 		"name": "Arcanine",
 		"types": [
 			"fire"
+		],
+		"forms": [
+			{
+				"name": "Arcanine",
+				"types": [
+					"fire"
+				]
+			},
+			{
+				"name": "Arcanine Hisui",
+				"types": [
+					"fire",
+					"rock"
+				],
+				"spriteSuffix": "hisui"
+			}
 		]
 	},
 	{
@@ -1431,6 +1465,24 @@
 		"isNfe": true,
 		"types": [
 			"electric"
+		],
+		"forms": [
+			{
+				"name": "Voltorb",
+				"types": [
+					"electric"
+				],
+				"isNfe": true
+			},
+			{
+				"name": "Voltorb Hisui",
+				"types": [
+					"electric",
+					"grass"
+				],
+				"isNfe": true,
+				"spriteSuffix": "hisui"
+			}
 		]
 	},
 	{
@@ -1438,6 +1490,22 @@
 		"name": "Electrode",
 		"types": [
 			"electric"
+		],
+		"forms": [
+			{
+				"name": "Electrode",
+				"types": [
+					"electric"
+				]
+			},
+			{
+				"name": "Electrode Hisui",
+				"types": [
+					"electric",
+					"grass"
+				],
+				"spriteSuffix": "hisui"
+			}
 		]
 	},
 	{
@@ -2144,6 +2212,22 @@
 		"name": "Typhlosion",
 		"types": [
 			"fire"
+		],
+		"forms": [
+			{
+				"name": "Typhlosion",
+				"types": [
+					"fire"
+				]
+			},
+			{
+				"name": "Typhlosion Hisui",
+				"types": [
+					"fire",
+					"ghost"
+				],
+				"spriteSuffix": "hisui"
+			}
 		]
 	},
 	{
@@ -2827,6 +2911,24 @@
 		"types": [
 			"water",
 			"poison"
+		],
+		"forms": [
+			{
+				"name": "Qwilfish",
+				"types": [
+					"water",
+					"poison"
+				]
+			},
+			{
+				"name": "Qwilfish Hisui",
+				"types": [
+					"dark",
+					"poison"
+				],
+				"isNfe": true,
+				"spriteSuffix": "hisui"
+			}
 		]
 	},
 	{
@@ -2896,6 +2998,25 @@
 		"types": [
 			"dark",
 			"ice"
+		],
+		"forms": [
+			{
+				"name": "Sneasel",
+				"types": [
+					"dark",
+					"ice"
+				],
+				"isNfe": true
+			},
+			{
+				"name": "Sneasel Hisui",
+				"types": [
+					"fighting",
+					"poison"
+				],
+				"isNfe": true,
+				"spriteSuffix": "hisui"
+			}
 		]
 	},
 	{
@@ -6179,6 +6300,22 @@
 		"name": "Samurott",
 		"types": [
 			"water"
+		],
+		"forms": [
+			{
+				"name": "Samurott",
+				"types": [
+					"water"
+				]
+			},
+			{
+				"name": "Samurott Hisui",
+				"types": [
+					"water",
+					"dark"
+				],
+				"spriteSuffix": "hisui"
+			}
 		]
 	},
 	{
@@ -6559,6 +6696,22 @@
 		"name": "Lilligant",
 		"types": [
 			"grass"
+		],
+		"forms": [
+			{
+				"name": "Lilligant",
+				"types": [
+					"grass"
+				]
+			},
+			{
+				"name": "Lilligant Hisui",
+				"types": [
+					"grass",
+					"fighting"
+				],
+				"spriteSuffix": "hisui"
+			}
 		]
 	},
 	{
@@ -6817,6 +6970,24 @@
 		"isNfe": true,
 		"types": [
 			"dark"
+		],
+		"forms": [
+			{
+				"name": "Zorua",
+				"types": [
+					"dark"
+				],
+				"isNfe": true
+			},
+			{
+				"name": "Zorua Hisui",
+				"types": [
+					"normal",
+					"ghost"
+				],
+				"isNfe": true,
+				"spriteSuffix": "hisui"
+			}
 		]
 	},
 	{
@@ -6824,6 +6995,22 @@
 		"name": "Zoroark",
 		"types": [
 			"dark"
+		],
+		"forms": [
+			{
+				"name": "Zoroark",
+				"types": [
+					"dark"
+				]
+			},
+			{
+				"name": "Zoroark Hisui",
+				"types": [
+					"normal",
+					"ghost"
+				],
+				"spriteSuffix": "hisui"
+			}
 		]
 	},
 	{
@@ -7399,6 +7586,23 @@
 		"types": [
 			"normal",
 			"flying"
+		],
+		"forms": [
+			{
+				"name": "Braviary",
+				"types": [
+					"normal",
+					"flying"
+				]
+			},
+			{
+				"name": "Braviary Hisui",
+				"types": [
+					"psychic",
+					"flying"
+				],
+				"spriteSuffix": "hisui"
+			}
 		]
 	},
 	{
@@ -8534,6 +8738,24 @@
 		"isNfe": true,
 		"types": [
 			"dragon"
+		],
+		"forms": [
+			{
+				"name": "Sliggoo",
+				"types": [
+					"dragon"
+				],
+				"isNfe": true
+			},
+			{
+				"name": "Sliggoo Hisui",
+				"types": [
+					"steel",
+					"dragon"
+				],
+				"isNfe": true,
+				"spriteSuffix": "hisui"
+			}
 		]
 	},
 	{
@@ -8541,6 +8763,22 @@
 		"name": "Goodra",
 		"types": [
 			"dragon"
+		],
+		"forms": [
+			{
+				"name": "Goodra",
+				"types": [
+					"dragon"
+				]
+			},
+			{
+				"name": "Goodra Hisui",
+				"types": [
+					"steel",
+					"dragon"
+				],
+				"spriteSuffix": "hisui"
+			}
 		]
 	},
 	{
@@ -8653,6 +8891,22 @@
 		"name": "Avalugg",
 		"types": [
 			"ice"
+		],
+		"forms": [
+			{
+				"name": "Avalugg",
+				"types": [
+					"ice"
+				]
+			},
+			{
+				"name": "Avalugg Hisui",
+				"types": [
+					"ice",
+					"rock"
+				],
+				"spriteSuffix": "hisui"
+			}
 		]
 	},
 	{
@@ -8809,6 +9063,23 @@
 		"types": [
 			"grass",
 			"ghost"
+		],
+		"forms": [
+			{
+				"name": "Decidueye",
+				"types": [
+					"grass",
+					"ghost"
+				]
+			},
+			{
+				"name": "Decidueye Hisui",
+				"types": [
+					"grass",
+					"fighting"
+				],
+				"spriteSuffix": "hisui"
+			}
 		]
 	},
 	{
