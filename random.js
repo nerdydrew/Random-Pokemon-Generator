@@ -6,16 +6,16 @@ const SPRITE_EXTENTION = '.png';
 function generateRandom() {
 	markLoading(true);
 
-	var options = getOptions();
+	const options = getOptions();
 	persistOptions(options);
 
 	getEligiblePokemon(
 		options,
 		function(eligiblePokemon) {
-			var results = document.getElementById("results");
+			const results = document.getElementById("results");
 			if (eligiblePokemon) {
-				var generatedPokemon = chooseRandom(eligiblePokemon, options);
-				var html = htmlifyPokemonArray(generatedPokemon, options);
+				const generatedPokemon = chooseRandom(eligiblePokemon, options);
+				const html = htmlifyPokemonArray(generatedPokemon, options);
 				results.innerHTML = html;
 			} else {
 				results.innerHTML = "An error occurred while generating Pok&eacute;mon.";
@@ -88,21 +88,21 @@ function parseBoolean(boolean) {
 }
 
 // Cache the results of getEligiblePokemon by options.
-var cachedOptionsJson;
-var cachedEligiblePokemon;
+let cachedOptionsJson;
+let cachedEligiblePokemon;
 
 function getEligiblePokemon(options, callback) {
-	var optionsJson = JSON.stringify(options);
+	const optionsJson = JSON.stringify(options);
 
 	if (cachedOptionsJson == optionsJson) {
 		callback(cachedEligiblePokemon);
 	} else {
-		var request = new XMLHttpRequest();
+		const request = new XMLHttpRequest();
 		request.onreadystatechange = function() {
 			if (request.readyState == XMLHttpRequest.DONE) {
 				if (request.status == 200) {
-					var pokemonInRegion = JSON.parse(request.responseText);
-					var eligiblePokemon = filterByOptions(pokemonInRegion, options);
+					const pokemonInRegion = JSON.parse(request.responseText);
+					const eligiblePokemon = filterByOptions(pokemonInRegion, options);
 					cachedOptionsJson = optionsJson;
 					cachedEligiblePokemon = eligiblePokemon;
 					callback(eligiblePokemon);
@@ -146,17 +146,17 @@ function filterByOptions(pokemonInRegion, options) {
 
 /** Chooses N random Pokémon from the array of eligibles without replacement. */
 function chooseRandom(eligiblePokemon, options) {
-	var chosenArray = [];
+	const chosenArray = [];
 
 	// Deep copy so that we can modify the array as needed.
-	var eligiblePokemon = JSON.parse(JSON.stringify(eligiblePokemon));
+	eligiblePokemon = JSON.parse(JSON.stringify(eligiblePokemon));
 
 	while (eligiblePokemon.length > 0 && chosenArray.length < options.n) {
-		var chosen = removeRandomElement(eligiblePokemon);
+		let chosen = removeRandomElement(eligiblePokemon);
 
 		if (options.forms && chosen.forms) {
 			// Choose a random form, getting its ID from the top level.
-			var randomForm = removeRandomElement(chosen.forms);
+			const randomForm = removeRandomElement(chosen.forms);
 			randomForm.id = chosen.id;
 			chosen = randomForm;
 
@@ -203,8 +203,8 @@ function removeGigantamaxes(pokemonArray) {
 
 /** Converts a JSON array of Pokémon into an HTML ordered list. */
 function htmlifyPokemonArray(generatedPokemon, options) {
-	var output = "<ol>";
-	for (var i=0; i<generatedPokemon.length; i++) {
+	let output = "<ol>";
+	for (let i=0; i<generatedPokemon.length; i++) {
 		output += htmlifyPokemon(generatedPokemon[i], options);
 	}
 	output += "</ol>";
@@ -215,10 +215,10 @@ function htmlifyPokemonArray(generatedPokemon, options) {
 /** Converts JSON for a single Pokémon into an HTML list item. */
 function htmlifyPokemon(pokemon, options) {
 	// http://bulbapedia.bulbagarden.net/wiki/Shiny_Pok%C3%A9mon#Generation_VI
-	var shiny = Math.floor(Math.random() * 65536) < 16;
+	const shiny = Math.floor(Math.random() * 65536) < 16;
 
-	var title = (shiny ? "Shiny " : "") + pokemon.name;
-	var classes = "";
+	const title = (shiny ? "Shiny " : "") + pokemon.name;
+	let classes = "";
 	if (shiny) {
 		classes += "shiny ";
 	}
@@ -226,7 +226,7 @@ function htmlifyPokemon(pokemon, options) {
 		classes += "imageless ";
 	}
 
-	var out = '<li title="' + title + '" class="' + classes + '">';
+	let out = '<li title="' + title + '" class="' + classes + '">';
 
 	if (options.natures) {
 		out += '<span class="nature">' + generateNature() + "</span> ";
@@ -236,7 +236,7 @@ function htmlifyPokemon(pokemon, options) {
 		out += ' <span class="star">&#9733;</span>';
 	}
 	if (options.sprites) {
-		var sprite = getSpritePath(pokemon, shiny);
+		const sprite = getSpritePath(pokemon, shiny);
 		out += ' <img src="' + sprite + '" alt="' + title + '" title="' + title + '" />';
 	}
 
@@ -246,8 +246,8 @@ function htmlifyPokemon(pokemon, options) {
 }
 
 function getSpritePath(pokemon, shiny) {
-	var path = shiny ? PATH_TO_SHINY_SPRITES : PATH_TO_SPRITES;
-	var name = pokemon.id;
+	const path = shiny ? PATH_TO_SHINY_SPRITES : PATH_TO_SPRITES;
+	let name = pokemon.id;
 	if (pokemon.spriteSuffix) {
 		name = name + "-" + pokemon.spriteSuffix;
 	}
@@ -270,9 +270,9 @@ function removeRandomElement(arr) {
 
 /** Modern Fisher-Yates shuffle. */
 function shuffle(arr) {
-	for (var i = arr.length - 1; i > 0; i--) {
-		var j = randomInteger(i + 1);
-		var temp = arr[i];
+	for (let i = arr.length - 1; i > 0; i--) {
+		const j = randomInteger(i + 1);
+		const temp = arr[i];
 		arr[i] = arr[j];
 		arr[j] = temp;
 	}
@@ -287,7 +287,7 @@ const STORAGE_OPTIONS_KEY = "options";
 
 /** Stores the current options in local storage and in the URL. */
 function persistOptions(options) {
-	var optionsJson = JSON.stringify(options);
+	const optionsJson = JSON.stringify(options);
 	window.localStorage.setItem(STORAGE_OPTIONS_KEY, optionsJson);
 
 	window.history.replaceState({}, "", "?" + convertOptionsToUrlParams(options));
@@ -298,7 +298,7 @@ function loadOptions() {
 	if (urlHasOptions()) {
 		setOptions(convertUrlParamsToOptions());
 	} else {
-		var optionsJson = window.localStorage.getItem(STORAGE_OPTIONS_KEY);
+		const optionsJson = window.localStorage.getItem(STORAGE_OPTIONS_KEY);
 		if (optionsJson) {
 			setOptions(JSON.parse(optionsJson));
 		}
