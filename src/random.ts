@@ -1,131 +1,64 @@
-const PATH_TO_SPRITES = 'sprites/png/normal/';
-const PATH_TO_SHINY_SPRITES = 'sprites/png/shiny/';
-const SPRITE_EXTENTION = '.png';
+const numberDropdown = document.getElementById("n") as HTMLInputElement;
+const regionDropdown = document.getElementById("region") as HTMLInputElement;
+const typeDropdown = document.getElementById("type") as HTMLInputElement;
+const legendariesCheckbox = document.getElementById("legendaries") as HTMLInputElement;
+const nfesCheckbox = document.getElementById("nfes") as HTMLInputElement;
+const spritesCheckbox = document.getElementById("sprites") as HTMLInputElement;
+const naturesCheckbox = document.getElementById("natures") as HTMLInputElement;
+const formsCheckbox = document.getElementById("forms") as HTMLInputElement;
 
 /** Called when the Generate button is clicked. */
-function generateRandom() {
+async function generateRandom() {
 	markLoading(true);
 
-	const options = getOptions();
+	const options = getOptionsFromForm();
 	persistOptions(options);
 
-	getEligiblePokemon(
-		options,
-		function(eligiblePokemon) {
-			const results = document.getElementById("results");
-			if (eligiblePokemon) {
-				const generatedPokemon = chooseRandom(eligiblePokemon, options);
-				const html = htmlifyPokemonArray(generatedPokemon, options);
-				results.innerHTML = html;
-			} else {
-				results.innerHTML = "An error occurred while generating Pok&eacute;mon.";
-			}
-			markLoading(false);
-		}
-	);
+	const resultsContainer = document.getElementById("results");
+	try {
+		const eligiblePokemon = await getEligiblePokemon(options);
+		const generatedPokemon = chooseRandom(eligiblePokemon, options);
+		resultsContainer.innerHTML = toHtml(generatedPokemon, options);
+	} catch (error) {
+		console.error(error);
+		resultsContainer.innerHTML = "An error occurred while generating Pok&eacute;mon.";
+	}
+	markLoading(false);
 }
 
 function onPageLoad() {
 	loadOptions();
 }
-
-function markLoading(isLoading) {
-	document.getElementById("controls").className = isLoading ? "loading" : "";
-}
-
-function getOptions() {
-	return {
-		n: parseInt(document.getElementById("n").value),
-		region: document.getElementById("region").value,
-		type: document.getElementById("type").value,
-		legendaries: document.getElementById("legendaries").checked,
-		nfes: document.getElementById("nfes").checked,
-		sprites: document.getElementById("sprites").checked,
-		natures: document.getElementById("natures").checked,
-		forms: document.getElementById("forms").checked
-	};
-}
-
-function setOptions(options) {
-	if ("n" in options) {
-		setDropdownIfValid("n", parseInt(options.n));
-	}
-	if ("region" in options) {
-		setDropdownIfValid("region", options.region);
-	}
-	if ("type" in options) {
-		setDropdownIfValid("type", options.type);
-	}
-	if ("legendaries" in options) {
-		document.getElementById("legendaries").checked = parseBoolean(options.legendaries);
-	}
-	if ("nfes" in options) {
-		document.getElementById("nfes").checked = parseBoolean(options.nfes);
-	}
-	if ("sprites" in options) {
-		document.getElementById("sprites").checked = parseBoolean(options.sprites);
-	}
-	if ("natures" in options) {
-		document.getElementById("natures").checked = parseBoolean(options.natures);
-	}
-	if ("forms" in options) {
-		document.getElementById("forms").checked = parseBoolean(options.forms);
-	}
-	if ("generate" in options) {
-		generateRandom();
-	}
-}
-
-function setDropdownIfValid(selectID, value) {
-	const select = document.getElementById(selectID);
-	const option = select.querySelector("[value='" + value + "']");
-	if (option) {
-		select.value = option.value;
-	}
-}
-
-function parseBoolean(boolean) {
-	if (typeof boolean == "string") {
-		return boolean.toLowerCase() == "true";
-	}
-	return !!boolean;
-}
+document.addEventListener("DOMContentLoaded", onPageLoad);
 
 // Cache the results of getEligiblePokemon by options.
-let cachedOptionsJson;
-let cachedEligiblePokemon;
+let cachedOptionsJson: string;
+let cachedEligiblePokemon: Pokemon[];
 
-function getEligiblePokemon(options, callback) {
+async function getEligiblePokemon(options: Options): Promise<Pokemon[]> {
 	const optionsJson = JSON.stringify(options);
 
 	if (cachedOptionsJson == optionsJson) {
-		callback(cachedEligiblePokemon);
+		return Promise.resolve(cachedEligiblePokemon);
 	} else {
-		const request = new XMLHttpRequest();
-		request.onreadystatechange = function() {
-			if (request.readyState == XMLHttpRequest.DONE) {
-				if (request.status == 200) {
-					const pokemonInRegion = JSON.parse(request.responseText);
-					const eligiblePokemon = filterByOptions(pokemonInRegion, options);
-					cachedOptionsJson = optionsJson;
-					cachedEligiblePokemon = eligiblePokemon;
-					callback(eligiblePokemon);
-				} else {
-					console.error(request);
-					callback(null);
-				}
-			}
-		};
-		request.open("GET", "dex/" + options.region + ".json");
-		request.send();
+		const response = await fetch("dex/" + options.region + ".json");
+		if (!response.ok) {
+			console.error(response);
+			throw Error("Failed to get eligible Pokémon.");
+		}
+		const pokemonInRegion: Pokemon[] = await response.json();
+		const eligiblePokemon = filterByOptions(pokemonInRegion, options);
+		cachedOptionsJson = optionsJson;
+		cachedEligiblePokemon = eligiblePokemon;
+		return eligiblePokemon;
 	}
 }
 
-function filterByOptions(pokemonInRegion, options) {
-	return pokemonInRegion.filter(function (pokemon) {
+function filterByOptions<P extends Pokemon|Form>(pokemonInRegion: P[], options: Options): P[] {
+	return pokemonInRegion.filter((pokemon: Pokemon | Form) => {
 		// Legendary status is independent of form, so check this before
 		// checking forms.
-		if (!options.legendaries && pokemon.isLegendary) {
+		if (!options.legendaries && "isLegendary" in pokemon && pokemon.isLegendary) {
 			return false;
 		}
 
@@ -140,7 +73,7 @@ function filterByOptions(pokemonInRegion, options) {
 			return false;
 		}
 
-		if (!options.nfes && pokemon.isNfe) {
+		if (!options.nfes && "isNfe" in pokemon && pokemon.isNfe) {
 			return false;
 		}
 
@@ -149,43 +82,41 @@ function filterByOptions(pokemonInRegion, options) {
 }
 
 /** Chooses N random Pokémon from the array of eligibles without replacement. */
-function chooseRandom(eligiblePokemon, options) {
-	const chosenArray = [];
+function chooseRandom(eligiblePokemon: Pokemon[], options: Options): GeneratedPokemon[] {
+	const generated = [];
 
 	// Deep copy so that we can modify the array as needed.
 	eligiblePokemon = JSON.parse(JSON.stringify(eligiblePokemon));
 
-	while (eligiblePokemon.length > 0 && chosenArray.length < options.n) {
-		let chosen = removeRandomElement(eligiblePokemon);
+	while (eligiblePokemon.length > 0 && generated.length < options.n) {
+		const pokemon: Pokemon = removeRandomElement(eligiblePokemon);
+		let form = null;
 
-		if (options.forms && chosen.forms) {
-			// Choose a random form, getting its ID from the top level.
-			const randomForm = removeRandomElement(chosen.forms);
-			randomForm.id = chosen.id;
-			chosen = randomForm;
+		if (options.forms && pokemon.forms) {
+			form = removeRandomElement(pokemon.forms);
 
 			// If we generated a mega, we can't choose any more.
-			if (chosen.isMega) {
+			if (form.isMega) {
 				eligiblePokemon = removeMegas(eligiblePokemon);
 			}
-			if (chosen.isGigantamax) {
+			if (form.isGigantamax) {
 				eligiblePokemon = removeGigantamaxes(eligiblePokemon);
 			}
 		}
 
-		chosenArray.push(chosen);
+		generated.push(new GeneratedPokemon(pokemon, form, options));
 	}
 
 	// Megas are more likely to appear at the start of the array,
 	// so we shuffle for good measure.
-	return shuffle(chosenArray);
+	return shuffle(generated);
 }
 
 /** Filters megas from the array. Doesn't mutate the original array. */
-function removeMegas(pokemonArray) {
-	return pokemonArray.filter(function (pokemon) {
-		if ("forms" in pokemon) {
-			pokemon.forms = pokemon.forms.filter(function (form) {return !form.isMega});
+function removeMegas(pokemonArray: Pokemon[]): Pokemon[] {
+	return pokemonArray.filter((pokemon: Pokemon) => {
+		if (pokemon.forms) {
+			pokemon.forms = pokemon.forms.filter(form => !form.isMega);
 			return pokemon.forms.length > 0;
 		} else {
 			return true; // always keep if no forms
@@ -194,10 +125,10 @@ function removeMegas(pokemonArray) {
 }
 
 /** Filters Gigantamax forms from the array. Doesn't mutate the original array. */
-function removeGigantamaxes(pokemonArray) {
-	return pokemonArray.filter(function (pokemon) {
-		if ("forms" in pokemon) {
-			pokemon.forms = pokemon.forms.filter(function (form) {return !form.isGigantamax});
+function removeGigantamaxes(pokemonArray: Pokemon[]): Pokemon[] {
+	return pokemonArray.filter((pokemon: Pokemon) => {
+		if (pokemon.forms) {
+			pokemon.forms = pokemon.forms.filter(form => !form.isGigantamax);
 			return pokemon.forms.length > 0;
 		} else {
 			return true; // always keep if no forms
@@ -206,139 +137,6 @@ function removeGigantamaxes(pokemonArray) {
 }
 
 /** Converts a JSON array of Pokémon into an HTML ordered list. */
-function htmlifyPokemonArray(generatedPokemon, options) {
-	let output = "<ol>";
-	for (let i=0; i<generatedPokemon.length; i++) {
-		output += htmlifyPokemon(generatedPokemon[i], options);
-	}
-	output += "</ol>";
-
-	return output;
+function toHtml(pokemon: GeneratedPokemon[], options: Options) {
+	return `<ol>${pokemon.map(p => p.toHtml(options.sprites)).join("")}</ol>`;
 }
-
-/** Converts JSON for a single Pokémon into an HTML list item. */
-function htmlifyPokemon(pokemon, options) {
-	// http://bulbapedia.bulbagarden.net/wiki/Shiny_Pok%C3%A9mon#Generation_VI
-	const shiny = Math.floor(Math.random() * 65536) < 16;
-
-	const title = (shiny ? "Shiny " : "") + pokemon.name;
-	let classes = "";
-	if (shiny) {
-		classes += "shiny ";
-	}
-	if (!options.sprites) {
-		classes += "imageless ";
-	}
-
-	let out = '<li title="' + title + '" class="' + classes + '">';
-
-	if (options.natures) {
-		out += '<span class="nature">' + generateNature() + "</span> ";
-	}
-	out += pokemon.name;
-	if (shiny) {
-		out += ' <span class="star">&#9733;</span>';
-	}
-	if (options.sprites) {
-		const sprite = getSpritePath(pokemon, shiny);
-		out += ' <img src="' + sprite + '" alt="' + title + '" title="' + title + '" />';
-	}
-
-	out += "</li>";
-
-	return out;
-}
-
-function getSpritePath(pokemon, shiny) {
-	const path = shiny ? PATH_TO_SHINY_SPRITES : PATH_TO_SPRITES;
-	let name = pokemon.id;
-	if (pokemon.spriteSuffix) {
-		name = name + "-" + pokemon.spriteSuffix;
-	}
-	return path + name + SPRITE_EXTENTION;
-}
-
-function generateNature() {
-	return getRandomElement(NATURES);
-}
-
-const NATURES = ["Adamant", "Bashful", "Bold", "Brave", "Calm", "Careful", "Docile", "Gentle", "Hardy", "Hasty", "Impish", "Jolly", "Lax", "Lonely", "Mild", "Modest", "Na&iuml;ve", "Naughty", "Quiet", "Quirky", "Rash", "Relaxed", "Sassy", "Serious", "Timid"];
-
-function getRandomElement(arr) {
-	return arr[randomInteger(arr.length)];
-}
-
-function removeRandomElement(arr) {
-	return arr.splice(randomInteger(arr.length), 1)[0];
-}
-
-/** Modern Fisher-Yates shuffle. */
-function shuffle(arr) {
-	for (let i = arr.length - 1; i > 0; i--) {
-		const j = randomInteger(i + 1);
-		const temp = arr[i];
-		arr[i] = arr[j];
-		arr[j] = temp;
-	}
-	return arr;
-}
-
-function randomInteger(maxExclusive) {
-	return Math.floor(Math.random() * maxExclusive);
-}
-
-const STORAGE_OPTIONS_KEY = "options";
-
-/** Stores the current options in local storage and in the URL. */
-function persistOptions(options) {
-	const optionsJson = JSON.stringify(options);
-	window.localStorage.setItem(STORAGE_OPTIONS_KEY, optionsJson);
-
-	window.history.replaceState({}, "", "?" + convertOptionsToUrlParams(options));
-}
-
-/** Loads options from either the URL or local storage. */
-function loadOptions() {
-	if (urlHasOptions()) {
-		setOptions(convertUrlParamsToOptions());
-	} else {
-		const optionsJson = window.localStorage.getItem(STORAGE_OPTIONS_KEY);
-		if (optionsJson) {
-			setOptions(JSON.parse(optionsJson));
-		}
-	}
-}
-
-/** Returns whether or not the URL specifies any options as parameters. */
-function urlHasOptions() {
-	const questionIndex = window.location.href.indexOf("?");
-	return questionIndex >= 0 && questionIndex + 1 < window.location.href.length;
-}
-
-/** Parses options from the URL parameters. */
-function convertUrlParamsToOptions() {
-	const questionIndex = window.location.href.indexOf("?");
-	const paramString = window.location.href.substring(questionIndex + 1);
-	const options = {};
-	const parameterPairs = paramString.split("&");
-	for (let i=0; i<parameterPairs.length; i++) { // woo IE
-		const splitParam = parameterPairs[i].split("=");
-		const key = decodeURIComponent(splitParam[0]);
-		const value = splitParam[1];
-		if (value) {
-			options[key] = decodeURIComponent(value);
-		} else {
-			options[key] = null;
-		}
-	}
-	return options;
-}
-
-/** Returns URL parameters for the given settings, excluding the leading "?". */
-function convertOptionsToUrlParams(options) {
-	return Object.keys(options).map(function(key) {
-		return encodeURIComponent(key) + "=" + encodeURIComponent(options[key])
-	}).join("&");
-}
-
-document.addEventListener("DOMContentLoaded", onPageLoad);
