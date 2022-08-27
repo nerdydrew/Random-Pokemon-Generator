@@ -25,6 +25,10 @@ function generateRandom() {
 	);
 }
 
+function onPageLoad() {
+	loadOptions();
+}
+
 function markLoading(isLoading) {
 	document.getElementById("controls").className = isLoading ? "loading" : "";
 }
@@ -337,4 +341,4 @@ function convertOptionsToUrlParams(options) {
 	}).join("&");
 }
 
-document.addEventListener("DOMContentLoaded", loadOptions);
+document.addEventListener("DOMContentLoaded", onPageLoad);
