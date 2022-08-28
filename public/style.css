@@ -37,7 +37,7 @@ header{margin:1em 0}
 #history{margin:1em 0 0;display:flex;justify-content:space-between}
 button.text{background:transparent;color:inherit;border:0;padding:0}
 
-#results li{display:inline-block;height:3em;padding-top:128px;width:33%;margin-bottom:1em;position:relative;list-style:none;animation:.5s ease-out 0s 1 fadeIn}
+#results li{display:inline-block;height:3em;padding-top:128px;width:33%;margin-bottom:1em;position:relative;list-style:none;animation:0.5s ease-out 0s 1 fadeIn}
 #results .nature{color:#888}.star{color:#F4D04D}
 #results li.shiny:before,#results li.shiny:after,#results li.shiny .star:before,#results li.shiny .star:after{
 	content:"\2605";position:absolute;top:64px;left:50%;font-size:.75em;opacity:0;pointer-events:none;z-index:100}
@@ -67,7 +67,8 @@ footer{font-size:.875em;padding:3em 0;color:#666;clear:both}
 	a:hover,button.text:hover{color:#FFF}
 }
 
-@keyframes fadeIn { from {opacity:0} to {opacity:1} }
+/* Mobile Safari doesn't display this animation smoothly unless I add another CSS declaration. */
+@keyframes fadeIn { from {opacity:0} to {opacity:1;color:inherit} }
 @keyframes rotate { from {transform:rotate(0deg)} to {transform:rotate(360deg)} }
 @keyframes shine {
 	from{color:#F8F838;text-shadow:2px 0 #F88008, -2px 0 #F88008, 0 2px #F88008, 0 -2px #F88008}

@@ -72,10 +72,10 @@ function getShinies(): GeneratedPokemon[] {
 
 function toggleShinyDisplay() {
 	const isInvisible = document.getElementById("shiny-container").classList.toggle("invisible");
-	updateShinyToggler(!isInvisible);
+	updateShinyTogglerText(!isInvisible);
 }
 
-function updateShinyToggler(shiniesVisible: boolean) {
+function updateShinyTogglerText(shiniesVisible: boolean) {
 	const button = document.getElementById("shiny-toggler");
 	if (shiniesVisible) {
 		button.innerHTML = button.innerHTML.replace("Show", "Hide");
@@ -89,6 +89,6 @@ function clearShinies() {
 		window.localStorage.removeItem(STORAGE_SHINIES_KEY);
 		document.getElementById("shiny-container").classList.add("invisible");
 		toggleHistoryVisibility(undefined, []);
-		updateShinyToggler(false); // Prepare for next time
+		updateShinyTogglerText(false); // Prepare for next time
 	}
 }
