@@ -1,3 +1,6 @@
+dev:
+	npm run dev
+
 preview:
 	aws s3 sync --dryrun --exclude ".*" --delete public/ s3://randompokemon.com
 
