@@ -1,27 +1,51 @@
-const HISTORY_SIZE = 10;
+const HISTORY_SIZE = 64;
 const STORAGE_LATEST_KEY = "latestPokemon";
 const STORAGE_SHINIES_KEY = "shinies";
 
-/** The last HISTORY_SIZE sets of Pokémon to be generated, oldest first. Stored per session. */
+/** The last HISTORY_SIZE sets of Pokémon to be generated, newest first. Stored per session. */
 type LatestPokemon = GeneratedPokemon[][];
+
+let displayedIndex: number = -1; // Nothing displayed on first load
 
 function addToHistory(pokemon: GeneratedPokemon[]) {
 	const latest = getLatestPokemon();
-	latest.push(pokemon);
+	latest.unshift(pokemon);
 	while (latest.length > HISTORY_SIZE) {
-		latest.shift();
+		latest.pop();
 	}
 	window.sessionStorage.setItem(STORAGE_LATEST_KEY, JSON.stringify(latest));
 
 	const shinies = getShinies();
-	shinies.push(...pokemon.filter(p => p.shiny));
+	shinies.unshift(...pokemon.filter(p => p.shiny));
 	window.localStorage.setItem(STORAGE_SHINIES_KEY, JSON.stringify(shinies));
+
+	displayedIndex = 0;
+	toggleHistoryVisibility(latest, shinies);
 }
 
-function updateDisplayedHistory(latest?: LatestPokemon, shinies?: GeneratedPokemon[]) {
+function toggleHistoryVisibility(latest?: LatestPokemon, shinies?: GeneratedPokemon[]) {
 	latest = latest ?? getLatestPokemon();
 	shinies = shinies ?? getShinies();
-	//TODO
+
+	document.getElementById("history").classList.toggle("hidden", displayedIndex == null);
+	document.getElementById("previous").classList.toggle("hidden", displayedIndex >= latest.length - 1);
+	document.getElementById("next").classList.toggle("hidden", displayedIndex <= 0);
+}
+
+function displayPrevious() {
+	displayHistoryAtIndex(displayedIndex + 1); // One older
+}
+
+function displayNext() {
+	displayHistoryAtIndex(displayedIndex - 1); // One newer
+}
+
+function displayHistoryAtIndex(index: number) {
+	const latest = getLatestPokemon();
+	index = Math.max(0, Math.min(index, latest.length-1));
+	displayedIndex = index;
+	displayPokemon(latest[index]);
+	toggleHistoryVisibility(latest);
 }
 
 function getLatestPokemon(): LatestPokemon {
@@ -34,7 +58,7 @@ function getLatestPokemon(): LatestPokemon {
 			.map((member: Object) => GeneratedPokemon.fromJson(member)));
 }
 
-/** All encountered shiny Pokémon, oldest first. */
+/** All encountered shiny Pokémon, newest first. */
 function getShinies(): GeneratedPokemon[] {
 	const shinies = JSON.parse(window.localStorage.getItem(STORAGE_SHINIES_KEY));
 	if (!Array.isArray(shinies)) {

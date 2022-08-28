@@ -14,24 +14,32 @@ async function generateRandom() {
 	const options = getOptionsFromForm();
 	persistOptions(options);
 
-	const resultsContainer = document.getElementById("results");
 	try {
 		const eligiblePokemon = await getEligiblePokemon(options);
 		const generatedPokemon = chooseRandom(eligiblePokemon, options);
 		addToHistory(generatedPokemon);
-		resultsContainer.innerHTML = toHtml(generatedPokemon, options);
+		displayPokemon(generatedPokemon);
 	} catch (error) {
 		console.error(error);
-		resultsContainer.innerHTML = "An error occurred while generating Pok&eacute;mon.";
+		displayPokemon(null);
 	}
 	markLoading(false);
 }
 
 function onPageLoad() {
 	loadOptions();
-	updateDisplayedHistory();
+	toggleHistoryVisibility();
 }
 document.addEventListener("DOMContentLoaded", onPageLoad);
+
+function displayPokemon(pokemon: GeneratedPokemon[]) {
+	const resultsContainer = document.getElementById("results");
+	if (!pokemon) {
+		resultsContainer.innerHTML = "An error occurred while generating Pok&eacute;mon.";
+	} else {
+		resultsContainer.innerHTML = toHtml(pokemon);
+	}
+}
 
 // Cache the results of getEligiblePokemon by options.
 let cachedOptionsJson: string;
@@ -139,6 +147,7 @@ function removeGigantamaxes(pokemonArray: Pokemon[]): Pokemon[] {
 }
 
 /** Converts a JSON array of Pokémon into an HTML ordered list. */
-function toHtml(pokemon: GeneratedPokemon[], options: Options) {
-	return `<ol>${pokemon.map(p => p.toHtml(options.sprites)).join("")}</ol>`;
+function toHtml(pokemon: GeneratedPokemon[]) {
+	const includeSprites = spritesCheckbox.checked;
+	return `<ol>${pokemon.map(p => p.toHtml(includeSprites)).join("")}</ol>`;
 }
