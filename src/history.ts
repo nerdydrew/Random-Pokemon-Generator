@@ -1,47 +1,48 @@
 const HISTORY_SIZE = 10;
-const STORAGE_HISTORY_KEY = "history";
+const STORAGE_LATEST_KEY = "latestPokemon";
+const STORAGE_SHINIES_KEY = "shinies";
 
-interface GenerationHistory {
-	/** The last HISTORY_SIZE sets of Pokémon to be generated, latest first. */
-	latest: GeneratedPokemon[][];
-	/** The last shiny of each Pokémon to have been encountered. */
-	shinies: {[id: number]: GeneratedPokemon};
-}
+/** The last HISTORY_SIZE sets of Pokémon to be generated, oldest first. Stored per session. */
+type LatestPokemon = GeneratedPokemon[][];
 
 function addToHistory(pokemon: GeneratedPokemon[]) {
-	const history = getHistoryFromLocalStorage();
-	history.latest.unshift(pokemon);
-	while (history.latest.length > HISTORY_SIZE) {
-		history.latest.pop();
+	const latest = getLatestPokemon();
+	latest.push(pokemon);
+	while (latest.length > HISTORY_SIZE) {
+		latest.shift();
 	}
-	for (const shiny of pokemon.filter(p => p.shiny)) {
-		history.shinies[shiny.id] = shiny;
-	}
-	window.localStorage.setItem(STORAGE_HISTORY_KEY, JSON.stringify(history));
-	updateDisplayedHistory(history);
+	window.sessionStorage.setItem(STORAGE_LATEST_KEY, JSON.stringify(latest));
+
+	const shinies = getShinies();
+	shinies.push(...pokemon.filter(p => p.shiny));
+	window.localStorage.setItem(STORAGE_SHINIES_KEY, JSON.stringify(shinies));
 }
 
-function updateDisplayedHistory(history?: GenerationHistory) {
-	if (!history) {
-		history = getHistoryFromLocalStorage();
-	}
-	console.log(history); //TODO
+function updateDisplayedHistory(latest?: LatestPokemon, shinies?: GeneratedPokemon[]) {
+	latest = latest ?? getLatestPokemon();
+	shinies = shinies ?? getShinies();
+	//TODO
 }
 
-function getHistoryFromLocalStorage(): GenerationHistory {
-	const history: GenerationHistory = {latest: [], shinies: {}};
-	const json = JSON.parse(window.localStorage.getItem(STORAGE_HISTORY_KEY));
-	if (!json) {
-		return history;
+function getLatestPokemon(): LatestPokemon {
+	const parties = JSON.parse(window.sessionStorage.getItem(STORAGE_LATEST_KEY));
+	if (!Array.isArray(parties)) {
+		return [];
 	}
-	history.latest = json.latest;
-	for (const [id, shinyJson] of Object.entries(json.shinies)) {
-		history.shinies[Number(id)] = GeneratedPokemon.fromJson(shinyJson);
-	}
-	return history;
+	return parties
+		.map(party => party
+			.map((member: Object) => GeneratedPokemon.fromJson(member)));
 }
 
-function clearHistory() {
-	window.localStorage.removeItem(STORAGE_HISTORY_KEY);
-	updateDisplayedHistory();
+/** All encountered shiny Pokémon, oldest first. */
+function getShinies(): GeneratedPokemon[] {
+	const shinies = JSON.parse(window.localStorage.getItem(STORAGE_SHINIES_KEY));
+	if (!Array.isArray(shinies)) {
+		return [];
+	}
+	return shinies.map(shiny => GeneratedPokemon.fromJson(shiny));
+}
+
+function clearShinies() {
+	window.localStorage.removeItem(STORAGE_SHINIES_KEY);
 }
