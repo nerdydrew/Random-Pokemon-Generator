@@ -9,33 +9,36 @@ h2{font-weight:400;color:#666;font-size:1.25em;font-style:italic;font-family:Geo
 p,ul,ol{margin:0 0 1em}
 article,section{margin:1em 0}
 
-a,#history button{color:#000;text-decoration:none;border-bottom:1px solid #AAA}
-a:hover,#history button:hover{color:#666}
+a,button.text{color:#000;text-decoration:none;border-bottom:1px solid #AAA}
+a:hover,button.text:hover{color:#666}
 
 fieldset{border:0;cursor:default;line-height:2;margin:1em 0}
 label{white-space:nowrap}
 label,select{margin-right:1em}
 label select{margin:0}
 input[type="checkbox"]{vertical-align:baseline;margin-right:.25em}
-input[type="button"],input[type="submit"]{padding:.125em .25em;cursor:pointer;font-size:1em}
+button,input[type="button"],input[type="submit"]{cursor:pointer}
+#controls input[type="submit"]{font-size:1em;padding:.125em .25em}
 abbr{cursor:help;border-bottom:1px dotted;text-decoration:none}
 .clear{clear:both}
 .hidden{visibility:hidden}
+.invisible{display:none}
 
 header{margin:1em 0}
 
-#controls,#controls:before{border:1px solid #000;border-radius:2px}
-#controls{padding:.5em 1em;border-bottom-width:2px;position:relative;z-index:10;margin:0 auto}
-#controls:before{border-top-width:2px;content:"";display:block;position:absolute;z-index:-1;top:1px;left:1px;right:1px;bottom:1px}
+.menu,.menu:before{border:1px solid #000;border-radius:2px}
+.menu{padding:.5em 1em;border-bottom-width:2px;position:relative;z-index:10;margin:0 auto}
+.menu:before{border-top-width:2px;content:"";display:block;position:absolute;z-index:-1;top:1px;left:1px;right:1px;bottom:1px}
+
 .loading:after{position:absolute;top:50%;right:4%;z-index:-2;content:"";width:1em;height:1em;margin:-1em 0 0;
 	border-radius:1em;border:.25em solid;border-color:currentColor transparent;
 	animation:1.25s linear infinite rotate, .5s ease-out 0s 1 fadeIn}
 
 #history{margin:1em 0 0;display:flex;justify-content:space-between}
-#history button{background:transparent;color:inherit;cursor:pointer;border:0;padding:0}
+button.text{background:transparent;color:inherit;border:0;padding:0}
 
 #results li{display:inline-block;height:3em;padding-top:128px;width:33%;margin-bottom:1em;position:relative;list-style:none;animation:.5s ease-out 0s 1 fadeIn}
-#results .nature{color:#888}#results .star{color:#F4D04D}
+#results .nature{color:#888}.star{color:#F4D04D}
 #results li.shiny:before,#results li.shiny:after,#results li.shiny .star:before,#results li.shiny .star:after{
 	content:"\2605";position:absolute;top:64px;left:50%;font-size:.75em;opacity:0;pointer-events:none;z-index:100}
 #results li.shiny:before      {animation:.6s steps(8) .075s 1 rotateStar, .075s alternate steps(2) infinite shine;font-size:1.5em}
@@ -44,6 +47,8 @@ header{margin:1em 0}
 #results li.shiny .star:after {animation:.6s steps(8) .300s 1 rotateStar, .075s alternate steps(2) infinite shine}
 #results img{position:absolute;bottom:3em;left:50%;transform:translateX(-50%)}
 #results li.imageless{font-weight:700;margin:2em 0;height:auto}
+
+#shiny-toggler,#shiny-container button{margin-bottom:1em}
 
 footer{font-size:.875em;padding:3em 0;color:#666;clear:both}
 
@@ -56,10 +61,10 @@ footer{font-size:.875em;padding:3em 0;color:#666;clear:both}
 @media screen and (prefers-color-scheme: dark) {
 	html{background:#222;color:#FFF}
 	h2,footer{color:#CCC}
-	#controls,#controls:before{border-color:#FFF}
+	.menu,.menu:before{border-color:#FFF}
 
-	a,#history button{color:#DDD;border-bottom-color:#777}
-	a:hover,#history button:hover{color:#FFF}
+	a,button.text{color:#DDD;border-bottom-color:#777}
+	a:hover,button.text:hover{color:#FFF}
 }
 
 @keyframes fadeIn { from {opacity:0} to {opacity:1} }

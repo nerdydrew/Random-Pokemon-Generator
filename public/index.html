@@ -22,7 +22,7 @@
 	<h1>Random Pok&eacute;mon Generator</h1>
 </header>
 
-<form action="?" method="get" id="controls" onsubmit="generateRandom(); return false;">
+<form action="?" method="get" id="controls" class="menu" onsubmit="generateRandom(); return false;">
 	<fieldset>
 		<label>Generate <select name="n" id="n" required>
 			<option value="1">1</option>
@@ -86,11 +86,17 @@
 </form>
 
 <nav id="history">
-	<button class="hidden" id="previous" onclick="displayPrevious()">&#x23EA; Previous</button>
-	<button class="hidden" id="next" onclick="displayNext()">Next &#x23E9;</button>
+	<button class="hidden text" id="previous" onclick="displayPrevious()">&#x23EA; Previous</button>
+	<button class="hidden text" id="next" onclick="displayNext()">Next &#x23E9;</button>
 </nav>
 
 <section id="results"></section>
+
+<button id="shiny-toggler" class=" text" onclick="toggleShinyDisplay()"><span class="star">&starf;</span> Show your shiny Pokémon</button>
+<section id="shiny-container" class="menu invisible">
+	<div id="shinies"></div>
+	<button class="text" onclick="clearShinies()">&#x274C; Clear your shiny Pokémon</button>
+</section>
 
 <footer>
 	<p>

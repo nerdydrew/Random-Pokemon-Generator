@@ -22,7 +22,7 @@ function randomInteger(maxExclusive: number): number {
 }
 
 function markLoading(isLoading: boolean) {
-	document.getElementById("controls").className = isLoading ? "loading" : "";
+	document.getElementById("controls").classList.toggle("loading", isLoading);
 }
 
 function setDropdownIfValid(select: HTMLInputElement, value: string | number) {

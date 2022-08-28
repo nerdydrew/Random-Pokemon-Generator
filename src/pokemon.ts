@@ -52,7 +52,6 @@ class GeneratedPokemon {
 
 	/** Converts JSON for a single Pokémon into an HTML list item. */
 	toHtml(includeSprite: boolean): string {
-		const title = (this.shiny ? "Shiny " : "") + this.name;
 		let classes = "";
 		if (this.shiny) {
 			classes += "shiny ";
@@ -60,8 +59,8 @@ class GeneratedPokemon {
 		if (!includeSprite) {
 			classes += "imageless ";
 		}
-		return `<li title="${title}" class="${classes}">
-			${includeSprite ? `<img src="${this.getSpritePath()}" alt="${title}" />` : ""}
+		return `<li class="${classes}">
+			${includeSprite ? this.toImage() : ""}
 			${this.toText()}
 		</li>`;
 	}
@@ -72,6 +71,11 @@ class GeneratedPokemon {
 			${this.name}
 			${this.shiny ? `<span class="star">&#9733;</span>` : ""}
 		`;
+	}
+
+	toImage(): string {
+		const altText = (this.shiny ? "Shiny " : "") + this.name;
+		return `<img src="${this.getSpritePath()}" alt="${altText}" title="${altText}" />`;
 	}
 
 	private getSpritePath(): string {

@@ -30,6 +30,9 @@ function toggleHistoryVisibility(latest?: LatestPokemon, shinies?: GeneratedPoke
 	document.getElementById("history").classList.toggle("hidden", displayedIndex == null);
 	document.getElementById("previous").classList.toggle("hidden", displayedIndex >= latest.length - 1);
 	document.getElementById("next").classList.toggle("hidden", displayedIndex <= 0);
+
+	document.getElementById("shinies").innerHTML = shinies.map(p => p.toImage()).join(" ");
+	document.getElementById("shiny-toggler").classList.toggle("invisible", shinies.length == 0);
 }
 
 function displayPrevious() {
@@ -67,6 +70,25 @@ function getShinies(): GeneratedPokemon[] {
 	return shinies.map(shiny => GeneratedPokemon.fromJson(shiny));
 }
 
+function toggleShinyDisplay() {
+	const isInvisible = document.getElementById("shiny-container").classList.toggle("invisible");
+	updateShinyToggler(!isInvisible);
+}
+
+function updateShinyToggler(shiniesVisible: boolean) {
+	const button = document.getElementById("shiny-toggler");
+	if (shiniesVisible) {
+		button.innerHTML = button.innerHTML.replace("Show", "Hide");
+	} else {
+		button.innerHTML = button.innerHTML.replace("Hide", "Show");
+	}
+}
+
 function clearShinies() {
-	window.localStorage.removeItem(STORAGE_SHINIES_KEY);
+	if (window.confirm("Are you sure you want to clear your shiny Pokémon?")) {
+		window.localStorage.removeItem(STORAGE_SHINIES_KEY);
+		document.getElementById("shiny-container").classList.add("invisible");
+		toggleHistoryVisibility(undefined, []);
+		updateShinyToggler(false); // Prepare for next time
+	}
 }
