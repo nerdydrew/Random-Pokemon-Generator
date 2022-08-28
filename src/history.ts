@@ -1,36 +1,30 @@
 const HISTORY_SIZE = 64;
-const STORAGE_LATEST_KEY = "latestPokemon";
 const STORAGE_SHINIES_KEY = "shinies";
 
-/** The last HISTORY_SIZE sets of Pokémon to be generated, newest first. Stored per session. */
-type LatestPokemon = GeneratedPokemon[][];
+/** The last HISTORY_SIZE sets of Pokémon to be generated, newest first. */
+const latestPokemon: GeneratedPokemon[][] = [];
 
 let displayedIndex: number = -1; // Nothing displayed on first load
 
 function addToHistory(pokemon: GeneratedPokemon[]) {
-	const latest = getLatestPokemon();
-	latest.unshift(pokemon);
-	while (latest.length > HISTORY_SIZE) {
-		latest.pop();
+	latestPokemon.unshift(pokemon);
+	while (latestPokemon.length > HISTORY_SIZE) {
+		latestPokemon.pop();
 	}
-	window.sessionStorage.setItem(STORAGE_LATEST_KEY, JSON.stringify(latest));
 
 	const shinies = getShinies();
 	shinies.unshift(...pokemon.filter(p => p.shiny));
 	window.localStorage.setItem(STORAGE_SHINIES_KEY, JSON.stringify(shinies));
 
 	displayedIndex = 0;
-	toggleHistoryVisibility(latest, shinies);
+	toggleHistoryVisibility(shinies);
 }
 
-function toggleHistoryVisibility(latest?: LatestPokemon, shinies?: GeneratedPokemon[]) {
-	latest = latest ?? getLatestPokemon();
-	shinies = shinies ?? getShinies();
-
-	document.getElementById("history").classList.toggle("hidden", displayedIndex == null);
-	document.getElementById("previous").classList.toggle("hidden", displayedIndex >= latest.length - 1);
+function toggleHistoryVisibility(shinies?: GeneratedPokemon[]) {
+	document.getElementById("previous").classList.toggle("hidden", displayedIndex >= latestPokemon.length - 1);
 	document.getElementById("next").classList.toggle("hidden", displayedIndex <= 0);
 
+	shinies = shinies ?? getShinies();
 	document.getElementById("shinies").innerHTML = shinies.map(p => p.toImage()).join(" ");
 	document.getElementById("shiny-toggler").classList.toggle("invisible", shinies.length == 0);
 }
@@ -44,21 +38,10 @@ function displayNext() {
 }
 
 function displayHistoryAtIndex(index: number) {
-	const latest = getLatestPokemon();
-	index = Math.max(0, Math.min(index, latest.length-1));
+	index = Math.max(0, Math.min(index, latestPokemon.length-1));
 	displayedIndex = index;
-	displayPokemon(latest[index]);
-	toggleHistoryVisibility(latest);
-}
-
-function getLatestPokemon(): LatestPokemon {
-	const parties = JSON.parse(window.sessionStorage.getItem(STORAGE_LATEST_KEY));
-	if (!Array.isArray(parties)) {
-		return [];
-	}
-	return parties
-		.map(party => party
-			.map((member: Object) => GeneratedPokemon.fromJson(member)));
+	displayPokemon(latestPokemon[index]);
+	toggleHistoryVisibility();
 }
 
 /** All encountered shiny Pokémon, newest first. */
@@ -88,7 +71,7 @@ function clearShinies() {
 	if (window.confirm("Are you sure you want to clear your shiny Pokémon?")) {
 		window.localStorage.removeItem(STORAGE_SHINIES_KEY);
 		document.getElementById("shiny-container").classList.add("invisible");
-		toggleHistoryVisibility(undefined, []);
+		toggleHistoryVisibility([]);
 		updateShinyTogglerText(false); // Prepare for next time
 	}
 }

@@ -71,7 +71,7 @@ class GeneratedPokemon {
 		return `
 			${this.nature ? `<span class="nature">${this.nature}</span>` : ""}
 			${this.name}
-			${this.shiny ? `<span class="star">&#starf;</span>` : ""}
+			${this.shiny ? `<span class="star">&starf;</span>` : ""}
 		`;
 	}
 
