@@ -30,15 +30,15 @@ header{margin:1em 0}
 	border-radius:1em;border:.25em solid;border-color:currentColor transparent;
 	animation:1.25s linear infinite rotate, .5s ease-out 0s 1 fadeIn}
 
-#results li{display:inline-block;height:calc(3em + 128px);width:33%;margin-bottom:1em;position:relative;list-style:none;animation:.5s ease-out 0s 1 fadeIn}
+#results li{display:inline-block;height:3em;padding-top:128px;width:33%;margin-bottom:1em;position:relative;list-style:none;animation:.5s ease-out 0s 1 fadeIn}
 #results .nature{color:#888}#results .star{color:#F4D04D}
 #results li.shiny:before,#results li.shiny:after,#results li.shiny .star:before,#results li.shiny .star:after{
-	content:"\2605";position:absolute;top:50%;left:50%;font-size:.75em;opacity:0;pointer-events:none;z-index:100}
+	content:"\2605";position:absolute;top:64px;left:50%;font-size:.75em;opacity:0;pointer-events:none;z-index:100}
 #results li.shiny:before      {animation:.6s steps(8) .075s 1 rotateStar, .075s alternate steps(2) infinite shine;font-size:1.5em}
 #results li.shiny:after       {animation:.6s steps(8) .150s 1 rotateStar, .075s alternate steps(2) infinite shine}
 #results li.shiny .star:before{animation:.6s steps(8) .225s 1 rotateStar, .075s alternate steps(2) infinite shine}
 #results li.shiny .star:after {animation:.6s steps(8) .300s 1 rotateStar, .075s alternate steps(2) infinite shine}
-#results img{position:absolute;bottom:0;left:50%;transform:translateX(-50%)}
+#results img{position:absolute;bottom:3em;left:50%;transform:translateX(-50%)}
 #results li.imageless{font-weight:700;margin:2em 0;height:auto}
 
 footer{font-size:.875em;padding:3em 0;color:#666;clear:both}

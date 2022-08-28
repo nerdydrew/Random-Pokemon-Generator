@@ -61,11 +61,17 @@ class GeneratedPokemon {
 			classes += "imageless ";
 		}
 		return `<li title="${title}" class="${classes}">
+			${includeSprite ? `<img src="${this.getSpritePath()}" alt="${title}" />` : ""}
+			${this.toText()}
+		</li>`;
+	}
+
+	toText(): string {
+		return `
 			${this.nature ? `<span class="nature">${this.nature}</span>` : ""}
 			${this.name}
 			${this.shiny ? `<span class="star">&#9733;</span>` : ""}
-			${includeSprite ? `<img src="${this.getSpritePath()}" alt="${title}" />` : ""}
-		</li>`;
+		`;
 	}
 
 	private getSpritePath(): string {
