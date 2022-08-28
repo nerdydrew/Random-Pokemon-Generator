@@ -48,7 +48,9 @@ button.text{background:transparent;color:inherit;border:0;padding:0}
 #results img{position:absolute;bottom:3em;left:50%;transform:translateX(-50%)}
 #results li.imageless{font-weight:700;margin:2em 0;height:auto}
 
-#shiny-toggler,#shiny-container button{margin-bottom:1em}
+#shiny-toggler{margin-bottom:.5em}
+#shiny-container button{margin-bottom:1em}
+#shiny-toggler.is-showing .is-hiding,#shiny-toggler.is-hiding .is-showing{display:none}
 
 footer{font-size:.875em;padding:3em 0;color:#666;clear:both}
 

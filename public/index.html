@@ -17,7 +17,6 @@
 </head>
 <body>
 
-
 <header>
 	<h1>Random Pok&eacute;mon Generator</h1>
 </header>
@@ -92,7 +91,11 @@
 
 <section id="results"></section>
 
-<button id="shiny-toggler" class=" text" onclick="toggleShinyDisplay()"><span class="star">&starf;</span> Show your shiny Pokémon</button>
+<button id="shiny-toggler" class="text is-hiding" onclick="toggleShinyDisplay()">
+	<span class="star">&starf;</span>
+	<span id="shiny-count">0</span> shiny Pokémon
+	<span class="is-showing">&and;</span><span class="is-hiding">&or;</span>
+</button>
 <section id="shiny-container" class="menu invisible">
 	<div id="shinies"></div>
 	<button class="text" onclick="clearShinies()">&#x274C; Clear your shiny Pokémon</button>

@@ -25,6 +25,7 @@ function toggleHistoryVisibility(shinies?: GeneratedPokemon[]) {
 	document.getElementById("next").classList.toggle("hidden", displayedIndex <= 0);
 
 	shinies = shinies ?? getShinies();
+	document.getElementById("shiny-count").innerHTML = String(shinies.length);
 	document.getElementById("shinies").innerHTML = shinies.map(p => p.toImage()).join(" ");
 	document.getElementById("shiny-toggler").classList.toggle("invisible", shinies.length == 0);
 }
@@ -55,16 +56,13 @@ function getShinies(): GeneratedPokemon[] {
 
 function toggleShinyDisplay() {
 	const isInvisible = document.getElementById("shiny-container").classList.toggle("invisible");
-	updateShinyTogglerText(!isInvisible);
+	updateShinyToggler(!isInvisible);
 }
 
-function updateShinyTogglerText(shiniesVisible: boolean) {
+function updateShinyToggler(shiniesVisible: boolean) {
 	const button = document.getElementById("shiny-toggler");
-	if (shiniesVisible) {
-		button.innerHTML = button.innerHTML.replace("Show", "Hide");
-	} else {
-		button.innerHTML = button.innerHTML.replace("Hide", "Show");
-	}
+	button.classList.toggle("is-hiding", !shiniesVisible);
+	button.classList.toggle("is-showing", shiniesVisible);
 }
 
 function clearShinies() {
@@ -72,6 +70,6 @@ function clearShinies() {
 		window.localStorage.removeItem(STORAGE_SHINIES_KEY);
 		document.getElementById("shiny-container").classList.add("invisible");
 		toggleHistoryVisibility([]);
-		updateShinyTogglerText(false); // Prepare for next time
+		updateShinyToggler(false); // Prepare for next time
 	}
 }
