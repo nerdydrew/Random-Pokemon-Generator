@@ -25,6 +25,7 @@ class GeneratedPokemon {
 	private readonly spriteSuffix?: string;
 	readonly nature?: string;
 	readonly shiny: boolean;
+	readonly date: Date;
 
 	private constructor(pokemon?: Pokemon, form?: Form, options?: Options) {
 		if (!pokemon) {
@@ -38,6 +39,7 @@ class GeneratedPokemon {
 		}
 		// http://bulbapedia.bulbagarden.net/wiki/Shiny_Pok%C3%A9mon#Generation_VI
 		this.shiny = Math.floor(Math.random() * 65536) < 16;
+		this.date = new Date();
 	}
 
 	static generate(pokemon: Pokemon, form: Form | undefined, options: Options): GeneratedPokemon {
