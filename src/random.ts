@@ -18,6 +18,7 @@ async function generateRandom() {
 	try {
 		const eligiblePokemon = await getEligiblePokemon(options);
 		const generatedPokemon = chooseRandom(eligiblePokemon, options);
+		addToHistory(generatedPokemon);
 		resultsContainer.innerHTML = toHtml(generatedPokemon, options);
 	} catch (error) {
 		console.error(error);
@@ -28,6 +29,7 @@ async function generateRandom() {
 
 function onPageLoad() {
 	loadOptions();
+	updateDisplayedHistory();
 }
 document.addEventListener("DOMContentLoaded", onPageLoad);
 
@@ -104,7 +106,7 @@ function chooseRandom(eligiblePokemon: Pokemon[], options: Options): GeneratedPo
 			}
 		}
 
-		generated.push(new GeneratedPokemon(pokemon, form, options));
+		generated.push(GeneratedPokemon.generate(pokemon, form, options));
 	}
 
 	// Megas are more likely to appear at the start of the array,
