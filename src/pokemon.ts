@@ -32,7 +32,7 @@ class GeneratedPokemon {
 			return;
 		}
 		this.id = pokemon.id;
-		this.name = pokemon.name;
+		this.name = form?.name ?? pokemon.name;
 		this.spriteSuffix = form?.spriteSuffix;
 		if (options.natures) {
 			this.nature = generateNature();
