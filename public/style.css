@@ -49,6 +49,7 @@ button.text{background:transparent;color:inherit;border:0;padding:0}
 #results li.imageless{font-weight:700;margin:2em 0;height:auto;padding:0}
 
 #shiny-toggler{margin-bottom:.5em}
+#shinies{margin-top:1em}
 #shiny-container button{margin-bottom:1em}
 #shiny-toggler.is-showing .is-hiding,#shiny-toggler.is-hiding .is-showing{display:none}
 
