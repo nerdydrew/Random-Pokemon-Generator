@@ -66,9 +66,12 @@ async function getEligiblePokemon(options: Options): Promise<Pokemon[]> {
 
 function filterByOptions<P extends Pokemon|Form>(pokemonInRegion: P[], options: Options): P[] {
 	return pokemonInRegion.filter((pokemon: Pokemon | Form) => {
-		// Legendary status is independent of form, so check this before
+		// Legendary and NFE status are independent of form, so check these before
 		// checking forms.
 		if (!options.legendaries && "isLegendary" in pokemon && pokemon.isLegendary) {
+			return false;
+		}
+		if (!options.nfes && "isNfe" in pokemon && pokemon.isNfe) {
 			return false;
 		}
 
@@ -80,10 +83,6 @@ function filterByOptions<P extends Pokemon|Form>(pokemonInRegion: P[], options: 
 		}
 
 		if (options.type != "all" && pokemon.types.indexOf(options.type) < 0) {
-			return false;
-		}
-
-		if (!options.nfes && "isNfe" in pokemon && pokemon.isNfe) {
 			return false;
 		}
 
