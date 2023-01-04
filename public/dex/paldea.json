@@ -3979,5 +3979,20 @@
 			"electric",
 			"dragon"
 		]
+	},
+	{
+		"id": 6,
+		"name": "Charizard",
+		"types": [
+			"fire",
+			"flying"
+		]
+	},
+	{
+		"id": 815,
+		"name": "Cinderace",
+		"types": [
+			"fire"
+		]
 	}
 ]
