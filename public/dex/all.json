@@ -8523,6 +8523,77 @@
 		"name": "Furfrou",
 		"types": [
 			"normal"
+		],
+		"forms": [
+			{
+				"name": "Furfrou",
+				"types": [
+					"normal"
+				]
+			},
+			{
+				"name": "Furfrou",
+				"types": [
+					"normal"
+				],
+				"spriteSuffix": "star"
+			},
+			{
+				"name": "Furfrou",
+				"types": [
+					"normal"
+				],
+				"spriteSuffix": "dandy"
+			},
+			{
+				"name": "Furfrou",
+				"types": [
+					"normal"
+				],
+				"spriteSuffix": "debutante"
+			},
+			{
+				"name": "Furfrou",
+				"types": [
+					"normal"
+				],
+				"spriteSuffix": "diamond"
+			},
+			{
+				"name": "Furfrou",
+				"types": [
+					"normal"
+				],
+				"spriteSuffix": "heart"
+			},
+			{
+				"name": "Furfrou",
+				"types": [
+					"normal"
+				],
+				"spriteSuffix": "kabuki"
+			},
+			{
+				"name": "Furfrou",
+				"types": [
+					"normal"
+				],
+				"spriteSuffix": "lareine"
+			},
+			{
+				"name": "Furfrou",
+				"types": [
+					"normal"
+				],
+				"spriteSuffix": "matron"
+			},
+			{
+				"name": "Furfrou",
+				"types": [
+					"normal"
+				],
+				"spriteSuffix": "pharaoh"
+			}
 		]
 	},
 	{
@@ -8983,6 +9054,21 @@
 		"name": "Xerneas",
 		"types": [
 			"fairy"
+		],
+		"forms": [
+			{
+				"name": "Xerneas",
+				"types": [
+					"fairy"
+				]
+			},
+			{
+				"name": "Xerneas",
+				"types": [
+					"fairy"
+				],
+				"spriteSuffix": "neutral"
+			}
 		],
 		"isLegendary": true
 	},
@@ -11480,6 +11566,21 @@
 		"name": "Oinkologne",
 		"types": [
 			"normal"
+		],
+		"forms": [
+			{
+				"name": "Oinkologne",
+				"types": [
+					"normal"
+				]
+			},
+			{
+				"name": "Oinkologne",
+				"types": [
+					"normal"
+				],
+				"spriteSuffix": "f"
+			}
 		]
 	},
 	{
@@ -12339,6 +12440,22 @@
 		"types": [
 			"fighting",
 			"ghost"
+		]
+	},
+	{
+		"id": 1011,
+		"name": "Walking Wake",
+		"types": [
+			"water",
+			"dragon"
+		]
+	},
+	{
+		"id": 1012,
+		"name": "Iron Leaves",
+		"types": [
+			"grass",
+			"psychic"
 		]
 	}
 ]

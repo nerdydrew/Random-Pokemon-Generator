@@ -3994,5 +3994,21 @@
 		"types": [
 			"fire"
 		]
+	},
+	{
+		"id": 1011,
+		"name": "Walking Wake",
+		"types": [
+			"water",
+			"dragon"
+		]
+	},
+	{
+		"id": 1012,
+		"name": "Iron Leaves",
+		"types": [
+			"grass",
+			"psychic"
+		]
 	}
 ]

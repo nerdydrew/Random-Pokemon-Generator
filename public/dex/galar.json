@@ -6242,6 +6242,21 @@
 		"types": [
 			"fairy"
 		],
+		"forms": [
+			{
+				"name": "Xerneas",
+				"types": [
+					"fairy"
+				]
+			},
+			{
+				"name": "Xerneas",
+				"types": [
+					"fairy"
+				],
+				"spriteSuffix": "neutral"
+			}
+		],
 		"isLegendary": true
 	},
 	{
