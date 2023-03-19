@@ -1,5 +1,5 @@
-const PATH_TO_SPRITES = 'sprites/png/normal/';
-const PATH_TO_SHINY_SPRITES = 'sprites/png/shiny/';
+const PATH_TO_SPRITES = 'sprites/normal/';
+const PATH_TO_SHINY_SPRITES = 'sprites/shiny/';
 const SPRITE_EXTENTION = '.png';
 
 interface Pokemon {
@@ -21,6 +21,7 @@ interface Form {
 
 class GeneratedPokemon {
 	readonly id: number;
+	readonly baseName: string;
 	readonly name: string;
 	private readonly spriteSuffix?: string;
 	readonly nature?: string;
@@ -32,6 +33,7 @@ class GeneratedPokemon {
 			return;
 		}
 		this.id = pokemon.id;
+		this.baseName = pokemon.name;
 		this.name = form?.name ?? pokemon.name;
 		this.spriteSuffix = form?.spriteSuffix;
 		if (options.natures) {
@@ -82,11 +84,20 @@ class GeneratedPokemon {
 
 	private getSpritePath(): string {
 		const path = this.shiny ? PATH_TO_SHINY_SPRITES : PATH_TO_SPRITES;
-		let name = String(this.id);
+		let name = this.normalizeName();
 		if (this.spriteSuffix) {
 			name += "-" + this.spriteSuffix;
 		}
 		return path + name + SPRITE_EXTENTION;
+	}
+
+	private normalizeName(): string {
+		return (this.baseName ?? this.name)
+			.toLowerCase()
+			.replaceAll("é", "e")
+			.replaceAll("♀", "f")
+			.replaceAll("♂", "m")
+			.replaceAll(/['.:% -]/g, "");
 	}
 }
 
