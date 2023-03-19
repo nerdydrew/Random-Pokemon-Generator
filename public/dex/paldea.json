@@ -2414,6 +2414,22 @@
 		"name": "Zoroark",
 		"types": [
 			"dark"
+		],
+		"forms": [
+			{
+				"name": "Zoroark",
+				"types": [
+					"dark"
+				]
+			},
+			{
+				"name": "Zoroark Hisui",
+				"types": [
+					"normal",
+					"ghost"
+				],
+				"spriteSuffix": "hisui"
+			}
 		]
 	},
 	{
@@ -4009,6 +4025,39 @@
 		"types": [
 			"grass",
 			"psychic"
+		]
+	},
+	{
+		"id": 658,
+		"name": "Greninja",
+		"types": [
+			"water",
+			"dark"
+		],
+		"forms": [
+			{
+				"name": "Greninja",
+				"types": [
+					"water",
+					"dark"
+				]
+			},
+			{
+				"name": "Ash's Greninja",
+				"types": [
+					"water",
+					"dark"
+				],
+				"spriteSuffix": "ash"
+			}
+		]
+	},
+	{
+		"id": 724,
+		"name": "Decidueye",
+		"types": [
+			"grass",
+			"ghost"
 		]
 	}
 ]
