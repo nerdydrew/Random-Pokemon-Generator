@@ -605,6 +605,14 @@
 		]
 	},
 	{
+		"id": 195,
+		"name": "Quagsire",
+		"types": [
+			"water",
+			"ground"
+		]
+	},
+	{
 		"id": 980,
 		"name": "Clodsire",
 		"types": [
