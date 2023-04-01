@@ -4059,5 +4059,12 @@
 			"grass",
 			"ghost"
 		]
+	},
+	{
+		"id": 503,
+		"name": "Samurott",
+		"types": [
+			"water"
+		]
 	}
 ]
