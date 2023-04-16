@@ -2352,7 +2352,7 @@
 				"name": "Tauros Aqua Breed",
 				"types": [
 					"fighting",
-					"fire"
+					"water"
 				],
 				"spriteSuffix": "aqua"
 			}
@@ -4073,6 +4073,13 @@
 		"name": "Samurott",
 		"types": [
 			"water"
+		]
+	},
+	{
+		"id": 157,
+		"name": "Typhlosion",
+		"types": [
+			"fire"
 		]
 	}
 ]
