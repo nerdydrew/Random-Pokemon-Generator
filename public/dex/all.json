@@ -1169,7 +1169,6 @@
 			{
 				"name": "Slowpoke Galar",
 				"types": [
-					"water",
 					"psychic"
 				],
 				"spriteSuffix": "galar",
@@ -1204,7 +1203,7 @@
 			{
 				"name": "Slowbro Galar",
 				"types": [
-					"water",
+					"poison",
 					"psychic"
 				],
 				"spriteSuffix": "galar"
@@ -2646,7 +2645,7 @@
 			{
 				"name": "Slowking Galar",
 				"types": [
-					"water",
+					"poison",
 					"psychic"
 				],
 				"spriteSuffix": "galar"
