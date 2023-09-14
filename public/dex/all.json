@@ -12456,5 +12456,162 @@
 			"grass",
 			"psychic"
 		]
+	},
+	{
+		"id": 1011,
+		"name": "Dipplin",
+		"types": [
+			"grass",
+			"dragon"
+		]
+	},
+	{
+		"id": 1012,
+		"name": "Poltchageist",
+		"isNfe": true,
+		"types": [
+			"grass",
+			"ghost"
+		],
+		"forms": [
+			{
+				"name": "Poltchageist",
+				"types": [
+					"grass",
+					"ghost"
+				]
+			},
+			{
+				"name": "Poltchageist",
+				"types": [
+					"grass",
+					"ghost"
+				],
+				"spriteSuffix": "artisan"
+			}
+		]
+	},
+	{
+		"id": 1013,
+		"name": "Sinistcha",
+		"types": [
+			"grass",
+			"ghost"
+		],
+		"forms": [
+			{
+				"name": "Sinistcha",
+				"types": [
+					"grass",
+					"ghost"
+				]
+			},
+			{
+				"name": "Sinistcha",
+				"types": [
+					"grass",
+					"ghost"
+				],
+				"spriteSuffix": "masterpiece"
+			}
+		]
+	},
+	{
+		"id": 1014,
+		"name": "Okidogi",
+		"isLegendary": true,
+		"types": [
+			"poison",
+			"fighting"
+		]
+	},
+	{
+		"id": 1015,
+		"name": "Munkidori",
+		"isLegendary": true,
+		"types": [
+			"poison",
+			"psychic"
+		]
+	},
+	{
+		"id": 1016,
+		"name": "Fezandipiti",
+		"isLegendary": true,
+		"types": [
+			"poison",
+			"fairy"
+		]
+	},
+	{
+		"id": 1017,
+		"name": "Ogerpon",
+		"isLegendary": true,
+		"types": [
+			"grass"
+		],
+		"forms": [
+			{
+				"name": "Ogerpon (Teal Mask)",
+				"types": [
+					"grass"
+				]
+			},
+			{
+				"name": "Ogerpon (Teal Mask)",
+				"types": [
+					"grass"
+				],
+				"spriteSuffix": "mask"
+			},
+			{
+				"name": "Ogerpon (Hearthflame Mask)",
+				"types": [
+					"grass",
+					"fire"
+				],
+				"spriteSuffix": "hearthflame"
+			},
+			{
+				"name": "Ogerpon (Hearthflame Mask)",
+				"types": [
+					"grass",
+					"fire"
+				],
+				"spriteSuffix": "hearthflame-mask"
+			},
+			{
+				"name": "Ogerpon (Wellspring Mask)",
+				"types": [
+					"grass",
+					"water"
+				],
+				"spriteSuffix": "wellspring"
+			},
+			{
+				"name": "Ogerpon (Wellspring Mask)",
+				"types": [
+					"grass",
+					"water"
+				],
+				"spriteSuffix": "wellspring-mask"
+			},
+			{
+				"name": "Ogerpon (Cornerstone Mask)",
+				"types": [
+					"grass",
+					"rock"
+				],
+				"spriteSuffix": "cornerstone"
+			},
+			{
+				"name": "Ogerpon (Cornerstone Mask)",
+				"types": [
+					"grass",
+					"rock"
+				],
+				"spriteSuffix": "cornerstone-mask"
+			}
+		]
 	}
 ]
