@@ -21,6 +21,3 @@ deploy:
 	aws s3 sync --exclude ".*" --exclude "sprites/*" --delete \
 		--cache-control "max-age=${text_lifetime_seconds}" \
 		public/ s3://randompokemon.com
-
-zip:
-	zip -r public/sprites/sprites.zip public/sprites -x public/\*.zip
