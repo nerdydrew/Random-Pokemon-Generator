@@ -8,6 +8,7 @@ interface Pokemon {
 	types: string[];
 	isNfe?: boolean;
 	isLegendary?: boolean;
+	isNotPickable?: boolean;
 	forms?: Form[];
 }
 

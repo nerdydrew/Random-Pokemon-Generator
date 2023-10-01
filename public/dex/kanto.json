@@ -1185,7 +1185,8 @@
 		"types": [
 			"psychic"
 		],
-		"isLegendary": true
+		"isLegendary": true,
+		"isNotPickable": true
 	},
 	{
 		"id": 151,
@@ -1193,6 +1194,7 @@
 		"types": [
 			"psychic"
 		],
-		"isLegendary": true
+		"isLegendary": true,
+		"isNotPickable": true
 	}
 ]

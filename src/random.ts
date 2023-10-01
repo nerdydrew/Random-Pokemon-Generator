@@ -2,6 +2,7 @@ const numberDropdown = document.getElementById("n") as HTMLInputElement;
 const regionDropdown = document.getElementById("region") as HTMLInputElement;
 const typeDropdown = document.getElementById("type") as HTMLInputElement;
 const legendariesCheckbox = document.getElementById("legendaries") as HTMLInputElement;
+const pickableCheckbox = document.getElementById("pickable") as HTMLInputElement;
 const nfesCheckbox = document.getElementById("nfes") as HTMLInputElement;
 const spritesCheckbox = document.getElementById("sprites") as HTMLInputElement;
 const naturesCheckbox = document.getElementById("natures") as HTMLInputElement;
@@ -68,6 +69,9 @@ function filterByOptions<P extends Pokemon|Form>(pokemonInRegion: P[], options: 
 	return pokemonInRegion.filter((pokemon: Pokemon | Form) => {
 		// Legendary and NFE status are independent of form, so check these before
 		// checking forms.
+		if (options.pickable && "isNotPickable" in pokemon && pokemon.isNotPickable) {
+			return false;
+		}
 		if (!options.legendaries && "isLegendary" in pokemon && pokemon.isLegendary) {
 			return false;
 		}

@@ -5,6 +5,7 @@ type Options = {
 	region: string;
 	type: string;
 	legendaries: boolean;
+	pickable: boolean;
 	nfes: boolean;
 	sprites: boolean;
 	natures: boolean;
@@ -18,6 +19,7 @@ function getOptionsFromForm(): Options {
 		region: regionDropdown.value,
 		type: typeDropdown.value,
 		legendaries: legendariesCheckbox.checked,
+		pickable: pickableCheckbox.checked,
 		nfes: nfesCheckbox.checked,
 		sprites: spritesCheckbox.checked,
 		natures: naturesCheckbox.checked,
@@ -37,6 +39,9 @@ function setOptions(options: Partial<Options>) {
 	}
 	if (options.legendaries != null) {
 		legendariesCheckbox.checked = options.legendaries;
+	}
+	if (options.pickable != null) {
+		pickableCheckbox.checked = options.pickable;
 	}
 	if (options.nfes != null) {
 		nfesCheckbox.checked = options.nfes;
@@ -96,6 +101,9 @@ function convertUrlParamsToOptions(): Partial<Options> {
 	}
 	if (params.has("legendaries")) {
 		options.legendaries = parseBoolean(params.get("legendaries"));
+	}
+	if (params.has("pickable")) {
+		options.pickable = parseBoolean(params.get("pickable"));
 	}
 	if (params.has("nfes")) {
 		options.nfes = parseBoolean(params.get("nfes"));
