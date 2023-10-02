@@ -147,12 +147,20 @@ function convertOptionsToUrlParams(options: Partial<Options>): string {
 }
 
 function addFormChangeListeners() {
-	regionDropdown.addEventListener("change", toggleStadiumRentals);
-	toggleStadiumRentals();
+	regionDropdown.addEventListener("change", toggleStadiumRentalsCheckbox);
+	toggleStadiumRentalsCheckbox();
+	regionDropdown.addEventListener("change", toggleFormsCheckbox);
+	toggleFormsCheckbox();
 }
 
-function toggleStadiumRentals() {
+function toggleStadiumRentalsCheckbox() {
 	const regionOption = regionDropdown.options[regionDropdown.selectedIndex];
 	const shouldShow = regionOption?.dataset?.stadium == "true";
 	stadiumRentalsCheckbox.parentElement.classList.toggle("invisible", !shouldShow);
+}
+
+function toggleFormsCheckbox() {
+	const regionOption = regionDropdown.options[regionDropdown.selectedIndex];
+	const shouldShow = regionOption?.dataset?.forms != "false";
+	formsCheckbox.parentElement.classList.toggle("invisible", !shouldShow);
 }
