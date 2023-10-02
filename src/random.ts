@@ -1,13 +1,3 @@
-const numberDropdown = document.getElementById("n") as HTMLInputElement;
-const regionDropdown = document.getElementById("region") as HTMLInputElement;
-const typeDropdown = document.getElementById("type") as HTMLInputElement;
-const legendariesCheckbox = document.getElementById("legendaries") as HTMLInputElement;
-const stadiumRentalsCheckbox = document.getElementById("stadiumRentals") as HTMLInputElement;
-const nfesCheckbox = document.getElementById("nfes") as HTMLInputElement;
-const spritesCheckbox = document.getElementById("sprites") as HTMLInputElement;
-const naturesCheckbox = document.getElementById("natures") as HTMLInputElement;
-const formsCheckbox = document.getElementById("forms") as HTMLInputElement;
-
 /** Called when the Generate button is clicked. */
 async function generateRandom() {
 	markLoading(true);

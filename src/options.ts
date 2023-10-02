@@ -1,5 +1,15 @@
 const STORAGE_OPTIONS_KEY = "options";
 
+const numberDropdown = document.getElementById("n") as HTMLSelectElement;
+const regionDropdown = document.getElementById("region") as HTMLSelectElement;
+const typeDropdown = document.getElementById("type") as HTMLSelectElement;
+const legendariesCheckbox = document.getElementById("legendaries") as HTMLInputElement;
+const stadiumRentalsCheckbox = document.getElementById("stadiumRentals") as HTMLInputElement;
+const nfesCheckbox = document.getElementById("nfes") as HTMLInputElement;
+const spritesCheckbox = document.getElementById("sprites") as HTMLInputElement;
+const naturesCheckbox = document.getElementById("natures") as HTMLInputElement;
+const formsCheckbox = document.getElementById("forms") as HTMLInputElement;
+
 type Options = {
 	n: number;
 	region: string;

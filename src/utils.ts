@@ -25,7 +25,7 @@ function markLoading(isLoading: boolean) {
 	document.getElementById("controls").classList.toggle("loading", isLoading);
 }
 
-function setDropdownIfValid(select: HTMLInputElement, value: string | number) {
+function setDropdownIfValid(select: HTMLSelectElement, value: string | number) {
 	const option: HTMLOptionElement = select.querySelector("[value='" + value + "']");
 	if (option) {
 		select.value = option.value;
