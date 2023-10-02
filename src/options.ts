@@ -5,6 +5,11 @@ type Options = {
 	region: string;
 	type: string;
 	legendaries: boolean;
+	/**
+	 * Whether to only generate Pokémon that can be chosen as rentals. Only relevant for
+	 * Stadium 1 and 2 (Kanto and Johto).
+	 */
+	stadiumRentals: boolean;
 	nfes: boolean;
 	sprites: boolean;
 	natures: boolean;
@@ -18,6 +23,7 @@ function getOptionsFromForm(): Options {
 		region: regionDropdown.value,
 		type: typeDropdown.value,
 		legendaries: legendariesCheckbox.checked,
+		stadiumRentals: stadiumRentalsCheckbox.checked,
 		nfes: nfesCheckbox.checked,
 		sprites: spritesCheckbox.checked,
 		natures: naturesCheckbox.checked,
@@ -37,6 +43,9 @@ function setOptions(options: Partial<Options>) {
 	}
 	if (options.legendaries != null) {
 		legendariesCheckbox.checked = options.legendaries;
+	}
+	if (options.stadiumRentals != null) {
+		stadiumRentalsCheckbox.checked = options.stadiumRentals;
 	}
 	if (options.nfes != null) {
 		nfesCheckbox.checked = options.nfes;
@@ -97,6 +106,9 @@ function convertUrlParamsToOptions(): Partial<Options> {
 	if (params.has("legendaries")) {
 		options.legendaries = parseBoolean(params.get("legendaries"));
 	}
+	if (params.has("stadiumRentals")) {
+		options.stadiumRentals = parseBoolean(params.get("stadiumRentals"));
+	}
 	if (params.has("nfes")) {
 		options.nfes = parseBoolean(params.get("nfes"));
 	}
@@ -122,4 +134,15 @@ function convertOptionsToUrlParams(options: Partial<Options>): string {
 			return encodeURIComponent(key) + "=" + encodeURIComponent(value);
 		})
 		.join("&");
+}
+
+function addFormChangeListeners() {
+	regionDropdown.addEventListener("change", toggleStadiumRentals);
+	toggleStadiumRentals();
+}
+
+function toggleStadiumRentals() {
+	const regionOption = regionDropdown.options[regionDropdown.selectedIndex];
+	const shouldShow = regionOption?.dataset?.stadium == "true";
+	stadiumRentalsCheckbox.parentElement.classList.toggle("invisible", !shouldShow);
 }

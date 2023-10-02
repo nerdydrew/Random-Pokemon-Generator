@@ -1191,7 +1191,8 @@
 		"types": [
 			"psychic"
 		],
-		"isLegendary": true
+		"isLegendary": true,
+		"isStadiumRental": false
 	},
 	{
 		"id": 151,
@@ -1199,7 +1200,8 @@
 		"types": [
 			"psychic"
 		],
-		"isLegendary": true
+		"isLegendary": true,
+		"isStadiumRental": false
 	},
 	{
 		"id": 152,
@@ -2167,7 +2169,8 @@
 			"psychic",
 			"flying"
 		],
-		"isLegendary": true
+		"isLegendary": true,
+		"isStadiumRental": false
 	},
 	{
 		"id": 250,
@@ -2176,7 +2179,8 @@
 			"fire",
 			"flying"
 		],
-		"isLegendary": true
+		"isLegendary": true,
+		"isStadiumRental": false
 	},
 	{
 		"id": 251,
@@ -2185,6 +2189,7 @@
 			"psychic",
 			"grass"
 		],
-		"isLegendary": true
+		"isLegendary": true,
+		"isStadiumRental": false
 	}
 ]

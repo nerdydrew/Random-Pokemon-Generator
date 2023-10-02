@@ -8,6 +8,8 @@ interface Pokemon {
 	types: string[];
 	isNfe?: boolean;
 	isLegendary?: boolean;
+	/** Whether this Pokémon can be rented in Stadium 1 or 2. Defaults to true. */
+	isStadiumRental?: boolean;
 	forms?: Form[];
 }
 
