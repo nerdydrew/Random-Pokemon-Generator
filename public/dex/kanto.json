@@ -1186,7 +1186,7 @@
 			"psychic"
 		],
 		"isLegendary": true,
-		"isNotPickable": true
+		"isStadiumRental": false
 	},
 	{
 		"id": 151,
@@ -1195,6 +1195,6 @@
 			"psychic"
 		],
 		"isLegendary": true,
-		"isNotPickable": true
+		"isStadiumRental": false
 	}
 ]
