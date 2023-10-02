@@ -3,31 +3,49 @@ const PATH_TO_SHINY_SPRITES = 'sprites/shiny/';
 const SPRITE_EXTENTION = '.png';
 
 interface Pokemon {
+	/** National Pokédex number. */
 	id: number;
+	/** The display name of this Pokémon. */
 	name: string;
+	/** This Pokémon's type(s) (lowecased). */
 	types: string[];
+	/** Whether this Pokémon is not fully evolved. Defaults to false. */
 	isNfe?: boolean;
+	/** Whether this Pokémon is legendary. Defaults to false. */
 	isLegendary?: boolean;
 	/** Whether this Pokémon can be rented in Stadium 1 or 2. Defaults to true. */
 	isStadiumRental?: boolean;
+	/** Alternate forms for this Pokémon, if any. */
 	forms?: Form[];
 }
 
 interface Form {
+	/** Display name for this form. */
 	name: string;
+	/** Type(s) of this form (lowercased). */
 	types: string[];
+	/** An optional suffix added to the sprite's filename (between a hyphen and the extension). */
 	spriteSuffix?: string;
+	/** Whether this form is a Mega Evolution. Defaults to false. */
 	isMega?: boolean;
+	/** Whether this form is a Gigantamax. Defaults to false. */
 	isGigantamax?: boolean;
 }
 
 class GeneratedPokemon {
+	/** National Pokédex number. */
 	readonly id: number;
+	/** The name of this Pokémon, not including what form it is. */
 	readonly baseName: string;
+	/** The name of this Pokémon, including what form it is. */
 	readonly name: string;
+	/** An optional suffix added to the sprite's filename (between a hyphen and the extension). */
 	private readonly spriteSuffix?: string;
+	/** This Pokémon's nature, if generated. */
 	readonly nature?: string;
+	/** Whether this Pokémon is shiny. */
 	readonly shiny: boolean;
+	/** When this Pokémon was generated. */
 	readonly date: Date;
 
 	private constructor(pokemon?: Pokemon, form?: Form, options?: Options) {
