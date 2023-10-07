@@ -72,7 +72,7 @@ def rename_file(file):
 
     pokemon = pokemon_by_id[id_number]
     if suffix and not is_form_known(pokemon, suffix):
-        print(f"{path} does not correspond to any known form.")
+        print(f"{path} does not correspond to any known form of {pokemon['name']}.")
         exit(1)
     
     new_name = os.path.join(path.parent, normalize_name(pokemon["name"]))

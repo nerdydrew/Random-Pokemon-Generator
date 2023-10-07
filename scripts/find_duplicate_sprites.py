@@ -24,5 +24,6 @@ if __name__ == "__main__":
             non_form = os.path.join(normal_sprites_folder, re.sub(r"-[^.]+", "", filename))
             if are_same(normal, non_form):
                 print(f"Form {filename} is a duplicate of {non_form}.")
-        elif are_same(normal, shiny):
+        
+        if are_same(normal, shiny):
             print(f"Shiny {filename} is duplicate.")
