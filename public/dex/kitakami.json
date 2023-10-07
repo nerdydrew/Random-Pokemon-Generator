@@ -996,5 +996,23 @@
 				"spriteSuffix": "cornerstone-mask"
 			}
 		]
+	},
+	{
+		"id": 901,
+		"name": "Ursaluna",
+		"types": [
+			"ground",
+			"normal"
+		],
+		"forms": [
+			{
+				"name": "Bloodmoon Ursaluna",
+				"types": [
+					"ground",
+					"normal"
+				],
+				"spriteSuffix": "bloodmoon"
+			}
+		]
 	}
 ]

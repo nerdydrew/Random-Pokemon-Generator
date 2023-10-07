@@ -11411,6 +11411,23 @@
 		"types": [
 			"ground",
 			"normal"
+		],
+		"forms": [
+			{
+				"name": "Ursaluna",
+				"types": [
+					"ground",
+					"normal"
+				]
+			},
+			{
+				"name": "Bloodmoon Ursaluna",
+				"types": [
+					"ground",
+					"normal"
+				],
+				"spriteSuffix": "bloodmoon"
+			}
 		]
 	},
 	{
