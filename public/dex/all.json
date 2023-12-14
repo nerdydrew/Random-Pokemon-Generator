@@ -11125,6 +11125,7 @@
 			"steel",
 			"dragon"
 		],
+		"isNfe": true,
 		"forms": [
 			{
 				"name": "Duraludon",
@@ -12480,7 +12481,8 @@
 		"types": [
 			"grass",
 			"dragon"
-		]
+		],
+		"isNfe": true
 	},
 	{
 		"id": 1012,
@@ -12629,6 +12631,92 @@
 				],
 				"spriteSuffix": "cornerstone-mask"
 			}
+		]
+	},
+	{
+		"id": 1018,
+		"name": "Archaludon",
+		"types": [
+			"steel",
+			"dragon"
+		]
+	},
+	{
+		"id": 1019,
+		"name": "Hydrapple",
+		"types": [
+			"grass",
+			"dragon"
+		]
+	},
+	{
+		"id": 1020,
+		"name": "Gouging Fire",
+		"types": [
+			"fire",
+			"dragon"
+		]
+	},
+	{
+		"id": 1021,
+		"name": "Raging Bolt",
+		"types": [
+			"electric",
+			"dragon"
+		]
+	},
+	{
+		"id": 1022,
+		"name": "Iron Boulder",
+		"types": [
+			"rock",
+			"psychic"
+		]
+	},
+	{
+		"id": 1023,
+		"name": "Iron Crown",
+		"types": [
+			"steel",
+			"psychic"
+		]
+	},
+	{
+		"id": 1024,
+		"name": "Terapagos",
+		"types": [
+			"normal"
+		],
+		"isLegendary": true,
+		"forms": [
+			{
+				"name": "Terapagos",
+				"types": [
+					"normal"
+				]
+			},
+			{
+				"name": "Terapagos Terastal",
+				"types": [
+					"normal"
+				],
+				"spriteSuffix": "terastal"
+			},
+			{
+				"name": "Terapagos Stellar",
+				"types": [
+					"normal"
+				],
+				"spriteSuffix": "stellar"
+			}
+		]
+	},
+	{
+		"id": 1025,
+		"name": "Pecharunt",
+		"types": [
+			"poison",
+			"ghost"
 		]
 	}
 ]
