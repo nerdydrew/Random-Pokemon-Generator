@@ -14,15 +14,15 @@ a:hover,button.text:hover{color:#666}
 
 fieldset{border:0;cursor:default;line-height:2;margin:1em 0}
 label{white-space:nowrap}
-label,select{margin-right:1em}
-label select{margin:0}
+label,select,button{margin-right:1em}
+label select,button:last-child{margin:0}
 input[type="checkbox"]{vertical-align:baseline;margin-right:.25em}
 button,input[type="button"],input[type="submit"]{cursor:pointer}
 #controls input[type="submit"]{font-size:1em;padding:.125em .25em}
 abbr{cursor:help;border-bottom:1px dotted;text-decoration:none}
 .clear{clear:both}
 .hidden{visibility:hidden}
-.invisible{display:none}
+.invisible{display:none !important}
 
 header{margin:1em 0}
 

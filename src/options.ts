@@ -10,7 +10,10 @@ const stadiumRentalsCheckbox = document.getElementById("stadiumRentals") as HTML
 const nfesCheckbox = document.getElementById("nfes") as HTMLInputElement;
 const spritesCheckbox = document.getElementById("sprites") as HTMLInputElement;
 const naturesCheckbox = document.getElementById("natures") as HTMLInputElement;
+const formsDropdown = document.getElementById("formsDropdown") as HTMLInputElement;
 const formsCheckbox = document.getElementById("forms") as HTMLInputElement;
+const megasCheckbox = document.getElementById("megas") as HTMLInputElement;
+const gigantamaxesCheckbox = document.getElementById("gigantamaxes") as HTMLInputElement;
 
 type Options = {
 	n: number;
@@ -26,6 +29,10 @@ type Options = {
 	sprites: boolean;
 	natures: boolean;
 	forms: boolean;
+	/** Whether to include mega evolutions. Ignored if forms is false. */
+	megas: boolean;
+	/** Whether to include gigantamax forms. Ignored if forms is false. */
+	gigantamaxes: boolean;
 	generate?: boolean;
 }
 
@@ -39,7 +46,9 @@ function getOptionsFromForm(): Options {
 		nfes: nfesCheckbox.checked,
 		sprites: spritesCheckbox.checked,
 		natures: naturesCheckbox.checked,
-		forms: formsCheckbox.checked
+		forms: formsCheckbox.checked,
+		megas: megasCheckbox.checked,
+		gigantamaxes: gigantamaxesCheckbox.checked
 	};
 }
 
@@ -80,6 +89,12 @@ function setOptions(options: Partial<Options>) {
 	}
 	if (options.forms != null) {
 		formsCheckbox.checked = options.forms;
+	}
+	if (options.megas != null) {
+		megasCheckbox.checked = options.megas;
+	}
+	if (options.gigantamaxes != null) {
+		gigantamaxesCheckbox.checked = options.gigantamaxes;
 	}
 	if (options.generate !== undefined) {
 		generateRandom();
@@ -148,6 +163,12 @@ function convertUrlParamsToOptions(): Partial<Options> {
 	if (params.has("forms")) {
 		options.forms = parseBoolean(params.get("forms"));
 	}
+	if (params.has("megas")) {
+		options.megas = parseBoolean(params.get("megas"));
+	}
+	if (params.has("gigantamaxes")) {
+		options.gigantamaxes = parseBoolean(params.get("gigantamaxes"));
+	}
 	if (params.has("generate")) {
 		options.generate = true;
 	}
@@ -172,11 +193,16 @@ function convertOptionsToUrlParams(options: Partial<Options>): string {
 }
 
 function addFormChangeListeners() {
+	toggleDropdownsOnButtonClick();
+
 	regionDropdown.addEventListener("change", toggleStadiumRentalsCheckbox);
 	toggleStadiumRentalsCheckbox();
-	regionDropdown.addEventListener("change", toggleFormsCheckbox);
-	toggleFormsCheckbox();
-	toggleDropdownsOnButtonClick();
+
+	regionDropdown.addEventListener("change", toggleFormsVisibility);
+	toggleFormsVisibility();
+
+	formsCheckbox.addEventListener("change", toggleFormSubtypes);
+	toggleFormSubtypes();
 
 	allTypesCheckbox.addEventListener("change", toggleAllTypes);
 	typeCheckboxes.forEach(checkbox => {
@@ -191,10 +217,15 @@ function toggleStadiumRentalsCheckbox() {
 	stadiumRentalsCheckbox.parentElement.classList.toggle("invisible", !shouldShow);
 }
 
-function toggleFormsCheckbox() {
+function toggleFormsVisibility() {
 	const regionOption = regionDropdown.options[regionDropdown.selectedIndex];
 	const shouldShow = regionOption?.dataset?.forms != "false";
-	formsCheckbox.parentElement.classList.toggle("invisible", !shouldShow);
+	formsDropdown.classList.toggle("invisible", !shouldShow);
+}
+
+function toggleFormSubtypes() {
+	megasCheckbox.disabled = !formsCheckbox.checked;
+	gigantamaxesCheckbox.disabled = !formsCheckbox.checked;
 }
 
 function toggleDropdownsOnButtonClick() {

@@ -69,6 +69,12 @@ function filterByOptions<P extends Pokemon|Form>(pokemonInRegion: P[], options: 
 		if (!options.nfes && "isNfe" in pokemon && pokemon.isNfe) {
 			return false;
 		}
+		if (!options.megas && "isMega" in pokemon && pokemon.isMega) {
+			return false;
+		}
+		if (!options.gigantamaxes && "isGigantamax" in pokemon && pokemon.isGigantamax) {
+			return false;
+		}
 
 		if (options.forms && "forms" in pokemon) {
 			// If we are generating with forms and this Pokémon has forms,

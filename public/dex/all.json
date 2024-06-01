@@ -11240,7 +11240,8 @@
 					"poison",
 					"dragon"
 				],
-				"spriteSuffix": "eternamax"
+				"spriteSuffix": "eternamax",
+				"isGigantamax": true
 			}
 		],
 		"isLegendary": true

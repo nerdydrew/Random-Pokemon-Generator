@@ -90,7 +90,17 @@
 	<fieldset>
 		<label><input type="checkbox" id="sprites" name="sprites" value="true" checked>Sprites</label>
 		<label><input type="checkbox" id="natures" name="natures" value="true">Natures</label>
-		<label><input type="checkbox" id="forms" name="forms" value="true" checked><abbr title="Allow alternate forms, such as Mega Evolutions.">Forms</abbr></label>
+
+		<div class="dropdown" id="formsDropdown">
+			<button type="button">Forms</button>
+			<div class="popup">
+				<ul>
+					<li><label><input type="checkbox" id="forms" name="forms" value="true" checked>Alternate Forms</label></li>
+					<li><label><input type="checkbox" id="megas" name="megas" value="true" checked>Mega Evolutions</label></li>
+					<li><label><input type="checkbox" id="gigantamaxes" name="gigantamaxes" value="true" checked>Gigantamax Forms</label></li>
+				</ul>
+			</div>
+		</div>
 
 		<input value="Generate" type="submit" />
 	</fieldset>
