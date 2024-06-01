@@ -77,7 +77,8 @@ function filterByOptions<P extends Pokemon|Form>(pokemonInRegion: P[], options: 
 			return pokemon.forms.length > 0;
 		}
 
-		if (options.type != "all" && pokemon.types.indexOf(options.type) < 0) {
+		const types = new Set(options.types);
+		if (types.size > 0 && !pokemon.types.some(type => types.has(type))) {
 			return false;
 		}
 

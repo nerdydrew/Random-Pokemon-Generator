@@ -2,7 +2,9 @@ const STORAGE_OPTIONS_KEY = "options";
 
 const numberDropdown = document.getElementById("n") as HTMLSelectElement;
 const regionDropdown = document.getElementById("region") as HTMLSelectElement;
-const typeDropdown = document.getElementById("type") as HTMLSelectElement;
+const typesDropdown = document.getElementById("types");
+const allTypesCheckbox: HTMLInputElement = typesDropdown.querySelector("input[value='all']");
+const typeCheckboxes: HTMLInputElement[] = Array.from(typesDropdown.querySelectorAll("input:not([value='all'])"));
 const legendariesCheckbox = document.getElementById("legendaries") as HTMLInputElement;
 const stadiumRentalsCheckbox = document.getElementById("stadiumRentals") as HTMLInputElement;
 const nfesCheckbox = document.getElementById("nfes") as HTMLInputElement;
@@ -13,7 +15,7 @@ const formsCheckbox = document.getElementById("forms") as HTMLInputElement;
 type Options = {
 	n: number;
 	region: string;
-	type: string;
+	types: string[];
 	legendaries: boolean;
 	/**
 	 * Whether to only generate Pokémon that can be chosen as rentals. Only relevant for
@@ -31,7 +33,7 @@ function getOptionsFromForm(): Options {
 	return {
 		n: parseInt(numberDropdown.value),
 		region: regionDropdown.value,
-		type: typeDropdown.value,
+		types: getSelectedTypes(),
 		legendaries: legendariesCheckbox.checked,
 		stadiumRentals: stadiumRentalsCheckbox.checked,
 		nfes: nfesCheckbox.checked,
@@ -41,6 +43,12 @@ function getOptionsFromForm(): Options {
 	};
 }
 
+function getSelectedTypes(): string[] {
+	return typeCheckboxes
+			.filter(checkbox => checkbox.checked)
+			.map(checkbox => checkbox.value);
+}
+
 function setOptions(options: Partial<Options>) {
 	if (options.n != null) {
 		setDropdownIfValid(numberDropdown, options.n);
@@ -48,8 +56,12 @@ function setOptions(options: Partial<Options>) {
 	if (options.region != null) {
 		setDropdownIfValid(regionDropdown, options.region);
 	}
-	if (options.type != null) {
-		setDropdownIfValid(typeDropdown, options.type);
+	if (options.types != null) {
+		const types = new Set(options.types);
+		typeCheckboxes.forEach(checkbox => {
+			// Treat an empty array as every type being selected.
+			checkbox.checked = types.has(checkbox.value) || options.types.length == 0;
+		});
 	}
 	if (options.legendaries != null) {
 		legendariesCheckbox.checked = options.legendaries;
@@ -111,7 +123,12 @@ function convertUrlParamsToOptions(): Partial<Options> {
 		options.region = params.get("region");
 	}
 	if (params.has("type")) {
-		options.type = params.get("type");
+		const type = params.get("type");
+		options.types = type == "all" ? [] : [type];
+	}
+	if (params.has("types")) {
+		const types = params.get("types").split(",");
+		options.types = types[0] == "all" ? [] : types;
 	}
 	if (params.has("legendaries")) {
 		options.legendaries = parseBoolean(params.get("legendaries"));
@@ -141,6 +158,14 @@ function convertUrlParamsToOptions(): Partial<Options> {
 function convertOptionsToUrlParams(options: Partial<Options>): string {
 	return Object.entries(options)
 		.map(function([key, value]) {
+			if (Array.isArray(value)) {
+				if (key == "types" && value.length == typeCheckboxes.length || value.length == 0) {
+					// If all types are selected, store it as "all" for a shorter URL.
+					value = "all";
+				} else {
+					value = value.join(",");
+				}
+			}
 			return encodeURIComponent(key) + "=" + encodeURIComponent(value);
 		})
 		.join("&");
@@ -151,6 +176,13 @@ function addFormChangeListeners() {
 	toggleStadiumRentalsCheckbox();
 	regionDropdown.addEventListener("change", toggleFormsCheckbox);
 	toggleFormsCheckbox();
+	toggleDropdownsOnButtonClick();
+
+	allTypesCheckbox.addEventListener("change", toggleAllTypes);
+	typeCheckboxes.forEach(checkbox => {
+		checkbox.addEventListener("change", handleTypeChange);
+	});
+	handleTypeChange();
 }
 
 function toggleStadiumRentalsCheckbox() {
@@ -163,4 +195,55 @@ function toggleFormsCheckbox() {
 	const regionOption = regionDropdown.options[regionDropdown.selectedIndex];
 	const shouldShow = regionOption?.dataset?.forms != "false";
 	formsCheckbox.parentElement.classList.toggle("invisible", !shouldShow);
+}
+
+function toggleDropdownsOnButtonClick() {
+	// Toggle a dropdown by clicking its button. Also close with the Escape key or
+	// by clicking outside of it.
+
+	document.querySelectorAll(".dropdown").forEach(dropdownWrapper => {
+		const button = dropdownWrapper.querySelector("button");
+		const popup = dropdownWrapper.querySelector(".popup");
+		if (popup) {
+			button.addEventListener("click", e => {
+				popup.classList.toggle("visible");
+			});
+			document.addEventListener("keydown", event => {
+				if (event.keyCode == 27) {
+					popup.classList.remove("visible");
+				}
+			});
+			document.addEventListener("click", event => {
+				if (event.target instanceof HTMLElement && event.target != button
+						&& !popup.contains(event?.target)) {
+					popup.classList.remove("visible");
+				}
+			});
+		}
+	});
+}
+
+function toggleAllTypes() {
+	const selectAll = allTypesCheckbox.checked;
+	typeCheckboxes.forEach(checkbox => checkbox.checked = selectAll);
+	handleTypeChange();
+}
+
+function handleTypeChange() {
+	// Updates the dropdown button's text and the "all" checkbox's state.
+	const selected = getSelectedTypes();
+	const allSelected = selected.length == typeCheckboxes.length;
+
+	allTypesCheckbox.checked = selected.length > 0;
+	allTypesCheckbox.indeterminate = !allSelected && allTypesCheckbox.checked;
+
+	let displayText;
+	if (allSelected || selected.length == 0) {
+		displayText = "All Types";
+	} else if (selected.length == 1) {
+		displayText = typesDropdown.querySelector("input[value='" + selected[0] + "']").parentElement.innerText;
+	} else {
+		displayText = selected.length + " Types";
+	}
+	typesDropdown.querySelector("button").innerText = displayText;
 }
