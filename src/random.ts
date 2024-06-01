@@ -28,6 +28,8 @@ function displayPokemon(pokemon: GeneratedPokemon[]) {
 	const resultsContainer = document.getElementById("results");
 	if (!pokemon) {
 		resultsContainer.innerHTML = "An error occurred while generating Pok&eacute;mon.";
+	} else if (pokemon.length == 0) {
+		resultsContainer.innerHTML = "No matching Pok&eacute;mon found.";
 	} else {
 		resultsContainer.innerHTML = toHtml(pokemon);
 	}

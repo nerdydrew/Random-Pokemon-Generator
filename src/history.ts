@@ -7,6 +7,9 @@ const latestPokemon: GeneratedPokemon[][] = [];
 let displayedIndex: number = -1; // Nothing displayed on first load
 
 function addToHistory(pokemon: GeneratedPokemon[]) {
+	if (!pokemon || pokemon.length == 0) {
+		return;
+	}
 	latestPokemon.unshift(pokemon);
 	while (latestPokemon.length > HISTORY_SIZE) {
 		latestPokemon.pop();
