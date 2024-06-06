@@ -89,6 +89,17 @@ class GeneratedPokemon {
 		</li>`;
 	}
 
+	toHtmlForShinyHistory(): string {
+		const encounterDate = this.date ?
+			`<div class="date" title="${this.date}">Encountered on ${this.date.toLocaleDateString()}</div>`
+			: "";
+		return `<li>
+			${this.toImage()}
+			${this.toText()}
+			${encounterDate}
+		</li>`;
+	}
+
 	toText(): string {
 		return `
 			${this.nature ? `<span class="nature">${this.nature}</span>` : ""}

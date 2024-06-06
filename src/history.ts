@@ -29,7 +29,9 @@ function toggleHistoryVisibility(shinies?: GeneratedPokemon[]) {
 
 	shinies = shinies ?? getShinies();
 	document.getElementById("shiny-count").innerHTML = String(shinies.length);
-	document.getElementById("shinies").innerHTML = shinies.map(p => p.toImage()).join(" ");
+	document.getElementById("shinies").innerHTML = "<ol>"
+		+ shinies.map(p => p.toHtmlForShinyHistory()).join(" ")
+		+ "</ol>";
 	document.getElementById("shiny-toggler").classList.toggle("invisible", shinies.length == 0);
 }
 
@@ -50,11 +52,19 @@ function displayHistoryAtIndex(index: number) {
 
 /** All encountered shiny Pokémon, newest first. */
 function getShinies(): GeneratedPokemon[] {
-	const shinies = JSON.parse(window.localStorage.getItem(STORAGE_SHINIES_KEY));
+	const shinies = JSON.parse(window.localStorage.getItem(STORAGE_SHINIES_KEY), dateReviver);
 	if (!Array.isArray(shinies)) {
 		return [];
 	}
 	return shinies.map(shiny => GeneratedPokemon.fromJson(shiny));
+}
+
+function dateReviver(key, value) {
+	if (key == "date" && typeof value == "string") {
+		return new Date(value);
+	} else {
+		return value;
+	}
 }
 
 function toggleShinyDisplay() {

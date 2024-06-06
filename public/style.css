@@ -46,7 +46,8 @@ header{margin:1em 0}
 #history{margin:1em 0 0;display:flex;justify-content:space-between}
 button.text{background:transparent;color:inherit;border:0;padding:0}
 
-#results li{display:inline-block;height:3em;padding-top:128px;width:33%;margin-bottom:1em;position:relative;list-style:none;animation:0.5s ease-out 0s 1 fadeIn}
+#results li,#shinies li{display:inline-block;height:3em;padding-top:128px;width:33%;min-width:138px;margin-bottom:1em;position:relative;list-style:none}
+#results li{animation:0.5s ease-out 0s 1 fadeIn}
 #results .nature{color:#888}.star{color:#F4D04D}
 #results li.shiny:before,#results li.shiny:after,#results li.shiny .star:before,#results li.shiny .star:after{
 	content:"\2605";position:absolute;top:64px;left:50%;font-size:.75em;opacity:0;pointer-events:none;z-index:100}
@@ -54,11 +55,13 @@ button.text{background:transparent;color:inherit;border:0;padding:0}
 #results li.shiny:after       {animation:.6s steps(8) .150s 1 rotateStar, .075s alternate steps(2) infinite shine}
 #results li.shiny .star:before{animation:.6s steps(8) .225s 1 rotateStar, .075s alternate steps(2) infinite shine}
 #results li.shiny .star:after {animation:.6s steps(8) .300s 1 rotateStar, .075s alternate steps(2) infinite shine}
-#results img{position:absolute;bottom:3em;left:50%;transform:translateX(-50%)}
+#results img,#shinies img{position:absolute;bottom:3em;left:50%;transform:translateX(-50%)}
 #results li.imageless{font-weight:700;margin:2em 0;height:auto;padding:0}
 
 #shiny-toggler{margin-bottom:.5em}
 #shinies{margin-top:1em}
+#shinies li{width:138px}
+#shinies .date{color:#888}
 #shiny-container button{margin-bottom:1em}
 #shiny-toggler.is-showing .is-hiding,#shiny-toggler.is-hiding .is-showing{display:none}
 
@@ -66,9 +69,6 @@ footer{font-size:.875em;padding:3em 0;color:#666;clear:both}
 
 @media screen and (max-width:27em){header{font-size:.75em}}
 @media screen and (max-width:21em){header{font-size:.625em}}
-
-@media screen and (max-width:420px){#results li{width:49%}}
-@media screen and (max-width:308px){#results li{float:none;width:auto}}
 
 @media screen and (prefers-color-scheme: dark) {
 	html{background:#222;color:#FFF}
