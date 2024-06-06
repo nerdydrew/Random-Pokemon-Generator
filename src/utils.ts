@@ -37,7 +37,7 @@ function parseBoolean(boolean: string): boolean {
 }
 
 function displayYearsInFooter() {
-	document.querySelectorAll("span[data-since]").forEach(span => {
+	document.querySelectorAll("span[data-since]").forEach((span: HTMLSpanElement) => {
 		span.innerText = span.dataset.since + "-" + new Date().getFullYear();
 	});
 }

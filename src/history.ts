@@ -59,7 +59,7 @@ function getShinies(): GeneratedPokemon[] {
 	return shinies.map(shiny => GeneratedPokemon.fromJson(shiny));
 }
 
-function dateReviver(key, value) {
+function dateReviver(key: string, value: any) {
 	if (key == "date" && typeof value == "string") {
 		return new Date(value);
 	} else {
