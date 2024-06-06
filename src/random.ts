@@ -21,6 +21,7 @@ function onPageLoad() {
 	loadOptions();
 	toggleHistoryVisibility();
 	addFormChangeListeners();
+	displayYearsInFooter();
 }
 document.addEventListener("DOMContentLoaded", onPageLoad);
 

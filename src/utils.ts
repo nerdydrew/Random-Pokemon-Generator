@@ -35,3 +35,9 @@ function setDropdownIfValid(select: HTMLSelectElement, value: string | number) {
 function parseBoolean(boolean: string): boolean {
 	return boolean.toLowerCase() == "true";
 }
+
+function displayYearsInFooter() {
+	document.querySelectorAll("span[data-since]").forEach(span => {
+		span.innerText = span.dataset.since + "-" + new Date().getFullYear();
+	});
+}
