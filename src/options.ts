@@ -10,6 +10,7 @@ const stadiumRentalsCheckbox = document.getElementById("stadiumRentals") as HTML
 const nfesCheckbox = document.getElementById("nfes") as HTMLInputElement;
 const spritesCheckbox = document.getElementById("sprites") as HTMLInputElement;
 const naturesCheckbox = document.getElementById("natures") as HTMLInputElement;
+const gendersCheckbox = document.getElementById("genders") as HTMLInputElement;
 const formsDropdown = document.getElementById("formsDropdown") as HTMLInputElement;
 const formsCheckbox = document.getElementById("forms") as HTMLInputElement;
 const megasCheckbox = document.getElementById("megas") as HTMLInputElement;
@@ -28,6 +29,7 @@ type Options = {
 	nfes: boolean;
 	sprites: boolean;
 	natures: boolean;
+	genders: boolean;
 	forms: boolean;
 	/** Whether to include mega evolutions. Ignored if forms is false. */
 	megas: boolean;
@@ -46,6 +48,7 @@ function getOptionsFromForm(): Options {
 		nfes: nfesCheckbox.checked,
 		sprites: spritesCheckbox.checked,
 		natures: naturesCheckbox.checked,
+		genders: gendersCheckbox.checked,
 		forms: formsCheckbox.checked,
 		megas: megasCheckbox.checked,
 		gigantamaxes: gigantamaxesCheckbox.checked
@@ -86,6 +89,9 @@ function setOptions(options: Partial<Options>) {
 	}
 	if (options.natures != null) {
 		naturesCheckbox.checked = options.natures;
+	}
+	if (options.genders != null) {
+		gendersCheckbox.checked = options.genders;
 	}
 	if (options.forms != null) {
 		formsCheckbox.checked = options.forms;
@@ -159,6 +165,9 @@ function convertUrlParamsToOptions(): Partial<Options> {
 	}
 	if (params.has("natures")) {
 		options.natures = parseBoolean(params.get("natures"));
+	}
+	if (params.has("genders")) {
+		options.genders = parseBoolean(params.get("genders"));
 	}
 	if (params.has("forms")) {
 		options.forms = parseBoolean(params.get("forms"));

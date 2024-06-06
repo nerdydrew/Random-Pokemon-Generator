@@ -23,6 +23,8 @@ abbr{cursor:help;border-bottom:1px dotted;text-decoration:none}
 .clear{clear:both}
 .hidden{visibility:hidden}
 .invisible{display:none !important}
+.male{color:blue}
+.female{color:deeppink}
 
 header{margin:1em 0}
 
@@ -78,6 +80,9 @@ footer{font-size:.875em;padding:3em 0;color:#666;clear:both}
 
 	a,button.text{color:#DDD;border-bottom-color:#777}
 	a:hover,button.text:hover{color:#FFF}
+
+	.male{color:lightblue}
+	.female{color:pink}
 }
 
 /* Mobile Safari doesn't display this animation smoothly unless I add another CSS declaration. */

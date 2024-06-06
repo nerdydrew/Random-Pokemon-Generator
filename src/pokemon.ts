@@ -17,6 +17,8 @@ interface Pokemon {
 	isStadiumRental?: boolean;
 	/** Alternate forms for this Pokémon, if any. */
 	forms?: Form[];
+	/** Ratio of male to female or "unknown". Defaults to (1:1). */
+	genderRatio?: {male: number, female: number} | "unknown";
 }
 
 interface Form {
@@ -30,6 +32,8 @@ interface Form {
 	isMega?: boolean;
 	/** Whether this form is a Gigantamax. Defaults to false. */
 	isGigantamax?: boolean;
+	/** Ratio of male to female or "unknown". Defaults to (1:1). */
+	genderRatio?: {male: number, female: number} | "unknown";
 }
 
 class GeneratedPokemon {
@@ -47,6 +51,8 @@ class GeneratedPokemon {
 	readonly shiny: boolean;
 	/** When this Pokémon was generated. */
 	readonly date: Date;
+	/** This Pokémon's gender, or null if not generated or neuter. */
+	readonly gender?: "male" | "female";
 
 	private constructor(pokemon?: Pokemon, form?: Form, options?: Options) {
 		if (!pokemon) {
@@ -62,6 +68,12 @@ class GeneratedPokemon {
 		// http://bulbapedia.bulbagarden.net/wiki/Shiny_Pok%C3%A9mon#Generation_VI
 		this.shiny = Math.floor(Math.random() * 65536) < 16;
 		this.date = new Date();
+		if (options.genders) {
+			const ratio = form?.genderRatio ?? pokemon?.genderRatio ?? {male: 1, female: 1};
+			if (ratio != "unknown") {
+				this.gender = Math.random() < (ratio.male / (ratio.male + ratio.female)) ? "male" : "female";
+			}
+		}
 	}
 
 	static generate(pokemon: Pokemon, form: Form | undefined, options: Options): GeneratedPokemon {
@@ -104,8 +116,20 @@ class GeneratedPokemon {
 		return `
 			${this.nature ? `<span class="nature">${this.nature}</span>` : ""}
 			${this.name}
+			${this.genderToText()}
 			${this.shiny ? `<span class="star">&starf;</span>` : ""}
 		`;
+	}
+
+	private genderToText(): string {
+		// Skips Nidoran M and F.
+		if (this.gender == "male" && this.id != 29) {
+			return `<span class="male" title="Male">♂</span>`;
+		} else if (this.gender == "female" && this.id != 32) {
+			return `<span class="female" title="Female">♀</span>`;
+		} else {
+			return "";
+		}
 	}
 
 	toImage(): string {

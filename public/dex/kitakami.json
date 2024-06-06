@@ -35,14 +35,22 @@
 		"isNfe": true,
 		"types": [
 			"fairy"
-		]
+		],
+		"genderRatio": {
+			"male": 1,
+			"female": 3
+		}
 	},
 	{
 		"id": 36,
 		"name": "Clefable",
 		"types": [
 			"fairy"
-		]
+		],
+		"genderRatio": {
+			"male": 1,
+			"female": 3
+		}
 	},
 	{
 		"id": 37,
@@ -50,14 +58,22 @@
 		"isNfe": true,
 		"types": [
 			"fire"
-		]
+		],
+		"genderRatio": {
+			"male": 1,
+			"female": 3
+		}
 	},
 	{
 		"id": 38,
 		"name": "Ninetales",
 		"types": [
 			"fire"
-		]
+		],
+		"genderRatio": {
+			"male": 1,
+			"female": 3
+		}
 	},
 	{
 		"id": 60,
@@ -155,7 +171,11 @@
 		"name": "Snorlax",
 		"types": [
 			"normal"
-		]
+		],
+		"genderRatio": {
+			"male": 7,
+			"female": 1
+		}
 	},
 	{
 		"id": 161,
@@ -212,7 +232,11 @@
 		"isNfe": true,
 		"types": [
 			"fairy"
-		]
+		],
+		"genderRatio": {
+			"male": 1,
+			"female": 3
+		}
 	},
 	{
 		"id": 186,
@@ -360,14 +384,22 @@
 		"name": "Volbeat",
 		"types": [
 			"bug"
-		]
+		],
+		"genderRatio": {
+			"male": 1,
+			"female": 0
+		}
 	},
 	{
 		"id": 314,
 		"name": "Illumise",
 		"types": [
 			"bug"
-		]
+		],
+		"genderRatio": {
+			"male": 0,
+			"female": 1
+		}
 	},
 	{
 		"id": 341,
@@ -430,7 +462,8 @@
 			"steel",
 			"psychic"
 		],
-		"isLegendary": true
+		"isLegendary": true,
+		"genderRatio": "unknown"
 	},
 	{
 		"id": 387,
@@ -438,7 +471,11 @@
 		"isNfe": true,
 		"types": [
 			"grass"
-		]
+		],
+		"genderRatio": {
+			"male": 7,
+			"female": 1
+		}
 	},
 	{
 		"id": 388,
@@ -446,7 +483,11 @@
 		"isNfe": true,
 		"types": [
 			"grass"
-		]
+		],
+		"genderRatio": {
+			"male": 7,
+			"female": 1
+		}
 	},
 	{
 		"id": 389,
@@ -454,7 +495,11 @@
 		"types": [
 			"grass",
 			"ground"
-		]
+		],
+		"genderRatio": {
+			"male": 7,
+			"female": 1
+		}
 	},
 	{
 		"id": 390,
@@ -462,7 +507,11 @@
 		"isNfe": true,
 		"types": [
 			"fire"
-		]
+		],
+		"genderRatio": {
+			"male": 7,
+			"female": 1
+		}
 	},
 	{
 		"id": 391,
@@ -471,7 +520,11 @@
 		"types": [
 			"fire",
 			"fighting"
-		]
+		],
+		"genderRatio": {
+			"male": 7,
+			"female": 1
+		}
 	},
 	{
 		"id": 392,
@@ -479,7 +532,11 @@
 		"types": [
 			"fire",
 			"fighting"
-		]
+		],
+		"genderRatio": {
+			"male": 7,
+			"female": 1
+		}
 	},
 	{
 		"id": 393,
@@ -487,7 +544,11 @@
 		"isNfe": true,
 		"types": [
 			"water"
-		]
+		],
+		"genderRatio": {
+			"male": 7,
+			"female": 1
+		}
 	},
 	{
 		"id": 394,
@@ -495,7 +556,11 @@
 		"isNfe": true,
 		"types": [
 			"water"
-		]
+		],
+		"genderRatio": {
+			"male": 7,
+			"female": 1
+		}
 	},
 	{
 		"id": 395,
@@ -503,7 +568,11 @@
 		"types": [
 			"water",
 			"steel"
-		]
+		],
+		"genderRatio": {
+			"male": 7,
+			"female": 1
+		}
 	},
 	{
 		"id": 424,
@@ -526,7 +595,11 @@
 		"isNfe": true,
 		"types": [
 			"normal"
-		]
+		],
+		"genderRatio": {
+			"male": 7,
+			"female": 1
+		}
 	},
 	{
 		"id": 469,
@@ -574,7 +647,8 @@
 		"types": [
 			"water"
 		],
-		"isLegendary": true
+		"isLegendary": true,
+		"genderRatio": "unknown"
 	},
 	{
 		"id": 490,
@@ -582,7 +656,8 @@
 		"types": [
 			"water"
 		],
-		"isLegendary": true
+		"isLegendary": true,
+		"genderRatio": "unknown"
 	},
 	{
 		"id": 491,
@@ -590,7 +665,8 @@
 		"types": [
 			"dark"
 		],
-		"isLegendary": true
+		"isLegendary": true,
+		"genderRatio": "unknown"
 	},
 	{
 		"id": 492,
@@ -603,7 +679,8 @@
 				"name": "Shaymin",
 				"types": [
 					"grass"
-				]
+				],
+				"genderRatio": "unknown"
 			},
 			{
 				"name": "Shaymin Sky",
@@ -611,10 +688,12 @@
 					"grass",
 					"flying"
 				],
-				"spriteSuffix": "sky"
+				"spriteSuffix": "sky",
+				"genderRatio": "unknown"
 			}
 		],
-		"isLegendary": true
+		"isLegendary": true,
+		"genderRatio": "unknown"
 	},
 	{
 		"id": 532,
@@ -622,7 +701,11 @@
 		"isNfe": true,
 		"types": [
 			"fighting"
-		]
+		],
+		"genderRatio": {
+			"male": 3,
+			"female": 1
+		}
 	},
 	{
 		"id": 533,
@@ -630,14 +713,22 @@
 		"isNfe": true,
 		"types": [
 			"fighting"
-		]
+		],
+		"genderRatio": {
+			"male": 3,
+			"female": 1
+		}
 	},
 	{
 		"id": 534,
 		"name": "Conkeldurr",
 		"types": [
 			"fighting"
-		]
+		],
+		"genderRatio": {
+			"male": 3,
+			"female": 1
+		}
 	},
 	{
 		"id": 540,
@@ -730,7 +821,11 @@
 		"types": [
 			"dark",
 			"flying"
-		]
+		],
+		"genderRatio": {
+			"male": 0,
+			"female": 1
+		}
 	},
 	{
 		"id": 630,
@@ -738,7 +833,11 @@
 		"types": [
 			"dark",
 			"flying"
-		]
+		],
+		"genderRatio": {
+			"male": 0,
+			"female": 1
+		}
 	},
 	{
 		"id": 708,
@@ -862,7 +961,8 @@
 				"types": [
 					"grass",
 					"ghost"
-				]
+				],
+				"genderRatio": "unknown"
 			},
 			{
 				"name": "Poltchageist",
@@ -870,9 +970,11 @@
 					"grass",
 					"ghost"
 				],
-				"spriteSuffix": "artisan"
+				"spriteSuffix": "artisan",
+				"genderRatio": "unknown"
 			}
-		]
+		],
+		"genderRatio": "unknown"
 	},
 	{
 		"id": 1013,
@@ -887,7 +989,8 @@
 				"types": [
 					"grass",
 					"ghost"
-				]
+				],
+				"genderRatio": "unknown"
 			},
 			{
 				"name": "Sinistcha",
@@ -895,9 +998,11 @@
 					"grass",
 					"ghost"
 				],
-				"spriteSuffix": "masterpiece"
+				"spriteSuffix": "masterpiece",
+				"genderRatio": "unknown"
 			}
-		]
+		],
+		"genderRatio": "unknown"
 	},
 	{
 		"id": 1014,
@@ -906,7 +1011,11 @@
 		"types": [
 			"poison",
 			"fighting"
-		]
+		],
+		"genderRatio": {
+			"male": 1,
+			"female": 0
+		}
 	},
 	{
 		"id": 1015,
@@ -915,7 +1024,11 @@
 		"types": [
 			"poison",
 			"psychic"
-		]
+		],
+		"genderRatio": {
+			"male": 1,
+			"female": 0
+		}
 	},
 	{
 		"id": 1016,
@@ -924,7 +1037,11 @@
 		"types": [
 			"poison",
 			"fairy"
-		]
+		],
+		"genderRatio": {
+			"male": 1,
+			"female": 0
+		}
 	},
 	{
 		"id": 1017,
@@ -938,14 +1055,22 @@
 				"name": "Ogerpon (Teal Mask)",
 				"types": [
 					"grass"
-				]
+				],
+				"genderRatio": {
+					"male": 0,
+					"female": 1
+				}
 			},
 			{
 				"name": "Ogerpon (Teal Mask)",
 				"types": [
 					"grass"
 				],
-				"spriteSuffix": "mask"
+				"spriteSuffix": "mask",
+				"genderRatio": {
+					"male": 0,
+					"female": 1
+				}
 			},
 			{
 				"name": "Ogerpon (Hearthflame Mask)",
@@ -953,7 +1078,11 @@
 					"grass",
 					"fire"
 				],
-				"spriteSuffix": "hearthflame"
+				"spriteSuffix": "hearthflame",
+				"genderRatio": {
+					"male": 0,
+					"female": 1
+				}
 			},
 			{
 				"name": "Ogerpon (Hearthflame Mask)",
@@ -961,7 +1090,11 @@
 					"grass",
 					"fire"
 				],
-				"spriteSuffix": "hearthflame-mask"
+				"spriteSuffix": "hearthflame-mask",
+				"genderRatio": {
+					"male": 0,
+					"female": 1
+				}
 			},
 			{
 				"name": "Ogerpon (Wellspring Mask)",
@@ -969,7 +1102,11 @@
 					"grass",
 					"water"
 				],
-				"spriteSuffix": "wellspring"
+				"spriteSuffix": "wellspring",
+				"genderRatio": {
+					"male": 0,
+					"female": 1
+				}
 			},
 			{
 				"name": "Ogerpon (Wellspring Mask)",
@@ -977,7 +1114,11 @@
 					"grass",
 					"water"
 				],
-				"spriteSuffix": "wellspring-mask"
+				"spriteSuffix": "wellspring-mask",
+				"genderRatio": {
+					"male": 0,
+					"female": 1
+				}
 			},
 			{
 				"name": "Ogerpon (Cornerstone Mask)",
@@ -985,7 +1126,11 @@
 					"grass",
 					"rock"
 				],
-				"spriteSuffix": "cornerstone"
+				"spriteSuffix": "cornerstone",
+				"genderRatio": {
+					"male": 0,
+					"female": 1
+				}
 			},
 			{
 				"name": "Ogerpon (Cornerstone Mask)",
@@ -993,9 +1138,17 @@
 					"grass",
 					"rock"
 				],
-				"spriteSuffix": "cornerstone-mask"
+				"spriteSuffix": "cornerstone-mask",
+				"genderRatio": {
+					"male": 0,
+					"female": 1
+				}
 			}
-		]
+		],
+		"genderRatio": {
+			"male": 0,
+			"female": 1
+		}
 	},
 	{
 		"id": 901,
@@ -1011,7 +1164,11 @@
 					"ground",
 					"normal"
 				],
-				"spriteSuffix": "bloodmoon"
+				"spriteSuffix": "bloodmoon",
+				"genderRatio": {
+					"male": 1,
+					"female": 0
+				}
 			}
 		]
 	}
