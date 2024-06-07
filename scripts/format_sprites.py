@@ -18,6 +18,7 @@ default_folder = "../public/sprites/"
 dex_file = "../public/dex/all.json"
 new_dimension = 120
 new_dimensions = (new_dimension, new_dimension)
+desired_extension = "webp"
 
 def load_json(filename):
     with open(filename, "r") as f:
@@ -30,7 +31,8 @@ def format_images(folder):
             format_images(file_or_folder)
         elif is_image(file_or_folder):
             resize_image(file_or_folder)
-            rename_file(file_or_folder)
+            file_or_folder = rename_file(file_or_folder)
+            resave_as_webp(file_or_folder)
 
 def is_image(file):
     try:
@@ -58,6 +60,7 @@ def resize_image(file):
 pokemon_by_id = {p["id"] : p for p in load_json(dex_file)}
 
 def rename_file(file):
+    """Returns the new file name if renamed, or the current name otherwise."""
     path = Path(file)
     name = path.stem
     if "-" in name:
@@ -68,7 +71,7 @@ def rename_file(file):
         id_number = int(name)
     except:
         # Skip if not named with a number.
-        return
+        return file
 
     pokemon = pokemon_by_id[id_number]
     if suffix and not is_form_known(pokemon, suffix):
@@ -80,6 +83,19 @@ def rename_file(file):
         new_name = f"{new_name}-{suffix}"
     new_name = f"{new_name}{path.suffix}"
     path.rename(new_name)
+    return new_name
+
+def resave_as_webp(file):
+    """Returns the new file name if changed, or the current name otherwise."""
+    name, extension = file.rsplit(".", 1)
+    if extension == desired_extension:
+        return file
+    else:
+        new_location = f"{name}.{desired_extension}"
+        image = Image.open(file)
+        image.save(new_location, format=desired_extension, optimize = True)
+        os.remove(file)
+        return new_location
 
 def is_form_known(pokemon, form_suffix):
     if "forms" not in pokemon:

@@ -1,6 +1,6 @@
 const PATH_TO_SPRITES = 'sprites/normal/';
 const PATH_TO_SHINY_SPRITES = 'sprites/shiny/';
-const SPRITE_EXTENTION = '.png';
+const SPRITE_EXTENTION = '.webp';
 
 interface Pokemon {
 	/** National Pokédex number. */
