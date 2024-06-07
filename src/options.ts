@@ -5,7 +5,9 @@ const regionDropdown = document.getElementById("region") as HTMLSelectElement;
 const typesDropdown = document.getElementById("types");
 const allTypesCheckbox: HTMLInputElement = typesDropdown.querySelector("input[value='all']");
 const typeCheckboxes: HTMLInputElement[] = Array.from(typesDropdown.querySelectorAll("input:not([value='all'])"));
+const sublegendariesCheckbox = document.getElementById("sublegendaries") as HTMLInputElement;
 const legendariesCheckbox = document.getElementById("legendaries") as HTMLInputElement;
+const mythicalsCheckbox = document.getElementById("mythicals") as HTMLInputElement;
 const stadiumRentalsCheckbox = document.getElementById("stadiumRentals") as HTMLInputElement;
 const nfesCheckbox = document.getElementById("nfes") as HTMLInputElement;
 const spritesCheckbox = document.getElementById("sprites") as HTMLInputElement;
@@ -20,7 +22,10 @@ type Options = {
 	n: number;
 	region: string;
 	types: string[];
+	sublegendaries: boolean;
+	/** Whether to incllude restricted legendaries. */
 	legendaries: boolean;
+	mythicals: boolean;
 	/**
 	 * Whether to only generate Pokémon that can be chosen as rentals. Only relevant for
 	 * Stadium 1 and 2 (Kanto and Johto).
@@ -43,7 +48,9 @@ function getOptionsFromForm(): Options {
 		n: parseInt(numberDropdown.value),
 		region: regionDropdown.value,
 		types: getSelectedTypes(),
+		sublegendaries: sublegendariesCheckbox.checked,
 		legendaries: legendariesCheckbox.checked,
+		mythicals: mythicalsCheckbox.checked,
 		stadiumRentals: stadiumRentalsCheckbox.checked,
 		nfes: nfesCheckbox.checked,
 		sprites: spritesCheckbox.checked,
@@ -75,8 +82,14 @@ function setOptions(options: Partial<Options>) {
 			checkbox.checked = types.has(checkbox.value) || options.types.length == 0;
 		});
 	}
+	if (options.sublegendaries != null) {
+		sublegendariesCheckbox.checked = options.sublegendaries;
+	}
 	if (options.legendaries != null) {
 		legendariesCheckbox.checked = options.legendaries;
+	}
+	if (options.mythicals != null) {
+		mythicalsCheckbox.checked = options.mythicals;
 	}
 	if (options.stadiumRentals != null) {
 		stadiumRentalsCheckbox.checked = options.stadiumRentals;
@@ -151,8 +164,14 @@ function convertUrlParamsToOptions(): Partial<Options> {
 		const types = params.get("types").split(",");
 		options.types = types[0] == "all" ? [] : types;
 	}
+	if (params.has("sublegendaries")) {
+		options.sublegendaries = parseBoolean(params.get("sublegendaries"));
+	}
 	if (params.has("legendaries")) {
 		options.legendaries = parseBoolean(params.get("legendaries"));
+	}
+	if (params.has("mythicals")) {
+		options.mythicals = parseBoolean(params.get("mythicals"));
 	}
 	if (params.has("stadiumRentals")) {
 		options.stadiumRentals = parseBoolean(params.get("stadiumRentals"));

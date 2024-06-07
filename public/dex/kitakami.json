@@ -462,8 +462,8 @@
 			"steel",
 			"psychic"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isMythical": true
 	},
 	{
 		"id": 387,
@@ -647,8 +647,8 @@
 		"types": [
 			"water"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isMythical": true
 	},
 	{
 		"id": 490,
@@ -656,8 +656,8 @@
 		"types": [
 			"water"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isMythical": true
 	},
 	{
 		"id": 491,
@@ -665,8 +665,8 @@
 		"types": [
 			"dark"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isMythical": true
 	},
 	{
 		"id": 492,
@@ -692,8 +692,8 @@
 				"genderRatio": "unknown"
 			}
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isMythical": true
 	},
 	{
 		"id": 532,
@@ -1007,7 +1007,6 @@
 	{
 		"id": 1014,
 		"name": "Okidogi",
-		"isLegendary": true,
 		"types": [
 			"poison",
 			"fighting"
@@ -1015,12 +1014,12 @@
 		"genderRatio": {
 			"male": 1,
 			"female": 0
-		}
+		},
+		"isSubLegendary": true
 	},
 	{
 		"id": 1015,
 		"name": "Munkidori",
-		"isLegendary": true,
 		"types": [
 			"poison",
 			"psychic"
@@ -1028,12 +1027,12 @@
 		"genderRatio": {
 			"male": 1,
 			"female": 0
-		}
+		},
+		"isSubLegendary": true
 	},
 	{
 		"id": 1016,
 		"name": "Fezandipiti",
-		"isLegendary": true,
 		"types": [
 			"poison",
 			"fairy"
@@ -1041,12 +1040,12 @@
 		"genderRatio": {
 			"male": 1,
 			"female": 0
-		}
+		},
+		"isSubLegendary": true
 	},
 	{
 		"id": 1017,
 		"name": "Ogerpon",
-		"isLegendary": true,
 		"types": [
 			"grass"
 		],
@@ -1148,7 +1147,8 @@
 		"genderRatio": {
 			"male": 0,
 			"female": 1
-		}
+		},
+		"isSubLegendary": true
 	},
 	{
 		"id": 901,

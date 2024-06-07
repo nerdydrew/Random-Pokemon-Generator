@@ -560,8 +560,8 @@
 		"types": [
 			"normal"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 773,
@@ -714,8 +714,8 @@
 				"genderRatio": "unknown"
 			}
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 774,
@@ -887,8 +887,8 @@
 			"electric",
 			"fairy"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 786,
@@ -897,8 +897,8 @@
 			"psychic",
 			"fairy"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 787,
@@ -907,8 +907,8 @@
 			"grass",
 			"fairy"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 788,
@@ -917,8 +917,8 @@
 			"water",
 			"fairy"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 789,
@@ -927,8 +927,8 @@
 		"types": [
 			"psychic"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isLegendary": true
 	},
 	{
 		"id": 790,
@@ -937,8 +937,8 @@
 		"types": [
 			"psychic"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isLegendary": true
 	},
 	{
 		"id": 791,
@@ -947,8 +947,8 @@
 			"psychic",
 			"steel"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isLegendary": true
 	},
 	{
 		"id": 792,
@@ -957,8 +957,8 @@
 			"psychic",
 			"ghost"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isLegendary": true
 	},
 	{
 		"id": 793,
@@ -1028,8 +1028,8 @@
 		"types": [
 			"psychic"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isLegendary": true
 	},
 	{
 		"id": 801,
@@ -1038,8 +1038,8 @@
 			"steel",
 			"fairy"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isMythical": true
 	},
 	{
 		"id": 802,
@@ -1048,8 +1048,8 @@
 			"fighting",
 			"ghost"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isMythical": true
 	},
 	{
 		"id": 10,
@@ -3797,7 +3797,7 @@
 				"genderRatio": "unknown"
 			}
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isLegendary": true
 	}
 ]

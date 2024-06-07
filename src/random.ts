@@ -66,7 +66,13 @@ function filterByOptions<P extends Pokemon|Form>(pokemonInRegion: P[], options: 
 		if (options.stadiumRentals && "isStadiumRental" in pokemon && !pokemon.isStadiumRental) {
 			return false;
 		}
+		if (!options.sublegendaries && "isSubLegendary" in pokemon && pokemon.isSubLegendary) {
+			return false;
+		}
 		if (!options.legendaries && "isLegendary" in pokemon && pokemon.isLegendary) {
+			return false;
+		}
+		if (!options.mythicals && "isMythical" in pokemon && pokemon.isMythical) {
 			return false;
 		}
 		if (!options.nfes && "isNfe" in pokemon && pokemon.isNfe) {

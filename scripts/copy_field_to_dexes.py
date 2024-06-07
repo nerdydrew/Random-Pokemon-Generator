@@ -35,22 +35,23 @@ def copy_field(source_pokemon, destination_pokemon, field_name):
         destination_pokemon[field_name] = source_pokemon[field_name]
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Must have at least one argument.")
-        print(f"Usage: {sys.argv[0]} [field_to_copy]...")
+    if len(sys.argv) != 2:
+        print("Must have one argument.")
+        print(f"Usage: {sys.argv[0]} [field_to_copy]")
         exit(1)
+
+    field_name_to_copy = sys.argv[1]
 
     source_dex_file = os.path.join(dex_folder, source_dex_name)
     source_by_name = {p["name"] : p for p in load_json(source_dex_file)}
 
     for dex_name in os.listdir(dex_folder):
         if dex_name != source_dex_name:
-            for field_name_to_copy in sys.argv[1:]:
-                dex_file = os.path.join(dex_folder, dex_name)
-                dex_to_update = load_json(dex_file)
-                
-                for pokemon in dex_to_update:
-                    source_pokemon = source_by_name[pokemon["name"]]
-                    copy_field(source_pokemon, pokemon, field_name_to_copy)
+            dex_file = os.path.join(dex_folder, dex_name)
+            dex_to_update = load_json(dex_file)
+            
+            for pokemon in dex_to_update:
+                source_pokemon = source_by_name[pokemon["name"]]
+                copy_field(source_pokemon, pokemon, field_name_to_copy)
 
             write_json(dex_file, dex_to_update)

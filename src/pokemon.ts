@@ -11,8 +11,12 @@ interface Pokemon {
 	types: string[];
 	/** Whether this Pokémon is not fully evolved. Defaults to false. */
 	isNfe?: boolean;
-	/** Whether this Pokémon is legendary. Defaults to false. */
+	/** Whether this Pokémon is a sub-legendary. Defaults to false. */
+	isSubLegendary?: boolean;
+	/** Whether this Pokémon is a restricted legendary. Defaults to false. */
 	isLegendary?: boolean;
+	/** Whether this Pokémon is mythical. Defaults to false. */
+	isMythical?: boolean;
 	/** Whether this Pokémon can be rented in Stadium 1 or 2. Defaults to true. */
 	isStadiumRental?: boolean;
 	/** Alternate forms for this Pokémon, if any. */

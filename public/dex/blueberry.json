@@ -2736,7 +2736,6 @@
 		"types": [
 			"normal"
 		],
-		"isLegendary": true,
 		"forms": [
 			{
 				"name": "Terapagos",
@@ -2758,7 +2757,8 @@
 				],
 				"spriteSuffix": "stellar"
 			}
-		]
+		],
+		"isLegendary": true
 	},
 	{
 		"id": 1009,
@@ -2785,6 +2785,7 @@
 			"poison",
 			"ghost"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isMythical": true
 	}
 ]

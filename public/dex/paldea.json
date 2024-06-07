@@ -4372,42 +4372,42 @@
 	{
 		"id": 1001,
 		"name": "Wo-Chien",
-		"isLegendary": true,
 		"types": [
 			"dark",
 			"grass"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 1002,
 		"name": "Chien-Pao",
-		"isLegendary": true,
 		"types": [
 			"dark",
 			"ice"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 1003,
 		"name": "Ting-Lu",
-		"isLegendary": true,
 		"types": [
 			"dark",
 			"ground"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 1004,
 		"name": "Chi-Yu",
-		"isLegendary": true,
 		"types": [
 			"dark",
 			"fire"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 1005,
@@ -4430,22 +4430,22 @@
 	{
 		"id": 1007,
 		"name": "Koraidon",
-		"isLegendary": true,
 		"types": [
 			"fighting",
 			"dragon"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isLegendary": true
 	},
 	{
 		"id": 1008,
 		"name": "Miraidon",
-		"isLegendary": true,
 		"types": [
 			"electric",
 			"dragon"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isLegendary": true
 	},
 	{
 		"id": 6,

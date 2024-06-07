@@ -4483,8 +4483,8 @@
 		"types": [
 			"normal"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 773,
@@ -4637,8 +4637,8 @@
 				"genderRatio": "unknown"
 			}
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 246,
@@ -4790,8 +4790,8 @@
 				"genderRatio": "unknown"
 			}
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isLegendary": true
 	},
 	{
 		"id": 889,
@@ -4817,8 +4817,8 @@
 				"genderRatio": "unknown"
 			}
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isLegendary": true
 	},
 	{
 		"id": 890,
@@ -4847,8 +4847,8 @@
 				"genderRatio": "unknown"
 			}
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isLegendary": true
 	},
 	{
 		"id": 891,
@@ -4857,11 +4857,11 @@
 		"types": [
 			"fighting"
 		],
-		"isLegendary": true,
 		"genderRatio": {
 			"male": 7,
 			"female": 1
-		}
+		},
+		"isSubLegendary": true
 	},
 	{
 		"id": 892,
@@ -4921,11 +4921,11 @@
 				}
 			}
 		],
-		"isLegendary": true,
 		"genderRatio": {
 			"male": 7,
 			"female": 1
-		}
+		},
+		"isSubLegendary": true
 	},
 	{
 		"id": 893,
@@ -4953,8 +4953,8 @@
 				"genderRatio": "unknown"
 			}
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isMythical": true
 	},
 	{
 		"id": 894,
@@ -4962,8 +4962,8 @@
 		"types": [
 			"electric"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 895,
@@ -4971,8 +4971,8 @@
 		"types": [
 			"dragon"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 896,
@@ -4980,8 +4980,8 @@
 		"types": [
 			"ice"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 897,
@@ -4989,8 +4989,8 @@
 		"types": [
 			"ghost"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 898,
@@ -5027,8 +5027,8 @@
 				"genderRatio": "unknown"
 			}
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isLegendary": true
 	},
 	{
 		"id": 79,
@@ -5103,8 +5103,8 @@
 				"genderRatio": "unknown"
 			}
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 145,
@@ -5124,8 +5124,8 @@
 				"genderRatio": "unknown"
 			}
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 146,
@@ -5145,8 +5145,8 @@
 				"genderRatio": "unknown"
 			}
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 427,
@@ -6657,8 +6657,8 @@
 		"types": [
 			"electric"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 244,
@@ -6666,8 +6666,8 @@
 		"types": [
 			"fire"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 245,
@@ -6675,8 +6675,8 @@
 		"types": [
 			"water"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 249,
@@ -6685,8 +6685,8 @@
 			"psychic",
 			"flying"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isLegendary": true
 	},
 	{
 		"id": 250,
@@ -6695,8 +6695,8 @@
 			"fire",
 			"flying"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isLegendary": true
 	},
 	{
 		"id": 377,
@@ -6704,8 +6704,8 @@
 		"types": [
 			"rock"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 378,
@@ -6713,8 +6713,8 @@
 		"types": [
 			"ice"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 379,
@@ -6722,8 +6722,8 @@
 		"types": [
 			"steel"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 380,
@@ -6732,11 +6732,11 @@
 			"dragon",
 			"psychic"
 		],
-		"isLegendary": true,
 		"genderRatio": {
 			"male": 0,
 			"female": 1
-		}
+		},
+		"isSubLegendary": true
 	},
 	{
 		"id": 381,
@@ -6745,11 +6745,11 @@
 			"dragon",
 			"psychic"
 		],
-		"isLegendary": true,
 		"genderRatio": {
 			"male": 1,
 			"female": 0
-		}
+		},
+		"isSubLegendary": true
 	},
 	{
 		"id": 382,
@@ -6774,8 +6774,8 @@
 				"genderRatio": "unknown"
 			}
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isLegendary": true
 	},
 	{
 		"id": 383,
@@ -6801,8 +6801,8 @@
 				"genderRatio": "unknown"
 			}
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isLegendary": true
 	},
 	{
 		"id": 384,
@@ -6811,8 +6811,8 @@
 			"dragon",
 			"flying"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isLegendary": true
 	},
 	{
 		"id": 480,
@@ -6820,8 +6820,8 @@
 		"types": [
 			"psychic"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 481,
@@ -6829,8 +6829,8 @@
 		"types": [
 			"psychic"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 482,
@@ -6838,8 +6838,8 @@
 		"types": [
 			"psychic"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 483,
@@ -6848,8 +6848,8 @@
 			"steel",
 			"dragon"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isLegendary": true
 	},
 	{
 		"id": 484,
@@ -6858,8 +6858,8 @@
 			"water",
 			"dragon"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isLegendary": true
 	},
 	{
 		"id": 485,
@@ -6868,7 +6868,7 @@
 			"fire",
 			"steel"
 		],
-		"isLegendary": true
+		"isSubLegendary": true
 	},
 	{
 		"id": 486,
@@ -6876,8 +6876,8 @@
 		"types": [
 			"normal"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 487,
@@ -6905,8 +6905,8 @@
 				"genderRatio": "unknown"
 			}
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isLegendary": true
 	},
 	{
 		"id": 488,
@@ -6914,11 +6914,11 @@
 		"types": [
 			"psychic"
 		],
-		"isLegendary": true,
 		"genderRatio": {
 			"male": 0,
 			"female": 1
-		}
+		},
+		"isSubLegendary": true
 	},
 	{
 		"id": 641,
@@ -6949,11 +6949,11 @@
 				}
 			}
 		],
-		"isLegendary": true,
 		"genderRatio": {
 			"male": 1,
 			"female": 0
-		}
+		},
+		"isSubLegendary": true
 	},
 	{
 		"id": 642,
@@ -6987,11 +6987,11 @@
 				}
 			}
 		],
-		"isLegendary": true,
 		"genderRatio": {
 			"male": 1,
 			"female": 0
-		}
+		},
+		"isSubLegendary": true
 	},
 	{
 		"id": 645,
@@ -7025,11 +7025,11 @@
 				}
 			}
 		],
-		"isLegendary": true,
 		"genderRatio": {
 			"male": 1,
 			"female": 0
-		}
+		},
+		"isSubLegendary": true
 	},
 	{
 		"id": 716,
@@ -7054,8 +7054,8 @@
 				"genderRatio": "unknown"
 			}
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isLegendary": true
 	},
 	{
 		"id": 717,
@@ -7064,8 +7064,8 @@
 			"dark",
 			"flying"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isLegendary": true
 	},
 	{
 		"id": 718,
@@ -7102,8 +7102,8 @@
 				"genderRatio": "unknown"
 			}
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isLegendary": true
 	},
 	{
 		"id": 785,
@@ -7112,8 +7112,8 @@
 			"electric",
 			"fairy"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 786,
@@ -7122,8 +7122,8 @@
 			"psychic",
 			"fairy"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 787,
@@ -7132,8 +7132,8 @@
 			"grass",
 			"fairy"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 788,
@@ -7142,8 +7142,8 @@
 			"water",
 			"fairy"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 124,
@@ -7405,8 +7405,8 @@
 			"psychic",
 			"fire"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isMythical": true
 	},
 	{
 		"id": 564,
@@ -7511,8 +7511,8 @@
 				"genderRatio": "unknown"
 			}
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isMythical": true
 	},
 	{
 		"id": 719,
@@ -7521,8 +7521,8 @@
 			"rock",
 			"fairy"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isMythical": true
 	},
 	{
 		"id": 721,
@@ -7531,8 +7531,8 @@
 			"fire",
 			"water"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isMythical": true
 	},
 	{
 		"id": 793,

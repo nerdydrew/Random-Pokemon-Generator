@@ -1337,8 +1337,8 @@
 			"ice",
 			"flying"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 145,
@@ -1347,8 +1347,8 @@
 			"electric",
 			"flying"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 146,
@@ -1357,8 +1357,8 @@
 			"fire",
 			"flying"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 147,
@@ -1390,9 +1390,9 @@
 		"types": [
 			"psychic"
 		],
-		"isLegendary": true,
 		"isStadiumRental": false,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isLegendary": true
 	},
 	{
 		"id": 151,
@@ -1400,9 +1400,9 @@
 		"types": [
 			"psychic"
 		],
-		"isLegendary": true,
 		"isStadiumRental": false,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isMythical": true
 	},
 	{
 		"id": 152,
@@ -2449,8 +2449,8 @@
 		"types": [
 			"electric"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 244,
@@ -2458,8 +2458,8 @@
 		"types": [
 			"fire"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 245,
@@ -2467,8 +2467,8 @@
 		"types": [
 			"water"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 246,
@@ -2503,9 +2503,9 @@
 			"psychic",
 			"flying"
 		],
-		"isLegendary": true,
 		"isStadiumRental": false,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isLegendary": true
 	},
 	{
 		"id": 250,
@@ -2514,9 +2514,9 @@
 			"fire",
 			"flying"
 		],
-		"isLegendary": true,
 		"isStadiumRental": false,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isLegendary": true
 	},
 	{
 		"id": 251,
@@ -2525,8 +2525,8 @@
 			"psychic",
 			"grass"
 		],
-		"isLegendary": true,
 		"isStadiumRental": false,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isMythical": true
 	}
 ]

@@ -1330,8 +1330,8 @@
 			"psychic",
 			"fire"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isMythical": true
 	},
 	{
 		"id": 495,
@@ -2766,8 +2766,8 @@
 			"steel",
 			"fighting"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 639,
@@ -2776,8 +2776,8 @@
 			"rock",
 			"fighting"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 640,
@@ -2786,8 +2786,8 @@
 			"grass",
 			"fighting"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 641,
@@ -2818,11 +2818,11 @@
 				}
 			}
 		],
-		"isLegendary": true,
 		"genderRatio": {
 			"male": 1,
 			"female": 0
-		}
+		},
+		"isSubLegendary": true
 	},
 	{
 		"id": 642,
@@ -2857,11 +2857,11 @@
 				}
 			}
 		],
-		"isLegendary": true,
 		"genderRatio": {
 			"male": 1,
 			"female": 0
-		}
+		},
+		"isSubLegendary": true
 	},
 	{
 		"id": 643,
@@ -2870,8 +2870,8 @@
 			"dragon",
 			"fire"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isLegendary": true
 	},
 	{
 		"id": 644,
@@ -2880,8 +2880,8 @@
 			"dragon",
 			"electric"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isLegendary": true
 	},
 	{
 		"id": 645,
@@ -2915,11 +2915,11 @@
 				}
 			}
 		],
-		"isLegendary": true,
 		"genderRatio": {
 			"male": 1,
 			"female": 0
-		}
+		},
+		"isSubLegendary": true
 	},
 	{
 		"id": 646,
@@ -2956,8 +2956,8 @@
 				"genderRatio": "unknown"
 			}
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isLegendary": true
 	},
 	{
 		"id": 647,
@@ -2985,8 +2985,8 @@
 				"genderRatio": "unknown"
 			}
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isMythical": true
 	},
 	{
 		"id": 648,
@@ -3014,8 +3014,8 @@
 				"genderRatio": "unknown"
 			}
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isMythical": true
 	},
 	{
 		"id": 649,
@@ -3070,7 +3070,7 @@
 				"genderRatio": "unknown"
 			}
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isMythical": true
 	}
 ]

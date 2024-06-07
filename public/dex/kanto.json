@@ -1331,8 +1331,8 @@
 			"ice",
 			"flying"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 145,
@@ -1341,8 +1341,8 @@
 			"electric",
 			"flying"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 146,
@@ -1351,8 +1351,8 @@
 			"fire",
 			"flying"
 		],
-		"isLegendary": true,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isSubLegendary": true
 	},
 	{
 		"id": 147,
@@ -1384,9 +1384,9 @@
 		"types": [
 			"psychic"
 		],
-		"isLegendary": true,
 		"isStadiumRental": false,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isLegendary": true
 	},
 	{
 		"id": 151,
@@ -1394,8 +1394,8 @@
 		"types": [
 			"psychic"
 		],
-		"isLegendary": true,
 		"isStadiumRental": false,
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isMythical": true
 	}
 ]
