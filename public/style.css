@@ -36,7 +36,7 @@ header{margin:1em 0}
 .dropdown > button:after{content:"";border:.3em solid transparent;border-top-color:currentColor;
 	display:inline-block;margin-left:.25em;transform:translateY(0.15em)}
 .dropdown .popup{position:absolute;top:calc(100% - 0.25rem);background:#EEE;box-shadow:0 0 .25em currentColor;
-	line-height:1.5;text-align:left;display:none;padding:.5em;border-radius:2px}
+	line-height:1.5;text-align:left;display:none;padding:.5em;border-radius:2px;z-index:20}
 .dropdown .popup.visible{display:block}
 .dropdown > .popup ul{margin:0;padding:0}
 .dropdown > .popup li{list-style:none;margin:.25em 0}
