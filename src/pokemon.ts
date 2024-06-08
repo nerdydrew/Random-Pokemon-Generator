@@ -128,10 +128,11 @@ class GeneratedPokemon {
 	}
 
 	private genderToText(): string {
-		// Skips Nidoran M and F.
-		if (this.gender == "male" && this.id != 29) {
+		if (this.name == "Nidoran ♀" || this.name == "Nidoran ♂") {
+			return "";
+		} else if (this.gender == "male") {
 			return `<span class="male" title="Male">♂</span>`;
-		} else if (this.gender == "female" && this.id != 32) {
+		} else if (this.gender == "female") {
 			return `<span class="female" title="Female">♀</span>`;
 		} else {
 			return "";
