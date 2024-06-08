@@ -1465,24 +1465,6 @@
 		"evolutionCount": 2
 	},
 	{
-		"id": 150,
-		"name": "Mewtwo",
-		"types": [
-			"psychic"
-		],
-		"genderRatio": "unknown",
-		"isLegendary": true
-	},
-	{
-		"id": 151,
-		"name": "Mew",
-		"types": [
-			"psychic"
-		],
-		"genderRatio": "unknown",
-		"isMythical": true
-	},
-	{
 		"id": 152,
 		"name": "Chikorita",
 		"isNfe": true,
@@ -2615,35 +2597,5 @@
 			"dark"
 		],
 		"evolutionCount": 2
-	},
-	{
-		"id": 249,
-		"name": "Lugia",
-		"types": [
-			"psychic",
-			"flying"
-		],
-		"genderRatio": "unknown",
-		"isLegendary": true
-	},
-	{
-		"id": 250,
-		"name": "Ho-oh",
-		"types": [
-			"fire",
-			"flying"
-		],
-		"genderRatio": "unknown",
-		"isLegendary": true
-	},
-	{
-		"id": 251,
-		"name": "Celebi",
-		"types": [
-			"psychic",
-			"grass"
-		],
-		"genderRatio": "unknown",
-		"isMythical": true
 	}
 ]

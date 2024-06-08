@@ -1456,7 +1456,6 @@
 		"types": [
 			"psychic"
 		],
-		"isStadiumRental": false,
 		"genderRatio": "unknown",
 		"isLegendary": true
 	},
@@ -1466,7 +1465,6 @@
 		"types": [
 			"psychic"
 		],
-		"isStadiumRental": false,
 		"genderRatio": "unknown",
 		"isMythical": true
 	}

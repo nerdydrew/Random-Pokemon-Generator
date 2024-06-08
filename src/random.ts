@@ -63,11 +63,8 @@ function filterByOptions<P extends Pokemon|Form>(pokemonInRegion: P[], options: 
 	const evolutionCounts = new Set(options.evolutionCounts);
 	const types = new Set(options.types);
 	return pokemonInRegion.filter((pokemon: Pokemon | Form) => {
-		// Legendary, evolution, and Stadium status are independent of form, so check these before
+		// Legendary and evolution status are independent of form, so check these before
 		// checking forms.
-		if (options.stadiumRentals && "isStadiumRental" in pokemon && !pokemon.isStadiumRental) {
-			return false;
-		}
 		if (!options.sublegendaries && "isSubLegendary" in pokemon && pokemon.isSubLegendary) {
 			return false;
 		}

@@ -19,8 +19,6 @@ interface Pokemon {
 	isLegendary?: boolean;
 	/** Whether this Pokémon is mythical. Defaults to false. */
 	isMythical?: boolean;
-	/** Whether this Pokémon can be rented in Stadium 1 or 2. Defaults to true. */
-	isStadiumRental?: boolean;
 	/** Alternate forms for this Pokémon, if any. */
 	forms?: Form[];
 	/** Ratio of male to female or "unknown". Defaults to (1:1). */

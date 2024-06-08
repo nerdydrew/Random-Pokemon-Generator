@@ -8,7 +8,6 @@ const typeCheckboxes: HTMLInputElement[] = Array.from(typesDropdown.querySelecto
 const sublegendariesCheckbox = document.getElementById("sublegendaries") as HTMLInputElement;
 const legendariesCheckbox = document.getElementById("legendaries") as HTMLInputElement;
 const mythicalsCheckbox = document.getElementById("mythicals") as HTMLInputElement;
-const stadiumRentalsCheckbox = document.getElementById("stadiumRentals") as HTMLInputElement;
 const nfesCheckbox = document.getElementById("nfes") as HTMLInputElement;
 const fullyEvolvedCheckbox = document.getElementById("fullyEvolved") as HTMLInputElement;
 const unevolvedCheckbox = document.getElementById("unevolved") as HTMLInputElement;
@@ -31,11 +30,6 @@ type Options = {
 	/** Whether to incllude restricted legendaries. */
 	legendaries: boolean;
 	mythicals: boolean;
-	/**
-	 * Whether to only generate Pokémon that can be chosen as rentals. Only relevant for
-	 * Stadium 1 and 2 (Kanto and Johto).
-	 */
-	stadiumRentals: boolean;
 	/** The number of times a Pokémon has evolved. */
 	evolutionCounts: number[];
 	nfes: boolean;
@@ -59,7 +53,6 @@ function getOptionsFromForm(): Options {
 		sublegendaries: sublegendariesCheckbox.checked,
 		legendaries: legendariesCheckbox.checked,
 		mythicals: mythicalsCheckbox.checked,
-		stadiumRentals: stadiumRentalsCheckbox.checked,
 		evolutionCounts: getEvolutionCounts(),
 		nfes: nfesCheckbox.checked,
 		fullyEvolved: fullyEvolvedCheckbox.checked,
@@ -106,9 +99,6 @@ function setOptions(options: Partial<Options>) {
 	}
 	if (options.mythicals != null) {
 		mythicalsCheckbox.checked = options.mythicals;
-	}
-	if (options.stadiumRentals != null) {
-		stadiumRentalsCheckbox.checked = options.stadiumRentals;
 	}
 	if (options.evolutionCounts != null) {
 		const counts = new Set(options.evolutionCounts);
@@ -199,9 +189,6 @@ function convertUrlParamsToOptions(): Partial<Options> {
 	if (params.has("mythicals")) {
 		options.mythicals = parseBoolean(params.get("mythicals"));
 	}
-	if (params.has("stadiumRentals")) {
-		options.stadiumRentals = parseBoolean(params.get("stadiumRentals"));
-	}
 	if (params.has("evolutionCounts")) {
 		options.evolutionCounts = params.get("evolutionCounts")
 			.split(",")
@@ -257,9 +244,6 @@ function convertOptionsToUrlParams(options: Partial<Options>): string {
 function addFormChangeListeners() {
 	toggleDropdownsOnButtonClick();
 
-	regionDropdown.addEventListener("change", toggleStadiumRentalsCheckbox);
-	toggleStadiumRentalsCheckbox();
-
 	regionDropdown.addEventListener("change", toggleFormsVisibility);
 	toggleFormsVisibility();
 
@@ -271,12 +255,6 @@ function addFormChangeListeners() {
 		checkbox.addEventListener("change", handleTypeChange);
 	});
 	handleTypeChange();
-}
-
-function toggleStadiumRentalsCheckbox() {
-	const regionOption = regionDropdown.options[regionDropdown.selectedIndex];
-	const shouldShow = regionOption?.dataset?.stadium == "true";
-	stadiumRentalsCheckbox.parentElement.classList.toggle("invisible", !shouldShow);
 }
 
 function toggleFormsVisibility() {
