@@ -250,11 +250,16 @@ function addFormChangeListeners() {
 	formsCheckbox.addEventListener("change", toggleFormSubtypes);
 	toggleFormSubtypes();
 
-	allTypesCheckbox.addEventListener("change", toggleAllTypes);
-	typeCheckboxes.forEach(checkbox => {
-		checkbox.addEventListener("change", handleTypeChange);
+	document.querySelectorAll("input[type='checkbox'][data-select-all='true']").forEach(checkbox => {
+		checkbox.addEventListener("change", selectAll);
 	});
-	handleTypeChange();
+
+	document.querySelectorAll(".dropdown").forEach((dropdown: HTMLElement) => {
+		updateDropdownTitle(dropdown);
+		dropdown.querySelectorAll("input[type='checkbox']").forEach(checkbox => {
+			checkbox.addEventListener("change", () => updateDropdownTitle(dropdown));
+		});
+	});
 }
 
 function toggleFormsVisibility() {
@@ -294,27 +299,52 @@ function toggleDropdownsOnButtonClick() {
 	});
 }
 
-function toggleAllTypes() {
-	const selectAll = allTypesCheckbox.checked;
-	typeCheckboxes.forEach(checkbox => checkbox.checked = selectAll);
-	handleTypeChange();
+function selectAll(event: Event) {
+	if (!(event.target instanceof HTMLInputElement)) {
+		return;
+	}
+	const selectAll = event.target.checked;
+	const container = event.target.closest(".popup");
+	container.querySelectorAll("input[type='checkbox']:not([data-select-all]")
+		.forEach((checkbox: HTMLInputElement) => checkbox.checked = selectAll);
 }
 
-function handleTypeChange() {
-	// Updates the dropdown button's text and the "all" checkbox's state.
-	const selected = getSelectedTypes();
-	const allSelected = selected.length == typeCheckboxes.length;
+function updateDropdownTitle(dropdownContainer: HTMLElement) {
+	const button = dropdownContainer.querySelector("button");
+	const selectAllCheckbox: HTMLInputElement = dropdownContainer.querySelector("input[type='checkbox'][data-select-all='true']");
+	const allCheckboxes: HTMLInputElement[] = Array.from(dropdownContainer.querySelectorAll("input[type='checkbox']:not([data-select-all]"));
+	const selectedCheckboxes: HTMLInputElement[] = allCheckboxes.filter(checkbox => checkbox.checked && !checkbox.disabled);
+	const allAreSelected = selectedCheckboxes.length == allCheckboxes.length;
+	const allowNoSelection = !!button.dataset.allowNone;
+	const pluralName = button.dataset.pluralName;
 
-	allTypesCheckbox.checked = selected.length > 0;
-	allTypesCheckbox.indeterminate = !allSelected && allTypesCheckbox.checked;
-
-	let displayText;
-	if (allSelected || selected.length == 0) {
-		displayText = "All Types";
-	} else if (selected.length == 1) {
-		displayText = typesDropdown.querySelector("input[value='" + selected[0] + "']").parentElement.innerText;
-	} else {
-		displayText = selected.length + " Types";
+	// Update the "select all" checkbox if one exists.
+	if (selectAllCheckbox) {
+		selectAllCheckbox.checked = selectedCheckboxes.length > 0;
+		selectAllCheckbox.indeterminate = !allAreSelected && selectAllCheckbox.checked;
 	}
-	typesDropdown.querySelector("button").innerText = displayText;
+
+	// Update the text on the title button.
+	let displayText;
+	if (allowNoSelection && selectedCheckboxes.length == 0) {
+		displayText = "No " + pluralName;
+	} else if (allAreSelected || selectedCheckboxes.length == 0) {
+		displayText = button.dataset.allName ?? ("All " + pluralName);
+	} else if (selectedCheckboxes.length == 1) {
+		displayText = getNameForCheckbox(selectedCheckboxes[0]);
+	} else if (button.dataset.allowShowingTwo && selectedCheckboxes.length == 2) {
+		displayText = getNameForCheckbox(selectedCheckboxes[0]) + ", " + getNameForCheckbox(selectedCheckboxes[1]);
+	} else {
+		const nameForCount = button.dataset.nameForCount ?? pluralName;
+		displayText = selectedCheckboxes.length + " " + nameForCount;
+	}
+	button.innerText = displayText;
+}
+
+function getNameForCheckbox(checkbox: HTMLInputElement) {
+	if (checkbox.dataset.shortName) {
+		return checkbox.dataset.shortName;
+	} else {
+		return checkbox.parentElement.innerText;
+	}
 }

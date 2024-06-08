@@ -52,10 +52,10 @@
 		</select>
 
 		<div class="dropdown" id="types">
-			<button type="button">Types</button>
+			<button type="button" data-plural-name="Types" data-allow-showing-two="true">All Types</button>
 			<div class="popup">
 				<ul>
-					<li><label><input type="checkbox" name="types" value="all" checked>All Types</label></li>
+					<li><label><input type="checkbox" name="types" value="all" data-select-all="true" checked>All Types</label></li>
 					<li><label><input type="checkbox" name="types" value="bug" checked>Bug</label></li>
 					<li><label><input type="checkbox" name="types" value="dark" checked>Dark</label></li>
 					<li><label><input type="checkbox" name="types" value="dragon" checked>Dragon</label></li>
@@ -81,26 +81,33 @@
 
 	<fieldset>
 		<div class="dropdown">
-			<button type="button">Legendaries</button>
+			<button type="button" data-plural-name="Legendaries" data-name-for-count="Legendary Types" data-allow-none="true">All Legendaries</button>
 			<div class="popup">
 				<ul>
-					<li><label><input type="checkbox" id="sublegendaries" name="sublegendaries" value="true" checked>Sub-Legendary Pokémon</label></li>
-					<li><label><input type="checkbox" id="legendaries" name="legendaries" value="true" checked>Restricted Legendary Pokémon</label></li>
-					<li><label><input type="checkbox" id="mythicals" name="mythicals" value="true" checked>Mythical Pokémon</label></li>
+					<li><label><input type="checkbox" id="sublegendaries" name="sublegendaries" value="true" data-short-name="Sub-Legendary" checked>Sub-Legendary Pok&eacute;mon</label></li>
+					<li><label><input type="checkbox" id="legendaries" name="legendaries" value="true" data-short-name="Legendary" checked>Legendary Pok&eacute;mon</label></li>
+					<li><label><input type="checkbox" id="mythicals" name="mythicals" value="true" data-short-name="Mythical" checked>Mythical Pok&eacute;mon</label></li>
 				</ul>
 			</div>
 		</div>
 
 		<div class="dropdown">
-			<button type="button">Evolutions</button>
+			<button type="button" data-plural-name="Stages">Stages</button>
 			<div class="popup">
 				<ul>
 					<li><label><input type="checkbox" id="unevolved" name="evolutionCount" value="0" checked>Unevolved</label></li>
-					<li><label><input type="checkbox" id="evolvedOnce" name="evolutionCount" value="1" checked>Evolved once</label></li>
-					<li><label><input type="checkbox" id="evolvedTwice" name="evolutionCount" value="2" checked>Evolved twice</label></li>
-					<li><hr /></li>
-					<li><label><input type="checkbox" id="nfes" name="nfes" value="true" checked>Not fully evolved</label></li>
-					<li><label><input type="checkbox" id="fullyEvolved" name="fullyEvolved" value="true" checked>Fully evolved</label></li>
+					<li><label><input type="checkbox" id="evolvedOnce" name="evolutionCount" value="1" checked>Evolved Once</label></li>
+					<li><label><input type="checkbox" id="evolvedTwice" name="evolutionCount" value="2" checked>Evolved Twice</label></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="dropdown">
+			<button type="button" data-all-name="Fully Evolved or Not">Fully Evolved or Not</button>
+			<div class="popup">
+				<ul>
+					<li><label><input type="checkbox" id="nfes" name="nfes" value="true" checked>Not Fully Evolved</label></li>
+					<li><label><input type="checkbox" id="fullyEvolved" name="fullyEvolved" value="true" checked>Fully Evolved</label></li>
 				</ul>
 			</div>
 		</div>
@@ -112,12 +119,12 @@
 		<label><input type="checkbox" id="genders" name="genders" value="true">Genders</label>
 
 		<div class="dropdown" id="formsDropdown">
-			<button type="button">Forms</button>
+			<button type="button" data-plural-name="Forms" data-allow-showing-two="true" data-allow-none="true">Forms</button>
 			<div class="popup">
 				<ul>
-					<li><label><input type="checkbox" id="forms" name="forms" value="true" checked>Alternate Forms</label></li>
-					<li><label><input type="checkbox" id="megas" name="megas" value="true" checked>Mega Evolutions</label></li>
-					<li><label><input type="checkbox" id="gigantamaxes" name="gigantamaxes" value="true" checked>Gigantamax Forms</label></li>
+					<li><label><input type="checkbox" id="forms" name="forms" value="true" data-short-name="Forms" checked>Alternate Forms</label></li>
+					<li><label><input type="checkbox" id="megas" name="megas" value="true" data-short-name="Megas" checked>Mega Evolutions</label></li>
+					<li><label><input type="checkbox" id="gigantamaxes" name="gigantamaxes" value="true" data-short-name="Gigantamax" checked>Gigantamax Forms</label></li>
 				</ul>
 			</div>
 		</div>
