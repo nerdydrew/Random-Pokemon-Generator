@@ -60,8 +60,10 @@ async function getEligiblePokemon(options: Options): Promise<Pokemon[]> {
 }
 
 function filterByOptions<P extends Pokemon|Form>(pokemonInRegion: P[], options: Options): P[] {
+	const evolutionCounts = new Set(options.evolutionCounts);
+	const types = new Set(options.types);
 	return pokemonInRegion.filter((pokemon: Pokemon | Form) => {
-		// Legendary, NFE, and Stadium status are independent of form, so check these before
+		// Legendary, evolution, and Stadium status are independent of form, so check these before
 		// checking forms.
 		if (options.stadiumRentals && "isStadiumRental" in pokemon && !pokemon.isStadiumRental) {
 			return false;
@@ -75,11 +77,20 @@ function filterByOptions<P extends Pokemon|Form>(pokemonInRegion: P[], options: 
 		if (!options.mythicals && "isMythical" in pokemon && pokemon.isMythical) {
 			return false;
 		}
-		if (!options.nfes && "isNfe" in pokemon && pokemon.isNfe) {
-			return false;
+		if (options.nfes || options.fullyEvolved) {
+			// If neither option is checked, treat it as both being checked.
+			if (!options.nfes && "isNfe" in pokemon && pokemon.isNfe) {
+				return false;
+			}
+			if (!options.fullyEvolved && !("isNfe" in pokemon)) {
+				return false;
+			}
 		}
-		if (!options.fullyEvolved && !("isNfe" in pokemon)) {
-			return false;
+		if (evolutionCounts.size > 0) {
+			const evolutionCount = "evolutionCount" in pokemon ? pokemon.evolutionCount : 0;
+			if (!evolutionCounts.has(evolutionCount)) {
+				return false;
+			}
 		}
 		if (!options.megas && "isMega" in pokemon && pokemon.isMega) {
 			return false;
@@ -95,7 +106,6 @@ function filterByOptions<P extends Pokemon|Form>(pokemonInRegion: P[], options: 
 			return pokemon.forms.length > 0;
 		}
 
-		const types = new Set(options.types);
 		if (types.size > 0 && !pokemon.types.some(type => types.has(type))) {
 			return false;
 		}

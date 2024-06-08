@@ -11,6 +11,10 @@ const mythicalsCheckbox = document.getElementById("mythicals") as HTMLInputEleme
 const stadiumRentalsCheckbox = document.getElementById("stadiumRentals") as HTMLInputElement;
 const nfesCheckbox = document.getElementById("nfes") as HTMLInputElement;
 const fullyEvolvedCheckbox = document.getElementById("fullyEvolved") as HTMLInputElement;
+const unevolvedCheckbox = document.getElementById("unevolved") as HTMLInputElement;
+const evolvedOnceCheckbox = document.getElementById("evolvedOnce") as HTMLInputElement;
+const evolvedTwiceCheckbox = document.getElementById("evolvedTwice") as HTMLInputElement;
+const evolutionCountCheckboxes = [unevolvedCheckbox, evolvedOnceCheckbox, evolvedTwiceCheckbox];
 const spritesCheckbox = document.getElementById("sprites") as HTMLInputElement;
 const naturesCheckbox = document.getElementById("natures") as HTMLInputElement;
 const gendersCheckbox = document.getElementById("genders") as HTMLInputElement;
@@ -32,6 +36,8 @@ type Options = {
 	 * Stadium 1 and 2 (Kanto and Johto).
 	 */
 	stadiumRentals: boolean;
+	/** The number of times a Pokémon has evolved. */
+	evolutionCounts: number[];
 	nfes: boolean;
 	fullyEvolved: boolean;
 	sprites: boolean;
@@ -54,6 +60,7 @@ function getOptionsFromForm(): Options {
 		legendaries: legendariesCheckbox.checked,
 		mythicals: mythicalsCheckbox.checked,
 		stadiumRentals: stadiumRentalsCheckbox.checked,
+		evolutionCounts: getEvolutionCounts(),
 		nfes: nfesCheckbox.checked,
 		fullyEvolved: fullyEvolvedCheckbox.checked,
 		sprites: spritesCheckbox.checked,
@@ -63,6 +70,12 @@ function getOptionsFromForm(): Options {
 		megas: megasCheckbox.checked,
 		gigantamaxes: gigantamaxesCheckbox.checked
 	};
+}
+
+function getEvolutionCounts(): number[] {
+	return evolutionCountCheckboxes
+			.filter(checkbox => checkbox.checked)
+			.map(checkbox => parseInt(checkbox.value));
 }
 
 function getSelectedTypes(): string[] {
@@ -96,6 +109,13 @@ function setOptions(options: Partial<Options>) {
 	}
 	if (options.stadiumRentals != null) {
 		stadiumRentalsCheckbox.checked = options.stadiumRentals;
+	}
+	if (options.evolutionCounts != null) {
+		const counts = new Set(options.evolutionCounts);
+		evolutionCountCheckboxes.forEach(checkbox => {
+			// Treat an empty array as every type being selected.
+			checkbox.checked = counts.has(parseInt(checkbox.value)) || options.evolutionCounts.length == 0; //TODO this isn't working?
+		});
 	}
 	if (options.nfes != null) {
 		nfesCheckbox.checked = options.nfes;
@@ -181,6 +201,11 @@ function convertUrlParamsToOptions(): Partial<Options> {
 	}
 	if (params.has("stadiumRentals")) {
 		options.stadiumRentals = parseBoolean(params.get("stadiumRentals"));
+	}
+	if (params.has("evolutionCounts")) {
+		options.evolutionCounts = params.get("evolutionCounts")
+			.split(",")
+			.map(c => parseInt(c));
 	}
 	if (params.has("nfes")) {
 		options.nfes = parseBoolean(params.get("nfes"));

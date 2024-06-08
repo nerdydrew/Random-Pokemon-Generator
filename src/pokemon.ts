@@ -11,6 +11,8 @@ interface Pokemon {
 	types: string[];
 	/** Whether this Pokémon is not fully evolved. Defaults to false. */
 	isNfe?: boolean;
+	/** The number of times this Pokémon has evolved. Defaults to 0 (unevolved). */
+	evolutionCount?: 0 | 1 | 2;
 	/** Whether this Pokémon is a sub-legendary. Defaults to false. */
 	isSubLegendary?: boolean;
 	/** Whether this Pokémon is a restricted legendary. Defaults to false. */

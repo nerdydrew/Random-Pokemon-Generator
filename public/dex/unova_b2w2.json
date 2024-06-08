@@ -12,7 +12,8 @@
 		"name": "Raticate",
 		"types": [
 			"normal"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 27,
@@ -27,7 +28,8 @@
 		"name": "Sandslash",
 		"types": [
 			"ground"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 35,
@@ -39,7 +41,8 @@
 		"genderRatio": {
 			"male": 1,
 			"female": 3
-		}
+		},
+		"evolutionCount": 1
 	},
 	{
 		"id": 36,
@@ -50,7 +53,8 @@
 		"genderRatio": {
 			"male": 1,
 			"female": 3
-		}
+		},
+		"evolutionCount": 2
 	},
 	{
 		"id": 37,
@@ -73,7 +77,8 @@
 		"genderRatio": {
 			"male": 1,
 			"female": 3
-		}
+		},
+		"evolutionCount": 1
 	},
 	{
 		"id": 39,
@@ -85,7 +90,8 @@
 		"genderRatio": {
 			"male": 1,
 			"female": 3
-		}
+		},
+		"evolutionCount": 1
 	},
 	{
 		"id": 40,
@@ -96,7 +102,8 @@
 		"genderRatio": {
 			"male": 1,
 			"female": 3
-		}
+		},
+		"evolutionCount": 2
 	},
 	{
 		"id": 41,
@@ -114,7 +121,8 @@
 		"types": [
 			"poison",
 			"flying"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 54,
@@ -129,7 +137,8 @@
 		"name": "Golduck",
 		"types": [
 			"water"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 58,
@@ -152,7 +161,8 @@
 		"genderRatio": {
 			"male": 3,
 			"female": 1
-		}
+		},
+		"evolutionCount": 1
 	},
 	{
 		"id": 81,
@@ -172,7 +182,8 @@
 			"electric",
 			"steel"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"evolutionCount": 1
 	},
 	{
 		"id": 86,
@@ -188,7 +199,8 @@
 		"types": [
 			"water",
 			"ice"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 88,
@@ -203,7 +215,8 @@
 		"name": "Muk",
 		"types": [
 			"poison"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 95,
@@ -235,7 +248,8 @@
 		"name": "Weezing",
 		"types": [
 			"poison"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 114,
@@ -261,7 +275,8 @@
 			"water",
 			"psychic"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"evolutionCount": 1
 	},
 	{
 		"id": 125,
@@ -273,7 +288,8 @@
 		"genderRatio": {
 			"male": 3,
 			"female": 1
-		}
+		},
+		"evolutionCount": 1
 	},
 	{
 		"id": 126,
@@ -285,7 +301,8 @@
 		"genderRatio": {
 			"male": 3,
 			"female": 1
-		}
+		},
+		"evolutionCount": 1
 	},
 	{
 		"id": 127,
@@ -331,7 +348,8 @@
 		"genderRatio": {
 			"male": 7,
 			"female": 1
-		}
+		},
+		"evolutionCount": 1
 	},
 	{
 		"id": 135,
@@ -342,7 +360,8 @@
 		"genderRatio": {
 			"male": 7,
 			"female": 1
-		}
+		},
+		"evolutionCount": 1
 	},
 	{
 		"id": 136,
@@ -353,7 +372,8 @@
 		"genderRatio": {
 			"male": 7,
 			"female": 1
-		}
+		},
+		"evolutionCount": 1
 	},
 	{
 		"id": 169,
@@ -361,7 +381,8 @@
 		"types": [
 			"poison",
 			"flying"
-		]
+		],
+		"evolutionCount": 2
 	},
 	{
 		"id": 173,
@@ -401,14 +422,16 @@
 		"isNfe": true,
 		"types": [
 			"electric"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 181,
 		"name": "Ampharos",
 		"types": [
 			"electric"
-		]
+		],
+		"evolutionCount": 2
 	},
 	{
 		"id": 183,
@@ -416,14 +439,16 @@
 		"isNfe": true,
 		"types": [
 			"water"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 184,
 		"name": "Azumarill",
 		"types": [
 			"water"
-		]
+		],
+		"evolutionCount": 2
 	},
 	{
 		"id": 191,
@@ -438,7 +463,8 @@
 		"name": "Sunflora",
 		"types": [
 			"grass"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 193,
@@ -458,7 +484,8 @@
 		"genderRatio": {
 			"male": 7,
 			"female": 1
-		}
+		},
+		"evolutionCount": 1
 	},
 	{
 		"id": 197,
@@ -469,7 +496,8 @@
 		"genderRatio": {
 			"male": 7,
 			"female": 1
-		}
+		},
+		"evolutionCount": 1
 	},
 	{
 		"id": 206,
@@ -493,7 +521,8 @@
 		"types": [
 			"steel",
 			"ground"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 213,
@@ -536,7 +565,8 @@
 		"types": [
 			"ice",
 			"ground"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 222,
@@ -563,7 +593,8 @@
 		"name": "Octillery",
 		"types": [
 			"water"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 225,
@@ -579,7 +610,8 @@
 		"types": [
 			"water",
 			"flying"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 227,
@@ -629,7 +661,8 @@
 		"types": [
 			"rock",
 			"ground"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 248,
@@ -637,7 +670,8 @@
 		"types": [
 			"rock",
 			"dark"
-		]
+		],
+		"evolutionCount": 2
 	},
 	{
 		"id": 278,
@@ -654,7 +688,8 @@
 		"types": [
 			"water",
 			"flying"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 287,
@@ -670,14 +705,16 @@
 		"isNfe": true,
 		"types": [
 			"normal"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 289,
 		"name": "Slaking",
 		"types": [
 			"normal"
-		]
+		],
+		"evolutionCount": 2
 	},
 	{
 		"id": 298,
@@ -720,7 +757,8 @@
 		"genderRatio": {
 			"male": 1,
 			"female": 3
-		}
+		},
+		"evolutionCount": 1
 	},
 	{
 		"id": 304,
@@ -738,7 +776,8 @@
 		"types": [
 			"steel",
 			"rock"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 306,
@@ -746,7 +785,8 @@
 		"types": [
 			"steel",
 			"rock"
-		]
+		],
+		"evolutionCount": 2
 	},
 	{
 		"id": 315,
@@ -755,7 +795,8 @@
 		"types": [
 			"grass",
 			"poison"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 320,
@@ -770,7 +811,8 @@
 		"name": "Wailord",
 		"types": [
 			"water"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 322,
@@ -787,7 +829,8 @@
 		"types": [
 			"fire",
 			"ground"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 325,
@@ -802,7 +845,8 @@
 		"name": "Grumpig",
 		"types": [
 			"psychic"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 328,
@@ -819,7 +863,8 @@
 		"types": [
 			"ground",
 			"dragon"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 330,
@@ -827,7 +872,8 @@
 		"types": [
 			"ground",
 			"dragon"
-		]
+		],
+		"evolutionCount": 2
 	},
 	{
 		"id": 333,
@@ -844,7 +890,8 @@
 		"types": [
 			"dragon",
 			"flying"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 335,
@@ -892,7 +939,8 @@
 		"types": [
 			"water",
 			"dark"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 343,
@@ -911,7 +959,8 @@
 			"ground",
 			"psychic"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"evolutionCount": 1
 	},
 	{
 		"id": 351,
@@ -962,7 +1011,8 @@
 		"name": "Banette",
 		"types": [
 			"ghost"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 357,
@@ -995,7 +1045,8 @@
 		"types": [
 			"ice",
 			"water"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 365,
@@ -1003,7 +1054,8 @@
 		"types": [
 			"ice",
 			"water"
-		]
+		],
+		"evolutionCount": 2
 	},
 	{
 		"id": 374,
@@ -1023,7 +1075,8 @@
 			"steel",
 			"psychic"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"evolutionCount": 1
 	},
 	{
 		"id": 376,
@@ -1032,7 +1085,8 @@
 			"steel",
 			"psychic"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"evolutionCount": 2
 	},
 	{
 		"id": 406,
@@ -1049,7 +1103,8 @@
 		"types": [
 			"grass",
 			"poison"
-		]
+		],
+		"evolutionCount": 2
 	},
 	{
 		"id": 415,
@@ -1074,7 +1129,8 @@
 		"genderRatio": {
 			"male": 0,
 			"female": 1
-		}
+		},
+		"evolutionCount": 1
 	},
 	{
 		"id": 418,
@@ -1089,7 +1145,8 @@
 		"name": "Floatzel",
 		"types": [
 			"water"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 425,
@@ -1106,7 +1163,8 @@
 		"types": [
 			"ghost",
 			"flying"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 427,
@@ -1121,7 +1179,8 @@
 		"name": "Lopunny",
 		"types": [
 			"normal"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 436,
@@ -1140,7 +1199,8 @@
 			"steel",
 			"psychic"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"evolutionCount": 1
 	},
 	{
 		"id": 447,
@@ -1164,7 +1224,8 @@
 		"genderRatio": {
 			"male": 7,
 			"female": 1
-		}
+		},
+		"evolutionCount": 1
 	},
 	{
 		"id": 451,
@@ -1181,7 +1242,8 @@
 		"types": [
 			"poison",
 			"dark"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 453,
@@ -1198,7 +1260,8 @@
 		"types": [
 			"poison",
 			"fighting"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 455,
@@ -1222,7 +1285,8 @@
 		"types": [
 			"dark",
 			"ice"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 462,
@@ -1231,21 +1295,24 @@
 			"electric",
 			"steel"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"evolutionCount": 2
 	},
 	{
 		"id": 463,
 		"name": "Lickilicky",
 		"types": [
 			"normal"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 465,
 		"name": "Tangrowth",
 		"types": [
 			"grass"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 466,
@@ -1256,7 +1323,8 @@
 		"genderRatio": {
 			"male": 3,
 			"female": 1
-		}
+		},
+		"evolutionCount": 2
 	},
 	{
 		"id": 467,
@@ -1267,7 +1335,8 @@
 		"genderRatio": {
 			"male": 3,
 			"female": 1
-		}
+		},
+		"evolutionCount": 2
 	},
 	{
 		"id": 469,
@@ -1275,7 +1344,8 @@
 		"types": [
 			"bug",
 			"flying"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 470,
@@ -1286,7 +1356,8 @@
 		"genderRatio": {
 			"male": 7,
 			"female": 1
-		}
+		},
+		"evolutionCount": 1
 	},
 	{
 		"id": 471,
@@ -1297,7 +1368,8 @@
 		"genderRatio": {
 			"male": 7,
 			"female": 1
-		}
+		},
+		"evolutionCount": 1
 	},
 	{
 		"id": 472,
@@ -1305,7 +1377,8 @@
 		"types": [
 			"ground",
 			"flying"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 473,
@@ -1313,7 +1386,8 @@
 		"types": [
 			"ice",
 			"ground"
-		]
+		],
+		"evolutionCount": 2
 	},
 	{
 		"id": 476,
@@ -1321,7 +1395,8 @@
 		"types": [
 			"rock",
 			"steel"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 494,
@@ -1355,7 +1430,8 @@
 		"genderRatio": {
 			"male": 7,
 			"female": 1
-		}
+		},
+		"evolutionCount": 1
 	},
 	{
 		"id": 497,
@@ -1366,7 +1442,8 @@
 		"genderRatio": {
 			"male": 7,
 			"female": 1
-		}
+		},
+		"evolutionCount": 2
 	},
 	{
 		"id": 498,
@@ -1391,7 +1468,8 @@
 		"genderRatio": {
 			"male": 7,
 			"female": 1
-		}
+		},
+		"evolutionCount": 1
 	},
 	{
 		"id": 500,
@@ -1403,7 +1481,8 @@
 		"genderRatio": {
 			"male": 7,
 			"female": 1
-		}
+		},
+		"evolutionCount": 2
 	},
 	{
 		"id": 501,
@@ -1427,7 +1506,8 @@
 		"genderRatio": {
 			"male": 7,
 			"female": 1
-		}
+		},
+		"evolutionCount": 1
 	},
 	{
 		"id": 503,
@@ -1438,7 +1518,8 @@
 		"genderRatio": {
 			"male": 7,
 			"female": 1
-		}
+		},
+		"evolutionCount": 2
 	},
 	{
 		"id": 504,
@@ -1453,7 +1534,8 @@
 		"name": "Watchog",
 		"types": [
 			"normal"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 506,
@@ -1469,14 +1551,16 @@
 		"isNfe": true,
 		"types": [
 			"normal"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 508,
 		"name": "Stoutland",
 		"types": [
 			"normal"
-		]
+		],
+		"evolutionCount": 2
 	},
 	{
 		"id": 509,
@@ -1491,7 +1575,8 @@
 		"name": "Liepard",
 		"types": [
 			"dark"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 511,
@@ -1514,7 +1599,8 @@
 		"genderRatio": {
 			"male": 7,
 			"female": 1
-		}
+		},
+		"evolutionCount": 1
 	},
 	{
 		"id": 513,
@@ -1537,7 +1623,8 @@
 		"genderRatio": {
 			"male": 7,
 			"female": 1
-		}
+		},
+		"evolutionCount": 1
 	},
 	{
 		"id": 515,
@@ -1560,7 +1647,8 @@
 		"genderRatio": {
 			"male": 7,
 			"female": 1
-		}
+		},
+		"evolutionCount": 1
 	},
 	{
 		"id": 517,
@@ -1575,7 +1663,8 @@
 		"name": "Musharna",
 		"types": [
 			"psychic"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 519,
@@ -1593,7 +1682,8 @@
 		"types": [
 			"normal",
 			"flying"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 521,
@@ -1601,7 +1691,8 @@
 		"types": [
 			"normal",
 			"flying"
-		]
+		],
+		"evolutionCount": 2
 	},
 	{
 		"id": 522,
@@ -1616,7 +1707,8 @@
 		"name": "Zebstrika",
 		"types": [
 			"electric"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 524,
@@ -1632,14 +1724,16 @@
 		"isNfe": true,
 		"types": [
 			"rock"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 526,
 		"name": "Gigalith",
 		"types": [
 			"rock"
-		]
+		],
+		"evolutionCount": 2
 	},
 	{
 		"id": 527,
@@ -1656,7 +1750,8 @@
 		"types": [
 			"psychic",
 			"flying"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 529,
@@ -1672,7 +1767,8 @@
 		"types": [
 			"ground",
 			"steel"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 531,
@@ -1703,7 +1799,8 @@
 		"genderRatio": {
 			"male": 3,
 			"female": 1
-		}
+		},
+		"evolutionCount": 1
 	},
 	{
 		"id": 534,
@@ -1714,7 +1811,8 @@
 		"genderRatio": {
 			"male": 3,
 			"female": 1
-		}
+		},
+		"evolutionCount": 2
 	},
 	{
 		"id": 535,
@@ -1731,7 +1829,8 @@
 		"types": [
 			"water",
 			"ground"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 537,
@@ -1739,7 +1838,8 @@
 		"types": [
 			"water",
 			"ground"
-		]
+		],
+		"evolutionCount": 2
 	},
 	{
 		"id": 538,
@@ -1779,7 +1879,8 @@
 		"types": [
 			"bug",
 			"grass"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 542,
@@ -1787,7 +1888,8 @@
 		"types": [
 			"bug",
 			"grass"
-		]
+		],
+		"evolutionCount": 2
 	},
 	{
 		"id": 543,
@@ -1805,7 +1907,8 @@
 		"types": [
 			"bug",
 			"poison"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 545,
@@ -1813,7 +1916,8 @@
 		"types": [
 			"bug",
 			"poison"
-		]
+		],
+		"evolutionCount": 2
 	},
 	{
 		"id": 546,
@@ -1828,7 +1932,8 @@
 		"name": "Whimsicott",
 		"types": [
 			"grass"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 548,
@@ -1851,7 +1956,8 @@
 		"genderRatio": {
 			"male": 0,
 			"female": 1
-		}
+		},
+		"evolutionCount": 1
 	},
 	{
 		"id": 550,
@@ -1891,7 +1997,8 @@
 		"types": [
 			"ground",
 			"dark"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 553,
@@ -1899,7 +2006,8 @@
 		"types": [
 			"ground",
 			"dark"
-		]
+		],
+		"evolutionCount": 2
 	},
 	{
 		"id": 554,
@@ -1914,7 +2022,8 @@
 		"name": "Darmanitan",
 		"types": [
 			"fire"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 556,
@@ -1938,7 +2047,8 @@
 		"types": [
 			"bug",
 			"rock"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 559,
@@ -1955,7 +2065,8 @@
 		"types": [
 			"dark",
 			"fighting"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 561,
@@ -1978,7 +2089,8 @@
 		"name": "Cofagrigus",
 		"types": [
 			"ghost"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 564,
@@ -2003,7 +2115,8 @@
 		"genderRatio": {
 			"male": 7,
 			"female": 1
-		}
+		},
+		"evolutionCount": 1
 	},
 	{
 		"id": 566,
@@ -2028,7 +2141,8 @@
 		"genderRatio": {
 			"male": 7,
 			"female": 1
-		}
+		},
+		"evolutionCount": 1
 	},
 	{
 		"id": 568,
@@ -2043,7 +2157,8 @@
 		"name": "Garbodor",
 		"types": [
 			"poison"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 570,
@@ -2066,7 +2181,8 @@
 		"genderRatio": {
 			"male": 7,
 			"female": 1
-		}
+		},
+		"evolutionCount": 1
 	},
 	{
 		"id": 572,
@@ -2089,7 +2205,8 @@
 		"genderRatio": {
 			"male": 1,
 			"female": 3
-		}
+		},
+		"evolutionCount": 1
 	},
 	{
 		"id": 574,
@@ -2113,7 +2230,8 @@
 		"genderRatio": {
 			"male": 1,
 			"female": 3
-		}
+		},
+		"evolutionCount": 1
 	},
 	{
 		"id": 576,
@@ -2124,7 +2242,8 @@
 		"genderRatio": {
 			"male": 1,
 			"female": 3
-		}
+		},
+		"evolutionCount": 2
 	},
 	{
 		"id": 577,
@@ -2140,14 +2259,16 @@
 		"isNfe": true,
 		"types": [
 			"psychic"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 579,
 		"name": "Reuniclus",
 		"types": [
 			"psychic"
-		]
+		],
+		"evolutionCount": 2
 	},
 	{
 		"id": 580,
@@ -2164,7 +2285,8 @@
 		"types": [
 			"water",
 			"flying"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 582,
@@ -2180,14 +2302,16 @@
 		"isNfe": true,
 		"types": [
 			"ice"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 584,
 		"name": "Vanilluxe",
 		"types": [
 			"ice"
-		]
+		],
+		"evolutionCount": 2
 	},
 	{
 		"id": 585,
@@ -2274,7 +2398,8 @@
 				],
 				"spriteSuffix": "winter"
 			}
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 587,
@@ -2298,7 +2423,8 @@
 		"types": [
 			"bug",
 			"steel"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 590,
@@ -2315,7 +2441,8 @@
 		"types": [
 			"grass",
 			"poison"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 592,
@@ -2384,7 +2511,8 @@
 					"female": 0
 				}
 			}
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 594,
@@ -2408,7 +2536,8 @@
 		"types": [
 			"bug",
 			"electric"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 597,
@@ -2425,7 +2554,8 @@
 		"types": [
 			"grass",
 			"steel"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 599,
@@ -2443,7 +2573,8 @@
 		"types": [
 			"steel"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"evolutionCount": 1
 	},
 	{
 		"id": 601,
@@ -2451,7 +2582,8 @@
 		"types": [
 			"steel"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"evolutionCount": 2
 	},
 	{
 		"id": 602,
@@ -2467,14 +2599,16 @@
 		"isNfe": true,
 		"types": [
 			"electric"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 604,
 		"name": "Eelektross",
 		"types": [
 			"electric"
-		]
+		],
+		"evolutionCount": 2
 	},
 	{
 		"id": 605,
@@ -2489,7 +2623,8 @@
 		"name": "Beheeyem",
 		"types": [
 			"psychic"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 607,
@@ -2507,7 +2642,8 @@
 		"types": [
 			"ghost",
 			"fire"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 609,
@@ -2515,7 +2651,8 @@
 		"types": [
 			"ghost",
 			"fire"
-		]
+		],
+		"evolutionCount": 2
 	},
 	{
 		"id": 610,
@@ -2531,14 +2668,16 @@
 		"isNfe": true,
 		"types": [
 			"dragon"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 612,
 		"name": "Haxorus",
 		"types": [
 			"dragon"
-		]
+		],
+		"evolutionCount": 2
 	},
 	{
 		"id": 613,
@@ -2553,7 +2692,8 @@
 		"name": "Beartic",
 		"types": [
 			"ice"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 615,
@@ -2576,7 +2716,8 @@
 		"name": "Accelgor",
 		"types": [
 			"bug"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 618,
@@ -2599,7 +2740,8 @@
 		"name": "Mienshao",
 		"types": [
 			"fighting"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 621,
@@ -2625,7 +2767,8 @@
 			"ground",
 			"ghost"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"evolutionCount": 1
 	},
 	{
 		"id": 624,
@@ -2642,7 +2785,8 @@
 		"types": [
 			"dark",
 			"steel"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 626,
@@ -2674,7 +2818,8 @@
 		"genderRatio": {
 			"male": 1,
 			"female": 0
-		}
+		},
+		"evolutionCount": 1
 	},
 	{
 		"id": 629,
@@ -2699,7 +2844,8 @@
 		"genderRatio": {
 			"male": 0,
 			"female": 1
-		}
+		},
+		"evolutionCount": 1
 	},
 	{
 		"id": 631,
@@ -2732,7 +2878,8 @@
 		"types": [
 			"dark",
 			"dragon"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 635,
@@ -2740,7 +2887,8 @@
 		"types": [
 			"dark",
 			"dragon"
-		]
+		],
+		"evolutionCount": 2
 	},
 	{
 		"id": 636,
@@ -2757,7 +2905,8 @@
 		"types": [
 			"bug",
 			"fire"
-		]
+		],
+		"evolutionCount": 1
 	},
 	{
 		"id": 638,
