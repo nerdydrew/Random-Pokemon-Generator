@@ -10,6 +10,7 @@ const legendariesCheckbox = document.getElementById("legendaries") as HTMLInputE
 const mythicalsCheckbox = document.getElementById("mythicals") as HTMLInputElement;
 const stadiumRentalsCheckbox = document.getElementById("stadiumRentals") as HTMLInputElement;
 const nfesCheckbox = document.getElementById("nfes") as HTMLInputElement;
+const fullyEvolvedCheckbox = document.getElementById("fullyEvolved") as HTMLInputElement;
 const spritesCheckbox = document.getElementById("sprites") as HTMLInputElement;
 const naturesCheckbox = document.getElementById("natures") as HTMLInputElement;
 const gendersCheckbox = document.getElementById("genders") as HTMLInputElement;
@@ -32,6 +33,7 @@ type Options = {
 	 */
 	stadiumRentals: boolean;
 	nfes: boolean;
+	fullyEvolved: boolean;
 	sprites: boolean;
 	natures: boolean;
 	genders: boolean;
@@ -53,6 +55,7 @@ function getOptionsFromForm(): Options {
 		mythicals: mythicalsCheckbox.checked,
 		stadiumRentals: stadiumRentalsCheckbox.checked,
 		nfes: nfesCheckbox.checked,
+		fullyEvolved: fullyEvolvedCheckbox.checked,
 		sprites: spritesCheckbox.checked,
 		natures: naturesCheckbox.checked,
 		genders: gendersCheckbox.checked,
@@ -96,6 +99,9 @@ function setOptions(options: Partial<Options>) {
 	}
 	if (options.nfes != null) {
 		nfesCheckbox.checked = options.nfes;
+	}
+	if (options.fullyEvolved != null) {
+		fullyEvolvedCheckbox.checked = options.fullyEvolved;
 	}
 	if (options.sprites != null) {
 		spritesCheckbox.checked = options.sprites;
@@ -178,6 +184,9 @@ function convertUrlParamsToOptions(): Partial<Options> {
 	}
 	if (params.has("nfes")) {
 		options.nfes = parseBoolean(params.get("nfes"));
+	}
+	if (params.has("fullyEvolved")) {
+		options.fullyEvolved = parseBoolean(params.get("fullyEvolved"));
 	}
 	if (params.has("sprites")) {
 		options.sprites = parseBoolean(params.get("sprites"));
