@@ -8,6 +8,8 @@ const typeCheckboxes: HTMLInputElement[] = Array.from(typesDropdown.querySelecto
 const sublegendariesCheckbox = document.getElementById("sublegendaries") as HTMLInputElement;
 const legendariesCheckbox = document.getElementById("legendaries") as HTMLInputElement;
 const mythicalsCheckbox = document.getElementById("mythicals") as HTMLInputElement;
+const paradoxCheckbox = document.getElementById("paradox") as HTMLInputElement;
+const ultraBeastCheckbox = document.getElementById("ultraBeast") as HTMLInputElement;
 const nfesCheckbox = document.getElementById("nfes") as HTMLInputElement;
 const fullyEvolvedCheckbox = document.getElementById("fullyEvolved") as HTMLInputElement;
 const unevolvedCheckbox = document.getElementById("unevolved") as HTMLInputElement;
@@ -27,9 +29,11 @@ type Options = {
 	region: string;
 	types: string[];
 	sublegendaries: boolean;
-	/** Whether to incllude restricted legendaries. */
+	/** Whether to include restricted legendaries. */
 	legendaries: boolean;
 	mythicals: boolean;
+	paradoxes: boolean;
+	ultraBeasts: boolean;
 	/** The number of times a Pokémon has evolved. */
 	evolutionCounts: number[];
 	nfes: boolean;
@@ -53,6 +57,8 @@ function getOptionsFromForm(): Options {
 		sublegendaries: sublegendariesCheckbox.checked,
 		legendaries: legendariesCheckbox.checked,
 		mythicals: mythicalsCheckbox.checked,
+		paradoxes: paradoxCheckbox.checked,
+		ultraBeasts: ultraBeastCheckbox.checked,
 		evolutionCounts: getEvolutionCounts(),
 		nfes: nfesCheckbox.checked,
 		fullyEvolved: fullyEvolvedCheckbox.checked,
@@ -99,6 +105,12 @@ function setOptions(options: Partial<Options>) {
 	}
 	if (options.mythicals != null) {
 		mythicalsCheckbox.checked = options.mythicals;
+	}
+	if (options.paradoxes != null) {
+		paradoxCheckbox.checked = options.paradoxes;
+	}
+	if (options.ultraBeasts != null) {
+		ultraBeastCheckbox.checked = options.ultraBeasts;
 	}
 	if (options.evolutionCounts != null) {
 		const counts = new Set(options.evolutionCounts);
@@ -188,6 +200,12 @@ function convertUrlParamsToOptions(): Partial<Options> {
 	}
 	if (params.has("mythicals")) {
 		options.mythicals = parseBoolean(params.get("mythicals"));
+	}
+	if (params.has("paradoxes")) {
+		options.paradoxes = parseBoolean(params.get("paradoxes"));
+	}
+	if (params.has("ultraBeasts")) {
+		options.ultraBeasts = parseBoolean(params.get("ultraBeasts"));
 	}
 	if (params.has("evolutionCounts")) {
 		options.evolutionCounts = params.get("evolutionCounts")

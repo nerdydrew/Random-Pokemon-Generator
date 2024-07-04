@@ -7844,7 +7844,8 @@
 			"rock",
 			"poison"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isUltraBeast": true
 	},
 	{
 		"id": 794,
@@ -7853,7 +7854,8 @@
 			"bug",
 			"fighting"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isUltraBeast": true
 	},
 	{
 		"id": 795,
@@ -7862,7 +7864,8 @@
 			"bug",
 			"fighting"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isUltraBeast": true
 	},
 	{
 		"id": 796,
@@ -7870,7 +7873,8 @@
 		"types": [
 			"electric"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isUltraBeast": true
 	},
 	{
 		"id": 797,
@@ -7879,7 +7883,8 @@
 			"steel",
 			"flying"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isUltraBeast": true
 	},
 	{
 		"id": 798,
@@ -7888,7 +7893,8 @@
 			"grass",
 			"steel"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isUltraBeast": true
 	},
 	{
 		"id": 799,
@@ -7897,7 +7903,8 @@
 			"dark",
 			"dragon"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isUltraBeast": true
 	},
 	{
 		"id": 803,
@@ -7906,7 +7913,8 @@
 		"types": [
 			"poison"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isUltraBeast": true
 	},
 	{
 		"id": 804,
@@ -7916,7 +7924,8 @@
 			"dragon"
 		],
 		"genderRatio": "unknown",
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"isUltraBeast": true
 	},
 	{
 		"id": 805,
@@ -7925,7 +7934,8 @@
 			"rock",
 			"steel"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isUltraBeast": true
 	},
 	{
 		"id": 806,
@@ -7934,6 +7944,7 @@
 			"fire",
 			"ghost"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isUltraBeast": true
 	}
 ]

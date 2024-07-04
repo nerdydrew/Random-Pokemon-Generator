@@ -74,6 +74,12 @@ function filterByOptions<P extends Pokemon|Form>(pokemonInRegion: P[], options: 
 		if (!options.mythicals && "isMythical" in pokemon && pokemon.isMythical) {
 			return false;
 		}
+		if (!options.paradoxes && "isParadox" in pokemon && pokemon.isParadox) {
+			return false;
+		}
+		if (!options.ultraBeasts && "isUltraBeast" in pokemon && pokemon.isUltraBeast) {
+			return false;
+		}
 		if (options.nfes || options.fullyEvolved) {
 			// If neither option is checked, treat it as both being checked.
 			if (!options.nfes && "isNfe" in pokemon && pokemon.isNfe) {

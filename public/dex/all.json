@@ -11883,7 +11883,8 @@
 			"rock",
 			"poison"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isUltraBeast": true
 	},
 	{
 		"id": 794,
@@ -11892,7 +11893,8 @@
 			"bug",
 			"fighting"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isUltraBeast": true
 	},
 	{
 		"id": 795,
@@ -11901,7 +11903,8 @@
 			"bug",
 			"fighting"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isUltraBeast": true
 	},
 	{
 		"id": 796,
@@ -11909,7 +11912,8 @@
 		"types": [
 			"electric"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isUltraBeast": true
 	},
 	{
 		"id": 797,
@@ -11918,7 +11922,8 @@
 			"steel",
 			"flying"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isUltraBeast": true
 	},
 	{
 		"id": 798,
@@ -11927,7 +11932,8 @@
 			"grass",
 			"steel"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isUltraBeast": true
 	},
 	{
 		"id": 799,
@@ -11936,7 +11942,8 @@
 			"dark",
 			"dragon"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isUltraBeast": true
 	},
 	{
 		"id": 800,
@@ -12010,7 +12017,8 @@
 		"types": [
 			"poison"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isUltraBeast": true
 	},
 	{
 		"id": 804,
@@ -12020,7 +12028,8 @@
 			"dragon"
 		],
 		"genderRatio": "unknown",
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"isUltraBeast": true
 	},
 	{
 		"id": 805,
@@ -12029,7 +12038,8 @@
 			"rock",
 			"steel"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isUltraBeast": true
 	},
 	{
 		"id": 806,
@@ -12038,7 +12048,8 @@
 			"fire",
 			"ghost"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isUltraBeast": true
 	},
 	{
 		"id": 807,
@@ -14459,7 +14470,8 @@
 			"ground",
 			"fighting"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isParadox": true
 	},
 	{
 		"id": 985,
@@ -14468,7 +14480,8 @@
 			"fairy",
 			"psychic"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isParadox": true
 	},
 	{
 		"id": 986,
@@ -14477,7 +14490,8 @@
 			"grass",
 			"dark"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isParadox": true
 	},
 	{
 		"id": 987,
@@ -14486,7 +14500,8 @@
 			"ghost",
 			"fairy"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isParadox": true
 	},
 	{
 		"id": 988,
@@ -14495,7 +14510,8 @@
 			"bug",
 			"fighting"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isParadox": true
 	},
 	{
 		"id": 989,
@@ -14504,7 +14520,8 @@
 			"electric",
 			"ground"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isParadox": true
 	},
 	{
 		"id": 990,
@@ -14513,7 +14530,8 @@
 			"ground",
 			"steel"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isParadox": true
 	},
 	{
 		"id": 991,
@@ -14522,7 +14540,8 @@
 			"ice",
 			"water"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isParadox": true
 	},
 	{
 		"id": 992,
@@ -14531,7 +14550,8 @@
 			"fighting",
 			"electric"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isParadox": true
 	},
 	{
 		"id": 993,
@@ -14540,7 +14560,8 @@
 			"dark",
 			"flying"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isParadox": true
 	},
 	{
 		"id": 994,
@@ -14549,7 +14570,8 @@
 			"fire",
 			"poison"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isParadox": true
 	},
 	{
 		"id": 995,
@@ -14558,7 +14580,8 @@
 			"rock",
 			"electric"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isParadox": true
 	},
 	{
 		"id": 996,
@@ -14672,7 +14695,8 @@
 			"dragon",
 			"dark"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isParadox": true
 	},
 	{
 		"id": 1006,
@@ -14681,7 +14705,8 @@
 			"fairy",
 			"fighting"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isParadox": true
 	},
 	{
 		"id": 1007,
@@ -14691,7 +14716,8 @@
 			"dragon"
 		],
 		"genderRatio": "unknown",
-		"isLegendary": true
+		"isLegendary": true,
+		"isParadox": true
 	},
 	{
 		"id": 1008,
@@ -14701,7 +14727,8 @@
 			"dragon"
 		],
 		"genderRatio": "unknown",
-		"isLegendary": true
+		"isLegendary": true,
+		"isParadox": true
 	},
 	{
 		"id": 1009,
@@ -14710,7 +14737,8 @@
 			"water",
 			"dragon"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isParadox": true
 	},
 	{
 		"id": 1010,
@@ -14719,7 +14747,8 @@
 			"grass",
 			"psychic"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isParadox": true
 	},
 	{
 		"id": 1011,
@@ -14960,7 +14989,8 @@
 			"fire",
 			"dragon"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isParadox": true
 	},
 	{
 		"id": 1021,
@@ -14969,7 +14999,8 @@
 			"electric",
 			"dragon"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isParadox": true
 	},
 	{
 		"id": 1022,
@@ -14978,7 +15009,8 @@
 			"rock",
 			"psychic"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isParadox": true
 	},
 	{
 		"id": 1023,
@@ -14987,7 +15019,8 @@
 			"steel",
 			"psychic"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isParadox": true
 	},
 	{
 		"id": 1024,

@@ -19,6 +19,10 @@ interface Pokemon {
 	isLegendary?: boolean;
 	/** Whether this Pokémon is mythical. Defaults to false. */
 	isMythical?: boolean;
+	/** Whether this Pokémon is a Paradox (from Scarlet and Violet). Defaults to false. */
+	isParadox?: boolean;
+	/** Whether this Pokémon is an Ultra Beast. Defaults to false. */
+	isUltraBeast?: boolean;
 	/** Alternate forms for this Pokémon, if any. */
 	forms?: Form[];
 	/** Ratio of male to female or "unknown". Defaults to (1:1). */

@@ -2835,7 +2835,8 @@
 			"fire",
 			"dragon"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isParadox": true
 	},
 	{
 		"id": 1021,
@@ -2844,7 +2845,8 @@
 			"electric",
 			"dragon"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isParadox": true
 	},
 	{
 		"id": 1023,
@@ -2853,7 +2855,8 @@
 			"steel",
 			"psychic"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isParadox": true
 	},
 	{
 		"id": 1022,
@@ -2862,7 +2865,8 @@
 			"rock",
 			"psychic"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isParadox": true
 	},
 	{
 		"id": 1024,
@@ -2901,7 +2905,8 @@
 			"water",
 			"dragon"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isParadox": true
 	},
 	{
 		"id": 1010,
@@ -2910,7 +2915,8 @@
 			"grass",
 			"psychic"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"isParadox": true
 	},
 	{
 		"id": 1025,
