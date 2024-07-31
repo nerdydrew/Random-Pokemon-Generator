@@ -46,23 +46,47 @@ async function getEligiblePokemon(options: Options): Promise<Pokemon[]> {
 	if (cachedOptionsJson == optionsJson) {
 		return Promise.resolve(cachedEligiblePokemon);
 	} else {
-		const response = await fetch("dex/" + options.region + ".json");
-		if (!response.ok) {
-			console.error(response);
-			throw Error("Failed to get eligible Pokémon.");
-		}
-		const pokemonInRegion: Pokemon[] = await response.json();
-		const eligiblePokemon = filterByOptions(pokemonInRegion, options);
+		const eligiblePokemon = filterByOptions(await getPokemonInRegions(options.regions), options);
 		cachedOptionsJson = optionsJson;
 		cachedEligiblePokemon = eligiblePokemon;
 		return eligiblePokemon;
 	}
 }
 
-function filterByOptions<P extends Pokemon|Form>(pokemonInRegion: P[], options: Options): P[] {
+async function getPokemonInRegions(regions: string[]): Promise<Pokemon[]> {
+	if (regions.length == regionCheckboxes.length || regions.length == 0) {
+		regions = ["all"];
+	}
+
+	const responses = await Promise.all(
+		regions.map(region => fetch("dex/" + region + ".json"))
+	);
+	const pokemonById = new Map<number, Pokemon>();
+	for (const response of responses) {
+		if (!response.ok) {
+			console.error(response);
+			throw Error("Failed to get eligible Pokémon.");
+		}
+		const pokemonInRegion = await response.json();
+
+		// No need to merge anything if only one region was selected.
+		if (responses.length == 1) {
+			return pokemonInRegion;
+		}
+
+		// Merge so that an older region's version of a Pokémon is overwritten by a newer region's.
+		for (const pokemon of pokemonInRegion) {
+			pokemonById.set(pokemon.id, mergePokemon(pokemon, pokemonById.get(pokemon.id)));
+		}
+	}
+
+	return Array.from(pokemonById.values());
+}
+
+function filterByOptions<P extends Pokemon|Form>(pokemonInRegions: P[], options: Options): P[] {
 	const evolutionCounts = new Set(options.evolutionCounts);
 	const types = new Set(options.types);
-	return pokemonInRegion.filter((pokemon: Pokemon | Form) => {
+	return pokemonInRegions.filter((pokemon: Pokemon | Form) => {
 		// Legendary and evolution status are independent of form, so check these before
 		// checking forms.
 		if (!options.sublegendaries && "isSubLegendary" in pokemon && pokemon.isSubLegendary) {

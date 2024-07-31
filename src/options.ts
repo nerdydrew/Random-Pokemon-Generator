@@ -1,24 +1,32 @@
 const STORAGE_OPTIONS_KEY = "options";
 
 const numberDropdown = document.getElementById("n") as HTMLSelectElement;
-const regionDropdown = document.getElementById("region") as HTMLSelectElement;
+
+const regionsDropdown = document.getElementById("regions") as HTMLSelectElement;
+const allRegionsCheckbox: HTMLInputElement = regionsDropdown.querySelector("input[value='all']");
+const regionCheckboxes: HTMLInputElement[] = Array.from(regionsDropdown.querySelectorAll("input:not([value='all'])"));
+
 const typesDropdown = document.getElementById("types");
 const allTypesCheckbox: HTMLInputElement = typesDropdown.querySelector("input[value='all']");
 const typeCheckboxes: HTMLInputElement[] = Array.from(typesDropdown.querySelectorAll("input:not([value='all'])"));
+
 const sublegendariesCheckbox = document.getElementById("sublegendaries") as HTMLInputElement;
 const legendariesCheckbox = document.getElementById("legendaries") as HTMLInputElement;
 const mythicalsCheckbox = document.getElementById("mythicals") as HTMLInputElement;
 const paradoxCheckbox = document.getElementById("paradox") as HTMLInputElement;
 const ultraBeastCheckbox = document.getElementById("ultraBeast") as HTMLInputElement;
+
 const nfesCheckbox = document.getElementById("nfes") as HTMLInputElement;
 const fullyEvolvedCheckbox = document.getElementById("fullyEvolved") as HTMLInputElement;
 const unevolvedCheckbox = document.getElementById("unevolved") as HTMLInputElement;
 const evolvedOnceCheckbox = document.getElementById("evolvedOnce") as HTMLInputElement;
 const evolvedTwiceCheckbox = document.getElementById("evolvedTwice") as HTMLInputElement;
 const evolutionCountCheckboxes = [unevolvedCheckbox, evolvedOnceCheckbox, evolvedTwiceCheckbox];
+
 const spritesCheckbox = document.getElementById("sprites") as HTMLInputElement;
 const naturesCheckbox = document.getElementById("natures") as HTMLInputElement;
 const gendersCheckbox = document.getElementById("genders") as HTMLInputElement;
+
 const formsDropdown = document.getElementById("formsDropdown") as HTMLInputElement;
 const formsCheckbox = document.getElementById("forms") as HTMLInputElement;
 const megasCheckbox = document.getElementById("megas") as HTMLInputElement;
@@ -26,7 +34,7 @@ const gigantamaxesCheckbox = document.getElementById("gigantamaxes") as HTMLInpu
 
 type Options = {
 	n: number;
-	region: string;
+	regions: string[];
 	types: string[];
 	sublegendaries: boolean;
 	/** Whether to include restricted legendaries. */
@@ -52,7 +60,7 @@ type Options = {
 function getOptionsFromForm(): Options {
 	return {
 		n: parseInt(numberDropdown.value),
-		region: regionDropdown.value,
+		regions: getSelectedRegions(),
 		types: getSelectedTypes(),
 		sublegendaries: sublegendariesCheckbox.checked,
 		legendaries: legendariesCheckbox.checked,
@@ -77,6 +85,12 @@ function getEvolutionCounts(): number[] {
 			.map(checkbox => parseInt(checkbox.value));
 }
 
+function getSelectedRegions(): string[] {
+	return regionCheckboxes
+			.filter(checkbox => checkbox.checked)
+			.map(checkbox => checkbox.value);
+}
+
 function getSelectedTypes(): string[] {
 	return typeCheckboxes
 			.filter(checkbox => checkbox.checked)
@@ -87,8 +101,12 @@ function setOptions(options: Partial<Options>) {
 	if (options.n != null) {
 		setDropdownIfValid(numberDropdown, options.n);
 	}
-	if (options.region != null) {
-		setDropdownIfValid(regionDropdown, options.region);
+	if (options.regions != null) {
+		const regions = new Set(options.regions);
+		regionCheckboxes.forEach(checkbox => {
+			// Treat an empty array as every region being selected.
+			checkbox.checked = regions.has(checkbox.value) || options.regions.length == 0;
+		});
 	}
 	if (options.types != null) {
 		const types = new Set(options.types);
@@ -116,7 +134,7 @@ function setOptions(options: Partial<Options>) {
 		const counts = new Set(options.evolutionCounts);
 		evolutionCountCheckboxes.forEach(checkbox => {
 			// Treat an empty array as every type being selected.
-			checkbox.checked = counts.has(parseInt(checkbox.value)) || options.evolutionCounts.length == 0; //TODO this isn't working?
+			checkbox.checked = counts.has(parseInt(checkbox.value)) || options.evolutionCounts.length == 0;
 		});
 	}
 	if (options.nfes != null) {
@@ -182,7 +200,12 @@ function convertUrlParamsToOptions(): Partial<Options> {
 		options.n = parseInt(params.get("n"));
 	}
 	if (params.has("region")) {
-		options.region = params.get("region");
+		const region = params.get("region");
+		options.regions = region == "all" ? [] : [region];
+	}
+	if (params.has("regions")) {
+		const regions = params.get("regions").split(",");
+		options.regions = regions[0] == "all" ? [] : regions;
 	}
 	if (params.has("type")) {
 		const type = params.get("type");
@@ -246,24 +269,26 @@ function convertUrlParamsToOptions(): Partial<Options> {
 function convertOptionsToUrlParams(options: Partial<Options>): string {
 	return Object.entries(options)
 		.map(function([key, value]) {
+			let encodableValue: string | boolean | number;
 			if (Array.isArray(value)) {
-				if (key == "types" && value.length == typeCheckboxes.length || value.length == 0) {
-					// If all types are selected, store it as "all" for a shorter URL.
-					value = "all";
+				if (value.length == 0
+					|| (key == "types" && value.length == typeCheckboxes.length)
+					|| (key == "regions" && value.length == regionCheckboxes.length)) {
+					// If all types or regions are selected, store it as "all" for a shorter URL.
+					encodableValue = "all";
 				} else {
-					value = value.join(",");
+					encodableValue = value.join(",");
 				}
+			} else {
+				encodableValue = value;
 			}
-			return encodeURIComponent(key) + "=" + encodeURIComponent(value);
+			return encodeURIComponent(key) + "=" + encodeURIComponent(encodableValue);
 		})
 		.join("&");
 }
 
 function addFormChangeListeners() {
 	toggleDropdownsOnButtonClick();
-
-	regionDropdown.addEventListener("change", toggleFormsVisibility);
-	toggleFormsVisibility();
 
 	formsCheckbox.addEventListener("change", toggleFormSubtypes);
 	toggleFormSubtypes();
@@ -278,12 +303,6 @@ function addFormChangeListeners() {
 			checkbox.addEventListener("change", () => updateDropdownTitle(dropdown));
 		});
 	});
-}
-
-function toggleFormsVisibility() {
-	const regionOption = regionDropdown.options[regionDropdown.selectedIndex];
-	const shouldShow = regionOption?.dataset?.forms != "false";
-	formsDropdown.classList.toggle("invisible", !shouldShow);
 }
 
 function toggleFormSubtypes() {

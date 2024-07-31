@@ -7,7 +7,7 @@ interface Pokemon {
 	id: number;
 	/** The display name of this Pokémon. */
 	name: string;
-	/** This Pokémon's type(s) (lowecased). */
+	/** This Pokémon's type(s) (lowercased). */
 	types: string[];
 	/** Whether this Pokémon is not fully evolved. Defaults to false. */
 	isNfe?: boolean;
@@ -163,6 +163,28 @@ class GeneratedPokemon {
 			.replaceAll("♂", "m")
 			.replaceAll(/['.:% -]/g, "");
 	}
+}
+
+/** Merges two versions of the same Pokémon from different regions. */
+function mergePokemon(primary: Pokemon, secondary: Pokemon): Pokemon {
+	// If only one Pokémon is provided or neither has forms, we can use the primary.
+	if (!secondary || (!primary.forms && !secondary.forms)) {
+		return primary;
+	}
+	// If at least one has forms, we need to merge them. Copy the primary so we can modify it.
+	const merged = JSON.parse(JSON.stringify(primary));
+	merged.forms = mergeForms(primary?.forms ?? [primary], secondary.forms ?? [secondary]);
+	return merged;
+}
+
+function mergeForms(primaries: Form[], secondaries: Form[]): Form[] {
+	const formsBySpriteSuffix = new Map<string, Form>();
+	for (const forms of [secondaries, primaries]) {
+		for (const form of forms) {
+			formsBySpriteSuffix.set(form.spriteSuffix, form);
+		}
+	}
+	return Array.from(formsBySpriteSuffix.values());
 }
 
 function generateNature(): string {

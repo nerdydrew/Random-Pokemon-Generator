@@ -30,26 +30,31 @@
 			<option value="6" selected>6</option>
 		</select> Pok&eacute;mon.</label>
 
-		<select name="region" id="region" required>
-			<option value="all">All Regions</option>
-			<option value="kanto" title="Generation 1 (Red, Blue, and Yellow)" data-forms="false">Kanto</option>
-			<option value="stadium_rentals" title="Pok&eacute;mon that can be selected as rentals in Pok&eacute;mon Stadium." data-forms="false">Stadium Rentals</option>
-			<option value="johto" title="Generation 2 (Gold, Silver, and Crystal)">Johto</option>
-			<option value="stadium_2_rentals" title="Pok&eacute;mon that can be selected as rentals in Pok&eacute;mon Stadium 2.">Stadium 2 Rentals</option>
-			<option value="hoenn" title="Generation 3 (Ruby, Sapphire, and Emerald)">Hoenn</option>
-			<option value="sinnoh" title="Generation 4 (Diamond, Pearl)">Sinnoh</option>
-			<option value="sinnoh_pt" title="Generation 4 (Platinum)">Sinnoh (Platinum)</option>
-			<option value="unova" title="Generation 5 (Black and White)">Unova</option>
-			<option value="unova_b2w2" title="Generation 5 (Black 2 and White 2)">Unova (B2W2)</option>
-			<option value="kalos" title="Generation 6 (X and Y)">Kalos</option>
-			<option value="alola" title="Generation 7 (Sun and Moon)">Alola</option>
-			<option value="alola_usum" title="Generation 7 (Ultra Sun and Ultra Moon)">Alola (USUM)</option>
-			<option value="galar" title="Generation 8 (Sword and Shield)">Galar</option>
-			<option value="hisui" title="Generation 8 (Legends: Arceus)">Hisui</option>
-			<option value="paldea" title="Generation 9 (Scarlet and Violet)">Paldea</option>
-			<option value="kitakami" title="Generation 9 (Scarlet and Violet: Teal Mask)">Kitakami</option>
-			<option value="blueberry" title="Generation 9 (Scarlet and Violet: Indigo Disk)">Blueberry Academy</option>
-		</select>
+		<div class="dropdown" id="regions">
+			<button type="button" data-plural-name="Regions">All Regions</button>
+			<div class="popup">
+				<ul>
+					<li><label><input type="checkbox" value="all" data-select-all="true" checked>Select All</label></li>
+					<li><label title="Generation 1 (Red, Blue, and Yellow)"><input type="checkbox" name="regions" value="kanto" checked>Kanto</label></li>
+					<li><label title="Pok&eacute;mon that can be selected as rentals in Pok&eacute;mon Stadium."><input type="checkbox" name="regions" value="stadium_rentals" checked>Stadium Rentals</label></li>
+					<li><label title="Generation 2 (Gold, Silver, and Crystal)"><input type="checkbox" name="regions" value="johto" checked>Johto</label></li>
+					<li><label title="Pok&eacute;mon that can be selected as rentals in Pok&eacute;mon Stadium 2."><input type="checkbox" name="regions" value="stadium_2_rentals" checked>Stadium 2 Rentals</label></li>
+					<li><label title="Generation 3 (Ruby, Sapphire, and Emerald)"><input type="checkbox" name="regions" value="hoenn" checked>Hoenn</label></li>
+					<li><label title="Generation 4 (Diamond, Pearl)"><input type="checkbox" name="regions" value="sinnoh" checked>Sinnoh</label></li>
+					<li><label title="Generation 4 (Platinum)"><input type="checkbox" name="regions" value="sinnoh_pt" checked>Sinnoh (Platinum)</label></li>
+					<li><label title="Generation 5 (Black and White)"><input type="checkbox" name="regions" value="unova" checked>Unova</label></li>
+					<li><label title="Generation 5 (Black 2 and White 2)"><input type="checkbox" name="regions" value="unova_b2w2" checked>Unova (B2W2)</label></li>
+					<li><label title="Generation 6 (X and Y)"><input type="checkbox" name="regions" value="kalos" checked>Kalos</label></li>
+					<li><label title="Generation 7 (Sun and Moon)"><input type="checkbox" name="regions" value="alola" checked>Alola</label></li>
+					<li><label title="Generation 7 (Ultra Sun and Ultra Moon)"><input type="checkbox" name="regions" value="alola_usum" checked>Alola (USUM)</label></li>
+					<li><label title="Generation 8 (Sword and Shield)"><input type="checkbox" name="regions" value="galar" checked>Galar</label></li>
+					<li><label title="Generation 8 (Legends: Arceus)"><input type="checkbox" name="regions" value="hisui" checked>Hisui</label></li>
+					<li><label title="Generation 9 (Scarlet and Violet)"><input type="checkbox" name="regions" value="paldea" checked>Paldea</label></li>
+					<li><label title="Generation 9 (Scarlet and Violet: Teal Mask)"><input type="checkbox" name="regions" value="kitakami" checked>Kitakami</label></li>
+					<li><label title="Generation 9 (Scarlet and Violet: Indigo Disk)"><input type="checkbox" name="regions" value="blueberry" checked>Blueberry Academy</label></li>
+				</ul>
+			</div>
+		</div>
 
 		<div class="dropdown" id="types">
 			<button type="button" data-plural-name="Types" data-allow-showing-two="true">All Types</button>
