@@ -45,9 +45,11 @@ function displayNext() {
 
 function displayHistoryAtIndex(index: number) {
 	index = Math.max(0, Math.min(index, latestPokemon.length-1));
-	displayedIndex = index;
-	displayPokemon(latestPokemon[index]);
-	toggleHistoryVisibility();
+	if (index != displayedIndex) {
+		displayedIndex = index;
+		displayPokemon(latestPokemon[index]);
+		toggleHistoryVisibility();
+	}
 }
 
 /** All encountered shiny Pokémon, newest first. */
@@ -86,3 +88,26 @@ function clearShinies() {
 		updateShinyToggler(false); // Prepare for next time
 	}
 }
+
+// Allow swiping to the next or previous pages of history.
+document.addEventListener("DOMContentLoaded", () => {
+	let touchStartX = 0;
+	let touchStartY = 0;
+	const resultsElement = document.getElementById("results");
+	resultsElement.addEventListener("touchstart", e => {
+		touchStartX = e.changedTouches[0].screenX;
+		touchStartY = e.changedTouches[0].screenY;
+	});
+	resultsElement.addEventListener("touchend", e => {
+		const changeX = e.changedTouches[0].screenX - touchStartX;
+		const changeY = e.changedTouches[0].screenY - touchStartY;
+		// Arbitrary constants to detect a mostly horizontal swipe.
+		if (Math.abs(changeX) > 100 && Math.abs(changeX) > 2 * Math.abs(changeY)) {
+			if (changeX > 0) {
+				displayPrevious();
+			} else {
+				displayNext();
+			}
+		}
+	});
+});
