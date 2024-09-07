@@ -1,4 +1,9 @@
 {
+	"name": "Random Pokémon Generator",
+	"short_name": "Random Pokémon",
+	"description": "This website generates random Pokémon by region, type, and more.",
+	"start_url": ".",
+	"display": "standalone",
 	"icons": [
 		{ "src": "/favicon-192.png", "type": "image/png", "sizes": "192x192" },
 		{ "src": "/favicon-512.png", "type": "image/png", "sizes": "512x512" }
