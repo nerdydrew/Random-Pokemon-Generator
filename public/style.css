@@ -62,7 +62,7 @@ button.text{background:transparent;color:inherit;border:0;padding:0}
 
 #shiny-toggler{margin-bottom:.5em}
 #shinies{margin-top:1em}
-#shinies li{width:138px}
+#shinies li{width:30%}
 #shinies .date{color:#888}
 #shiny-container button{margin-bottom:1em}
 #shiny-toggler.is-showing .is-hiding,#shiny-toggler.is-hiding .is-showing{display:none}
