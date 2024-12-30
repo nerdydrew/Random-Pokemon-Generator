@@ -14629,8 +14629,7 @@
 			{
 				"name": "Gimmighoul",
 				"types": [
-					"ghost",
-					"poison"
+					"ghost"
 				],
 				"spriteSuffix": "roaming",
 				"genderRatio": "unknown"
