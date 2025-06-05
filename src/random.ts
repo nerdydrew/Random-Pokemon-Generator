@@ -83,10 +83,10 @@ async function getPokemonInRegions(regions: string[]): Promise<Pokemon[]> {
 	return Array.from(pokemonById.values());
 }
 
-function filterByOptions<P extends Pokemon|Form>(pokemonInRegions: P[], options: Options): P[] {
+function filterByOptions(pokemonInRegions: Pokemon[], options: Options): Pokemon[] {
 	const evolutionCounts = new Set(options.evolutionCounts);
 	const types = new Set(options.types);
-	return pokemonInRegions.filter((pokemon: Pokemon | Form) => {
+	return pokemonInRegions.filter(pokemon => {
 		// Legendary and evolution status are independent of form, so check these before
 		// checking forms.
 		if (!options.sublegendaries && "isSubLegendary" in pokemon && pokemon.isSubLegendary) {
@@ -119,26 +119,32 @@ function filterByOptions<P extends Pokemon|Form>(pokemonInRegions: P[], options:
 				return false;
 			}
 		}
-		if (!options.megas && "isMega" in pokemon && pokemon.isMega) {
-			return false;
-		}
-		if (!options.gigantamaxes && "isGigantamax" in pokemon && pokemon.isGigantamax) {
-			return false;
-		}
 
 		if (options.forms && "forms" in pokemon) {
 			// If we are generating with forms and this Pokémon has forms,
 			// filter on them instead of the top-level Pokémon.
-			pokemon.forms = filterByOptions(pokemon.forms, options);
+			pokemon.forms = filterFormsByOptions(pokemon.forms, options, types);
 			return pokemon.forms.length > 0;
+		} else {
+			return filterByType(pokemon, types);
 		}
+	});
+}
 
-		if (types.size > 0 && !pokemon.types.some(type => types.has(type))) {
+function filterFormsByOptions(forms: Form[], options: Options, types: Set<string>): Form[] {
+	return forms.filter(form => {
+		if (!options.megas && "isMega" in form && form.isMega) {
 			return false;
 		}
-
-		return true;
+		if (!options.gigantamaxes && "isGigantamax" in form && form.isGigantamax) {
+			return false;
+		}
+		return filterByType(form, types);
 	});
+}
+
+function filterByType<P extends Pokemon|Form>(pokemon: P, types: Set<string>): boolean {
+	return types.size === 0 || pokemon.types.some(type => types.has(type));
 }
 
 /** Chooses N random Pokémon from the array of eligibles without replacement. */
