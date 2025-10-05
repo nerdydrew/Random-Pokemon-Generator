@@ -61,11 +61,15 @@ class GeneratedPokemon {
 	readonly date: Date;
 	/** This Pokémon's gender, or null if not generated or neuter. */
 	readonly gender?: "male" | "female";
+	readonly showName: boolean = true;
+	readonly showSprite: boolean = true;
 
 	private constructor(pokemon?: Pokemon, form?: Form, options?: Options) {
 		if (!pokemon) {
 			return;
 		}
+		this.showName = options.names;
+		this.showSprite = options.sprites;
 		this.id = pokemon.id;
 		this.baseName = pokemon.name;
 		this.name = form?.name ?? pokemon.name;
@@ -74,7 +78,7 @@ class GeneratedPokemon {
 			this.nature = generateNature();
 		}
 		// http://bulbapedia.bulbagarden.net/wiki/Shiny_Pok%C3%A9mon#Generation_VI
-		this.shiny = Math.floor(Math.random() * 65536) < 16;
+		this.shiny = this.showSprite && Math.floor(Math.random() * 65536) < 16;
 		this.date = new Date();
 		if (options.genders) {
 			const ratio = form?.genderRatio ?? pokemon?.genderRatio ?? {male: 1, female: 1};
@@ -95,17 +99,17 @@ class GeneratedPokemon {
 	}
 
 	/** Converts JSON for a single Pokémon into an HTML list item. */
-	toHtml(includeSprite: boolean): string {
+	toHtml(): string {
 		let classes = "";
 		if (this.shiny) {
 			classes += "shiny ";
 		}
-		if (!includeSprite) {
+		if (!this.showSprite) {
 			classes += "imageless ";
 		}
 		return `<li class="${classes}">
-			${includeSprite ? this.toImage() : ""}
-			${this.toText()}
+			${this.showSprite ? this.toImage() : ""}
+			${this.toText(this.showName)}
 		</li>`;
 	}
 
@@ -115,18 +119,20 @@ class GeneratedPokemon {
 			: "";
 		return `<li>
 			${this.toImage()}
-			${this.toText()}
+			${this.toText(true)}
 			${encounterDate}
 		</li>`;
 	}
 
-	toText(): string {
+	toText(includeName: boolean): string {
 		return `
 			${this.nature ? `<span class="nature">${this.nature}</span>` : ""}
-			${this.name}
+			${includeName ? this.name : ""}
 			${this.genderToText()}
 			${this.shiny ? `<span class="star">&starf;</span>` : ""}
-		`;
+		`.trim() || "&nbsp;";
+		// Return a non-breaking space if the text would otherwise be empty so that it still takes
+		// up height. Otherwise, generating a shiny Pokémon without names would align poorly.
 	}
 
 	private genderToText(): string {
@@ -191,4 +197,6 @@ function generateNature(): string {
 	return getRandomElement(NATURES);
 }
 
-const NATURES = ["Adamant", "Bashful", "Bold", "Brave", "Calm", "Careful", "Docile", "Gentle", "Hardy", "Hasty", "Impish", "Jolly", "Lax", "Lonely", "Mild", "Modest", "Na&iuml;ve", "Naughty", "Quiet", "Quirky", "Rash", "Relaxed", "Sassy", "Serious", "Timid"];
+const NATURES = ["Adamant", "Bashful", "Bold", "Brave", "Calm", "Careful", "Docile", "Gentle",
+	"Hardy", "Hasty", "Impish", "Jolly", "Lax", "Lonely", "Mild", "Modest", "Na&iuml;ve",
+	"Naughty", "Quiet", "Quirky", "Rash", "Relaxed", "Sassy", "Serious", "Timid"];

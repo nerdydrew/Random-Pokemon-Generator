@@ -204,6 +204,5 @@ function removeGigantamaxes(pokemonArray: Pokemon[]): Pokemon[] {
 
 /** Converts a JSON array of Pokémon into an HTML ordered list. */
 function toHtml(pokemon: GeneratedPokemon[]) {
-	const includeSprites = spritesCheckbox.checked;
-	return `<ol>${pokemon.map(p => p.toHtml(includeSprites)).join("")}</ol>`;
+	return `<ol>${pokemon.map(p => p.toHtml()).join("")}</ol>`;
 }

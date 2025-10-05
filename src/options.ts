@@ -23,7 +23,7 @@ const evolvedOnceCheckbox = document.getElementById("evolvedOnce") as HTMLInputE
 const evolvedTwiceCheckbox = document.getElementById("evolvedTwice") as HTMLInputElement;
 const evolutionCountCheckboxes = [unevolvedCheckbox, evolvedOnceCheckbox, evolvedTwiceCheckbox];
 
-const spritesCheckbox = document.getElementById("sprites") as HTMLInputElement;
+const displayDropdown = document.getElementById("display") as HTMLSelectElement;
 const naturesCheckbox = document.getElementById("natures") as HTMLInputElement;
 const gendersCheckbox = document.getElementById("genders") as HTMLInputElement;
 
@@ -46,6 +46,7 @@ type Options = {
 	evolutionCounts: number[];
 	nfes: boolean;
 	fullyEvolved: boolean;
+	names: boolean;
 	sprites: boolean;
 	natures: boolean;
 	genders: boolean;
@@ -70,7 +71,8 @@ function getOptionsFromForm(): Options {
 		evolutionCounts: getEvolutionCounts(),
 		nfes: nfesCheckbox.checked,
 		fullyEvolved: fullyEvolvedCheckbox.checked,
-		sprites: spritesCheckbox.checked,
+		names: displayDropdown.value != "sprites",
+		sprites: displayDropdown.value != "names",
 		natures: naturesCheckbox.checked,
 		genders: gendersCheckbox.checked,
 		forms: formsCheckbox.checked,
@@ -143,9 +145,17 @@ function setOptions(options: Partial<Options>) {
 	if (options.fullyEvolved != null) {
 		fullyEvolvedCheckbox.checked = options.fullyEvolved;
 	}
-	if (options.sprites != null) {
-		spritesCheckbox.checked = options.sprites;
+
+	const sprites = options.sprites == null || options.sprites;
+	const names = options.names == null || options.names;
+	if (sprites && !names) {
+		displayDropdown.value = "sprites";
+	} else if (names && !sprites) {
+		displayDropdown.value = "names";
+	} else {
+		displayDropdown.value = "both";
 	}
+
 	if (options.natures != null) {
 		naturesCheckbox.checked = options.natures;
 	}
@@ -240,6 +250,9 @@ function convertUrlParamsToOptions(): Partial<Options> {
 	}
 	if (params.has("fullyEvolved")) {
 		options.fullyEvolved = parseBoolean(params.get("fullyEvolved"));
+	}
+	if (params.has("names")) {
+		options.names = parseBoolean(params.get("names"));
 	}
 	if (params.has("sprites")) {
 		options.sprites = parseBoolean(params.get("sprites"));

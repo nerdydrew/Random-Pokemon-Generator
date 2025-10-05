@@ -128,7 +128,12 @@
 	</fieldset>
 
 	<fieldset>
-		<label><input type="checkbox" id="sprites" name="sprites" value="true" checked>Sprites</label>
+		<select name="display" id="display" required>
+			<option value="names">Names Only</option>
+			<option value="sprites">Sprites Only</option>
+			<option value="both" selected>Names and Sprites</option>
+		</select>
+
 		<label><input type="checkbox" id="natures" name="natures" value="true">Natures</label>
 		<label><input type="checkbox" id="genders" name="genders" value="true">Genders</label>
 
