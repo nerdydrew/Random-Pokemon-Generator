@@ -30,24 +30,27 @@ interface Pokemon {
 }
 
 interface Form {
-	/** Display name for this form. */
-	name: string;
-	/** Type(s) of this form (lowercased). */
-	types: string[];
+	/**
+	 * Display name for this form. If absent, it will default to the base Pokémon's name, also
+	 * specifying if it's a Mega Evolution or Gigantamax.
+	 */
+	name?: string;
+	/** Type(s) of this form (lowercased). If absent, it will default to the base Pokémon's types. */
+	types?: string[];
 	/** An optional suffix added to the sprite's filename (between a hyphen and the extension). */
 	spriteSuffix?: string;
 	/** Whether this form is a Mega Evolution. Defaults to false. */
 	isMega?: boolean;
 	/** Whether this form is a Gigantamax. Defaults to false. */
 	isGigantamax?: boolean;
-	/** Ratio of male to female or "unknown". Defaults to (1:1). */
+	/** Ratio of male to female or "unknown". Defaults to the base Pokémon's ratio. */
 	genderRatio?: {male: number, female: number} | "unknown";
 }
 
 class GeneratedPokemon {
 	/** National Pokédex number. */
 	readonly id: number;
-	/** The name of this Pokémon, not including what form it is. */
+	/** The name of this Pokémon, excluding what form it is. */
 	readonly baseName: string;
 	/** The name of this Pokémon, including what form it is. */
 	readonly name: string;
@@ -72,7 +75,7 @@ class GeneratedPokemon {
 		this.showSprite = options.sprites;
 		this.id = pokemon.id;
 		this.baseName = pokemon.name;
-		this.name = form?.name ?? pokemon.name;
+		this.name = getName(pokemon, form);
 		this.spriteSuffix = form?.spriteSuffix;
 		if (options.natures) {
 			this.nature = generateNature();
@@ -169,6 +172,19 @@ class GeneratedPokemon {
 			.replaceAll("♂", "m")
 			.replaceAll(/['.:% -]/g, "");
 	}
+}
+
+function getName(pokemon: Pokemon, form?: Form): string {
+	if (form) {
+		if (form.name) {
+			return form.name;
+		} else if (form.isMega) {
+			return pokemon.name + " Mega";
+		} else if (form.isGigantamax) {
+			return pokemon.name + " Gigantamax";
+		}
+	}
+	return pokemon.name;
 }
 
 /** Merges two versions of the same Pokémon from different regions. */

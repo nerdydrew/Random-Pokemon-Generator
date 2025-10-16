@@ -123,28 +123,28 @@ function filterByOptions(pokemonInRegions: Pokemon[], options: Options): Pokemon
 		if (options.forms && "forms" in pokemon) {
 			// If we are generating with forms and this Pokémon has forms,
 			// filter on them instead of the top-level Pokémon.
-			pokemon.forms = filterFormsByOptions(pokemon.forms, options, types);
+			pokemon.forms = filterFormsByOptions(pokemon, options, types);
 			return pokemon.forms.length > 0;
 		} else {
-			return filterByType(pokemon, types);
+			return filterByType(pokemon, null, types);
 		}
 	});
 }
 
-function filterFormsByOptions(forms: Form[], options: Options, types: Set<string>): Form[] {
-	return forms.filter(form => {
+function filterFormsByOptions(pokemon: Pokemon, options: Options, types: Set<string>): Form[] {
+	return pokemon.forms.filter(form => {
 		if (!options.megas && "isMega" in form && form.isMega) {
 			return false;
 		}
 		if (!options.gigantamaxes && "isGigantamax" in form && form.isGigantamax) {
 			return false;
 		}
-		return filterByType(form, types);
+		return filterByType(pokemon, form, types);
 	});
 }
 
-function filterByType<P extends Pokemon|Form>(pokemon: P, types: Set<string>): boolean {
-	return types.size === 0 || pokemon.types.some(type => types.has(type));
+function filterByType(pokemon: Pokemon, form: Form | null, types: Set<string>): boolean {
+	return types.size === 0 || (form?.types ?? pokemon.types).some(type => types.has(type));
 }
 
 /** Chooses N random Pokémon from the array of eligibles without replacement. */
