@@ -567,17 +567,8 @@
 			"water"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Basculin",
-				"types": [
-					"water"
-				]
-			},
-			{
-				"name": "Basculin",
-				"types": [
-					"water"
-				],
 				"spriteSuffix": "bluestriped"
 			}
 		]
@@ -923,39 +914,14 @@
 			"grass"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Deerling",
-				"isNfe": true,
-				"types": [
-					"normal",
-					"grass"
-				]
-			},
-			{
-				"name": "Deerling",
-				"isNfe": true,
-				"types": [
-					"normal",
-					"grass"
-				],
 				"spriteSuffix": "autumn"
 			},
 			{
-				"name": "Deerling",
-				"isNfe": true,
-				"types": [
-					"normal",
-					"grass"
-				],
 				"spriteSuffix": "summer"
 			},
 			{
-				"name": "Deerling",
-				"isNfe": true,
-				"types": [
-					"normal",
-					"grass"
-				],
 				"spriteSuffix": "winter"
 			}
 		]
@@ -968,35 +934,14 @@
 			"grass"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Sawsbuck",
-				"types": [
-					"normal",
-					"grass"
-				]
-			},
-			{
-				"name": "Sawsbuck",
-				"types": [
-					"normal",
-					"grass"
-				],
 				"spriteSuffix": "autumn"
 			},
 			{
-				"name": "Sawsbuck",
-				"types": [
-					"normal",
-					"grass"
-				],
 				"spriteSuffix": "summer"
 			},
 			{
-				"name": "Sawsbuck",
-				"types": [
-					"normal",
-					"grass"
-				],
 				"spriteSuffix": "winter"
 			}
 		],
@@ -1055,24 +1000,12 @@
 		],
 		"forms": [
 			{
-				"name": "Frillish",
-				"isNfe": true,
-				"types": [
-					"water",
-					"ghost"
-				],
 				"genderRatio": {
 					"male": 1,
 					"female": 0
 				}
 			},
 			{
-				"name": "Frillish",
-				"isNfe": true,
-				"types": [
-					"water",
-					"ghost"
-				],
 				"spriteSuffix": "f",
 				"genderRatio": {
 					"male": 0,
@@ -1090,11 +1023,6 @@
 		],
 		"forms": [
 			{
-				"name": "Jellicent",
-				"types": [
-					"water",
-					"ghost"
-				],
 				"spriteSuffix": "f",
 				"genderRatio": {
 					"male": 0,
@@ -1102,11 +1030,6 @@
 				}
 			},
 			{
-				"name": "Jellicent",
-				"types": [
-					"water",
-					"ghost"
-				],
 				"genderRatio": {
 					"male": 1,
 					"female": 0
@@ -1546,26 +1469,10 @@
 			"flying"
 		],
 		"forms": [
-			{
-				"name": "Tornadus",
-				"types": [
-					"flying"
-				],
-				"genderRatio": {
-					"male": 1,
-					"female": 0
-				}
-			},
+			{},
 			{
 				"name": "Tornadus Therian",
-				"types": [
-					"flying"
-				],
-				"spriteSuffix": "therian",
-				"genderRatio": {
-					"male": 1,
-					"female": 0
-				}
+				"spriteSuffix": "therian"
 			}
 		],
 		"genderRatio": {
@@ -1583,28 +1490,11 @@
 		],
 		"forms": [
 			{
-				"name": "Thundurus",
-				"types": [
-					"electric",
-					"flying"
-				],
-				"isUber": true,
-				"genderRatio": {
-					"male": 1,
-					"female": 0
-				}
+				"isUber": true
 			},
 			{
 				"name": "Thundurus Therian",
-				"types": [
-					"electric",
-					"flying"
-				],
-				"spriteSuffix": "therian",
-				"genderRatio": {
-					"male": 1,
-					"female": 0
-				}
+				"spriteSuffix": "therian"
 			}
 		],
 		"genderRatio": {
@@ -1641,28 +1531,10 @@
 			"flying"
 		],
 		"forms": [
-			{
-				"name": "Landorus",
-				"types": [
-					"ground",
-					"flying"
-				],
-				"genderRatio": {
-					"male": 1,
-					"female": 0
-				}
-			},
+			{},
 			{
 				"name": "Landorus Therian",
-				"types": [
-					"ground",
-					"flying"
-				],
-				"spriteSuffix": "therian",
-				"genderRatio": {
-					"male": 1,
-					"female": 0
-				}
+				"spriteSuffix": "therian"
 			}
 		],
 		"genderRatio": {
@@ -1679,31 +1551,14 @@
 			"ice"
 		],
 		"forms": [
-			{
-				"name": "Kyurem",
-				"types": [
-					"dragon",
-					"ice"
-				],
-				"genderRatio": "unknown"
-			},
+			{},
 			{
 				"name": "Kyurem Black",
-				"types": [
-					"dragon",
-					"ice"
-				],
-				"spriteSuffix": "black",
-				"genderRatio": "unknown"
+				"spriteSuffix": "black"
 			},
 			{
 				"name": "Kyurem White",
-				"types": [
-					"dragon",
-					"ice"
-				],
-				"spriteSuffix": "white",
-				"genderRatio": "unknown"
+				"spriteSuffix": "white"
 			}
 		],
 		"genderRatio": "unknown",
@@ -1717,22 +1572,9 @@
 			"fighting"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Keldeo",
-				"types": [
-					"water",
-					"fighting"
-				],
-				"genderRatio": "unknown"
-			},
-			{
-				"name": "Keldeo",
-				"types": [
-					"water",
-					"fighting"
-				],
-				"spriteSuffix": "resolute",
-				"genderRatio": "unknown"
+				"spriteSuffix": "resolute"
 			}
 		],
 		"genderRatio": "unknown",
@@ -1746,22 +1588,14 @@
 			"psychic"
 		],
 		"forms": [
-			{
-				"name": "Meloetta",
-				"types": [
-					"normal",
-					"psychic"
-				],
-				"genderRatio": "unknown"
-			},
+			{},
 			{
 				"name": "Meloetta Pirouette",
 				"types": [
 					"normal",
 					"fighting"
 				],
-				"spriteSuffix": "pirouette",
-				"genderRatio": "unknown"
+				"spriteSuffix": "pirouette"
 			}
 		],
 		"genderRatio": "unknown",
@@ -1775,49 +1609,18 @@
 			"steel"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Genesect",
-				"types": [
-					"bug",
-					"steel"
-				],
-				"genderRatio": "unknown"
+				"spriteSuffix": "burn"
 			},
 			{
-				"name": "Genesect",
-				"types": [
-					"bug",
-					"steel"
-				],
-				"spriteSuffix": "burn",
-				"genderRatio": "unknown"
+				"spriteSuffix": "chill"
 			},
 			{
-				"name": "Genesect",
-				"types": [
-					"bug",
-					"steel"
-				],
-				"spriteSuffix": "chill",
-				"genderRatio": "unknown"
+				"spriteSuffix": "douse"
 			},
 			{
-				"name": "Genesect",
-				"types": [
-					"bug",
-					"steel"
-				],
-				"spriteSuffix": "douse",
-				"genderRatio": "unknown"
-			},
-			{
-				"name": "Genesect",
-				"types": [
-					"bug",
-					"steel"
-				],
-				"spriteSuffix": "shock",
-				"genderRatio": "unknown"
+				"spriteSuffix": "shock"
 			}
 		],
 		"genderRatio": "unknown",

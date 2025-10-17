@@ -231,11 +231,7 @@
 				"types": [
 					"fighting"
 				],
-				"spriteSuffix": "paldean",
-				"genderRatio": {
-					"male": 1,
-					"female": 0
-				}
+				"spriteSuffix": "paldean"
 			},
 			{
 				"name": "Tauros Blaze Breed",
@@ -243,11 +239,7 @@
 					"fighting",
 					"fire"
 				],
-				"spriteSuffix": "blaze",
-				"genderRatio": {
-					"male": 1,
-					"female": 0
-				}
+				"spriteSuffix": "blaze"
 			},
 			{
 				"name": "Tauros Aqua Breed",
@@ -255,11 +247,7 @@
 					"fighting",
 					"water"
 				],
-				"spriteSuffix": "aqua",
-				"genderRatio": {
-					"male": 1,
-					"female": 0
-				}
+				"spriteSuffix": "aqua"
 			}
 		],
 		"genderRatio": {
@@ -420,11 +408,6 @@
 		],
 		"forms": [
 			{
-				"name": "Pyroar",
-				"types": [
-					"fire",
-					"normal"
-				],
 				"spriteSuffix": "f",
 				"genderRatio": {
 					"male": 0,
@@ -432,11 +415,6 @@
 				}
 			},
 			{
-				"name": "Pyroar",
-				"types": [
-					"fire",
-					"normal"
-				],
 				"genderRatio": {
 					"male": 1,
 					"female": 0
@@ -458,39 +436,14 @@
 			"grass"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Deerling",
-				"isNfe": true,
-				"types": [
-					"normal",
-					"grass"
-				]
-			},
-			{
-				"name": "Deerling",
-				"isNfe": true,
-				"types": [
-					"normal",
-					"grass"
-				],
 				"spriteSuffix": "autumn"
 			},
 			{
-				"name": "Deerling",
-				"isNfe": true,
-				"types": [
-					"normal",
-					"grass"
-				],
 				"spriteSuffix": "summer"
 			},
 			{
-				"name": "Deerling",
-				"isNfe": true,
-				"types": [
-					"normal",
-					"grass"
-				],
 				"spriteSuffix": "winter"
 			}
 		]
@@ -503,35 +456,14 @@
 			"grass"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Sawsbuck",
-				"types": [
-					"normal",
-					"grass"
-				]
-			},
-			{
-				"name": "Sawsbuck",
-				"types": [
-					"normal",
-					"grass"
-				],
 				"spriteSuffix": "autumn"
 			},
 			{
-				"name": "Sawsbuck",
-				"types": [
-					"normal",
-					"grass"
-				],
 				"spriteSuffix": "summer"
 			},
 			{
-				"name": "Sawsbuck",
-				"types": [
-					"normal",
-					"grass"
-				],
 				"spriteSuffix": "winter"
 			}
 		],
@@ -552,22 +484,14 @@
 			"ghost"
 		],
 		"forms": [
-			{
-				"name": "Rotom",
-				"types": [
-					"electric",
-					"ghost"
-				],
-				"genderRatio": "unknown"
-			},
+			{},
 			{
 				"name": "Rotom Fan",
 				"types": [
 					"electric",
 					"flying"
 				],
-				"spriteSuffix": "fan",
-				"genderRatio": "unknown"
+				"spriteSuffix": "fan"
 			},
 			{
 				"name": "Rotom Frost",
@@ -575,8 +499,7 @@
 					"electric",
 					"ice"
 				],
-				"spriteSuffix": "frost",
-				"genderRatio": "unknown"
+				"spriteSuffix": "frost"
 			},
 			{
 				"name": "Rotom Heat",
@@ -584,8 +507,7 @@
 					"electric",
 					"fire"
 				],
-				"spriteSuffix": "heat",
-				"genderRatio": "unknown"
+				"spriteSuffix": "heat"
 			},
 			{
 				"name": "Rotom Mow",
@@ -593,8 +515,7 @@
 					"electric",
 					"grass"
 				],
-				"spriteSuffix": "mow",
-				"genderRatio": "unknown"
+				"spriteSuffix": "mow"
 			},
 			{
 				"name": "Rotom Wash",
@@ -602,8 +523,7 @@
 					"electric",
 					"water"
 				],
-				"spriteSuffix": "wash",
-				"genderRatio": "unknown"
+				"spriteSuffix": "wash"
 			}
 		],
 		"genderRatio": "unknown"
@@ -900,52 +820,27 @@
 			"flying"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Oricorio",
-				"types": [
-					"fire",
-					"flying"
-				],
-				"genderRatio": {
-					"male": 1,
-					"female": 3
-				}
-			},
-			{
-				"name": "Oricorio",
 				"types": [
 					"electric",
 					"flying"
 				],
-				"spriteSuffix": "pom-pom",
-				"genderRatio": {
-					"male": 1,
-					"female": 3
-				}
+				"spriteSuffix": "pom-pom"
 			},
 			{
-				"name": "Oricorio",
 				"types": [
 					"psychic",
 					"flying"
 				],
-				"spriteSuffix": "pau",
-				"genderRatio": {
-					"male": 1,
-					"female": 3
-				}
+				"spriteSuffix": "pau"
 			},
 			{
-				"name": "Oricorio",
 				"types": [
 					"ghost",
 					"flying"
 				],
-				"spriteSuffix": "sensu",
-				"genderRatio": {
-					"male": 1,
-					"female": 3
-				}
+				"spriteSuffix": "sensu"
 			}
 		],
 		"genderRatio": {
@@ -1249,20 +1144,12 @@
 		],
 		"forms": [
 			{
-				"name": "Meowstic",
-				"types": [
-					"psychic"
-				],
 				"genderRatio": {
 					"male": 1,
 					"female": 0
 				}
 			},
 			{
-				"name": "Meowstic",
-				"types": [
-					"psychic"
-				],
 				"spriteSuffix": "f",
 				"genderRatio": {
 					"male": 0,
@@ -1282,74 +1169,33 @@
 		"forms": [
 			{
 				"name": "Minior Core",
-				"types": [
-					"rock",
-					"flying"
-				],
-				"spriteSuffix": "blue",
-				"genderRatio": "unknown"
+				"spriteSuffix": "blue"
 			},
 			{
 				"name": "Minior Core",
-				"types": [
-					"rock",
-					"flying"
-				],
-				"spriteSuffix": "green",
-				"genderRatio": "unknown"
+				"spriteSuffix": "green"
 			},
 			{
 				"name": "Minior Core",
-				"types": [
-					"rock",
-					"flying"
-				],
-				"spriteSuffix": "indigo",
-				"genderRatio": "unknown"
+				"spriteSuffix": "indigo"
 			},
 			{
-				"name": "Minior",
-				"types": [
-					"rock",
-					"flying"
-				],
-				"spriteSuffix": "meteor",
-				"genderRatio": "unknown"
+				"spriteSuffix": "meteor"
 			},
 			{
 				"name": "Minior Core",
-				"types": [
-					"rock",
-					"flying"
-				],
-				"spriteSuffix": "orange",
-				"genderRatio": "unknown"
+				"spriteSuffix": "orange"
+			},
+			{
+				"name": "Minior Core"
 			},
 			{
 				"name": "Minior Core",
-				"types": [
-					"rock",
-					"flying"
-				],
-				"genderRatio": "unknown"
+				"spriteSuffix": "violet"
 			},
 			{
 				"name": "Minior Core",
-				"types": [
-					"rock",
-					"flying"
-				],
-				"spriteSuffix": "violet",
-				"genderRatio": "unknown"
-			},
-			{
-				"name": "Minior Core",
-				"types": [
-					"rock",
-					"flying"
-				],
-				"spriteSuffix": "yellow",
-				"genderRatio": "unknown"
+				"spriteSuffix": "yellow"
 			}
 		],
 		"genderRatio": "unknown"
@@ -2571,28 +2417,10 @@
 			"dark"
 		],
 		"forms": [
-			{
-				"name": "Greninja",
-				"types": [
-					"water",
-					"dark"
-				],
-				"genderRatio": {
-					"male": 7,
-					"female": 1
-				}
-			},
+			{},
 			{
 				"name": "Ash's Greninja",
-				"types": [
-					"water",
-					"dark"
-				],
-				"spriteSuffix": "ash",
-				"genderRatio": {
-					"male": 7,
-					"female": 1
-				}
+				"spriteSuffix": "ash"
 			}
 		],
 		"genderRatio": {
@@ -2875,24 +2703,13 @@
 			"normal"
 		],
 		"forms": [
-			{
-				"name": "Terapagos",
-				"types": [
-					"normal"
-				]
-			},
+			{},
 			{
 				"name": "Terapagos Terastal",
-				"types": [
-					"normal"
-				],
 				"spriteSuffix": "terastal"
 			},
 			{
 				"name": "Terapagos Stellar",
-				"types": [
-					"normal"
-				],
 				"spriteSuffix": "stellar"
 			}
 		],

@@ -1663,28 +1663,20 @@
 			"normal"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Castform",
-				"types": [
-					"normal"
-				]
-			},
-			{
-				"name": "Castform",
 				"types": [
 					"water"
 				],
 				"spriteSuffix": "rainy"
 			},
 			{
-				"name": "Castform",
 				"types": [
 					"ice"
 				],
 				"spriteSuffix": "snowy"
 			},
 			{
-				"name": "Castform",
 				"types": [
 					"fire"
 				],
@@ -2007,36 +1999,18 @@
 			"psychic"
 		],
 		"forms": [
-			{
-				"name": "Deoxys",
-				"types": [
-					"psychic"
-				],
-				"genderRatio": "unknown"
-			},
+			{},
 			{
 				"name": "Deoxys Attack",
-				"types": [
-					"psychic"
-				],
-				"spriteSuffix": "attack",
-				"genderRatio": "unknown"
+				"spriteSuffix": "attack"
 			},
 			{
 				"name": "Deoxys Defense",
-				"types": [
-					"psychic"
-				],
-				"spriteSuffix": "defense",
-				"genderRatio": "unknown"
+				"spriteSuffix": "defense"
 			},
 			{
 				"name": "Deoxys Speed",
-				"types": [
-					"psychic"
-				],
-				"spriteSuffix": "speed",
-				"genderRatio": "unknown"
+				"spriteSuffix": "speed"
 			}
 		],
 		"genderRatio": "unknown",

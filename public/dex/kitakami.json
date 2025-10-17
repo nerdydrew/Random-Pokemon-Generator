@@ -716,21 +716,14 @@
 			"grass"
 		],
 		"forms": [
-			{
-				"name": "Shaymin",
-				"types": [
-					"grass"
-				],
-				"genderRatio": "unknown"
-			},
+			{},
 			{
 				"name": "Shaymin Sky",
 				"types": [
 					"grass",
 					"flying"
 				],
-				"spriteSuffix": "sky",
-				"genderRatio": "unknown"
+				"spriteSuffix": "sky"
 			}
 		],
 		"genderRatio": "unknown",
@@ -1013,22 +1006,9 @@
 			"ghost"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Poltchageist",
-				"types": [
-					"grass",
-					"ghost"
-				],
-				"genderRatio": "unknown"
-			},
-			{
-				"name": "Poltchageist",
-				"types": [
-					"grass",
-					"ghost"
-				],
-				"spriteSuffix": "artisan",
-				"genderRatio": "unknown"
+				"spriteSuffix": "artisan"
 			}
 		],
 		"genderRatio": "unknown"
@@ -1041,22 +1021,9 @@
 			"ghost"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Sinistcha",
-				"types": [
-					"grass",
-					"ghost"
-				],
-				"genderRatio": "unknown"
-			},
-			{
-				"name": "Sinistcha",
-				"types": [
-					"grass",
-					"ghost"
-				],
-				"spriteSuffix": "masterpiece",
-				"genderRatio": "unknown"
+				"spriteSuffix": "masterpiece"
 			}
 		],
 		"genderRatio": "unknown",
@@ -1109,25 +1076,11 @@
 		],
 		"forms": [
 			{
-				"name": "Ogerpon (Teal Mask)",
-				"types": [
-					"grass"
-				],
-				"genderRatio": {
-					"male": 0,
-					"female": 1
-				}
+				"name": "Ogerpon (Teal Mask)"
 			},
 			{
 				"name": "Ogerpon (Teal Mask)",
-				"types": [
-					"grass"
-				],
-				"spriteSuffix": "mask",
-				"genderRatio": {
-					"male": 0,
-					"female": 1
-				}
+				"spriteSuffix": "mask"
 			},
 			{
 				"name": "Ogerpon (Hearthflame Mask)",
@@ -1135,11 +1088,7 @@
 					"grass",
 					"fire"
 				],
-				"spriteSuffix": "hearthflame",
-				"genderRatio": {
-					"male": 0,
-					"female": 1
-				}
+				"spriteSuffix": "hearthflame"
 			},
 			{
 				"name": "Ogerpon (Hearthflame Mask)",
@@ -1147,11 +1096,7 @@
 					"grass",
 					"fire"
 				],
-				"spriteSuffix": "hearthflame-mask",
-				"genderRatio": {
-					"male": 0,
-					"female": 1
-				}
+				"spriteSuffix": "hearthflame-mask"
 			},
 			{
 				"name": "Ogerpon (Wellspring Mask)",
@@ -1159,11 +1104,7 @@
 					"grass",
 					"water"
 				],
-				"spriteSuffix": "wellspring",
-				"genderRatio": {
-					"male": 0,
-					"female": 1
-				}
+				"spriteSuffix": "wellspring"
 			},
 			{
 				"name": "Ogerpon (Wellspring Mask)",
@@ -1171,11 +1112,7 @@
 					"grass",
 					"water"
 				],
-				"spriteSuffix": "wellspring-mask",
-				"genderRatio": {
-					"male": 0,
-					"female": 1
-				}
+				"spriteSuffix": "wellspring-mask"
 			},
 			{
 				"name": "Ogerpon (Cornerstone Mask)",
@@ -1183,11 +1120,7 @@
 					"grass",
 					"rock"
 				],
-				"spriteSuffix": "cornerstone",
-				"genderRatio": {
-					"male": 0,
-					"female": 1
-				}
+				"spriteSuffix": "cornerstone"
 			},
 			{
 				"name": "Ogerpon (Cornerstone Mask)",
@@ -1195,11 +1128,7 @@
 					"grass",
 					"rock"
 				],
-				"spriteSuffix": "cornerstone-mask",
-				"genderRatio": {
-					"male": 0,
-					"female": 1
-				}
+				"spriteSuffix": "cornerstone-mask"
 			}
 		],
 		"genderRatio": {
@@ -1218,10 +1147,6 @@
 		"forms": [
 			{
 				"name": "Bloodmoon Ursaluna",
-				"types": [
-					"ground",
-					"normal"
-				],
 				"spriteSuffix": "bloodmoon",
 				"genderRatio": {
 					"male": 1,

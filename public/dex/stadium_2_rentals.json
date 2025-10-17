@@ -1944,227 +1944,115 @@
 		],
 		"forms": [
 			{
-				"name": "Unown A",
-				"types": [
-					"psychic"
-				],
-				"genderRatio": "unknown"
+				"name": "Unown A"
 			},
 			{
 				"name": "Unown B",
-				"types": [
-					"psychic"
-				],
-				"spriteSuffix": "b",
-				"genderRatio": "unknown"
+				"spriteSuffix": "b"
 			},
 			{
 				"name": "Unown C",
-				"types": [
-					"psychic"
-				],
-				"spriteSuffix": "c",
-				"genderRatio": "unknown"
+				"spriteSuffix": "c"
 			},
 			{
 				"name": "Unown D",
-				"types": [
-					"psychic"
-				],
-				"spriteSuffix": "d",
-				"genderRatio": "unknown"
+				"spriteSuffix": "d"
 			},
 			{
 				"name": "Unown E",
-				"types": [
-					"psychic"
-				],
-				"spriteSuffix": "e",
-				"genderRatio": "unknown"
+				"spriteSuffix": "e"
 			},
 			{
 				"name": "Unown F",
-				"types": [
-					"psychic"
-				],
-				"spriteSuffix": "f",
-				"genderRatio": "unknown"
+				"spriteSuffix": "f"
 			},
 			{
 				"name": "Unown G",
-				"types": [
-					"psychic"
-				],
-				"spriteSuffix": "g",
-				"genderRatio": "unknown"
+				"spriteSuffix": "g"
 			},
 			{
 				"name": "Unown H",
-				"types": [
-					"psychic"
-				],
-				"spriteSuffix": "h",
-				"genderRatio": "unknown"
+				"spriteSuffix": "h"
 			},
 			{
 				"name": "Unown I",
-				"types": [
-					"psychic"
-				],
-				"spriteSuffix": "i",
-				"genderRatio": "unknown"
+				"spriteSuffix": "i"
 			},
 			{
 				"name": "Unown J",
-				"types": [
-					"psychic"
-				],
-				"spriteSuffix": "j",
-				"genderRatio": "unknown"
+				"spriteSuffix": "j"
 			},
 			{
 				"name": "Unown M",
-				"types": [
-					"psychic"
-				],
-				"spriteSuffix": "m",
-				"genderRatio": "unknown"
+				"spriteSuffix": "m"
 			},
 			{
 				"name": "Unown K",
-				"types": [
-					"psychic"
-				],
-				"spriteSuffix": "k",
-				"genderRatio": "unknown"
+				"spriteSuffix": "k"
 			},
 			{
 				"name": "Unown L",
-				"types": [
-					"psychic"
-				],
-				"spriteSuffix": "l",
-				"genderRatio": "unknown"
+				"spriteSuffix": "l"
 			},
 			{
 				"name": "Unown N",
-				"types": [
-					"psychic"
-				],
-				"spriteSuffix": "n",
-				"genderRatio": "unknown"
+				"spriteSuffix": "n"
 			},
 			{
 				"name": "Unown O",
-				"types": [
-					"psychic"
-				],
-				"spriteSuffix": "o",
-				"genderRatio": "unknown"
+				"spriteSuffix": "o"
 			},
 			{
 				"name": "Unown P",
-				"types": [
-					"psychic"
-				],
-				"spriteSuffix": "p",
-				"genderRatio": "unknown"
+				"spriteSuffix": "p"
 			},
 			{
 				"name": "Unown Q",
-				"types": [
-					"psychic"
-				],
-				"spriteSuffix": "q",
-				"genderRatio": "unknown"
+				"spriteSuffix": "q"
 			},
 			{
 				"name": "Unown R",
-				"types": [
-					"psychic"
-				],
-				"spriteSuffix": "r",
-				"genderRatio": "unknown"
+				"spriteSuffix": "r"
 			},
 			{
 				"name": "Unown S",
-				"types": [
-					"psychic"
-				],
-				"spriteSuffix": "s",
-				"genderRatio": "unknown"
+				"spriteSuffix": "s"
 			},
 			{
 				"name": "Unown T",
-				"types": [
-					"psychic"
-				],
-				"spriteSuffix": "t",
-				"genderRatio": "unknown"
+				"spriteSuffix": "t"
 			},
 			{
 				"name": "Unown U",
-				"types": [
-					"psychic"
-				],
-				"spriteSuffix": "u",
-				"genderRatio": "unknown"
+				"spriteSuffix": "u"
 			},
 			{
 				"name": "Unown V",
-				"types": [
-					"psychic"
-				],
-				"spriteSuffix": "v",
-				"genderRatio": "unknown"
+				"spriteSuffix": "v"
 			},
 			{
 				"name": "Unown W",
-				"types": [
-					"psychic"
-				],
-				"spriteSuffix": "w",
-				"genderRatio": "unknown"
+				"spriteSuffix": "w"
 			},
 			{
 				"name": "Unown X",
-				"types": [
-					"psychic"
-				],
-				"spriteSuffix": "x",
-				"genderRatio": "unknown"
+				"spriteSuffix": "x"
 			},
 			{
 				"name": "Unown Y",
-				"types": [
-					"psychic"
-				],
-				"spriteSuffix": "y",
-				"genderRatio": "unknown"
+				"spriteSuffix": "y"
 			},
 			{
 				"name": "Unown Z",
-				"types": [
-					"psychic"
-				],
-				"spriteSuffix": "z",
-				"genderRatio": "unknown"
+				"spriteSuffix": "z"
 			},
 			{
 				"name": "Unown !",
-				"types": [
-					"psychic"
-				],
-				"spriteSuffix": "exclamation",
-				"genderRatio": "unknown"
+				"spriteSuffix": "exclamation"
 			},
 			{
 				"name": "Unown ?",
-				"types": [
-					"psychic"
-				],
-				"spriteSuffix": "question",
-				"genderRatio": "unknown"
+				"spriteSuffix": "question"
 			}
 		],
 		"genderRatio": "unknown"

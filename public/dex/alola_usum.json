@@ -211,52 +211,27 @@
 			"flying"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Oricorio",
-				"types": [
-					"fire",
-					"flying"
-				],
-				"genderRatio": {
-					"male": 1,
-					"female": 3
-				}
-			},
-			{
-				"name": "Oricorio",
 				"types": [
 					"electric",
 					"flying"
 				],
-				"spriteSuffix": "pom-pom",
-				"genderRatio": {
-					"male": 1,
-					"female": 3
-				}
+				"spriteSuffix": "pom-pom"
 			},
 			{
-				"name": "Oricorio",
 				"types": [
 					"psychic",
 					"flying"
 				],
-				"spriteSuffix": "pau",
-				"genderRatio": {
-					"male": 1,
-					"female": 3
-				}
+				"spriteSuffix": "pau"
 			},
 			{
-				"name": "Oricorio",
 				"types": [
 					"ghost",
 					"flying"
 				],
-				"spriteSuffix": "sensu",
-				"genderRatio": {
-					"male": 1,
-					"female": 3
-				}
+				"spriteSuffix": "sensu"
 			}
 		],
 		"genderRatio": {
@@ -298,23 +273,10 @@
 		],
 		"forms": [
 			{
-				"name": "Lycanroc",
-				"types": [
-					"rock"
-				],
 				"spriteSuffix": "dusk"
 			},
+			{},
 			{
-				"name": "Lycanroc",
-				"types": [
-					"rock"
-				]
-			},
-			{
-				"name": "Lycanroc",
-				"types": [
-					"rock"
-				],
 				"spriteSuffix": "midnight"
 			}
 		],
@@ -329,17 +291,9 @@
 		"forms": [
 			{
 				"name": "Wishiwashi School",
-				"types": [
-					"water"
-				],
 				"spriteSuffix": "school"
 			},
-			{
-				"name": "Wishiwashi",
-				"types": [
-					"water"
-				]
-			}
+			{}
 		]
 	},
 	{
@@ -596,147 +550,107 @@
 		],
 		"forms": [
 			{
-				"name": "Silvally",
 				"types": [
 					"bug"
 				],
-				"spriteSuffix": "bug",
-				"genderRatio": "unknown"
+				"spriteSuffix": "bug"
 			},
 			{
-				"name": "Silvally",
 				"types": [
 					"dark"
 				],
-				"spriteSuffix": "dark",
-				"genderRatio": "unknown"
+				"spriteSuffix": "dark"
 			},
 			{
-				"name": "Silvally",
 				"types": [
 					"dragon"
 				],
-				"spriteSuffix": "dragon",
-				"genderRatio": "unknown"
+				"spriteSuffix": "dragon"
 			},
 			{
-				"name": "Silvally",
 				"types": [
 					"electric"
 				],
-				"spriteSuffix": "electric",
-				"genderRatio": "unknown"
+				"spriteSuffix": "electric"
 			},
 			{
-				"name": "Silvally",
 				"types": [
 					"fairy"
 				],
-				"spriteSuffix": "fairy",
-				"genderRatio": "unknown"
+				"spriteSuffix": "fairy"
 			},
 			{
-				"name": "Silvally",
 				"types": [
 					"fighting"
 				],
-				"spriteSuffix": "fighting",
-				"genderRatio": "unknown"
+				"spriteSuffix": "fighting"
 			},
 			{
-				"name": "Silvally",
 				"types": [
 					"fire"
 				],
-				"spriteSuffix": "fire",
-				"genderRatio": "unknown"
+				"spriteSuffix": "fire"
 			},
 			{
-				"name": "Silvally",
 				"types": [
 					"flying"
 				],
-				"spriteSuffix": "flying",
-				"genderRatio": "unknown"
+				"spriteSuffix": "flying"
 			},
 			{
-				"name": "Silvally",
 				"types": [
 					"ghost"
 				],
-				"spriteSuffix": "ghost",
-				"genderRatio": "unknown"
+				"spriteSuffix": "ghost"
 			},
 			{
-				"name": "Silvally",
 				"types": [
 					"grass"
 				],
-				"spriteSuffix": "grass",
-				"genderRatio": "unknown"
+				"spriteSuffix": "grass"
 			},
 			{
-				"name": "Silvally",
 				"types": [
 					"ground"
 				],
-				"spriteSuffix": "ground",
-				"genderRatio": "unknown"
+				"spriteSuffix": "ground"
 			},
 			{
-				"name": "Silvally",
 				"types": [
 					"ice"
 				],
-				"spriteSuffix": "ice",
-				"genderRatio": "unknown"
+				"spriteSuffix": "ice"
 			},
+			{},
 			{
-				"name": "Silvally",
-				"types": [
-					"normal"
-				],
-				"genderRatio": "unknown"
-			},
-			{
-				"name": "Silvally",
 				"types": [
 					"poison"
 				],
-				"spriteSuffix": "poison",
-				"genderRatio": "unknown"
+				"spriteSuffix": "poison"
 			},
 			{
-				"name": "Silvally",
 				"types": [
 					"psychic"
 				],
-				"spriteSuffix": "psychic",
-				"genderRatio": "unknown"
+				"spriteSuffix": "psychic"
 			},
 			{
-				"name": "Silvally",
 				"types": [
 					"rock"
 				],
-				"spriteSuffix": "rock",
-				"genderRatio": "unknown"
+				"spriteSuffix": "rock"
 			},
 			{
-				"name": "Silvally",
 				"types": [
 					"steel"
 				],
-				"spriteSuffix": "steel",
-				"genderRatio": "unknown"
+				"spriteSuffix": "steel"
 			},
 			{
-				"name": "Silvally",
 				"types": [
 					"water"
 				],
-				"spriteSuffix": "water",
-				"genderRatio": "unknown"
+				"spriteSuffix": "water"
 			}
 		],
 		"genderRatio": "unknown",
@@ -753,74 +667,33 @@
 		"forms": [
 			{
 				"name": "Minior Core",
-				"types": [
-					"rock",
-					"flying"
-				],
-				"spriteSuffix": "blue",
-				"genderRatio": "unknown"
+				"spriteSuffix": "blue"
 			},
 			{
 				"name": "Minior Core",
-				"types": [
-					"rock",
-					"flying"
-				],
-				"spriteSuffix": "green",
-				"genderRatio": "unknown"
+				"spriteSuffix": "green"
 			},
 			{
 				"name": "Minior Core",
-				"types": [
-					"rock",
-					"flying"
-				],
-				"spriteSuffix": "indigo",
-				"genderRatio": "unknown"
+				"spriteSuffix": "indigo"
 			},
 			{
-				"name": "Minior",
-				"types": [
-					"rock",
-					"flying"
-				],
-				"spriteSuffix": "meteor",
-				"genderRatio": "unknown"
+				"spriteSuffix": "meteor"
 			},
 			{
 				"name": "Minior Core",
-				"types": [
-					"rock",
-					"flying"
-				],
-				"spriteSuffix": "orange",
-				"genderRatio": "unknown"
+				"spriteSuffix": "orange"
+			},
+			{
+				"name": "Minior Core"
 			},
 			{
 				"name": "Minior Core",
-				"types": [
-					"rock",
-					"flying"
-				],
-				"genderRatio": "unknown"
+				"spriteSuffix": "violet"
 			},
 			{
 				"name": "Minior Core",
-				"types": [
-					"rock",
-					"flying"
-				],
-				"spriteSuffix": "violet",
-				"genderRatio": "unknown"
-			},
-			{
-				"name": "Minior Core",
-				"types": [
-					"rock",
-					"flying"
-				],
-				"spriteSuffix": "yellow",
-				"genderRatio": "unknown"
+				"spriteSuffix": "yellow"
 			}
 		],
 		"genderRatio": "unknown"
@@ -1067,21 +940,14 @@
 			"psychic"
 		],
 		"forms": [
-			{
-				"name": "Necrozma",
-				"types": [
-					"psychic"
-				],
-				"genderRatio": "unknown"
-			},
+			{},
 			{
 				"name": "Dawn Wings Necrozma",
 				"types": [
 					"psychic",
 					"ghost"
 				],
-				"spriteSuffix": "dawnwings",
-				"genderRatio": "unknown"
+				"spriteSuffix": "dawnwings"
 			},
 			{
 				"name": "Dusk Mane Necrozma",
@@ -1089,8 +955,7 @@
 					"psychic",
 					"steel"
 				],
-				"spriteSuffix": "duskmane",
-				"genderRatio": "unknown"
+				"spriteSuffix": "duskmane"
 			},
 			{
 				"name": "Ultra Necrozma",
@@ -1098,8 +963,7 @@
 					"psychic",
 					"dragon"
 				],
-				"spriteSuffix": "ultra",
-				"genderRatio": "unknown"
+				"spriteSuffix": "ultra"
 			}
 		],
 		"genderRatio": "unknown",
@@ -1159,16 +1023,9 @@
 			"normal"
 		],
 		"forms": [
-			{
-				"name": "Rattata",
-				"isNfe": true,
-				"types": [
-					"normal"
-				]
-			},
+			{},
 			{
 				"name": "Rattata Alola",
-				"isNfe": true,
 				"types": [
 					"dark",
 					"normal"
@@ -1184,12 +1041,7 @@
 			"normal"
 		],
 		"forms": [
-			{
-				"name": "Raticate",
-				"types": [
-					"normal"
-				]
-			},
+			{},
 			{
 				"name": "Raticate Alola",
 				"types": [
@@ -1227,19 +1079,8 @@
 			"electric"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Pikachu",
-				"isNfe": true,
-				"types": [
-					"electric"
-				]
-			},
-			{
-				"name": "Pikachu",
-				"isNfe": true,
-				"types": [
-					"electric"
-				],
 				"spriteSuffix": "hat",
 				"genderRatio": {
 					"male": 1,
@@ -1256,12 +1097,7 @@
 			"electric"
 		],
 		"forms": [
-			{
-				"name": "Raichu",
-				"types": [
-					"electric"
-				]
-			},
+			{},
 			{
 				"name": "Raichu Alola",
 				"types": [
@@ -1281,16 +1117,9 @@
 			"ground"
 		],
 		"forms": [
-			{
-				"name": "Sandshrew",
-				"isNfe": true,
-				"types": [
-					"ground"
-				]
-			},
+			{},
 			{
 				"name": "Sandshrew Alola",
-				"isNfe": true,
 				"types": [
 					"ice",
 					"steel"
@@ -1306,12 +1135,7 @@
 			"ground"
 		],
 		"forms": [
-			{
-				"name": "Sandslash",
-				"types": [
-					"ground"
-				]
-			},
+			{},
 			{
 				"name": "Sandslash Alola",
 				"types": [
@@ -1356,28 +1180,13 @@
 			"fire"
 		],
 		"forms": [
-			{
-				"name": "Vulpix",
-				"isNfe": true,
-				"types": [
-					"fire"
-				],
-				"genderRatio": {
-					"male": 1,
-					"female": 3
-				}
-			},
+			{},
 			{
 				"name": "Vulpix Alola",
-				"isNfe": true,
 				"types": [
 					"ice"
 				],
-				"spriteSuffix": "alola",
-				"genderRatio": {
-					"male": 1,
-					"female": 3
-				}
+				"spriteSuffix": "alola"
 			}
 		],
 		"genderRatio": {
@@ -1392,27 +1201,14 @@
 			"fire"
 		],
 		"forms": [
-			{
-				"name": "Ninetales",
-				"types": [
-					"fire"
-				],
-				"genderRatio": {
-					"male": 1,
-					"female": 3
-				}
-			},
+			{},
 			{
 				"name": "Ninetales Alola",
 				"types": [
 					"ice",
 					"fairy"
 				],
-				"spriteSuffix": "alola",
-				"genderRatio": {
-					"male": 1,
-					"female": 3
-				}
+				"spriteSuffix": "alola"
 			}
 		],
 		"genderRatio": {
@@ -1493,16 +1289,9 @@
 			"ground"
 		],
 		"forms": [
-			{
-				"name": "Diglett",
-				"isNfe": true,
-				"types": [
-					"ground"
-				]
-			},
+			{},
 			{
 				"name": "Diglett Alola",
-				"isNfe": true,
 				"types": [
 					"ground",
 					"steel"
@@ -1518,12 +1307,7 @@
 			"ground"
 		],
 		"forms": [
-			{
-				"name": "Dugtrio",
-				"types": [
-					"ground"
-				]
-			},
+			{},
 			{
 				"name": "Dugtrio Alola",
 				"types": [
@@ -1543,16 +1327,9 @@
 			"normal"
 		],
 		"forms": [
-			{
-				"name": "Meowth",
-				"isNfe": true,
-				"types": [
-					"normal"
-				]
-			},
+			{},
 			{
 				"name": "Meowth Alola",
-				"isNfe": true,
 				"types": [
 					"dark"
 				],
@@ -1567,12 +1344,7 @@
 			"normal"
 		],
 		"forms": [
-			{
-				"name": "Persian",
-				"types": [
-					"normal"
-				]
-			},
+			{},
 			{
 				"name": "Persian Alola",
 				"types": [
@@ -1697,27 +1469,10 @@
 			"psychic"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Alakazam",
-				"types": [
-					"psychic"
-				],
-				"genderRatio": {
-					"male": 3,
-					"female": 1
-				}
-			},
-			{
-				"name": "Alakazam Mega",
-				"types": [
-					"psychic"
-				],
 				"spriteSuffix": "mega",
-				"isMega": true,
-				"genderRatio": {
-					"male": 3,
-					"female": 1
-				}
+				"isMega": true
 			}
 		],
 		"genderRatio": {
@@ -1790,17 +1545,9 @@
 			"ground"
 		],
 		"forms": [
-			{
-				"name": "Geodude",
-				"isNfe": true,
-				"types": [
-					"rock",
-					"ground"
-				]
-			},
+			{},
 			{
 				"name": "Geodude Alola",
-				"isNfe": true,
 				"types": [
 					"rock",
 					"electric"
@@ -1818,17 +1565,9 @@
 			"ground"
 		],
 		"forms": [
-			{
-				"name": "Graveler",
-				"isNfe": true,
-				"types": [
-					"rock",
-					"ground"
-				]
-			},
+			{},
 			{
 				"name": "Graveler Alola",
-				"isNfe": true,
 				"types": [
 					"rock",
 					"electric"
@@ -1846,13 +1585,7 @@
 			"ground"
 		],
 		"forms": [
-			{
-				"name": "Golem",
-				"types": [
-					"rock",
-					"ground"
-				]
-			},
+			{},
 			{
 				"name": "Golem Alola",
 				"types": [
@@ -1881,19 +1614,8 @@
 			"psychic"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Slowbro",
-				"types": [
-					"water",
-					"psychic"
-				]
-			},
-			{
-				"name": "Slowbro Mega",
-				"types": [
-					"water",
-					"psychic"
-				],
 				"spriteSuffix": "mega",
 				"isMega": true
 			}
@@ -1929,16 +1651,9 @@
 			"poison"
 		],
 		"forms": [
-			{
-				"name": "Grimer",
-				"isNfe": true,
-				"types": [
-					"poison"
-				]
-			},
+			{},
 			{
 				"name": "Grimer Alola",
-				"isNfe": true,
 				"types": [
 					"poison",
 					"dark"
@@ -1954,12 +1669,7 @@
 			"poison"
 		],
 		"forms": [
-			{
-				"name": "Muk",
-				"types": [
-					"poison"
-				]
-			},
+			{},
 			{
 				"name": "Muk Alola",
 				"types": [
@@ -2015,19 +1725,8 @@
 			"poison"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Gengar",
-				"types": [
-					"ghost",
-					"poison"
-				]
-			},
-			{
-				"name": "Gengar Mega",
-				"types": [
-					"ghost",
-					"poison"
-				],
 				"spriteSuffix": "mega",
 				"isMega": true
 			}
@@ -2067,13 +1766,7 @@
 			"psychic"
 		],
 		"forms": [
-			{
-				"name": "Exeggutor",
-				"types": [
-					"grass",
-					"psychic"
-				]
-			},
+			{},
 			{
 				"name": "Exeggutor Alola",
 				"types": [
@@ -2100,12 +1793,7 @@
 			"ground"
 		],
 		"forms": [
-			{
-				"name": "Marowak",
-				"types": [
-					"ground"
-				]
-			},
+			{},
 			{
 				"name": "Marowak Alola",
 				"types": [
@@ -2137,27 +1825,10 @@
 			"normal"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Kangaskhan",
-				"types": [
-					"normal"
-				],
-				"genderRatio": {
-					"male": 0,
-					"female": 1
-				}
-			},
-			{
-				"name": "Kangaskhan Mega",
-				"types": [
-					"normal"
-				],
 				"spriteSuffix": "mega",
-				"isMega": true,
-				"genderRatio": {
-					"male": 0,
-					"female": 1
-				}
+				"isMega": true
 			}
 		],
 		"genderRatio": {
@@ -2242,14 +1913,8 @@
 			"bug"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Pinsir",
-				"types": [
-					"bug"
-				]
-			},
-			{
-				"name": "Pinsir Mega",
 				"types": [
 					"bug",
 					"flying"
@@ -2286,15 +1951,8 @@
 			"flying"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Gyarados",
-				"types": [
-					"water",
-					"flying"
-				]
-			},
-			{
-				"name": "Gyarados Mega",
 				"types": [
 					"water",
 					"dark"
@@ -2386,29 +2044,10 @@
 			"flying"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Aerodactyl",
-				"types": [
-					"rock",
-					"flying"
-				],
-				"genderRatio": {
-					"male": 7,
-					"female": 1
-				}
-			},
-			{
-				"name": "Aerodactyl Mega",
-				"types": [
-					"rock",
-					"flying"
-				],
 				"spriteSuffix": "mega",
-				"isMega": true,
-				"genderRatio": {
-					"male": 7,
-					"female": 1
-				}
+				"isMega": true
 			}
 		],
 		"genderRatio": {
@@ -2648,19 +2287,8 @@
 			"steel"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Scizor",
-				"types": [
-					"bug",
-					"steel"
-				]
-			},
-			{
-				"name": "Scizor Mega",
-				"types": [
-					"bug",
-					"steel"
-				],
 				"spriteSuffix": "mega",
 				"isMega": true
 			}
@@ -2844,19 +2472,8 @@
 			"ghost"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Sableye",
-				"types": [
-					"dark",
-					"ghost"
-				]
-			},
-			{
-				"name": "Sableye Mega",
-				"types": [
-					"dark",
-					"ghost"
-				],
 				"spriteSuffix": "mega",
 				"isMega": true
 			}
@@ -2879,19 +2496,8 @@
 			"dark"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Sharpedo",
-				"types": [
-					"water",
-					"dark"
-				]
-			},
-			{
-				"name": "Sharpedo Mega",
-				"types": [
-					"water",
-					"dark"
-				],
 				"spriteSuffix": "mega",
 				"isMega": true
 			}
@@ -2996,28 +2602,20 @@
 			"normal"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Castform",
-				"types": [
-					"normal"
-				]
-			},
-			{
-				"name": "Castform",
 				"types": [
 					"water"
 				],
 				"spriteSuffix": "rainy"
 			},
 			{
-				"name": "Castform",
 				"types": [
 					"ice"
 				],
 				"spriteSuffix": "snowy"
 			},
 			{
-				"name": "Castform",
 				"types": [
 					"fire"
 				],
@@ -3032,17 +2630,8 @@
 			"dark"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Absol",
-				"types": [
-					"dark"
-				]
-			},
-			{
-				"name": "Absol Mega",
-				"types": [
-					"dark"
-				],
 				"spriteSuffix": "mega",
 				"isMega": true
 			}
@@ -3063,17 +2652,8 @@
 			"ice"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Glalie",
-				"types": [
-					"ice"
-				]
-			},
-			{
-				"name": "Glalie Mega",
-				"types": [
-					"ice"
-				],
 				"spriteSuffix": "mega",
 				"isMega": true
 			}
@@ -3128,19 +2708,8 @@
 			"flying"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Salamence",
-				"types": [
-					"dragon",
-					"flying"
-				]
-			},
-			{
-				"name": "Salamence Mega",
-				"types": [
-					"dragon",
-					"flying"
-				],
 				"spriteSuffix": "mega",
 				"isMega": true
 			}
@@ -3176,23 +2745,10 @@
 			"psychic"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Metagross",
-				"types": [
-					"steel",
-					"psychic"
-				],
-				"genderRatio": "unknown"
-			},
-			{
-				"name": "Metagross Mega",
-				"types": [
-					"steel",
-					"psychic"
-				],
 				"spriteSuffix": "mega",
-				"isMega": true,
-				"genderRatio": "unknown"
+				"isMega": true
 			}
 		],
 		"genderRatio": "unknown",
@@ -3256,19 +2812,8 @@
 			"water"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Shellos",
-				"isNfe": true,
-				"types": [
-					"water"
-				]
-			},
-			{
-				"name": "Shellos",
-				"isNfe": true,
-				"types": [
-					"water"
-				],
 				"spriteSuffix": "east"
 			}
 		]
@@ -3281,19 +2826,8 @@
 			"ground"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Gastrodon",
-				"types": [
-					"water",
-					"ground"
-				]
-			},
-			{
-				"name": "Gastrodon",
-				"types": [
-					"water",
-					"ground"
-				],
 				"spriteSuffix": "east"
 			}
 		],
@@ -3381,19 +2915,8 @@
 			"ground"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Garchomp",
-				"types": [
-					"dragon",
-					"ground"
-				]
-			},
-			{
-				"name": "Garchomp Mega",
-				"types": [
-					"dragon",
-					"ground"
-				],
 				"spriteSuffix": "mega",
 				"isMega": true
 			}
@@ -3432,29 +2955,10 @@
 			"steel"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Lucario",
-				"types": [
-					"fighting",
-					"steel"
-				],
-				"genderRatio": {
-					"male": 7,
-					"female": 1
-				}
-			},
-			{
-				"name": "Lucario Mega",
-				"types": [
-					"fighting",
-					"steel"
-				],
 				"spriteSuffix": "mega",
-				"isMega": true,
-				"genderRatio": {
-					"male": 7,
-					"female": 1
-				}
+				"isMega": true
 			}
 		],
 		"genderRatio": {
@@ -3984,30 +3488,13 @@
 		"forms": [
 			{
 				"name": "Zygarde Complete",
-				"types": [
-					"dragon",
-					"ground"
-				],
-				"spriteSuffix": "complete",
-				"genderRatio": "unknown"
+				"spriteSuffix": "complete"
 			},
 			{
 				"name": "Zygarde 10%",
-				"types": [
-					"dragon",
-					"ground"
-				],
-				"spriteSuffix": "10",
-				"genderRatio": "unknown"
+				"spriteSuffix": "10"
 			},
-			{
-				"name": "Zygarde",
-				"types": [
-					"dragon",
-					"ground"
-				],
-				"genderRatio": "unknown"
-			}
+			{}
 		],
 		"genderRatio": "unknown",
 		"isLegendary": true
@@ -4187,14 +3674,8 @@
 			"electric"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Ampharos",
-				"types": [
-					"electric"
-				]
-			},
-			{
-				"name": "Ampharos Mega",
 				"types": [
 					"electric",
 					"dragon"
@@ -4245,19 +3726,8 @@
 			"fighting"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Heracross",
-				"types": [
-					"bug",
-					"fighting"
-				]
-			},
-			{
-				"name": "Heracross Mega",
-				"types": [
-					"bug",
-					"fighting"
-				],
 				"spriteSuffix": "mega",
 				"isMega": true
 			}
@@ -4305,19 +3775,8 @@
 			"fire"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Houndoom",
-				"types": [
-					"dark",
-					"fire"
-				]
-			},
-			{
-				"name": "Houndoom Mega",
-				"types": [
-					"dark",
-					"fire"
-				],
 				"spriteSuffix": "mega",
 				"isMega": true
 			}
@@ -4364,19 +3823,8 @@
 			"dark"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Tyranitar",
-				"types": [
-					"rock",
-					"dark"
-				]
-			},
-			{
-				"name": "Tyranitar Mega",
-				"types": [
-					"rock",
-					"dark"
-				],
 				"spriteSuffix": "mega",
 				"isMega": true
 			}
@@ -4391,19 +3839,8 @@
 			"fairy"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Mawile",
-				"types": [
-					"steel",
-					"fairy"
-				]
-			},
-			{
-				"name": "Mawile Mega",
-				"types": [
-					"steel",
-					"fairy"
-				],
 				"spriteSuffix": "mega",
 				"isMega": true
 			}
@@ -4424,17 +3861,8 @@
 			"electric"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Manectric",
-				"types": [
-					"electric"
-				]
-			},
-			{
-				"name": "Manectric Mega",
-				"types": [
-					"electric"
-				],
 				"spriteSuffix": "mega",
 				"isMega": true
 			}
@@ -4552,17 +3980,8 @@
 			"ghost"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Banette",
-				"types": [
-					"ghost"
-				]
-			},
-			{
-				"name": "Banette Mega",
-				"types": [
-					"ghost"
-				],
 				"spriteSuffix": "mega",
 				"isMega": true
 			}
@@ -4624,14 +4043,8 @@
 			"normal"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Lopunny",
-				"types": [
-					"normal"
-				]
-			},
-			{
-				"name": "Lopunny Mega",
 				"types": [
 					"normal",
 					"fighting"
@@ -4675,17 +4088,8 @@
 			"water"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Basculin",
-				"types": [
-					"water"
-				]
-			},
-			{
-				"name": "Basculin",
-				"types": [
-					"water"
-				],
 				"spriteSuffix": "bluestriped"
 			}
 		]
@@ -4766,24 +4170,12 @@
 		],
 		"forms": [
 			{
-				"name": "Frillish",
-				"isNfe": true,
-				"types": [
-					"water",
-					"ghost"
-				],
 				"genderRatio": {
 					"male": 1,
 					"female": 0
 				}
 			},
 			{
-				"name": "Frillish",
-				"isNfe": true,
-				"types": [
-					"water",
-					"ghost"
-				],
 				"spriteSuffix": "f",
 				"genderRatio": {
 					"male": 0,
@@ -4801,11 +4193,6 @@
 		],
 		"forms": [
 			{
-				"name": "Jellicent",
-				"types": [
-					"water",
-					"ghost"
-				],
 				"spriteSuffix": "f",
 				"genderRatio": {
 					"male": 0,
@@ -4813,11 +4200,6 @@
 				}
 			},
 			{
-				"name": "Jellicent",
-				"types": [
-					"water",
-					"ghost"
-				],
 				"genderRatio": {
 					"male": 1,
 					"female": 0
@@ -4943,11 +4325,6 @@
 		],
 		"forms": [
 			{
-				"name": "Pyroar",
-				"types": [
-					"fire",
-					"normal"
-				],
 				"spriteSuffix": "f",
 				"genderRatio": {
 					"male": 0,
@@ -4955,11 +4332,6 @@
 				}
 			},
 			{
-				"name": "Pyroar",
-				"types": [
-					"fire",
-					"normal"
-				],
 				"genderRatio": {
 					"male": 1,
 					"female": 0
@@ -4980,64 +4352,18 @@
 			"fairy"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Flab\u00e9b\u00e9",
-				"isNfe": true,
-				"types": [
-					"fairy"
-				],
-				"genderRatio": {
-					"male": 0,
-					"female": 1
-				}
+				"spriteSuffix": "blue"
 			},
 			{
-				"name": "Flab\u00e9b\u00e9",
-				"isNfe": true,
-				"types": [
-					"fairy"
-				],
-				"spriteSuffix": "blue",
-				"genderRatio": {
-					"male": 0,
-					"female": 1
-				}
+				"spriteSuffix": "orange"
 			},
 			{
-				"name": "Flab\u00e9b\u00e9",
-				"isNfe": true,
-				"types": [
-					"fairy"
-				],
-				"spriteSuffix": "orange",
-				"genderRatio": {
-					"male": 0,
-					"female": 1
-				}
+				"spriteSuffix": "white"
 			},
 			{
-				"name": "Flab\u00e9b\u00e9",
-				"isNfe": true,
-				"types": [
-					"fairy"
-				],
-				"spriteSuffix": "white",
-				"genderRatio": {
-					"male": 0,
-					"female": 1
-				}
-			},
-			{
-				"name": "Flab\u00e9b\u00e9",
-				"isNfe": true,
-				"types": [
-					"fairy"
-				],
-				"spriteSuffix": "yellow",
-				"genderRatio": {
-					"male": 0,
-					"female": 1
-				}
+				"spriteSuffix": "yellow"
 			}
 		],
 		"genderRatio": {
@@ -5053,76 +4379,21 @@
 			"fairy"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Floette",
-				"isNfe": true,
-				"types": [
-					"fairy"
-				],
-				"genderRatio": {
-					"male": 0,
-					"female": 1
-				}
+				"spriteSuffix": "blue"
 			},
 			{
-				"name": "Floette",
-				"isNfe": true,
-				"types": [
-					"fairy"
-				],
-				"spriteSuffix": "blue",
-				"genderRatio": {
-					"male": 0,
-					"female": 1
-				}
+				"spriteSuffix": "eternal"
 			},
 			{
-				"name": "Floette",
-				"isNfe": true,
-				"types": [
-					"fairy"
-				],
-				"spriteSuffix": "eternal",
-				"genderRatio": {
-					"male": 0,
-					"female": 1
-				}
+				"spriteSuffix": "orange"
 			},
 			{
-				"name": "Floette",
-				"isNfe": true,
-				"types": [
-					"fairy"
-				],
-				"spriteSuffix": "orange",
-				"genderRatio": {
-					"male": 0,
-					"female": 1
-				}
+				"spriteSuffix": "white"
 			},
 			{
-				"name": "Floette",
-				"isNfe": true,
-				"types": [
-					"fairy"
-				],
-				"spriteSuffix": "white",
-				"genderRatio": {
-					"male": 0,
-					"female": 1
-				}
-			},
-			{
-				"name": "Floette",
-				"isNfe": true,
-				"types": [
-					"fairy"
-				],
-				"spriteSuffix": "yellow",
-				"genderRatio": {
-					"male": 0,
-					"female": 1
-				}
+				"spriteSuffix": "yellow"
 			}
 		],
 		"genderRatio": {
@@ -5138,59 +4409,18 @@
 			"fairy"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Florges",
-				"types": [
-					"fairy"
-				],
-				"genderRatio": {
-					"male": 0,
-					"female": 1
-				}
+				"spriteSuffix": "blue"
 			},
 			{
-				"name": "Florges",
-				"types": [
-					"fairy"
-				],
-				"spriteSuffix": "blue",
-				"genderRatio": {
-					"male": 0,
-					"female": 1
-				}
+				"spriteSuffix": "orange"
 			},
 			{
-				"name": "Florges",
-				"types": [
-					"fairy"
-				],
-				"spriteSuffix": "orange",
-				"genderRatio": {
-					"male": 0,
-					"female": 1
-				}
+				"spriteSuffix": "white"
 			},
 			{
-				"name": "Florges",
-				"types": [
-					"fairy"
-				],
-				"spriteSuffix": "white",
-				"genderRatio": {
-					"male": 0,
-					"female": 1
-				}
-			},
-			{
-				"name": "Florges",
-				"types": [
-					"fairy"
-				],
-				"spriteSuffix": "yellow",
-				"genderRatio": {
-					"male": 0,
-					"female": 1
-				}
+				"spriteSuffix": "yellow"
 			}
 		],
 		"genderRatio": {
@@ -5206,73 +4436,32 @@
 			"normal"
 		],
 		"forms": [
+			{},
 			{
-				"name": "Furfrou",
-				"types": [
-					"normal"
-				]
-			},
-			{
-				"name": "Furfrou",
-				"types": [
-					"normal"
-				],
 				"spriteSuffix": "star"
 			},
 			{
-				"name": "Furfrou",
-				"types": [
-					"normal"
-				],
 				"spriteSuffix": "dandy"
 			},
 			{
-				"name": "Furfrou",
-				"types": [
-					"normal"
-				],
 				"spriteSuffix": "debutante"
 			},
 			{
-				"name": "Furfrou",
-				"types": [
-					"normal"
-				],
 				"spriteSuffix": "diamond"
 			},
 			{
-				"name": "Furfrou",
-				"types": [
-					"normal"
-				],
 				"spriteSuffix": "heart"
 			},
 			{
-				"name": "Furfrou",
-				"types": [
-					"normal"
-				],
 				"spriteSuffix": "kabuki"
 			},
 			{
-				"name": "Furfrou",
-				"types": [
-					"normal"
-				],
 				"spriteSuffix": "lareine"
 			},
 			{
-				"name": "Furfrou",
-				"types": [
-					"normal"
-				],
 				"spriteSuffix": "matron"
 			},
 			{
-				"name": "Furfrou",
-				"types": [
-					"normal"
-				],
 				"spriteSuffix": "pharaoh"
 			}
 		]
