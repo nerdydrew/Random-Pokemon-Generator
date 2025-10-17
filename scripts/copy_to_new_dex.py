@@ -9,7 +9,7 @@ from collections import OrderedDict
 Copies the Pokémon specified by a file to a new Pokédex file. Asks whether to copy each form.
 """
 
-forms_to_not_prompt = {"mega", "gigantamax", "alola", "hisui", "galar"}
+forms_to_not_prompt = {"gigantamax", "alola", "hisui", "galar"}
 
 dex_folder = "../public/dex/"
 source_dex_file_name = "all.json"
@@ -27,7 +27,7 @@ def copy_pokemon(pokemon):
         copy_forms(pokemon)
     return pokemon
 
-def should_copy_form(form):
+def should_copy_form(pokemon, form):
     if "spriteSuffix" in form:
         if form["spriteSuffix"] in forms_to_not_prompt:
             return False
@@ -36,14 +36,18 @@ def should_copy_form(form):
     else:
         suffix_to_display = ""
 
-    answer = input("\tInclude %s%s? (Y/n) " % (form["name"], suffix_to_display))
+    if "name" in form:
+        name = form["name"]
+    else:
+        name = pokemon["name"]
+    answer = input("\tInclude %s%s? (Y/n) " % (name, suffix_to_display))
     return answer.lower() != "n"
 
 def copy_forms(pokemon):
     suffixes = [f["spriteSuffix"] for f in pokemon["forms"] if "spriteSuffix" in f]
     print("%s has %i forms (%s)." % (pokemon["name"], len(pokemon["forms"]), ", ".join(suffixes)))
 
-    pokemon["forms"] = [f for f in pokemon["forms"] if should_copy_form(f)]
+    pokemon["forms"] = [f for f in pokemon["forms"] if should_copy_form(pokemon, f)]
 
     if len(pokemon["forms"]) == 0:
         print("No forms selected for %s." % pokemon["name"])
