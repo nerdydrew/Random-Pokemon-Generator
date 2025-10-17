@@ -673,7 +673,18 @@
 			"male": 1,
 			"female": 3
 		},
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"forms": [
+			{},
+			{
+				"types": [
+					"fairy",
+					"flying"
+				],
+				"isMega": true,
+				"spriteSuffix": "mega"
+			}
+		]
 	},
 	{
 		"id": 37,
@@ -1254,7 +1265,14 @@
 			"grass",
 			"poison"
 		],
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"forms": [
+			{},
+			{
+				"isMega": true,
+				"spriteSuffix": "mega"
+			}
+		]
 	},
 	{
 		"id": 72,
@@ -2040,7 +2058,14 @@
 			"psychic"
 		],
 		"genderRatio": "unknown",
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"forms": [
+			{},
+			{
+				"isMega": true,
+				"spriteSuffix": "mega"
+			}
+		]
 	},
 	{
 		"id": 122,
@@ -2588,7 +2613,14 @@
 			"dragon",
 			"flying"
 		],
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"forms": [
+			{},
+			{
+				"isMega": true,
+				"spriteSuffix": "mega"
+			}
+		]
 	},
 	{
 		"id": 150,
@@ -2671,7 +2703,18 @@
 			"male": 7,
 			"female": 1
 		},
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"forms": [
+			{},
+			{
+				"types": [
+					"grass",
+					"fairy"
+				],
+				"isMega": true,
+				"spriteSuffix": "mega"
+			}
+		]
 	},
 	{
 		"id": 155,
@@ -2769,7 +2812,18 @@
 			"male": 7,
 			"female": 1
 		},
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"forms": [
+			{},
+			{
+				"types": [
+					"water",
+					"dragon"
+				],
+				"isMega": true,
+				"spriteSuffix": "mega"
+			}
+		]
 	},
 	{
 		"id": 161,
@@ -3773,6 +3827,13 @@
 		"types": [
 			"steel",
 			"flying"
+		],
+		"forms": [
+			{},
+			{
+				"isMega": true,
+				"spriteSuffix": "mega"
+			}
 		]
 	},
 	{
@@ -6978,7 +7039,14 @@
 			"male": 0,
 			"female": 1
 		},
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"forms": [
+			{},
+			{
+				"isMega": true,
+				"spriteSuffix": "mega"
+			}
+		]
 	},
 	{
 		"id": 479,
@@ -7482,7 +7550,14 @@
 			"male": 7,
 			"female": 1
 		},
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"forms": [
+			{},
+			{
+				"isMega": true,
+				"spriteSuffix": "mega"
+			}
+		]
 	},
 	{
 		"id": 501,
@@ -7792,7 +7867,14 @@
 			"ground",
 			"steel"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"forms": [
+			{},
+			{
+				"isMega": true,
+				"spriteSuffix": "mega"
+			}
+		]
 	},
 	{
 		"id": 531,
@@ -7958,7 +8040,14 @@
 			"bug",
 			"poison"
 		],
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"forms": [
+			{},
+			{
+				"isMega": true,
+				"spriteSuffix": "mega"
+			}
+		]
 	},
 	{
 		"id": 546,
@@ -8173,7 +8262,14 @@
 			"dark",
 			"fighting"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"forms": [
+			{},
+			{
+				"isMega": true,
+				"spriteSuffix": "mega"
+			}
+		]
 	},
 	{
 		"id": 561,
@@ -8799,7 +8895,14 @@
 		"types": [
 			"electric"
 		],
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"forms": [
+			{},
+			{
+				"isMega": true,
+				"spriteSuffix": "mega"
+			}
+		]
 	},
 	{
 		"id": 605,
@@ -8843,7 +8946,14 @@
 			"ghost",
 			"fire"
 		],
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"forms": [
+			{},
+			{
+				"isMega": true,
+				"spriteSuffix": "mega"
+			}
+		]
 	},
 	{
 		"id": 610,
@@ -9491,7 +9601,14 @@
 			"male": 7,
 			"female": 1
 		},
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"forms": [
+			{},
+			{
+				"isMega": true,
+				"spriteSuffix": "mega"
+			}
+		]
 	},
 	{
 		"id": 653,
@@ -9529,7 +9646,14 @@
 			"male": 7,
 			"female": 1
 		},
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"forms": [
+			{},
+			{
+				"isMega": true,
+				"spriteSuffix": "mega"
+			}
+		]
 	},
 	{
 		"id": 656,
@@ -9586,6 +9710,10 @@
 					"male": 7,
 					"female": 1
 				}
+			},
+			{
+				"isMega": true,
+				"spriteSuffix": "mega"
 			}
 		],
 		"genderRatio": {
@@ -9869,6 +9997,10 @@
 					"male": 1,
 					"female": 0
 				}
+			},
+			{
+				"isMega": true,
+				"spriteSuffix": "mega"
 			}
 		],
 		"genderRatio": {
@@ -10028,6 +10160,10 @@
 					"male": 0,
 					"female": 1
 				}
+			},
+			{
+				"isMega": true,
+				"spriteSuffix": "mega"
 			}
 		],
 		"genderRatio": {
@@ -10347,7 +10483,14 @@
 			"dark",
 			"psychic"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"forms": [
+			{},
+			{
+				"isMega": true,
+				"spriteSuffix": "mega"
+			}
+		]
 	},
 	{
 		"id": 688,
@@ -10365,7 +10508,18 @@
 			"rock",
 			"water"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"forms": [
+			{},
+			{
+				"types": [
+					"rock",
+					"fighting"
+				],
+				"isMega": true,
+				"spriteSuffix": "mega"
+			}
+		]
 	},
 	{
 		"id": 690,
@@ -10383,7 +10537,14 @@
 			"poison",
 			"dragon"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"forms": [
+			{},
+			{
+				"isMega": true,
+				"spriteSuffix": "mega"
+			}
+		]
 	},
 	{
 		"id": 692,
@@ -10489,6 +10650,13 @@
 		"types": [
 			"fighting",
 			"flying"
+		],
+		"forms": [
+			{},
+			{
+				"isMega": true,
+				"spriteSuffix": "mega"
+			}
 		]
 	},
 	{
@@ -10785,6 +10953,10 @@
 					"ground"
 				],
 				"genderRatio": "unknown"
+			},
+			{
+				"isMega": true,
+				"spriteSuffix": "mega"
 			}
 		],
 		"genderRatio": "unknown",
@@ -11755,6 +11927,13 @@
 		"types": [
 			"normal",
 			"dragon"
+		],
+		"forms": [
+			{},
+			{
+				"isMega": true,
+				"spriteSuffix": "mega"
+			}
 		]
 	},
 	{
@@ -13002,7 +13181,14 @@
 		"types": [
 			"fighting"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"forms": [
+			{},
+			{
+				"isMega": true,
+				"spriteSuffix": "mega"
+			}
+		]
 	},
 	{
 		"id": 871,
