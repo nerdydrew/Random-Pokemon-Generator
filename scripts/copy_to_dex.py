@@ -6,7 +6,8 @@ import json
 from collections import OrderedDict
 
 """
-Copies the Pokémon specified by a file to a new Pokédex file. Asks whether to copy each form.
+Copies the Pokémon specified by a file to a Pokédex file, either a new file or appended to an
+existing file. Asks whether to copy each form.
 """
 
 forms_to_not_prompt = {"gigantamax", "alola", "hisui", "galar"}
@@ -44,7 +45,7 @@ def should_copy_form(pokemon, form):
     return answer.lower() != "n"
 
 def copy_forms(pokemon):
-    suffixes = [f["spriteSuffix"] for f in pokemon["forms"] if "spriteSuffix" in f]
+    suffixes = [f["spriteSuffix"] for f in pokemon["forms"] if "spriteSuffix" in f and f["spriteSuffix"] not in forms_to_not_prompt]
     print("%s has %i forms (%s)." % (pokemon["name"], len(pokemon["forms"]), ", ".join(suffixes)))
 
     pokemon["forms"] = [f for f in pokemon["forms"] if should_copy_form(pokemon, f)]
@@ -56,10 +57,18 @@ def copy_forms(pokemon):
         # If only the normal form is selected, clear the forms.
         del pokemon["forms"]
 
-def make_new_dex(names_to_copy):
+def add_to_dex(destination_dex, names_to_copy):
+    destination_dex_by_name = {p["name"] : p for p in destination_dex}
+
     source_dex_file = os.path.join(dex_folder, source_dex_file_name)
     source_dex_by_name = {p["name"] : p for p in load_json(source_dex_file)}
-    return [copy_pokemon(source_dex_by_name[name]) for name in names_to_copy]
+    
+    for name in names_to_copy:
+        if name in destination_dex_by_name:
+            print(f"{name} already exists in the dex. Replacing...")
+            destination_dex.remove(destination_dex_by_name[name])
+        destination_dex.append(copy_pokemon(source_dex_by_name[name]))
+    return destination_dex
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
@@ -72,9 +81,10 @@ if __name__ == "__main__":
     destination_file = os.path.join(dex_folder, sys.argv[2] + ".json")
 
     if os.path.isfile(destination_file):
-        answer = input(f"{destination_file} already exists. Overwrite? (y/N) ")
-        if answer.lower() != "y":
-            exit(1)
+        print(f"{destination_file} already exists. The specified Pokémon will be merged or appended.")
+        existing_dex = load_json(destination_file)
+    else:
+        existing_dex = {}
 
-    new_dex = make_new_dex(names_to_copy)
-    write_json(destination_file, new_dex)
+    resulting_dex = add_to_dex(existing_dex, names_to_copy)
+    write_json(destination_file, resulting_dex)

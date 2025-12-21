@@ -370,6 +370,16 @@
 					"psychic"
 				],
 				"spriteSuffix": "alola"
+			},
+			{
+				"name": "Raichu Mega X",
+				"isMega": true,
+				"spriteSuffix": "mega-x"
+			},
+			{
+				"name": "Raichu Mega Y",
+				"isMega": true,
+				"spriteSuffix": "mega-y"
 			}
 		],
 		"evolutionCount": 2
@@ -4448,7 +4458,18 @@
 		"types": [
 			"psychic"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"forms": [
+			{},
+			{
+				"types": [
+					"psychic",
+					"steel"
+				],
+				"isMega": true,
+				"spriteSuffix": "mega"
+			}
+		]
 	},
 	{
 		"id": 359,
@@ -4461,6 +4482,15 @@
 			{
 				"spriteSuffix": "mega",
 				"isMega": true
+			},
+			{
+				"name": "Absol Mega Z",
+				"types": [
+					"dark",
+					"ghost"
+				],
+				"isMega": true,
+				"spriteSuffix": "mega-z"
 			}
 		]
 	},
@@ -4936,7 +4966,18 @@
 			"normal",
 			"flying"
 		],
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"forms": [
+			{},
+			{
+				"types": [
+					"fighting",
+					"flying"
+				],
+				"isMega": true,
+				"spriteSuffix": "mega"
+			}
+		]
 	},
 	{
 		"id": 399,
@@ -5448,6 +5489,14 @@
 			{
 				"spriteSuffix": "mega",
 				"isMega": true
+			},
+			{
+				"name": "Garchomp Mega Z",
+				"types": [
+					"dragon"
+				],
+				"isMega": true,
+				"spriteSuffix": "mega-z"
 			}
 		],
 		"evolutionCount": 2
@@ -5488,6 +5537,11 @@
 			{
 				"spriteSuffix": "mega",
 				"isMega": true
+			},
+			{
+				"name": "Lucario Mega Z",
+				"isMega": true,
+				"spriteSuffix": "mega-z"
 			}
 		],
 		"genderRatio": {
@@ -5936,7 +5990,14 @@
 			"fire",
 			"steel"
 		],
-		"isSubLegendary": true
+		"isSubLegendary": true,
+		"forms": [
+			{},
+			{
+				"isMega": true,
+				"spriteSuffix": "mega"
+			}
+		]
 	},
 	{
 		"id": 486,
@@ -6003,7 +6064,14 @@
 			"dark"
 		],
 		"genderRatio": "unknown",
-		"isMythical": true
+		"isMythical": true,
+		"forms": [
+			{},
+			{
+				"isMega": true,
+				"spriteSuffix": "mega"
+			}
+		]
 	},
 	{
 		"id": 492,
@@ -7584,7 +7652,14 @@
 			"ghost"
 		],
 		"genderRatio": "unknown",
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"forms": [
+			{},
+			{
+				"isMega": true,
+				"spriteSuffix": "mega"
+			}
+		]
 	},
 	{
 		"id": 624,
@@ -8429,6 +8504,10 @@
 					"male": 0,
 					"female": 1
 				}
+			},
+			{
+				"isMega": true,
+				"spriteSuffix": "mega"
 			}
 		],
 		"evolutionCount": 1
@@ -9177,7 +9256,14 @@
 			"fighting",
 			"ice"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"forms": [
+			{},
+			{
+				"isMega": true,
+				"spriteSuffix": "mega"
+			}
+		]
 	},
 	{
 		"id": 741,
@@ -9481,7 +9567,18 @@
 			"bug",
 			"water"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"forms": [
+			{},
+			{
+				"types": [
+					"bug",
+					"steel"
+				],
+				"isMega": true,
+				"spriteSuffix": "mega"
+			}
+		]
 	},
 	{
 		"id": 769,
@@ -9960,7 +10057,18 @@
 			"fairy"
 		],
 		"genderRatio": "unknown",
-		"isMythical": true
+		"isMythical": true,
+		"forms": [
+			{},
+			{
+				"isMega": true,
+				"spriteSuffix": "mega"
+			},
+			{
+				"isMega": true,
+				"spriteSuffix": "mega-original"
+			}
+		]
 	},
 	{
 		"id": 802,
@@ -10020,7 +10128,14 @@
 			"electric"
 		],
 		"genderRatio": "unknown",
-		"isMythical": true
+		"isMythical": true,
+		"forms": [
+			{},
+			{
+				"isMega": true,
+				"spriteSuffix": "mega"
+			}
+		]
 	},
 	{
 		"id": 808,
@@ -11695,7 +11810,14 @@
 			"grass",
 			"fire"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"forms": [
+			{},
+			{
+				"isMega": true,
+				"spriteSuffix": "mega"
+			}
+		]
 	},
 	{
 		"id": 953,
@@ -11868,7 +11990,14 @@
 			"rock",
 			"poison"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"forms": [
+			{},
+			{
+				"isMega": true,
+				"spriteSuffix": "mega"
+			}
+		]
 	},
 	{
 		"id": 971,
@@ -11939,6 +12068,18 @@
 			},
 			{
 				"spriteSuffix": "stretch"
+			},
+			{
+				"isMega": true,
+				"spriteSuffix": "mega"
+			},
+			{
+				"isMega": true,
+				"spriteSuffix": "mega-droopy"
+			},
+			{
+				"isMega": true,
+				"spriteSuffix": "mega-stretch"
 			}
 		]
 	},
@@ -12138,7 +12279,14 @@
 			"dragon",
 			"ice"
 		],
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"forms": [
+			{},
+			{
+				"isMega": true,
+				"spriteSuffix": "mega"
+			}
+		]
 	},
 	{
 		"id": 999,
