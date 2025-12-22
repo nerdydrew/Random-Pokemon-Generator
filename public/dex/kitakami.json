@@ -683,7 +683,6 @@
 	{
 		"id": 489,
 		"name": "Phione",
-		"isNfe": true,
 		"types": [
 			"water"
 		],
