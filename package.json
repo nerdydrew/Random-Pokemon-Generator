@@ -1,12 +1,5 @@
 {
   "devDependencies": {
-    "concurrently": "^7.3.0",
-    "http-server": "^14.1.1",
-    "mocha": "^11.5.0",
-    "typescript": "^4.8.2"
-  },
-  "scripts": {
-    "dev": "concurrently \"npx tsc --watch\" \"npx http-server --port 8000\"",
-    "test": "mocha"
+    "typescript": "^5.9.3"
   }
 }

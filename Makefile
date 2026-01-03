@@ -2,7 +2,10 @@ text_lifetime_seconds=$$((   1 * 24 * 60 * 60 ))
 sprite_lifetime_seconds=$$(( 7 * 24 * 60 * 60 ))
 
 dev:
-	npm run dev
+	(trap 'kill 0' SIGINT; \
+		npx tsc --watch & \
+		python3 -m http.server --directory public/ 8000 \
+	)
 
 preview:
 	aws s3 sync --dryrun --exclude ".*" --delete \
