@@ -203,6 +203,8 @@ function setOptions(options: Partial<Options>) {
 	document.querySelectorAll(".dropdown").forEach((dropdown: HTMLElement) => {
 		updateDropdownTitle(dropdown);
 	});
+
+	updatePermalink();
 }
 
 /** Stores the current options in local storage. */
@@ -349,10 +351,13 @@ function addFormChangeListeners() {
 		});
 	});
 
-	const permalink = document.getElementById("permalink") as HTMLAnchorElement;
-	const updatePermalink = () => permalink.href = "?" + convertOptionsToUrlParams(getOptionsFromForm());
 	updatePermalink();
 	document.getElementById("controls").addEventListener("change", updatePermalink);
+}
+
+function updatePermalink() {
+	const permalink = document.getElementById("permalink") as HTMLAnchorElement;
+	permalink.href = "?" + convertOptionsToUrlParams(getOptionsFromForm());
 }
 
 function toggleFormSubtypes() {
