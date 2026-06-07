@@ -32,6 +32,8 @@ const formsCheckbox = document.getElementById("forms") as HTMLInputElement;
 const megasCheckbox = document.getElementById("megas") as HTMLInputElement;
 const gigantamaxesCheckbox = document.getElementById("gigantamaxes") as HTMLInputElement;
 
+const uniqueTypesCheckbox = document.getElementById("uniqueTypes") as HTMLInputElement;
+
 type Options = {
 	n: number;
 	regions: string[];
@@ -55,6 +57,7 @@ type Options = {
 	megas: boolean;
 	/** Whether to include gigantamax forms. Ignored if forms is false. */
 	gigantamaxes: boolean;
+	uniqueTypes: boolean;
 	generate?: boolean;
 }
 
@@ -76,7 +79,8 @@ const DEFAULT_OPTIONS: Options = {
 	genders: false,
 	forms: true,
 	megas: true,
-	gigantamaxes: true
+	gigantamaxes: true,
+	uniqueTypes: false
 };
 
 function getOptionsFromForm(): Options {
@@ -98,7 +102,8 @@ function getOptionsFromForm(): Options {
 		genders: gendersCheckbox.checked,
 		forms: formsCheckbox.checked,
 		megas: megasCheckbox.checked,
-		gigantamaxes: gigantamaxesCheckbox.checked
+		gigantamaxes: gigantamaxesCheckbox.checked,
+		uniqueTypes: uniqueTypesCheckbox.checked
 	};
 }
 
@@ -195,6 +200,9 @@ function setOptions(options: Partial<Options>) {
 	}
 	if (options.gigantamaxes != null) {
 		gigantamaxesCheckbox.checked = options.gigantamaxes;
+	}
+	if (options.uniqueTypes != null) {
+		uniqueTypesCheckbox.checked = options.uniqueTypes;
 	}
 	if (options.generate !== undefined) {
 		generateRandom();
@@ -300,6 +308,9 @@ function convertUrlParamsToOptions(): Partial<Options> {
 	}
 	if (params.has("gigantamaxes")) {
 		options.gigantamaxes = parseBoolean(params.get("gigantamaxes"));
+	}
+	if (params.has("uniqueTypes")) {
+		options.uniqueTypes = parseBoolean(params.get("uniqueTypes"));
 	}
 	if (params.has("generate")) {
 		options.generate = true;

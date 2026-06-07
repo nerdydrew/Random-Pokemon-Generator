@@ -170,6 +170,10 @@ function chooseRandom(eligiblePokemon: Pokemon[], options: Options): GeneratedPo
 			}
 		}
 
+		if (options.uniqueTypes) {
+			eligiblePokemon = removeTypes(form?.types ?? pokemon.types, eligiblePokemon);
+		}
+
 		generated.push(GeneratedPokemon.generate(pokemon, form, options));
 	}
 
@@ -198,6 +202,22 @@ function removeGigantamaxes(pokemonArray: Pokemon[]): Pokemon[] {
 			return pokemon.forms.length > 0;
 		} else {
 			return true; // always keep if no forms
+		}
+	});
+}
+
+/** Filters Pokémon of the given types from the array. Doesn't mutate the original array. */
+function removeTypes(types: string[], pokemonArray: Pokemon[]): Pokemon[] {
+	const typeSet = new Set(types);
+	return pokemonArray.filter((pokemon: Pokemon) => {
+		if (pokemon.forms) {
+			pokemon.forms = pokemon.forms.filter(form => {
+				const formTypes = form.types ?? pokemon.types;
+				return types.every(type => !typeSet.has(type));
+			});
+			return pokemon.forms.length > 0;
+		} else {
+			return pokemon.types.every(type => !typeSet.has(type));
 		}
 	});
 }
