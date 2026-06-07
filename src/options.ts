@@ -58,6 +58,27 @@ type Options = {
 	generate?: boolean;
 }
 
+const DEFAULT_OPTIONS: Options = {
+	n: 6,
+	regions: regionCheckboxes.map(checkbox => checkbox.value),
+	types: typeCheckboxes.map(checkbox => checkbox.value),
+	sublegendaries: true,
+	legendaries: true,
+	mythicals: true,
+	paradoxes: true,
+	ultraBeasts: true,
+	evolutionCounts: evolutionCountCheckboxes.map(checkbox => parseInt(checkbox.value)),
+	nfes: true,
+	fullyEvolved: true,
+	names: true,
+	sprites: true,
+	natures: false,
+	genders: false,
+	forms: true,
+	megas: true,
+	gigantamaxes: true
+};
+
 function getOptionsFromForm(): Options {
 	return {
 		n: parseInt(numberDropdown.value),
@@ -97,6 +118,10 @@ function getSelectedTypes(): string[] {
 	return typeCheckboxes
 			.filter(checkbox => checkbox.checked)
 			.map(checkbox => checkbox.value);
+}
+
+function resetOptions() {
+	setOptions(DEFAULT_OPTIONS);
 }
 
 function setOptions(options: Partial<Options>) {
@@ -174,6 +199,10 @@ function setOptions(options: Partial<Options>) {
 	if (options.generate !== undefined) {
 		generateRandom();
 	}
+
+	document.querySelectorAll(".dropdown").forEach((dropdown: HTMLElement) => {
+		updateDropdownTitle(dropdown);
+	});
 }
 
 /** Stores the current options in local storage and in the URL. */

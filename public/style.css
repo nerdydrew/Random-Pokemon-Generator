@@ -18,15 +18,20 @@ label,select,button{margin-right:1em}
 label select,button:last-child{margin:0}
 input[type="checkbox"]{vertical-align:baseline;margin-right:.25em}
 button,input[type="button"],input[type="submit"]{cursor:pointer}
-#controls button[type="submit"]{font-size:1em;padding:.25em .5em;background:#AD8;border-radius:.25em;border:1px solid #666}
-#controls button[type="submit"]:hover{background:#9D4}
-#controls button[type="submit"]:active{background:#8C1}
 abbr{cursor:help;border-bottom:1px dotted;text-decoration:none}
 .clear{clear:both}
 .hidden{visibility:hidden}
 .invisible{display:none !important}
 .male{color:blue}
 .female{color:deeppink}
+
+#controls button[type="submit"]{font-size:1em;padding:.25em .5em;background:#AD8;border-radius:.25em;border:1px solid #666}
+#controls button[type="submit"]:hover{background:#9D4}
+#controls button[type="submit"]:active{background:#8C1}
+
+button.danger{padding:.125em .5em;background:#FEE;border-radius:.25em;border:1px solid #FF1C31}
+button.danger:hover{background:#FDD}
+button.danger:active{background:#FCC}
 
 header{margin:1em 0}
 

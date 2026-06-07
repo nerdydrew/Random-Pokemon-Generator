@@ -93,6 +93,7 @@
 
 	<fieldset>
 		<button type="button" class="text is-hiding" data-click-to-toggle="advanced-options">Advanced options </button>
+		<button type="button" class="danger" id="reset" onclick="resetOptions()">↺ Reset</button>
 	</fieldset>
 
 	<div id="advanced-options" class="invisible">
@@ -172,7 +173,7 @@
 </button>
 <section id="shiny-container" class="menu invisible">
 	<div id="shinies"></div>
-	<button class="text" onclick="clearShinies()">&#x274C; Clear your shiny Pokémon</button>
+	<button class="danger" onclick="clearShinies()">&#x274C; Clear your shiny Pokémon</button>
 </section>
 
 <footer>
