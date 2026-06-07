@@ -205,12 +205,10 @@ function setOptions(options: Partial<Options>) {
 	});
 }
 
-/** Stores the current options in local storage and in the URL. */
+/** Stores the current options in local storage. */
 function persistOptions(options: Options) {
 	const optionsJson = JSON.stringify(options);
 	window.localStorage.setItem(STORAGE_OPTIONS_KEY, optionsJson);
-
-	window.history.replaceState({}, "", "?" + convertOptionsToUrlParams(options));
 }
 
 /** Loads options from either the URL or local storage. */
@@ -311,6 +309,9 @@ function convertUrlParamsToOptions(): Partial<Options> {
 function convertOptionsToUrlParams(options: Partial<Options>): string {
 	return Object.entries(options)
 		.map(function([key, value]) {
+			if (arraySafeEquals(DEFAULT_OPTIONS[key as keyof Options], value)) {
+				return null; // Skip default values.
+			}
 			let encodableValue: string | boolean | number;
 			if (Array.isArray(value)) {
 				if (value.length == 0
@@ -326,6 +327,7 @@ function convertOptionsToUrlParams(options: Partial<Options>): string {
 			}
 			return encodeURIComponent(key) + "=" + encodeURIComponent(encodableValue);
 		})
+		.filter(x => x) // non-null
 		.join("&");
 }
 
@@ -346,6 +348,11 @@ function addFormChangeListeners() {
 			checkbox.addEventListener("change", () => updateDropdownTitle(dropdown));
 		});
 	});
+
+	const permalink = document.getElementById("permalink") as HTMLAnchorElement;
+	const updatePermalink = () => permalink.href = "?" + convertOptionsToUrlParams(getOptionsFromForm());
+	updatePermalink();
+	document.getElementById("controls").addEventListener("change", updatePermalink);
 }
 
 function toggleFormSubtypes() {

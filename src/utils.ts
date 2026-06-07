@@ -41,3 +41,15 @@ function displayYearsInFooter() {
 		span.innerText = span.dataset.since + "-" + new Date().getFullYear();
 	});
 }
+
+function arraySafeEquals(a: any, b: any): boolean {
+	if (a === b) {
+		return true;
+	} else if (Array.isArray(a) && Array.isArray(b)) {
+		if (a.length != b.length) {
+			return false;
+		}
+		return a.every((element, index) => arraySafeEquals(element, b[index]));
+	}
+	return false;
+}
