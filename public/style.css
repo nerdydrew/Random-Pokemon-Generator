@@ -18,7 +18,9 @@ label,select,button{margin-right:1em}
 label select,button:last-child{margin:0}
 input[type="checkbox"]{vertical-align:baseline;margin-right:.25em}
 button,input[type="button"],input[type="submit"]{cursor:pointer}
-#controls input[type="submit"]{font-size:1em;padding:.125em .25em}
+#controls button[type="submit"]{font-size:1em;padding:.25em .5em;background:#AD8;border-radius:.25em;border:1px solid #666}
+#controls button[type="submit"]:hover{background:#9D4}
+#controls button[type="submit"]:active{background:#8C1}
 abbr{cursor:help;border-bottom:1px dotted;text-decoration:none}
 .clear{clear:both}
 .hidden{visibility:hidden}
