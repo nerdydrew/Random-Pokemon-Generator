@@ -19,7 +19,7 @@ async function generateRandom() {
 
 function onPageLoad() {
 	loadOptions();
-	toggleHistoryVisibility();
+	updateHistoryDisplay();
 	addFormChangeListeners();
 	displayYearsInFooter();
 }

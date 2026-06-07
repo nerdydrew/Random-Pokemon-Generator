@@ -301,6 +301,7 @@ function convertOptionsToUrlParams(options: Partial<Options>): string {
 }
 
 function addFormChangeListeners() {
+	toggleSectionsOnClick();
 	toggleDropdownsOnButtonClick();
 
 	formsCheckbox.addEventListener("change", toggleFormSubtypes);
@@ -349,13 +350,26 @@ function toggleDropdownsOnButtonClick() {
 	});
 }
 
+function toggleSectionsOnClick() {
+	document.querySelectorAll("button[data-click-to-toggle]").forEach((button: HTMLButtonElement) => {
+		button.addEventListener("click", () => toggleContentForButton(button));
+	});
+}
+
+function toggleContentForButton(button: HTMLButtonElement) {
+	const toToggle = document.getElementById(button.dataset.clickToToggle);
+	const isInvisible = toToggle.classList.toggle("invisible");
+	button.classList.toggle("is-hiding", isInvisible);
+	button.classList.toggle("is-showing", !isInvisible);
+}
+
 function selectAll(event: Event) {
 	if (!(event.target instanceof HTMLInputElement)) {
 		return;
 	}
 	const selectAll = event.target.checked;
 	const container = event.target.closest(".popup");
-	container.querySelectorAll("input[type='checkbox']:not([data-select-all]")
+	container.querySelectorAll("input[type='checkbox']:not([data-select-all])")
 		.forEach((checkbox: HTMLInputElement) => checkbox.checked = selectAll);
 }
 

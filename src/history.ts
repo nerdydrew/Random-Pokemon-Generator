@@ -20,10 +20,16 @@ function addToHistory(pokemon: GeneratedPokemon[]) {
 	window.localStorage.setItem(STORAGE_SHINIES_KEY, JSON.stringify(shinies));
 
 	displayedIndex = 0;
-	toggleHistoryVisibility(shinies);
+	updateHistoryDisplay(shinies);
 }
 
-function toggleHistoryVisibility(shinies?: GeneratedPokemon[]) {
+/**
+ * Displays or hides the next and previous buttons, depending on what index of history is viewed.
+ * Updates which shiny Pokémon are displayed.
+ * @param shinies Which shiny Pokémon have been encountered. If not specified, they will be loaded
+ *                from local storage.
+ */
+function updateHistoryDisplay(shinies?: GeneratedPokemon[]) {
 	document.getElementById("previous").classList.toggle("hidden", displayedIndex >= latestPokemon.length - 1);
 	document.getElementById("next").classList.toggle("hidden", displayedIndex <= 0);
 
@@ -32,7 +38,12 @@ function toggleHistoryVisibility(shinies?: GeneratedPokemon[]) {
 	document.getElementById("shinies").innerHTML = "<ol>"
 		+ shinies.map(p => p.toHtmlForShinyHistory()).join(" ")
 		+ "</ol>";
-	document.getElementById("shiny-toggler").classList.toggle("invisible", shinies.length == 0);
+
+	const toggleShiniesButton = document.getElementById("shiny-toggler") as HTMLButtonElement;
+	toggleShiniesButton.classList.toggle("invisible", shinies.length == 0);
+	if (shinies.length == 0 && toggleShiniesButton.classList.contains("is-showing")) {
+		toggleContentForButton(toggleShiniesButton);
+	}
 }
 
 function displayPrevious() {
@@ -48,7 +59,7 @@ function displayHistoryAtIndex(index: number) {
 	if (index != displayedIndex) {
 		displayedIndex = index;
 		displayPokemon(latestPokemon[index]);
-		toggleHistoryVisibility();
+		updateHistoryDisplay();
 	}
 }
 
@@ -69,23 +80,10 @@ function dateReviver(key: string, value: any) {
 	}
 }
 
-function toggleShinyDisplay() {
-	const isInvisible = document.getElementById("shiny-container").classList.toggle("invisible");
-	updateShinyToggler(!isInvisible);
-}
-
-function updateShinyToggler(shiniesVisible: boolean) {
-	const button = document.getElementById("shiny-toggler");
-	button.classList.toggle("is-hiding", !shiniesVisible);
-	button.classList.toggle("is-showing", shiniesVisible);
-}
-
 function clearShinies() {
 	if (window.confirm("Are you sure you want to clear your shiny Pokémon?")) {
 		window.localStorage.removeItem(STORAGE_SHINIES_KEY);
-		document.getElementById("shiny-container").classList.add("invisible");
-		toggleHistoryVisibility([]);
-		updateShinyToggler(false); // Prepare for next time
+		updateHistoryDisplay([]);
 	}
 }
 
