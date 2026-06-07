@@ -25,7 +25,7 @@ abbr{cursor:help;border-bottom:1px dotted;text-decoration:none}
 .male{color:blue}
 .female{color:deeppink}
 
-#controls button[type="submit"]{font-size:1em;padding:.25em .5em;background:#AD8;border-radius:.25em;border:1px solid #666}
+#controls button[type="submit"]{font-size:1em;padding:.25em .5em;background:#AD8;border-radius:.25em;border:1px solid #666;color:#000}
 #controls button[type="submit"]:hover{background:#9D4}
 #controls button[type="submit"]:active{background:#8C1}
 
@@ -51,6 +51,8 @@ header{margin:1em 0}
 .loading:after{position:absolute;top:50%;right:4%;z-index:-2;content:"";width:1em;height:1em;margin:-1em 0 0;
 	border-radius:1em;border:.25em solid;border-color:currentColor transparent;
 	animation:1.25s linear infinite rotate, .5s ease-out 0s 1 fadeIn}
+
+#advanced-options{border-top:1px dashed #888}
 
 #history{margin:1em 0 0;display:flex;justify-content:space-between}
 button.text{background:transparent;color:inherit;border:0;padding:0}
