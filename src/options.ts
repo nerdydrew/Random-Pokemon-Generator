@@ -364,11 +364,23 @@ function addFormChangeListeners() {
 
 	updatePermalink();
 	document.getElementById("controls").addEventListener("change", updatePermalink);
+
+	// If clicking on the permalink, update the URL but don't actually navigate to the page so
+	// that we don't clear the history.
+	const permalink = document.getElementById("permalink") as HTMLAnchorElement;
+	permalink.addEventListener("click", (event: MouseEvent) => {
+		if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) {
+			return;
+		}
+		event.preventDefault();
+		window.history.replaceState({}, "", permalink.href);
+	});
 }
 
 function updatePermalink() {
 	const permalink = document.getElementById("permalink") as HTMLAnchorElement;
-	permalink.href = "?" + convertOptionsToUrlParams(getOptionsFromForm());
+	const parameters = convertOptionsToUrlParams(getOptionsFromForm());
+	permalink.href = parameters ? ("?" + parameters) : "/";
 }
 
 function toggleFormSubtypes() {
