@@ -59,7 +59,8 @@ button.text{background:transparent;color:inherit;border:0;padding:0}
 
 #results li,#shinies li{display:inline-block;height:3em;padding-top:128px;width:33%;min-width:138px;margin-bottom:1em;position:relative;list-style:none}
 #results li{animation:0.5s ease-out 0s 1 fadeIn}
-#results .nature{color:#888}.star{color:#F4D04D}
+.minor-text{color:#888}
+.star{color:#F4D04D}
 #results li.shiny:before,#results li.shiny:after,#results li.shiny .star:before,#results li.shiny .star:after{
 	content:"\2605";position:absolute;top:64px;left:50%;font-size:.75em;opacity:0;pointer-events:none;z-index:100}
 #results li.shiny:before      {animation:.6s steps(8) .075s 1 rotateStar, .075s alternate steps(2) infinite shine;font-size:1.5em}
@@ -75,7 +76,6 @@ button[data-click-to-toggle].is-hiding:after{content:"∨"}
 
 #shinies{margin-top:1em}
 #shinies li{width:30%}
-#shinies .date{color:#888}
 #shiny-container button{margin-bottom:1em}
 
 footer{font-size:.875em;padding:3em 0;color:#666;clear:both}

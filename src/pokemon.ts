@@ -27,6 +27,8 @@ interface Pokemon {
 	forms?: Form[];
 	/** Ratio of male to female or "unknown". Defaults to (1:1). */
 	genderRatio?: {male: number, female: number} | "unknown";
+	/** Possible abilities for this Pokémon. */
+	abilities: string[];
 }
 
 interface Form {
@@ -45,6 +47,8 @@ interface Form {
 	isGigantamax?: boolean;
 	/** Ratio of male to female or "unknown". Defaults to the base Pokémon's ratio. */
 	genderRatio?: {male: number, female: number} | "unknown";
+	/** Possible abilities for this form. Defaults to the base Pokémon's abilities. */
+	abilities?: string[];
 }
 
 class GeneratedPokemon {
@@ -64,6 +68,7 @@ class GeneratedPokemon {
 	readonly date: Date;
 	/** This Pokémon's gender, or null if not generated or neuter. */
 	readonly gender?: "male" | "female";
+	readonly ability?: string;
 	readonly showName: boolean = true;
 	readonly showSprite: boolean = true;
 
@@ -89,6 +94,9 @@ class GeneratedPokemon {
 				this.gender = Math.random() < (ratio.male / (ratio.male + ratio.female)) ? "male" : "female";
 			}
 		}
+		if (options.abilities) {
+			this.ability = getRandomElement(form?.abilities ?? pokemon.abilities);
+		}
 	}
 
 	static generate(pokemon: Pokemon, form: Form | undefined, options: Options): GeneratedPokemon {
@@ -113,23 +121,25 @@ class GeneratedPokemon {
 		return `<li class="${classes}">
 			${this.showSprite ? this.toImage() : ""}
 			${this.toText(this.showName)}
+			${this.abilityToText()}
 		</li>`;
 	}
 
 	toHtmlForShinyHistory(): string {
 		const encounterDate = this.date ?
-			`<div class="date" title="${this.date}">Encountered on ${this.date.toLocaleDateString()}</div>`
+			`<div class="minor-text" title="${this.date}">Encountered on ${this.date.toLocaleDateString()}</div>`
 			: "";
 		return `<li>
 			${this.toImage()}
 			${this.toText(true)}
 			${encounterDate}
+			${this.abilityToText()}
 		</li>`;
 	}
 
 	toText(includeName: boolean): string {
 		return `
-			${this.nature ? `<span class="nature">${this.nature}</span>` : ""}
+			${this.nature ? `<span class="minor-text">${this.nature}</span>` : ""}
 			${includeName ? this.name : ""}
 			${this.genderToText()}
 			${this.shiny ? `<span class="star">&starf;</span>` : ""}
@@ -145,6 +155,14 @@ class GeneratedPokemon {
 			return `<span class="male" title="Male">♂</span>`;
 		} else if (this.gender == "female") {
 			return `<span class="female" title="Female">♀</span>`;
+		} else {
+			return "";
+		}
+	}
+
+	private abilityToText(): string {
+		if (this.ability) {
+			return `<div class="minor-text">Ability: ${this.ability}</div>`;
 		} else {
 			return "";
 		}

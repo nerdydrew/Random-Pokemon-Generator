@@ -6,7 +6,10 @@
 		"types": [
 			"electric"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Static"
+		]
 	},
 	{
 		"id": 26,
@@ -14,7 +17,10 @@
 		"types": [
 			"electric"
 		],
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"abilities": [
+			"Static"
+		]
 	},
 	{
 		"id": 27,
@@ -22,6 +28,9 @@
 		"isNfe": true,
 		"types": [
 			"ground"
+		],
+		"abilities": [
+			"Sand Veil"
 		]
 	},
 	{
@@ -30,7 +39,10 @@
 		"types": [
 			"ground"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Sand Veil"
+		]
 	},
 	{
 		"id": 37,
@@ -42,7 +54,10 @@
 		"genderRatio": {
 			"male": 1,
 			"female": 3
-		}
+		},
+		"abilities": [
+			"Flash Fire"
+		]
 	},
 	{
 		"id": 38,
@@ -54,7 +69,10 @@
 			"male": 1,
 			"female": 3
 		},
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Flash Fire"
+		]
 	},
 	{
 		"id": 39,
@@ -67,7 +85,10 @@
 			"male": 1,
 			"female": 3
 		},
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Cute Charm"
+		]
 	},
 	{
 		"id": 40,
@@ -79,7 +100,10 @@
 			"male": 1,
 			"female": 3
 		},
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"abilities": [
+			"Cute Charm"
+		]
 	},
 	{
 		"id": 41,
@@ -88,6 +112,9 @@
 		"types": [
 			"poison",
 			"flying"
+		],
+		"abilities": [
+			"Inner Focus"
 		]
 	},
 	{
@@ -98,7 +125,10 @@
 			"poison",
 			"flying"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Inner Focus"
+		]
 	},
 	{
 		"id": 43,
@@ -107,6 +137,9 @@
 		"types": [
 			"grass",
 			"poison"
+		],
+		"abilities": [
+			"Chlorophyll"
 		]
 	},
 	{
@@ -117,7 +150,10 @@
 			"grass",
 			"poison"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Chlorophyll"
+		]
 	},
 	{
 		"id": 45,
@@ -126,7 +162,10 @@
 			"grass",
 			"poison"
 		],
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"abilities": [
+			"Chlorophyll"
+		]
 	},
 	{
 		"id": 54,
@@ -134,6 +173,10 @@
 		"isNfe": true,
 		"types": [
 			"water"
+		],
+		"abilities": [
+			"Damp",
+			"Cloud Nine"
 		]
 	},
 	{
@@ -142,7 +185,11 @@
 		"types": [
 			"water"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Damp",
+			"Cloud Nine"
+		]
 	},
 	{
 		"id": 63,
@@ -154,7 +201,11 @@
 		"genderRatio": {
 			"male": 3,
 			"female": 1
-		}
+		},
+		"abilities": [
+			"Synchronize",
+			"Inner Focus"
+		]
 	},
 	{
 		"id": 64,
@@ -167,7 +218,11 @@
 			"male": 3,
 			"female": 1
 		},
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Synchronize",
+			"Inner Focus"
+		]
 	},
 	{
 		"id": 65,
@@ -179,7 +234,11 @@
 			"male": 3,
 			"female": 1
 		},
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"abilities": [
+			"Synchronize",
+			"Inner Focus"
+		]
 	},
 	{
 		"id": 66,
@@ -191,7 +250,10 @@
 		"genderRatio": {
 			"male": 3,
 			"female": 1
-		}
+		},
+		"abilities": [
+			"Guts"
+		]
 	},
 	{
 		"id": 67,
@@ -204,7 +266,10 @@
 			"male": 3,
 			"female": 1
 		},
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Guts"
+		]
 	},
 	{
 		"id": 68,
@@ -216,7 +281,10 @@
 			"male": 3,
 			"female": 1
 		},
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"abilities": [
+			"Guts"
+		]
 	},
 	{
 		"id": 72,
@@ -225,6 +293,10 @@
 		"types": [
 			"water",
 			"poison"
+		],
+		"abilities": [
+			"Clear Body",
+			"Liquid Ooze"
 		]
 	},
 	{
@@ -234,7 +306,11 @@
 			"water",
 			"poison"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Clear Body",
+			"Liquid Ooze"
+		]
 	},
 	{
 		"id": 74,
@@ -243,6 +319,10 @@
 		"types": [
 			"rock",
 			"ground"
+		],
+		"abilities": [
+			"Rock Head",
+			"Sturdy"
 		]
 	},
 	{
@@ -253,7 +333,11 @@
 			"rock",
 			"ground"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Rock Head",
+			"Sturdy"
+		]
 	},
 	{
 		"id": 76,
@@ -262,7 +346,11 @@
 			"rock",
 			"ground"
 		],
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"abilities": [
+			"Rock Head",
+			"Sturdy"
+		]
 	},
 	{
 		"id": 81,
@@ -272,7 +360,11 @@
 			"electric",
 			"steel"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"abilities": [
+			"Magnet Pull",
+			"Sturdy"
+		]
 	},
 	{
 		"id": 82,
@@ -282,7 +374,11 @@
 			"steel"
 		],
 		"genderRatio": "unknown",
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Magnet Pull",
+			"Sturdy"
+		]
 	},
 	{
 		"id": 84,
@@ -291,6 +387,10 @@
 		"types": [
 			"normal",
 			"flying"
+		],
+		"abilities": [
+			"Run Away",
+			"Early Bird"
 		]
 	},
 	{
@@ -300,7 +400,11 @@
 			"normal",
 			"flying"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Run Away",
+			"Early Bird"
+		]
 	},
 	{
 		"id": 88,
@@ -308,6 +412,10 @@
 		"isNfe": true,
 		"types": [
 			"poison"
+		],
+		"abilities": [
+			"Stench",
+			"Sticky Hold"
 		]
 	},
 	{
@@ -316,7 +424,11 @@
 		"types": [
 			"poison"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Stench",
+			"Sticky Hold"
+		]
 	},
 	{
 		"id": 100,
@@ -325,7 +437,11 @@
 		"types": [
 			"electric"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"abilities": [
+			"Soundproof",
+			"Static"
+		]
 	},
 	{
 		"id": 101,
@@ -334,7 +450,11 @@
 			"electric"
 		],
 		"genderRatio": "unknown",
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Soundproof",
+			"Static"
+		]
 	},
 	{
 		"id": 109,
@@ -342,6 +462,9 @@
 		"isNfe": true,
 		"types": [
 			"poison"
+		],
+		"abilities": [
+			"Levitate"
 		]
 	},
 	{
@@ -350,7 +473,10 @@
 		"types": [
 			"poison"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Levitate"
+		]
 	},
 	{
 		"id": 111,
@@ -359,6 +485,10 @@
 		"types": [
 			"ground",
 			"rock"
+		],
+		"abilities": [
+			"Lightning Rod",
+			"Rock Head"
 		]
 	},
 	{
@@ -368,7 +498,11 @@
 			"ground",
 			"rock"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Lightning Rod",
+			"Rock Head"
+		]
 	},
 	{
 		"id": 116,
@@ -376,6 +510,9 @@
 		"isNfe": true,
 		"types": [
 			"water"
+		],
+		"abilities": [
+			"Swift Swim"
 		]
 	},
 	{
@@ -385,7 +522,10 @@
 		"types": [
 			"water"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Poison Point"
+		]
 	},
 	{
 		"id": 118,
@@ -393,6 +533,10 @@
 		"isNfe": true,
 		"types": [
 			"water"
+		],
+		"abilities": [
+			"Swift Swim",
+			"Water Veil"
 		]
 	},
 	{
@@ -401,7 +545,11 @@
 		"types": [
 			"water"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Swift Swim",
+			"Water Veil"
+		]
 	},
 	{
 		"id": 120,
@@ -410,7 +558,11 @@
 		"types": [
 			"water"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"abilities": [
+			"Illuminate",
+			"Natural Cure"
+		]
 	},
 	{
 		"id": 121,
@@ -420,13 +572,20 @@
 			"psychic"
 		],
 		"genderRatio": "unknown",
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Illuminate",
+			"Natural Cure"
+		]
 	},
 	{
 		"id": 127,
 		"name": "Pinsir",
 		"types": [
 			"bug"
+		],
+		"abilities": [
+			"Hyper Cutter"
 		]
 	},
 	{
@@ -435,6 +594,9 @@
 		"isNfe": true,
 		"types": [
 			"water"
+		],
+		"abilities": [
+			"Swift Swim"
 		]
 	},
 	{
@@ -444,7 +606,10 @@
 			"water",
 			"flying"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Intimidate"
+		]
 	},
 	{
 		"id": 152,
@@ -456,7 +621,10 @@
 		"genderRatio": {
 			"male": 7,
 			"female": 1
-		}
+		},
+		"abilities": [
+			"Overgrow"
+		]
 	},
 	{
 		"id": 153,
@@ -469,7 +637,10 @@
 			"male": 7,
 			"female": 1
 		},
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Overgrow"
+		]
 	},
 	{
 		"id": 154,
@@ -481,7 +652,10 @@
 			"male": 7,
 			"female": 1
 		},
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"abilities": [
+			"Overgrow"
+		]
 	},
 	{
 		"id": 155,
@@ -493,7 +667,10 @@
 		"genderRatio": {
 			"male": 7,
 			"female": 1
-		}
+		},
+		"abilities": [
+			"Blaze"
+		]
 	},
 	{
 		"id": 156,
@@ -506,7 +683,10 @@
 			"male": 7,
 			"female": 1
 		},
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Blaze"
+		]
 	},
 	{
 		"id": 157,
@@ -518,7 +698,10 @@
 			"male": 7,
 			"female": 1
 		},
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"abilities": [
+			"Blaze"
+		]
 	},
 	{
 		"id": 158,
@@ -530,7 +713,10 @@
 		"genderRatio": {
 			"male": 7,
 			"female": 1
-		}
+		},
+		"abilities": [
+			"Torrent"
+		]
 	},
 	{
 		"id": 159,
@@ -543,7 +729,10 @@
 			"male": 7,
 			"female": 1
 		},
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Torrent"
+		]
 	},
 	{
 		"id": 160,
@@ -555,7 +744,10 @@
 			"male": 7,
 			"female": 1
 		},
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"abilities": [
+			"Torrent"
+		]
 	},
 	{
 		"id": 169,
@@ -564,7 +756,10 @@
 			"poison",
 			"flying"
 		],
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"abilities": [
+			"Inner Focus"
+		]
 	},
 	{
 		"id": 170,
@@ -573,6 +768,10 @@
 		"types": [
 			"water",
 			"electric"
+		],
+		"abilities": [
+			"Volt Absorb",
+			"Illuminate"
 		]
 	},
 	{
@@ -582,7 +781,11 @@
 			"water",
 			"electric"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Volt Absorb",
+			"Illuminate"
+		]
 	},
 	{
 		"id": 172,
@@ -590,6 +793,9 @@
 		"isNfe": true,
 		"types": [
 			"electric"
+		],
+		"abilities": [
+			"Static"
 		]
 	},
 	{
@@ -602,7 +808,10 @@
 		"genderRatio": {
 			"male": 1,
 			"female": 3
-		}
+		},
+		"abilities": [
+			"Cute Charm"
+		]
 	},
 	{
 		"id": 177,
@@ -611,6 +820,10 @@
 		"types": [
 			"psychic",
 			"flying"
+		],
+		"abilities": [
+			"Synchronize",
+			"Early Bird"
 		]
 	},
 	{
@@ -620,7 +833,11 @@
 			"psychic",
 			"flying"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Synchronize",
+			"Early Bird"
+		]
 	},
 	{
 		"id": 182,
@@ -628,7 +845,10 @@
 		"types": [
 			"grass"
 		],
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"abilities": [
+			"Chlorophyll"
+		]
 	},
 	{
 		"id": 183,
@@ -637,7 +857,11 @@
 		"types": [
 			"water"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Thick Fat",
+			"Huge Power"
+		]
 	},
 	{
 		"id": 184,
@@ -645,7 +869,11 @@
 		"types": [
 			"water"
 		],
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"abilities": [
+			"Thick Fat",
+			"Huge Power"
+		]
 	},
 	{
 		"id": 202,
@@ -653,7 +881,10 @@
 		"types": [
 			"psychic"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Shadow Tag"
+		]
 	},
 	{
 		"id": 203,
@@ -661,6 +892,10 @@
 		"types": [
 			"normal",
 			"psychic"
+		],
+		"abilities": [
+			"Inner Focus",
+			"Early Bird"
 		]
 	},
 	{
@@ -669,6 +904,10 @@
 		"types": [
 			"bug",
 			"fighting"
+		],
+		"abilities": [
+			"Swarm",
+			"Guts"
 		]
 	},
 	{
@@ -677,6 +916,10 @@
 		"isNfe": true,
 		"types": [
 			"fire"
+		],
+		"abilities": [
+			"Magma Armor",
+			"Flame Body"
 		]
 	},
 	{
@@ -686,7 +929,11 @@
 			"fire",
 			"rock"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Magma Armor",
+			"Flame Body"
+		]
 	},
 	{
 		"id": 222,
@@ -698,7 +945,11 @@
 		"genderRatio": {
 			"male": 1,
 			"female": 3
-		}
+		},
+		"abilities": [
+			"Hustle",
+			"Natural Cure"
+		]
 	},
 	{
 		"id": 227,
@@ -706,6 +957,10 @@
 		"types": [
 			"steel",
 			"flying"
+		],
+		"abilities": [
+			"Keen Eye",
+			"Sturdy"
 		]
 	},
 	{
@@ -715,7 +970,10 @@
 			"water",
 			"dragon"
 		],
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"abilities": [
+			"Swift Swim"
+		]
 	},
 	{
 		"id": 231,
@@ -723,6 +981,9 @@
 		"isNfe": true,
 		"types": [
 			"ground"
+		],
+		"abilities": [
+			"Pickup"
 		]
 	},
 	{
@@ -731,7 +992,10 @@
 		"types": [
 			"ground"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Sturdy"
+		]
 	},
 	{
 		"id": 252,
@@ -743,7 +1007,10 @@
 		"genderRatio": {
 			"male": 7,
 			"female": 1
-		}
+		},
+		"abilities": [
+			"Overgrow"
+		]
 	},
 	{
 		"id": 253,
@@ -756,7 +1023,10 @@
 			"male": 7,
 			"female": 1
 		},
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Overgrow"
+		]
 	},
 	{
 		"id": 254,
@@ -768,7 +1038,10 @@
 			"male": 7,
 			"female": 1
 		},
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"abilities": [
+			"Overgrow"
+		]
 	},
 	{
 		"id": 255,
@@ -780,7 +1053,10 @@
 		"genderRatio": {
 			"male": 7,
 			"female": 1
-		}
+		},
+		"abilities": [
+			"Blaze"
+		]
 	},
 	{
 		"id": 256,
@@ -794,7 +1070,10 @@
 			"male": 7,
 			"female": 1
 		},
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Blaze"
+		]
 	},
 	{
 		"id": 257,
@@ -807,7 +1086,10 @@
 			"male": 7,
 			"female": 1
 		},
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"abilities": [
+			"Blaze"
+		]
 	},
 	{
 		"id": 258,
@@ -819,7 +1101,10 @@
 		"genderRatio": {
 			"male": 7,
 			"female": 1
-		}
+		},
+		"abilities": [
+			"Torrent"
+		]
 	},
 	{
 		"id": 259,
@@ -833,7 +1118,10 @@
 			"male": 7,
 			"female": 1
 		},
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Torrent"
+		]
 	},
 	{
 		"id": 260,
@@ -846,7 +1134,10 @@
 			"male": 7,
 			"female": 1
 		},
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"abilities": [
+			"Torrent"
+		]
 	},
 	{
 		"id": 261,
@@ -854,6 +1145,9 @@
 		"isNfe": true,
 		"types": [
 			"dark"
+		],
+		"abilities": [
+			"Run Away"
 		]
 	},
 	{
@@ -862,7 +1156,10 @@
 		"types": [
 			"dark"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Intimidate"
+		]
 	},
 	{
 		"id": 263,
@@ -870,6 +1167,9 @@
 		"isNfe": true,
 		"types": [
 			"normal"
+		],
+		"abilities": [
+			"Pickup"
 		]
 	},
 	{
@@ -878,7 +1178,10 @@
 		"types": [
 			"normal"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Pickup"
+		]
 	},
 	{
 		"id": 265,
@@ -886,6 +1189,9 @@
 		"isNfe": true,
 		"types": [
 			"bug"
+		],
+		"abilities": [
+			"Shield Dust"
 		]
 	},
 	{
@@ -895,7 +1201,10 @@
 		"types": [
 			"bug"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Shed Skin"
+		]
 	},
 	{
 		"id": 267,
@@ -904,7 +1213,10 @@
 			"bug",
 			"flying"
 		],
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"abilities": [
+			"Swarm"
+		]
 	},
 	{
 		"id": 268,
@@ -913,7 +1225,10 @@
 		"types": [
 			"bug"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Shed Skin"
+		]
 	},
 	{
 		"id": 269,
@@ -922,7 +1237,10 @@
 			"bug",
 			"poison"
 		],
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"abilities": [
+			"Shield Dust"
+		]
 	},
 	{
 		"id": 270,
@@ -931,6 +1249,10 @@
 		"types": [
 			"water",
 			"grass"
+		],
+		"abilities": [
+			"Swift Swim",
+			"Rain Dish"
 		]
 	},
 	{
@@ -941,7 +1263,11 @@
 			"water",
 			"grass"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Swift Swim",
+			"Rain Dish"
+		]
 	},
 	{
 		"id": 272,
@@ -950,7 +1276,11 @@
 			"water",
 			"grass"
 		],
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"abilities": [
+			"Swift Swim",
+			"Rain Dish"
+		]
 	},
 	{
 		"id": 273,
@@ -958,6 +1288,10 @@
 		"isNfe": true,
 		"types": [
 			"grass"
+		],
+		"abilities": [
+			"Chlorophyll",
+			"Early Bird"
 		]
 	},
 	{
@@ -968,7 +1302,11 @@
 			"grass",
 			"dark"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Chlorophyll",
+			"Early Bird"
+		]
 	},
 	{
 		"id": 275,
@@ -977,7 +1315,11 @@
 			"grass",
 			"dark"
 		],
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"abilities": [
+			"Chlorophyll",
+			"Early Bird"
+		]
 	},
 	{
 		"id": 276,
@@ -986,6 +1328,9 @@
 		"types": [
 			"normal",
 			"flying"
+		],
+		"abilities": [
+			"Guts"
 		]
 	},
 	{
@@ -995,7 +1340,10 @@
 			"normal",
 			"flying"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Guts"
+		]
 	},
 	{
 		"id": 278,
@@ -1004,6 +1352,9 @@
 		"types": [
 			"water",
 			"flying"
+		],
+		"abilities": [
+			"Keen Eye"
 		]
 	},
 	{
@@ -1013,7 +1364,10 @@
 			"water",
 			"flying"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Keen Eye"
+		]
 	},
 	{
 		"id": 280,
@@ -1021,6 +1375,10 @@
 		"isNfe": true,
 		"types": [
 			"psychic"
+		],
+		"abilities": [
+			"Synchronize",
+			"Trace"
 		]
 	},
 	{
@@ -1030,7 +1388,11 @@
 		"types": [
 			"psychic"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Synchronize",
+			"Trace"
+		]
 	},
 	{
 		"id": 282,
@@ -1038,7 +1400,11 @@
 		"types": [
 			"psychic"
 		],
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"abilities": [
+			"Synchronize",
+			"Trace"
+		]
 	},
 	{
 		"id": 283,
@@ -1047,6 +1413,9 @@
 		"types": [
 			"bug",
 			"water"
+		],
+		"abilities": [
+			"Swift Swim"
 		]
 	},
 	{
@@ -1056,7 +1425,10 @@
 			"bug",
 			"flying"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Intimidate"
+		]
 	},
 	{
 		"id": 285,
@@ -1064,6 +1436,9 @@
 		"isNfe": true,
 		"types": [
 			"grass"
+		],
+		"abilities": [
+			"Effect Spore"
 		]
 	},
 	{
@@ -1073,7 +1448,10 @@
 			"grass",
 			"fighting"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Effect Spore"
+		]
 	},
 	{
 		"id": 287,
@@ -1081,6 +1459,9 @@
 		"isNfe": true,
 		"types": [
 			"normal"
+		],
+		"abilities": [
+			"Truant"
 		]
 	},
 	{
@@ -1090,7 +1471,10 @@
 		"types": [
 			"normal"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Vital Spirit"
+		]
 	},
 	{
 		"id": 289,
@@ -1098,7 +1482,10 @@
 		"types": [
 			"normal"
 		],
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"abilities": [
+			"Truant"
+		]
 	},
 	{
 		"id": 290,
@@ -1107,6 +1494,9 @@
 		"types": [
 			"bug",
 			"ground"
+		],
+		"abilities": [
+			"Compound Eyes"
 		]
 	},
 	{
@@ -1116,7 +1506,10 @@
 			"bug",
 			"flying"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Speed Boost"
+		]
 	},
 	{
 		"id": 292,
@@ -1126,7 +1519,10 @@
 			"ghost"
 		],
 		"genderRatio": "unknown",
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Wonder Guard"
+		]
 	},
 	{
 		"id": 293,
@@ -1134,6 +1530,9 @@
 		"isNfe": true,
 		"types": [
 			"normal"
+		],
+		"abilities": [
+			"Soundproof"
 		]
 	},
 	{
@@ -1143,7 +1542,10 @@
 		"types": [
 			"normal"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Soundproof"
+		]
 	},
 	{
 		"id": 295,
@@ -1151,7 +1553,10 @@
 		"types": [
 			"normal"
 		],
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"abilities": [
+			"Soundproof"
+		]
 	},
 	{
 		"id": 296,
@@ -1163,7 +1568,11 @@
 		"genderRatio": {
 			"male": 3,
 			"female": 1
-		}
+		},
+		"abilities": [
+			"Thick Fat",
+			"Guts"
+		]
 	},
 	{
 		"id": 297,
@@ -1175,7 +1584,11 @@
 			"male": 3,
 			"female": 1
 		},
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Thick Fat",
+			"Guts"
+		]
 	},
 	{
 		"id": 298,
@@ -1187,13 +1600,21 @@
 		"genderRatio": {
 			"male": 1,
 			"female": 3
-		}
+		},
+		"abilities": [
+			"Thick Fat",
+			"Huge Power"
+		]
 	},
 	{
 		"id": 299,
 		"name": "Nosepass",
 		"types": [
 			"rock"
+		],
+		"abilities": [
+			"Sturdy",
+			"Magnet Pull"
 		]
 	},
 	{
@@ -1206,7 +1627,10 @@
 		"genderRatio": {
 			"male": 1,
 			"female": 3
-		}
+		},
+		"abilities": [
+			"Cute Charm"
+		]
 	},
 	{
 		"id": 301,
@@ -1218,7 +1642,10 @@
 			"male": 1,
 			"female": 3
 		},
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Cute Charm"
+		]
 	},
 	{
 		"id": 302,
@@ -1226,6 +1653,9 @@
 		"types": [
 			"dark",
 			"ghost"
+		],
+		"abilities": [
+			"Keen Eye"
 		]
 	},
 	{
@@ -1233,6 +1663,10 @@
 		"name": "Mawile",
 		"types": [
 			"steel"
+		],
+		"abilities": [
+			"Hyper Cutter",
+			"Intimidate"
 		]
 	},
 	{
@@ -1242,6 +1676,10 @@
 		"types": [
 			"steel",
 			"rock"
+		],
+		"abilities": [
+			"Sturdy",
+			"Rock Head"
 		]
 	},
 	{
@@ -1252,7 +1690,11 @@
 			"steel",
 			"rock"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Sturdy",
+			"Rock Head"
+		]
 	},
 	{
 		"id": 306,
@@ -1261,7 +1703,11 @@
 			"steel",
 			"rock"
 		],
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"abilities": [
+			"Sturdy",
+			"Rock Head"
+		]
 	},
 	{
 		"id": 307,
@@ -1270,6 +1716,9 @@
 		"types": [
 			"fighting",
 			"psychic"
+		],
+		"abilities": [
+			"Pure Power"
 		]
 	},
 	{
@@ -1279,7 +1728,10 @@
 			"fighting",
 			"psychic"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Pure Power"
+		]
 	},
 	{
 		"id": 309,
@@ -1287,6 +1739,10 @@
 		"isNfe": true,
 		"types": [
 			"electric"
+		],
+		"abilities": [
+			"Static",
+			"Lightning Rod"
 		]
 	},
 	{
@@ -1295,13 +1751,20 @@
 		"types": [
 			"electric"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Static",
+			"Lightning Rod"
+		]
 	},
 	{
 		"id": 311,
 		"name": "Plusle",
 		"types": [
 			"electric"
+		],
+		"abilities": [
+			"Plus"
 		]
 	},
 	{
@@ -1309,6 +1772,9 @@
 		"name": "Minun",
 		"types": [
 			"electric"
+		],
+		"abilities": [
+			"Minus"
 		]
 	},
 	{
@@ -1320,7 +1786,11 @@
 		"genderRatio": {
 			"male": 1,
 			"female": 0
-		}
+		},
+		"abilities": [
+			"Illuminate",
+			"Swarm"
+		]
 	},
 	{
 		"id": 314,
@@ -1331,7 +1801,10 @@
 		"genderRatio": {
 			"male": 0,
 			"female": 1
-		}
+		},
+		"abilities": [
+			"Oblivious"
+		]
 	},
 	{
 		"id": 315,
@@ -1339,6 +1812,10 @@
 		"types": [
 			"grass",
 			"poison"
+		],
+		"abilities": [
+			"Natural Cure",
+			"Poison Point"
 		]
 	},
 	{
@@ -1347,6 +1824,10 @@
 		"isNfe": true,
 		"types": [
 			"poison"
+		],
+		"abilities": [
+			"Liquid Ooze",
+			"Sticky Hold"
 		]
 	},
 	{
@@ -1355,7 +1836,11 @@
 		"types": [
 			"poison"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Liquid Ooze",
+			"Sticky Hold"
+		]
 	},
 	{
 		"id": 318,
@@ -1364,6 +1849,9 @@
 		"types": [
 			"water",
 			"dark"
+		],
+		"abilities": [
+			"Rough Skin"
 		]
 	},
 	{
@@ -1373,7 +1861,10 @@
 			"water",
 			"dark"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Rough Skin"
+		]
 	},
 	{
 		"id": 320,
@@ -1381,6 +1872,10 @@
 		"isNfe": true,
 		"types": [
 			"water"
+		],
+		"abilities": [
+			"Water Veil",
+			"Oblivious"
 		]
 	},
 	{
@@ -1389,7 +1884,11 @@
 		"types": [
 			"water"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Water Veil",
+			"Oblivious"
+		]
 	},
 	{
 		"id": 322,
@@ -1398,6 +1897,9 @@
 		"types": [
 			"fire",
 			"ground"
+		],
+		"abilities": [
+			"Oblivious"
 		]
 	},
 	{
@@ -1407,13 +1909,19 @@
 			"fire",
 			"ground"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Magma Armor"
+		]
 	},
 	{
 		"id": 324,
 		"name": "Torkoal",
 		"types": [
 			"fire"
+		],
+		"abilities": [
+			"White Smoke"
 		]
 	},
 	{
@@ -1422,6 +1930,10 @@
 		"isNfe": true,
 		"types": [
 			"psychic"
+		],
+		"abilities": [
+			"Thick Fat",
+			"Own Tempo"
 		]
 	},
 	{
@@ -1430,13 +1942,20 @@
 		"types": [
 			"psychic"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Thick Fat",
+			"Own Tempo"
+		]
 	},
 	{
 		"id": 327,
 		"name": "Spinda",
 		"types": [
 			"normal"
+		],
+		"abilities": [
+			"Own Tempo"
 		]
 	},
 	{
@@ -1445,6 +1964,10 @@
 		"isNfe": true,
 		"types": [
 			"ground"
+		],
+		"abilities": [
+			"Hyper Cutter",
+			"Arena Trap"
 		]
 	},
 	{
@@ -1455,7 +1978,10 @@
 			"ground",
 			"dragon"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Levitate"
+		]
 	},
 	{
 		"id": 330,
@@ -1464,7 +1990,10 @@
 			"ground",
 			"dragon"
 		],
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"abilities": [
+			"Levitate"
+		]
 	},
 	{
 		"id": 331,
@@ -1472,6 +2001,9 @@
 		"isNfe": true,
 		"types": [
 			"grass"
+		],
+		"abilities": [
+			"Sand Veil"
 		]
 	},
 	{
@@ -1481,7 +2013,10 @@
 			"grass",
 			"dark"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Sand Veil"
+		]
 	},
 	{
 		"id": 333,
@@ -1490,6 +2025,9 @@
 		"types": [
 			"normal",
 			"flying"
+		],
+		"abilities": [
+			"Natural Cure"
 		]
 	},
 	{
@@ -1499,13 +2037,19 @@
 			"dragon",
 			"flying"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Natural Cure"
+		]
 	},
 	{
 		"id": 335,
 		"name": "Zangoose",
 		"types": [
 			"normal"
+		],
+		"abilities": [
+			"Immunity"
 		]
 	},
 	{
@@ -1513,6 +2057,9 @@
 		"name": "Seviper",
 		"types": [
 			"poison"
+		],
+		"abilities": [
+			"Shed Skin"
 		]
 	},
 	{
@@ -1522,7 +2069,10 @@
 			"rock",
 			"psychic"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"abilities": [
+			"Levitate"
+		]
 	},
 	{
 		"id": 338,
@@ -1531,7 +2081,10 @@
 			"rock",
 			"psychic"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"abilities": [
+			"Levitate"
+		]
 	},
 	{
 		"id": 339,
@@ -1540,6 +2093,9 @@
 		"types": [
 			"water",
 			"ground"
+		],
+		"abilities": [
+			"Oblivious"
 		]
 	},
 	{
@@ -1549,7 +2105,10 @@
 			"water",
 			"ground"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Oblivious"
+		]
 	},
 	{
 		"id": 341,
@@ -1557,6 +2116,10 @@
 		"isNfe": true,
 		"types": [
 			"water"
+		],
+		"abilities": [
+			"Hyper Cutter",
+			"Shell Armor"
 		]
 	},
 	{
@@ -1566,7 +2129,11 @@
 			"water",
 			"dark"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Hyper Cutter",
+			"Shell Armor"
+		]
 	},
 	{
 		"id": 343,
@@ -1576,7 +2143,10 @@
 			"ground",
 			"psychic"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"abilities": [
+			"Levitate"
+		]
 	},
 	{
 		"id": 344,
@@ -1586,7 +2156,10 @@
 			"psychic"
 		],
 		"genderRatio": "unknown",
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Levitate"
+		]
 	},
 	{
 		"id": 345,
@@ -1599,7 +2172,10 @@
 		"genderRatio": {
 			"male": 7,
 			"female": 1
-		}
+		},
+		"abilities": [
+			"Suction Cups"
+		]
 	},
 	{
 		"id": 346,
@@ -1612,7 +2188,10 @@
 			"male": 7,
 			"female": 1
 		},
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Suction Cups"
+		]
 	},
 	{
 		"id": 347,
@@ -1625,7 +2204,10 @@
 		"genderRatio": {
 			"male": 7,
 			"female": 1
-		}
+		},
+		"abilities": [
+			"Battle Armor"
+		]
 	},
 	{
 		"id": 348,
@@ -1638,7 +2220,10 @@
 			"male": 7,
 			"female": 1
 		},
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Battle Armor"
+		]
 	},
 	{
 		"id": 349,
@@ -1646,6 +2231,9 @@
 		"isNfe": true,
 		"types": [
 			"water"
+		],
+		"abilities": [
+			"Swift Swim"
 		]
 	},
 	{
@@ -1654,7 +2242,10 @@
 		"types": [
 			"water"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Marvel Scale"
+		]
 	},
 	{
 		"id": 351,
@@ -1682,6 +2273,9 @@
 				],
 				"spriteSuffix": "sunny"
 			}
+		],
+		"abilities": [
+			"Forecast"
 		]
 	},
 	{
@@ -1689,6 +2283,9 @@
 		"name": "Kecleon",
 		"types": [
 			"normal"
+		],
+		"abilities": [
+			"Color Change"
 		]
 	},
 	{
@@ -1697,6 +2294,9 @@
 		"isNfe": true,
 		"types": [
 			"ghost"
+		],
+		"abilities": [
+			"Insomnia"
 		]
 	},
 	{
@@ -1705,7 +2305,10 @@
 		"types": [
 			"ghost"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Insomnia"
+		]
 	},
 	{
 		"id": 355,
@@ -1713,6 +2316,9 @@
 		"isNfe": true,
 		"types": [
 			"ghost"
+		],
+		"abilities": [
+			"Levitate"
 		]
 	},
 	{
@@ -1721,7 +2327,10 @@
 		"types": [
 			"ghost"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Pressure"
+		]
 	},
 	{
 		"id": 357,
@@ -1729,6 +2338,9 @@
 		"types": [
 			"grass",
 			"flying"
+		],
+		"abilities": [
+			"Chlorophyll"
 		]
 	},
 	{
@@ -1736,6 +2348,9 @@
 		"name": "Chimecho",
 		"types": [
 			"psychic"
+		],
+		"abilities": [
+			"Levitate"
 		]
 	},
 	{
@@ -1743,6 +2358,9 @@
 		"name": "Absol",
 		"types": [
 			"dark"
+		],
+		"abilities": [
+			"Pressure"
 		]
 	},
 	{
@@ -1751,6 +2369,9 @@
 		"isNfe": true,
 		"types": [
 			"psychic"
+		],
+		"abilities": [
+			"Shadow Tag"
 		]
 	},
 	{
@@ -1759,6 +2380,9 @@
 		"isNfe": true,
 		"types": [
 			"ice"
+		],
+		"abilities": [
+			"Inner Focus"
 		]
 	},
 	{
@@ -1767,7 +2391,10 @@
 		"types": [
 			"ice"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Inner Focus"
+		]
 	},
 	{
 		"id": 363,
@@ -1776,6 +2403,9 @@
 		"types": [
 			"ice",
 			"water"
+		],
+		"abilities": [
+			"Thick Fat"
 		]
 	},
 	{
@@ -1786,7 +2416,10 @@
 			"ice",
 			"water"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Thick Fat"
+		]
 	},
 	{
 		"id": 365,
@@ -1795,7 +2428,10 @@
 			"ice",
 			"water"
 		],
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"abilities": [
+			"Thick Fat"
+		]
 	},
 	{
 		"id": 366,
@@ -1803,6 +2439,9 @@
 		"isNfe": true,
 		"types": [
 			"water"
+		],
+		"abilities": [
+			"Shell Armor"
 		]
 	},
 	{
@@ -1811,7 +2450,10 @@
 		"types": [
 			"water"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Swift Swim"
+		]
 	},
 	{
 		"id": 368,
@@ -1819,7 +2461,10 @@
 		"types": [
 			"water"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Swift Swim"
+		]
 	},
 	{
 		"id": 369,
@@ -1831,7 +2476,11 @@
 		"genderRatio": {
 			"male": 7,
 			"female": 1
-		}
+		},
+		"abilities": [
+			"Swift Swim",
+			"Rock Head"
+		]
 	},
 	{
 		"id": 370,
@@ -1842,7 +2491,10 @@
 		"genderRatio": {
 			"male": 1,
 			"female": 3
-		}
+		},
+		"abilities": [
+			"Swift Swim"
+		]
 	},
 	{
 		"id": 371,
@@ -1850,6 +2502,9 @@
 		"isNfe": true,
 		"types": [
 			"dragon"
+		],
+		"abilities": [
+			"Rock Head"
 		]
 	},
 	{
@@ -1859,7 +2514,10 @@
 		"types": [
 			"dragon"
 		],
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Rock Head"
+		]
 	},
 	{
 		"id": 373,
@@ -1868,7 +2526,10 @@
 			"dragon",
 			"flying"
 		],
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"abilities": [
+			"Intimidate"
+		]
 	},
 	{
 		"id": 374,
@@ -1878,7 +2539,10 @@
 			"steel",
 			"psychic"
 		],
-		"genderRatio": "unknown"
+		"genderRatio": "unknown",
+		"abilities": [
+			"Clear Body"
+		]
 	},
 	{
 		"id": 375,
@@ -1889,7 +2553,10 @@
 			"psychic"
 		],
 		"genderRatio": "unknown",
-		"evolutionCount": 1
+		"evolutionCount": 1,
+		"abilities": [
+			"Clear Body"
+		]
 	},
 	{
 		"id": 376,
@@ -1899,7 +2566,10 @@
 			"psychic"
 		],
 		"genderRatio": "unknown",
-		"evolutionCount": 2
+		"evolutionCount": 2,
+		"abilities": [
+			"Clear Body"
+		]
 	},
 	{
 		"id": 377,
@@ -1908,7 +2578,10 @@
 			"rock"
 		],
 		"genderRatio": "unknown",
-		"isSubLegendary": true
+		"isSubLegendary": true,
+		"abilities": [
+			"Clear Body"
+		]
 	},
 	{
 		"id": 378,
@@ -1917,7 +2590,10 @@
 			"ice"
 		],
 		"genderRatio": "unknown",
-		"isSubLegendary": true
+		"isSubLegendary": true,
+		"abilities": [
+			"Clear Body"
+		]
 	},
 	{
 		"id": 379,
@@ -1926,7 +2602,10 @@
 			"steel"
 		],
 		"genderRatio": "unknown",
-		"isSubLegendary": true
+		"isSubLegendary": true,
+		"abilities": [
+			"Clear Body"
+		]
 	},
 	{
 		"id": 380,
@@ -1939,7 +2618,10 @@
 			"male": 0,
 			"female": 1
 		},
-		"isSubLegendary": true
+		"isSubLegendary": true,
+		"abilities": [
+			"Levitate"
+		]
 	},
 	{
 		"id": 381,
@@ -1952,7 +2634,10 @@
 			"male": 1,
 			"female": 0
 		},
-		"isSubLegendary": true
+		"isSubLegendary": true,
+		"abilities": [
+			"Levitate"
+		]
 	},
 	{
 		"id": 382,
@@ -1961,7 +2646,10 @@
 			"water"
 		],
 		"genderRatio": "unknown",
-		"isLegendary": true
+		"isLegendary": true,
+		"abilities": [
+			"Drizzle"
+		]
 	},
 	{
 		"id": 383,
@@ -1970,7 +2658,10 @@
 			"ground"
 		],
 		"genderRatio": "unknown",
-		"isLegendary": true
+		"isLegendary": true,
+		"abilities": [
+			"Drought"
+		]
 	},
 	{
 		"id": 384,
@@ -1980,7 +2671,10 @@
 			"flying"
 		],
 		"genderRatio": "unknown",
-		"isLegendary": true
+		"isLegendary": true,
+		"abilities": [
+			"Air Lock"
+		]
 	},
 	{
 		"id": 385,
@@ -1990,7 +2684,10 @@
 			"psychic"
 		],
 		"genderRatio": "unknown",
-		"isMythical": true
+		"isMythical": true,
+		"abilities": [
+			"Serene Grace"
+		]
 	},
 	{
 		"id": 386,
@@ -2014,6 +2711,9 @@
 			}
 		],
 		"genderRatio": "unknown",
-		"isMythical": true
+		"isMythical": true,
+		"abilities": [
+			"Pressure"
+		]
 	}
 ]
