@@ -1,6 +1,7 @@
 html,div,dl,dt,dd,ul,ol,li,pre,form,label,fieldset,p,blockquote,input{margin:0;padding:0}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;margin:0;padding:0}
-html{background:#FFF;color:#333;font:.875em/1.5 "Helvetica Neue",Arial,sans-serif;text-align:center}
+html{background:#FFF;color:#333;font:.875em/1.5 "Helvetica Neue",Arial,sans-serif;text-align:center;
+	-webkit-text-size-adjust:100%;text-size-adjust:100%}
 body{max-width:44em;margin:0 auto;padding:.5em}
 
 h1{font-weight:700;font-size:2em;margin:0}
@@ -14,7 +15,7 @@ a:hover,button.text:hover{color:#666}
 
 fieldset{border:0;cursor:default;line-height:2;margin:1em 0}
 label{white-space:nowrap}
-label,select,button{margin-right:1em}
+label,select,button,#controls a{margin-right:1em}
 label select,button:last-child{margin:0}
 input[type="checkbox"]{vertical-align:baseline;margin-right:.25em}
 button,input[type="button"],input[type="submit"]{cursor:pointer}
@@ -25,7 +26,7 @@ abbr{cursor:help;border-bottom:1px dotted;text-decoration:none}
 .male{color:blue}
 .female{color:deeppink}
 
-#controls button[type="submit"]{font-size:1em;padding:.25em .5em;background:#BFEA8E;border-radius:.25em;border:1px solid #888;color:#000}
+#controls button[type="submit"]{font-size:1rem;padding:.25em .5em;background:#BFEA8E;border-radius:.25em;border:1px solid #888;color:#000}
 #controls button[type="submit"]:hover{background:#B2DD81}
 #controls button[type="submit"]:active{background:#A6D075}
 
@@ -55,7 +56,7 @@ header{margin:1em 0}
 #advanced-options{border-top:1px dashed #888}
 
 #history{margin:1em 0 0;display:flex;justify-content:space-between}
-button.text{background:transparent;color:inherit;border:0;padding:0}
+button.text{font-size:1rem;background:transparent;color:inherit;border:0;padding:0}
 
 #results li,#shinies li{display:inline-block;height:3em;padding-top:128px;width:33%;min-width:138px;margin-bottom:1em;position:relative;list-style:none}
 #results li{animation:0.5s ease-out 0s 1 fadeIn}

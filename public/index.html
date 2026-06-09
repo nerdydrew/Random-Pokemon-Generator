@@ -92,9 +92,9 @@
 	</fieldset>
 
 	<fieldset>
-		<button type="button" class="text is-hiding" data-click-to-toggle="advanced-options">Advanced options </button>
-		<button type="button" class="danger" id="reset" onclick="resetOptions()">↺ Reset</button>
+		<button type="button" class="text is-hiding" data-click-to-toggle="advanced-options">Advanced </button>
 		<a href="/" id="permalink">Link to current options</a>
+		<button type="button" class="danger" id="reset" onclick="resetOptions()">↺ Reset</button>
 	</fieldset>
 
 	<div id="advanced-options" class="invisible">
@@ -135,17 +135,6 @@
 					</ul>
 				</div>
 			</div>
-		</fieldset>
-
-		<fieldset>
-			<select name="display" id="display" required>
-				<option value="names">Names Only</option>
-				<option value="sprites">Images Only</option>
-				<option value="both" selected>Names and Images</option>
-			</select>
-
-			<label><input type="checkbox" id="natures" name="natures" value="true">Natures</label>
-			<label><input type="checkbox" id="genders" name="genders" value="true">Genders</label>
 
 			<div class="dropdown" id="formsDropdown">
 				<button type="button" data-plural-name="Forms" data-allow-showing-two="true" data-allow-none="true">Forms</button>
@@ -160,7 +149,18 @@
 		</fieldset>
 
 		<fieldset>
+			<select name="display" id="display" required>
+				<option value="names">Names Only</option>
+				<option value="sprites">Images Only</option>
+				<option value="both" selected>Names and Images</option>
+			</select>
+
+			<label><input type="checkbox" id="natures" name="natures" value="true">Natures</label>
+			<label><input type="checkbox" id="genders" name="genders" value="true">Genders</label>
 			<label><input type="checkbox" id="abilities" name="abilities" value="false">Abilities</label>
+		</fieldset>
+
+		<fieldset>
 			<label><input type="checkbox" id="uniqueTypes" name="uniqueTypes" value="false">Unique types (prevent repeats)</label>
 		</fieldset>
 	</div>
