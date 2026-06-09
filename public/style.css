@@ -25,13 +25,13 @@ abbr{cursor:help;border-bottom:1px dotted;text-decoration:none}
 .male{color:blue}
 .female{color:deeppink}
 
-#controls button[type="submit"]{font-size:1em;padding:.25em .5em;background:#AD8;border-radius:.25em;border:1px solid #666;color:#000}
-#controls button[type="submit"]:hover{background:#9D4}
-#controls button[type="submit"]:active{background:#8C1}
+#controls button[type="submit"]{font-size:1em;padding:.25em .5em;background:#BFEA8E;border-radius:.25em;border:1px solid #888;color:#000}
+#controls button[type="submit"]:hover{background:#B2DD81}
+#controls button[type="submit"]:active{background:#A6D075}
 
-button.danger{padding:.125em .5em;background:#FEE;border-radius:.25em;border:1px solid #FF1C31}
-button.danger:hover{background:#FDD}
-button.danger:active{background:#FCC}
+button.danger{padding:.125em .5em;background:#FEE;border-radius:.25em;border:1px solid #FF1E32;color:#000}
+button.danger:hover{background:#F1E1E1}
+button.danger:active{background:#EBDADA}
 
 header{margin:1em 0}
 
@@ -94,6 +94,10 @@ footer{font-size:.875em;padding:3em 0;color:#666;clear:both}
 
 	.male{color:lightblue}
 	.female{color:pink}
+
+	button.danger{background:#533;border-color:#FF1E32;color:#FFF}
+	button.danger:hover{background:#4A2929}
+	button.danger:active{background:#3F1F1F}
 }
 
 /* Mobile Safari doesn't display this animation smoothly unless I add another CSS declaration. */
