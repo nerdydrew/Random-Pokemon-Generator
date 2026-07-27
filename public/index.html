@@ -25,14 +25,14 @@
 
 <form action="?" method="get" id="controls" class="menu" onsubmit="generateRandom(); return false;">
 	<fieldset>
-		<label>Generate <select name="n" id="n" required>
+		<label><select name="n" id="n" required>
 			<option value="1">1</option>
 			<option value="2">2</option>
 			<option value="3">3</option>
 			<option value="4">4</option>
 			<option value="5">5</option>
 			<option value="6" selected>6</option>
-		</select> Pok&eacute;mon.</label>
+		</select> Pok&eacute;mon</label>
 
 		<div class="dropdown" id="regions">
 			<button type="button" data-plural-name="Regions">All Regions</button>
@@ -62,7 +62,7 @@
 		</div>
 
 		<div class="dropdown" id="types">
-			<button type="button" data-plural-name="Types" data-allow-showing-two="true">All Types</button>
+			<button type="button" data-plural-name="Types">All Types</button>
 			<div class="popup">
 				<ul>
 					<li><label><input type="checkbox" name="types" value="all" data-select-all="true" checked>Select All</label></li>
@@ -88,13 +88,9 @@
 			</div>
 		</div>
 
-		<button type="submit">Generate</button>
-	</fieldset>
-
-	<fieldset>
 		<button type="button" class="text is-hiding" data-click-to-toggle="advanced-options">Advanced </button>
-		<a href="/" id="permalink">Link to current options</a>
-		<button type="button" class="danger" id="reset" onclick="resetOptions()">↺ Reset</button>
+
+		<button type="submit">Generate</button>
 	</fieldset>
 
 	<div id="advanced-options" class="invisible">
@@ -162,6 +158,8 @@
 
 		<fieldset>
 			<label><input type="checkbox" id="uniqueTypes" name="uniqueTypes" value="false">Unique types (prevent repeats)</label>
+			<a href="/" id="permalink">Link&nbsp;to&nbsp;current&nbsp;options</a>
+			<button type="button" class="danger" id="reset" onclick="resetOptions()">↺ Reset</button>
 		</fieldset>
 	</div>
 </form>

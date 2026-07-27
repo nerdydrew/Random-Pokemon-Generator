@@ -13,7 +13,7 @@ article,section{margin:1em 0}
 a,button.text{color:#000;text-decoration:none;border-bottom:1px solid #AAA}
 a:hover,button.text:hover{color:#666}
 
-fieldset{border:0;cursor:default;line-height:2;margin:1em 0}
+fieldset{border:0;cursor:default;line-height:2.5;margin:.75em 0}
 label{white-space:nowrap}
 label,select,button,#controls a{margin-right:1em}
 label select,button:last-child{margin:0}
