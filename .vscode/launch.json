@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "PHP Built-in Server",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "d:/Pokemon/.tools/php/php.exe -S localhost:8080 -t d:/Pokemon/public",
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}

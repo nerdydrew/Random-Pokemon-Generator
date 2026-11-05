@@ -1,0 +1,718 @@
+[Wed Apr 22 01:26:32 2026] PHP 8.3.30 Development Server (http://localhost:8080) started
+[Wed Apr 22 01:27:40 2026] [::1]:50769 Accepted
+[Wed Apr 22 01:27:40 2026] [::1]:50769 [200]: GET /
+[Wed Apr 22 01:27:40 2026] [::1]:50769 Closing
+[Wed Apr 22 01:27:56 2026] [::1]:50819 Accepted
+[Wed Apr 22 01:27:56 2026] [::1]:50819 [200]: GET /?generate=1&n=3
+[Wed Apr 22 01:27:57 2026] [::1]:50819 Closing
+[Wed Apr 22 01:28:12 2026] [::1]:50858 Accepted
+[Wed Apr 22 01:28:12 2026] [::1]:50858 [200]: GET /
+[Wed Apr 22 01:28:12 2026] [::1]:50858 Closing
+[Wed Apr 22 01:28:12 2026] [::1]:50860 Accepted
+[Wed Apr 22 01:28:12 2026] [::1]:50861 Accepted
+[Wed Apr 22 01:28:12 2026] [::1]:50860 [200]: GET /style.css
+[Wed Apr 22 01:28:12 2026] [::1]:50861 [200]: GET /ui.js
+[Wed Apr 22 01:28:12 2026] [::1]:50860 Closing
+[Wed Apr 22 01:28:12 2026] [::1]:50861 Closing
+[Wed Apr 22 01:28:12 2026] [::1]:50864 Accepted
+[Wed Apr 22 01:28:12 2026] [::1]:50864 [200]: GET /manifest.webmanifest
+[Wed Apr 22 01:28:12 2026] [::1]:50864 Closing
+[Wed Apr 22 01:28:12 2026] [::1]:50865 Accepted
+[Wed Apr 22 01:28:12 2026] [::1]:50865 [200]: GET /favicon.svg
+[Wed Apr 22 01:28:12 2026] [::1]:50866 Accepted
+[Wed Apr 22 01:28:12 2026] [::1]:50866 [200]: GET /favicon-192.png
+[Wed Apr 22 01:28:12 2026] [::1]:50865 Closing
+[Wed Apr 22 01:28:12 2026] [::1]:50866 Closing
+[Wed Apr 22 01:28:14 2026] [::1]:50871 Accepted
+[Wed Apr 22 01:28:14 2026] [::1]:50872 Accepted
+[Wed Apr 22 01:28:14 2026] [::1]:50871 [200]: GET /?generate=1&n=1&regions%5B%5D=kanto&regions%5B%5D=johto&regions%5B%5D=hoenn&regions%5B%5D=sinnoh&regions%5B%5D=unova&regions%5B%5D=kalos&regions%5B%5D=alola&regions%5B%5D=galar&regions%5B%5D=hisui&regions%5B%5D=paldea&types%5B%5D=normal&types%5B%5D=fire&types%5B%5D=water&types%5B%5D=electric&types%5B%5D=grass&types%5B%5D=ice&types%5B%5D=fighting&types%5B%5D=poison&types%5B%5D=ground&types%5B%5D=flying&types%5B%5D=psychic&types%5B%5D=bug&types%5B%5D=rock&types%5B%5D=ghost&types%5B%5D=dragon&types%5B%5D=dark&types%5B%5D=steel&types%5B%5D=fairy&sublegendaries=true&legendaries=true&mythicals=true&paradoxes=true&ultraBeasts=true&evolutionCounts%5B%5D=0&evolutionCounts%5B%5D=1&evolutionCounts%5B%5D=2&nfes=true&fullyEvolved=true&display=both
+[Wed Apr 22 01:28:14 2026] [::1]:50871 Closing
+[Wed Apr 22 01:28:14 2026] [::1]:50872 [200]: GET /style.css
+[Wed Apr 22 01:28:14 2026] [::1]:50872 Closing
+[Wed Apr 22 01:28:14 2026] [::1]:50873 Accepted
+[Wed Apr 22 01:28:14 2026] [::1]:50874 Accepted
+[Wed Apr 22 01:28:14 2026] [::1]:50873 [200]: GET /sprites/normal/sandslash.webp
+[Wed Apr 22 01:28:14 2026] [::1]:50874 [200]: GET /ui.js
+[Wed Apr 22 01:28:14 2026] [::1]:50873 Closing
+[Wed Apr 22 01:28:14 2026] [::1]:50874 Closing
+[Wed Apr 22 01:28:14 2026] [::1]:50875 Accepted
+[Wed Apr 22 01:28:14 2026] [::1]:50875 [200]: GET /manifest.webmanifest
+[Wed Apr 22 01:28:14 2026] [::1]:50875 Closing
+[Wed Apr 22 01:28:14 2026] [::1]:50876 Accepted
+[Wed Apr 22 01:28:14 2026] [::1]:50876 [200]: GET /favicon-192.png
+[Wed Apr 22 01:28:14 2026] [::1]:50876 Closing
+[Wed Apr 22 01:28:17 2026] [::1]:50878 Accepted
+[Wed Apr 22 01:28:17 2026] [::1]:50878 [200]: GET /?generate=1&n=1&regions%5B%5D=kanto&regions%5B%5D=johto&regions%5B%5D=hoenn&regions%5B%5D=sinnoh&regions%5B%5D=unova&regions%5B%5D=kalos&regions%5B%5D=alola&regions%5B%5D=galar&regions%5B%5D=hisui&regions%5B%5D=paldea&types%5B%5D=normal&types%5B%5D=fire&types%5B%5D=water&types%5B%5D=electric&types%5B%5D=grass&types%5B%5D=ice&types%5B%5D=fighting&types%5B%5D=poison&types%5B%5D=ground&types%5B%5D=flying&types%5B%5D=psychic&types%5B%5D=bug&types%5B%5D=rock&types%5B%5D=ghost&types%5B%5D=dragon&types%5B%5D=dark&types%5B%5D=steel&types%5B%5D=fairy&sublegendaries=true&legendaries=true&mythicals=true&paradoxes=true&ultraBeasts=true&evolutionCounts%5B%5D=0&evolutionCounts%5B%5D=1&evolutionCounts%5B%5D=2&nfes=true&fullyEvolved=true&display=both
+[Wed Apr 22 01:28:17 2026] [::1]:50878 Closing
+[Wed Apr 22 01:28:17 2026] [::1]:50879 Accepted
+[Wed Apr 22 01:28:17 2026] [::1]:50879 [200]: GET /style.css
+[Wed Apr 22 01:28:17 2026] [::1]:50879 Closing
+[Wed Apr 22 01:28:17 2026] [::1]:50880 Accepted
+[Wed Apr 22 01:28:17 2026] [::1]:50881 Accepted
+[Wed Apr 22 01:28:17 2026] [::1]:50880 [200]: GET /sprites/normal/swirlix.webp
+[Wed Apr 22 01:28:17 2026] [::1]:50881 [200]: GET /ui.js
+[Wed Apr 22 01:28:17 2026] [::1]:50880 Closing
+[Wed Apr 22 01:28:17 2026] [::1]:50881 Closing
+[Wed Apr 22 01:28:17 2026] [::1]:50882 Accepted
+[Wed Apr 22 01:28:17 2026] [::1]:50882 [200]: GET /manifest.webmanifest
+[Wed Apr 22 01:28:17 2026] [::1]:50882 Closing
+[Wed Apr 22 01:28:17 2026] [::1]:50883 Accepted
+[Wed Apr 22 01:28:17 2026] [::1]:50883 [200]: GET /favicon-192.png
+[Wed Apr 22 01:28:17 2026] [::1]:50883 Closing
+[Wed Apr 22 01:28:22 2026] [::1]:50886 Accepted
+[Wed Apr 22 01:28:22 2026] [::1]:50886 [200]: GET /?history=previous
+[Wed Apr 22 01:28:22 2026] [::1]:50886 Closing
+[Wed Apr 22 01:28:22 2026] [::1]:50887 Accepted
+[Wed Apr 22 01:28:22 2026] [::1]:50888 Accepted
+[Wed Apr 22 01:28:22 2026] [::1]:50887 [200]: GET /style.css
+[Wed Apr 22 01:28:22 2026] [::1]:50887 Closing
+[Wed Apr 22 01:28:22 2026] [::1]:50889 Accepted
+[Wed Apr 22 01:28:22 2026] [::1]:50888 [200]: GET /ui.js
+[Wed Apr 22 01:28:22 2026] [::1]:50889 [200]: GET /sprites/normal/sandslash.webp
+[Wed Apr 22 01:28:22 2026] [::1]:50888 Closing
+[Wed Apr 22 01:28:22 2026] [::1]:50889 Closing
+[Wed Apr 22 01:28:23 2026] [::1]:50890 Accepted
+[Wed Apr 22 01:28:23 2026] [::1]:50890 [200]: GET /manifest.webmanifest
+[Wed Apr 22 01:28:23 2026] [::1]:50890 Closing
+[Wed Apr 22 01:28:23 2026] [::1]:50891 Accepted
+[Wed Apr 22 01:28:23 2026] [::1]:50891 [200]: GET /favicon-192.png
+[Wed Apr 22 01:28:23 2026] [::1]:50891 Closing
+[Wed Apr 22 01:28:24 2026] [::1]:50892 Accepted
+[Wed Apr 22 01:28:24 2026] [::1]:50892 [200]: GET /?history=next
+[Wed Apr 22 01:28:24 2026] [::1]:50892 Closing
+[Wed Apr 22 01:28:24 2026] [::1]:50893 Accepted
+[Wed Apr 22 01:28:24 2026] [::1]:50893 [200]: GET /style.css
+[Wed Apr 22 01:28:24 2026] [::1]:50893 Closing
+[Wed Apr 22 01:28:24 2026] [::1]:50894 Accepted
+[Wed Apr 22 01:28:24 2026] [::1]:50895 Accepted
+[Wed Apr 22 01:28:24 2026] [::1]:50894 [200]: GET /sprites/normal/swirlix.webp
+[Wed Apr 22 01:28:24 2026] [::1]:50895 [200]: GET /ui.js
+[Wed Apr 22 01:28:24 2026] [::1]:50894 Closing
+[Wed Apr 22 01:28:24 2026] [::1]:50895 Closing
+[Wed Apr 22 01:28:24 2026] [::1]:50896 Accepted
+[Wed Apr 22 01:28:24 2026] [::1]:50896 [200]: GET /manifest.webmanifest
+[Wed Apr 22 01:28:24 2026] [::1]:50896 Closing
+[Wed Apr 22 01:28:24 2026] [::1]:50897 Accepted
+[Wed Apr 22 01:28:24 2026] [::1]:50897 [200]: GET /favicon-192.png
+[Wed Apr 22 01:28:24 2026] [::1]:50897 Closing
+[Wed Apr 22 01:28:25 2026] [::1]:50898 Accepted
+[Wed Apr 22 01:28:25 2026] [::1]:50898 [200]: GET /?generate=1&n=1&regions%5B%5D=kanto&regions%5B%5D=johto&regions%5B%5D=hoenn&regions%5B%5D=sinnoh&regions%5B%5D=unova&regions%5B%5D=kalos&regions%5B%5D=alola&regions%5B%5D=galar&regions%5B%5D=hisui&regions%5B%5D=paldea&types%5B%5D=normal&types%5B%5D=fire&types%5B%5D=water&types%5B%5D=electric&types%5B%5D=grass&types%5B%5D=ice&types%5B%5D=fighting&types%5B%5D=poison&types%5B%5D=ground&types%5B%5D=flying&types%5B%5D=psychic&types%5B%5D=bug&types%5B%5D=rock&types%5B%5D=ghost&types%5B%5D=dragon&types%5B%5D=dark&types%5B%5D=steel&types%5B%5D=fairy&sublegendaries=true&legendaries=true&mythicals=true&paradoxes=true&ultraBeasts=true&evolutionCounts%5B%5D=0&evolutionCounts%5B%5D=1&evolutionCounts%5B%5D=2&nfes=true&fullyEvolved=true&display=both
+[Wed Apr 22 01:28:25 2026] [::1]:50898 Closing
+[Wed Apr 22 01:28:25 2026] [::1]:50899 Accepted
+[Wed Apr 22 01:28:25 2026] [::1]:50900 Accepted
+[Wed Apr 22 01:28:25 2026] [::1]:50899 [200]: GET /style.css
+[Wed Apr 22 01:28:25 2026] [::1]:50901 Accepted
+[Wed Apr 22 01:28:25 2026] [::1]:50900 [200]: GET /sprites/normal/omanyte.webp
+[Wed Apr 22 01:28:25 2026] [::1]:50901 [200]: GET /ui.js
+[Wed Apr 22 01:28:25 2026] [::1]:50899 Closing
+[Wed Apr 22 01:28:25 2026] [::1]:50900 Closing
+[Wed Apr 22 01:28:25 2026] [::1]:50901 Closing
+[Wed Apr 22 01:28:25 2026] [::1]:50902 Accepted
+[Wed Apr 22 01:28:25 2026] [::1]:50902 [200]: GET /manifest.webmanifest
+[Wed Apr 22 01:28:25 2026] [::1]:50902 Closing
+[Wed Apr 22 01:28:25 2026] [::1]:50903 Accepted
+[Wed Apr 22 01:28:25 2026] [::1]:50903 [200]: GET /favicon-192.png
+[Wed Apr 22 01:28:25 2026] [::1]:50903 Closing
+[Wed Apr 22 01:28:26 2026] [::1]:50904 Accepted
+[Wed Apr 22 01:28:26 2026] [::1]:50904 [200]: GET /?generate=1&n=1&regions%5B%5D=kanto&regions%5B%5D=johto&regions%5B%5D=hoenn&regions%5B%5D=sinnoh&regions%5B%5D=unova&regions%5B%5D=kalos&regions%5B%5D=alola&regions%5B%5D=galar&regions%5B%5D=hisui&regions%5B%5D=paldea&types%5B%5D=normal&types%5B%5D=fire&types%5B%5D=water&types%5B%5D=electric&types%5B%5D=grass&types%5B%5D=ice&types%5B%5D=fighting&types%5B%5D=poison&types%5B%5D=ground&types%5B%5D=flying&types%5B%5D=psychic&types%5B%5D=bug&types%5B%5D=rock&types%5B%5D=ghost&types%5B%5D=dragon&types%5B%5D=dark&types%5B%5D=steel&types%5B%5D=fairy&sublegendaries=true&legendaries=true&mythicals=true&paradoxes=true&ultraBeasts=true&evolutionCounts%5B%5D=0&evolutionCounts%5B%5D=1&evolutionCounts%5B%5D=2&nfes=true&fullyEvolved=true&display=both
+[Wed Apr 22 01:28:26 2026] [::1]:50904 Closing
+[Wed Apr 22 01:28:26 2026] [::1]:50905 Accepted
+[Wed Apr 22 01:28:26 2026] [::1]:50905 [200]: GET /style.css
+[Wed Apr 22 01:28:26 2026] [::1]:50905 Closing
+[Wed Apr 22 01:28:26 2026] [::1]:50906 Accepted
+[Wed Apr 22 01:28:26 2026] [::1]:50907 Accepted
+[Wed Apr 22 01:28:26 2026] [::1]:50906 [200]: GET /sprites/normal/litleo.webp
+[Wed Apr 22 01:28:26 2026] [::1]:50907 [200]: GET /ui.js
+[Wed Apr 22 01:28:26 2026] [::1]:50906 Closing
+[Wed Apr 22 01:28:26 2026] [::1]:50907 Closing
+[Wed Apr 22 01:28:26 2026] [::1]:50908 Accepted
+[Wed Apr 22 01:28:26 2026] [::1]:50908 [200]: GET /manifest.webmanifest
+[Wed Apr 22 01:28:26 2026] [::1]:50908 Closing
+[Wed Apr 22 01:28:26 2026] [::1]:50909 Accepted
+[Wed Apr 22 01:28:26 2026] [::1]:50909 [200]: GET /favicon-192.png
+[Wed Apr 22 01:28:26 2026] [::1]:50909 Closing
+[Wed Apr 22 01:28:26 2026] [::1]:50910 Accepted
+[Wed Apr 22 01:28:26 2026] [::1]:50910 [200]: GET /?generate=1&n=1&regions%5B%5D=kanto&regions%5B%5D=johto&regions%5B%5D=hoenn&regions%5B%5D=sinnoh&regions%5B%5D=unova&regions%5B%5D=kalos&regions%5B%5D=alola&regions%5B%5D=galar&regions%5B%5D=hisui&regions%5B%5D=paldea&types%5B%5D=normal&types%5B%5D=fire&types%5B%5D=water&types%5B%5D=electric&types%5B%5D=grass&types%5B%5D=ice&types%5B%5D=fighting&types%5B%5D=poison&types%5B%5D=ground&types%5B%5D=flying&types%5B%5D=psychic&types%5B%5D=bug&types%5B%5D=rock&types%5B%5D=ghost&types%5B%5D=dragon&types%5B%5D=dark&types%5B%5D=steel&types%5B%5D=fairy&sublegendaries=true&legendaries=true&mythicals=true&paradoxes=true&ultraBeasts=true&evolutionCounts%5B%5D=0&evolutionCounts%5B%5D=1&evolutionCounts%5B%5D=2&nfes=true&fullyEvolved=true&display=both
+[Wed Apr 22 01:28:26 2026] [::1]:50910 Closing
+[Wed Apr 22 01:28:26 2026] [::1]:50911 Accepted
+[Wed Apr 22 01:28:26 2026] [::1]:50911 [200]: GET /style.css
+[Wed Apr 22 01:28:26 2026] [::1]:50911 Closing
+[Wed Apr 22 01:28:26 2026] [::1]:50913 Accepted
+[Wed Apr 22 01:28:26 2026] [::1]:50914 Accepted
+[Wed Apr 22 01:28:26 2026] [::1]:50913 [200]: GET /sprites/normal/minun.webp
+[Wed Apr 22 01:28:26 2026] [::1]:50914 [200]: GET /ui.js
+[Wed Apr 22 01:28:26 2026] [::1]:50913 Closing
+[Wed Apr 22 01:28:26 2026] [::1]:50914 Closing
+[Wed Apr 22 01:28:26 2026] [::1]:50915 Accepted
+[Wed Apr 22 01:28:26 2026] [::1]:50915 [200]: GET /manifest.webmanifest
+[Wed Apr 22 01:28:26 2026] [::1]:50915 Closing
+[Wed Apr 22 01:28:26 2026] [::1]:50916 Accepted
+[Wed Apr 22 01:28:26 2026] [::1]:50916 [200]: GET /favicon-192.png
+[Wed Apr 22 01:28:26 2026] [::1]:50916 Closing
+[Wed Apr 22 01:28:27 2026] [::1]:50917 Accepted
+[Wed Apr 22 01:28:27 2026] [::1]:50917 [200]: GET /?generate=1&n=1&regions%5B%5D=kanto&regions%5B%5D=johto&regions%5B%5D=hoenn&regions%5B%5D=sinnoh&regions%5B%5D=unova&regions%5B%5D=kalos&regions%5B%5D=alola&regions%5B%5D=galar&regions%5B%5D=hisui&regions%5B%5D=paldea&types%5B%5D=normal&types%5B%5D=fire&types%5B%5D=water&types%5B%5D=electric&types%5B%5D=grass&types%5B%5D=ice&types%5B%5D=fighting&types%5B%5D=poison&types%5B%5D=ground&types%5B%5D=flying&types%5B%5D=psychic&types%5B%5D=bug&types%5B%5D=rock&types%5B%5D=ghost&types%5B%5D=dragon&types%5B%5D=dark&types%5B%5D=steel&types%5B%5D=fairy&sublegendaries=true&legendaries=true&mythicals=true&paradoxes=true&ultraBeasts=true&evolutionCounts%5B%5D=0&evolutionCounts%5B%5D=1&evolutionCounts%5B%5D=2&nfes=true&fullyEvolved=true&display=both
+[Wed Apr 22 01:28:27 2026] [::1]:50917 Closing
+[Wed Apr 22 01:28:27 2026] [::1]:50918 Accepted
+[Wed Apr 22 01:28:27 2026] [::1]:50918 [200]: GET /style.css
+[Wed Apr 22 01:28:27 2026] [::1]:50918 Closing
+[Wed Apr 22 01:28:27 2026] [::1]:50919 Accepted
+[Wed Apr 22 01:28:27 2026] [::1]:50920 Accepted
+[Wed Apr 22 01:28:27 2026] [::1]:50919 [200]: GET /sprites/normal/vespiquen.webp
+[Wed Apr 22 01:28:27 2026] [::1]:50920 [200]: GET /ui.js
+[Wed Apr 22 01:28:27 2026] [::1]:50919 Closing
+[Wed Apr 22 01:28:27 2026] [::1]:50920 Closing
+[Wed Apr 22 01:28:27 2026] [::1]:50921 Accepted
+[Wed Apr 22 01:28:27 2026] [::1]:50921 [200]: GET /manifest.webmanifest
+[Wed Apr 22 01:28:27 2026] [::1]:50921 Closing
+[Wed Apr 22 01:28:27 2026] [::1]:50922 Accepted
+[Wed Apr 22 01:28:27 2026] [::1]:50922 [200]: GET /favicon-192.png
+[Wed Apr 22 01:28:27 2026] [::1]:50922 Closing
+[Wed Apr 22 01:28:27 2026] [::1]:50923 Accepted
+[Wed Apr 22 01:28:27 2026] [::1]:50924 Accepted
+[Wed Apr 22 01:28:27 2026] [::1]:50923 [200]: GET /?generate=1&n=1&regions%5B%5D=kanto&regions%5B%5D=johto&regions%5B%5D=hoenn&regions%5B%5D=sinnoh&regions%5B%5D=unova&regions%5B%5D=kalos&regions%5B%5D=alola&regions%5B%5D=galar&regions%5B%5D=hisui&regions%5B%5D=paldea&types%5B%5D=normal&types%5B%5D=fire&types%5B%5D=water&types%5B%5D=electric&types%5B%5D=grass&types%5B%5D=ice&types%5B%5D=fighting&types%5B%5D=poison&types%5B%5D=ground&types%5B%5D=flying&types%5B%5D=psychic&types%5B%5D=bug&types%5B%5D=rock&types%5B%5D=ghost&types%5B%5D=dragon&types%5B%5D=dark&types%5B%5D=steel&types%5B%5D=fairy&sublegendaries=true&legendaries=true&mythicals=true&paradoxes=true&ultraBeasts=true&evolutionCounts%5B%5D=0&evolutionCounts%5B%5D=1&evolutionCounts%5B%5D=2&nfes=true&fullyEvolved=true&display=both
+[Wed Apr 22 01:28:27 2026] [::1]:50923 Closing
+[Wed Apr 22 01:28:27 2026] [::1]:50924 [200]: GET /style.css
+[Wed Apr 22 01:28:27 2026] [::1]:50924 Closing
+[Wed Apr 22 01:28:27 2026] [::1]:50925 Accepted
+[Wed Apr 22 01:28:27 2026] [::1]:50926 Accepted
+[Wed Apr 22 01:28:27 2026] [::1]:50925 [200]: GET /sprites/normal/mantyke.webp
+[Wed Apr 22 01:28:27 2026] [::1]:50926 [200]: GET /ui.js
+[Wed Apr 22 01:28:27 2026] [::1]:50925 Closing
+[Wed Apr 22 01:28:27 2026] [::1]:50926 Closing
+[Wed Apr 22 01:28:27 2026] [::1]:50927 Accepted
+[Wed Apr 22 01:28:27 2026] [::1]:50927 [200]: GET /manifest.webmanifest
+[Wed Apr 22 01:28:27 2026] [::1]:50927 Closing
+[Wed Apr 22 01:28:27 2026] [::1]:50928 Accepted
+[Wed Apr 22 01:28:27 2026] [::1]:50928 [200]: GET /favicon-192.png
+[Wed Apr 22 01:28:27 2026] [::1]:50928 Closing
+[Wed Apr 22 01:28:27 2026] [::1]:50929 Accepted
+[Wed Apr 22 01:28:27 2026] [::1]:50930 Accepted
+[Wed Apr 22 01:28:27 2026] [::1]:50929 [200]: GET /?generate=1&n=1&regions%5B%5D=kanto&regions%5B%5D=johto&regions%5B%5D=hoenn&regions%5B%5D=sinnoh&regions%5B%5D=unova&regions%5B%5D=kalos&regions%5B%5D=alola&regions%5B%5D=galar&regions%5B%5D=hisui&regions%5B%5D=paldea&types%5B%5D=normal&types%5B%5D=fire&types%5B%5D=water&types%5B%5D=electric&types%5B%5D=grass&types%5B%5D=ice&types%5B%5D=fighting&types%5B%5D=poison&types%5B%5D=ground&types%5B%5D=flying&types%5B%5D=psychic&types%5B%5D=bug&types%5B%5D=rock&types%5B%5D=ghost&types%5B%5D=dragon&types%5B%5D=dark&types%5B%5D=steel&types%5B%5D=fairy&sublegendaries=true&legendaries=true&mythicals=true&paradoxes=true&ultraBeasts=true&evolutionCounts%5B%5D=0&evolutionCounts%5B%5D=1&evolutionCounts%5B%5D=2&nfes=true&fullyEvolved=true&display=both
+[Wed Apr 22 01:28:27 2026] [::1]:50929 Closing
+[Wed Apr 22 01:28:27 2026] [::1]:50930 [200]: GET /style.css
+[Wed Apr 22 01:28:27 2026] [::1]:50930 Closing
+[Wed Apr 22 01:28:27 2026] [::1]:50931 Accepted
+[Wed Apr 22 01:28:27 2026] [::1]:50932 Accepted
+[Wed Apr 22 01:28:27 2026] [::1]:50931 [200]: GET /sprites/normal/pinsir.webp
+[Wed Apr 22 01:28:27 2026] [::1]:50932 [200]: GET /ui.js
+[Wed Apr 22 01:28:27 2026] [::1]:50931 Closing
+[Wed Apr 22 01:28:27 2026] [::1]:50932 Closing
+[Wed Apr 22 01:28:27 2026] [::1]:50933 Accepted
+[Wed Apr 22 01:28:27 2026] [::1]:50933 [200]: GET /manifest.webmanifest
+[Wed Apr 22 01:28:27 2026] [::1]:50933 Closing
+[Wed Apr 22 01:28:27 2026] [::1]:50934 Accepted
+[Wed Apr 22 01:28:27 2026] [::1]:50934 [200]: GET /favicon-192.png
+[Wed Apr 22 01:28:27 2026] [::1]:50934 Closing
+[Wed Apr 22 01:28:27 2026] [::1]:50935 Accepted
+[Wed Apr 22 01:28:27 2026] [::1]:50936 Accepted
+[Wed Apr 22 01:28:27 2026] [::1]:50935 [200]: GET /?generate=1&n=1&regions%5B%5D=kanto&regions%5B%5D=johto&regions%5B%5D=hoenn&regions%5B%5D=sinnoh&regions%5B%5D=unova&regions%5B%5D=kalos&regions%5B%5D=alola&regions%5B%5D=galar&regions%5B%5D=hisui&regions%5B%5D=paldea&types%5B%5D=normal&types%5B%5D=fire&types%5B%5D=water&types%5B%5D=electric&types%5B%5D=grass&types%5B%5D=ice&types%5B%5D=fighting&types%5B%5D=poison&types%5B%5D=ground&types%5B%5D=flying&types%5B%5D=psychic&types%5B%5D=bug&types%5B%5D=rock&types%5B%5D=ghost&types%5B%5D=dragon&types%5B%5D=dark&types%5B%5D=steel&types%5B%5D=fairy&sublegendaries=true&legendaries=true&mythicals=true&paradoxes=true&ultraBeasts=true&evolutionCounts%5B%5D=0&evolutionCounts%5B%5D=1&evolutionCounts%5B%5D=2&nfes=true&fullyEvolved=true&display=both
+[Wed Apr 22 01:28:27 2026] [::1]:50935 Closing
+[Wed Apr 22 01:28:27 2026] [::1]:50936 [200]: GET /style.css
+[Wed Apr 22 01:28:27 2026] [::1]:50936 Closing
+[Wed Apr 22 01:28:27 2026] [::1]:50937 Accepted
+[Wed Apr 22 01:28:27 2026] [::1]:50938 Accepted
+[Wed Apr 22 01:28:27 2026] [::1]:50937 [200]: GET /sprites/normal/seel.webp
+[Wed Apr 22 01:28:27 2026] [::1]:50938 [200]: GET /ui.js
+[Wed Apr 22 01:28:27 2026] [::1]:50937 Closing
+[Wed Apr 22 01:28:27 2026] [::1]:50938 Closing
+[Wed Apr 22 01:28:27 2026] [::1]:50939 Accepted
+[Wed Apr 22 01:28:27 2026] [::1]:50939 [200]: GET /manifest.webmanifest
+[Wed Apr 22 01:28:27 2026] [::1]:50939 Closing
+[Wed Apr 22 01:28:27 2026] [::1]:50940 Accepted
+[Wed Apr 22 01:28:27 2026] [::1]:50940 [200]: GET /favicon-192.png
+[Wed Apr 22 01:28:27 2026] [::1]:50940 Closing
+[Wed Apr 22 01:28:27 2026] [::1]:50941 Accepted
+[Wed Apr 22 01:28:27 2026] [::1]:50942 Accepted
+[Wed Apr 22 01:28:27 2026] [::1]:50941 [200]: GET /?generate=1&n=1&regions%5B%5D=kanto&regions%5B%5D=johto&regions%5B%5D=hoenn&regions%5B%5D=sinnoh&regions%5B%5D=unova&regions%5B%5D=kalos&regions%5B%5D=alola&regions%5B%5D=galar&regions%5B%5D=hisui&regions%5B%5D=paldea&types%5B%5D=normal&types%5B%5D=fire&types%5B%5D=water&types%5B%5D=electric&types%5B%5D=grass&types%5B%5D=ice&types%5B%5D=fighting&types%5B%5D=poison&types%5B%5D=ground&types%5B%5D=flying&types%5B%5D=psychic&types%5B%5D=bug&types%5B%5D=rock&types%5B%5D=ghost&types%5B%5D=dragon&types%5B%5D=dark&types%5B%5D=steel&types%5B%5D=fairy&sublegendaries=true&legendaries=true&mythicals=true&paradoxes=true&ultraBeasts=true&evolutionCounts%5B%5D=0&evolutionCounts%5B%5D=1&evolutionCounts%5B%5D=2&nfes=true&fullyEvolved=true&display=both
+[Wed Apr 22 01:28:27 2026] [::1]:50941 Closing
+[Wed Apr 22 01:28:28 2026] [::1]:50942 [200]: GET /style.css
+[Wed Apr 22 01:28:28 2026] [::1]:50942 Closing
+[Wed Apr 22 01:28:28 2026] [::1]:50943 Accepted
+[Wed Apr 22 01:28:28 2026] [::1]:50944 Accepted
+[Wed Apr 22 01:28:28 2026] [::1]:50943 [200]: GET /sprites/normal/naganadel.webp
+[Wed Apr 22 01:28:28 2026] [::1]:50944 [200]: GET /ui.js
+[Wed Apr 22 01:28:28 2026] [::1]:50943 Closing
+[Wed Apr 22 01:28:28 2026] [::1]:50944 Closing
+[Wed Apr 22 01:28:28 2026] [::1]:50945 Accepted
+[Wed Apr 22 01:28:28 2026] [::1]:50945 [200]: GET /manifest.webmanifest
+[Wed Apr 22 01:28:28 2026] [::1]:50945 Closing
+[Wed Apr 22 01:28:28 2026] [::1]:50946 Accepted
+[Wed Apr 22 01:28:28 2026] [::1]:50946 [200]: GET /favicon-192.png
+[Wed Apr 22 01:28:28 2026] [::1]:50946 Closing
+[Wed Apr 22 01:28:28 2026] [::1]:50947 Accepted
+[Wed Apr 22 01:28:28 2026] [::1]:50947 [200]: GET /?history=previous
+[Wed Apr 22 01:28:28 2026] [::1]:50947 Closing
+[Wed Apr 22 01:28:28 2026] [::1]:50950 Accepted
+[Wed Apr 22 01:28:28 2026] [::1]:50951 Accepted
+[Wed Apr 22 01:28:28 2026] [::1]:50950 [200]: GET /style.css
+[Wed Apr 22 01:28:28 2026] [::1]:50950 Closing
+[Wed Apr 22 01:28:28 2026] [::1]:50953 Accepted
+[Wed Apr 22 01:28:28 2026] [::1]:50951 [200]: GET /ui.js
+[Wed Apr 22 01:28:28 2026] [::1]:50953 [200]: GET /sprites/normal/seel.webp
+[Wed Apr 22 01:28:28 2026] [::1]:50951 Closing
+[Wed Apr 22 01:28:28 2026] [::1]:50953 Closing
+[Wed Apr 22 01:28:28 2026] [::1]:50954 Accepted
+[Wed Apr 22 01:28:28 2026] [::1]:50954 [200]: GET /manifest.webmanifest
+[Wed Apr 22 01:28:28 2026] [::1]:50954 Closing
+[Wed Apr 22 01:28:28 2026] [::1]:50955 Accepted
+[Wed Apr 22 01:28:28 2026] [::1]:50955 [200]: GET /favicon-192.png
+[Wed Apr 22 01:28:28 2026] [::1]:50955 Closing
+[Wed Apr 22 01:28:29 2026] [::1]:50956 Accepted
+[Wed Apr 22 01:28:29 2026] [::1]:50956 [200]: GET /?history=previous
+[Wed Apr 22 01:28:29 2026] [::1]:50956 Closing
+[Wed Apr 22 01:28:29 2026] [::1]:50957 Accepted
+[Wed Apr 22 01:28:29 2026] [::1]:50957 [200]: GET /style.css
+[Wed Apr 22 01:28:29 2026] [::1]:50957 Closing
+[Wed Apr 22 01:28:29 2026] [::1]:50958 Accepted
+[Wed Apr 22 01:28:29 2026] [::1]:50959 Accepted
+[Wed Apr 22 01:28:29 2026] [::1]:50958 [200]: GET /ui.js
+[Wed Apr 22 01:28:29 2026] [::1]:50959 [200]: GET /sprites/normal/pinsir.webp
+[Wed Apr 22 01:28:29 2026] [::1]:50958 Closing
+[Wed Apr 22 01:28:29 2026] [::1]:50959 Closing
+[Wed Apr 22 01:28:29 2026] [::1]:50960 Accepted
+[Wed Apr 22 01:28:29 2026] [::1]:50960 [200]: GET /manifest.webmanifest
+[Wed Apr 22 01:28:29 2026] [::1]:50960 Closing
+[Wed Apr 22 01:28:29 2026] [::1]:50961 Accepted
+[Wed Apr 22 01:28:29 2026] [::1]:50961 [200]: GET /favicon-192.png
+[Wed Apr 22 01:28:29 2026] [::1]:50961 Closing
+[Wed Apr 22 01:28:29 2026] [::1]:50962 Accepted
+[Wed Apr 22 01:28:30 2026] [::1]:50962 [200]: GET /?history=previous
+[Wed Apr 22 01:28:30 2026] [::1]:50962 Closing
+[Wed Apr 22 01:28:30 2026] [::1]:50963 Accepted
+[Wed Apr 22 01:28:30 2026] [::1]:50964 Accepted
+[Wed Apr 22 01:28:30 2026] [::1]:50963 [200]: GET /style.css
+[Wed Apr 22 01:28:30 2026] [::1]:50963 Closing
+[Wed Apr 22 01:28:30 2026] [::1]:50964 [200]: GET /ui.js
+[Wed Apr 22 01:28:30 2026] [::1]:50964 Closing
+[Wed Apr 22 01:28:30 2026] [::1]:50965 Accepted
+[Wed Apr 22 01:28:30 2026] [::1]:50965 [200]: GET /sprites/normal/mantyke.webp
+[Wed Apr 22 01:28:30 2026] [::1]:50965 Closing
+[Wed Apr 22 01:28:30 2026] [::1]:50966 Accepted
+[Wed Apr 22 01:28:30 2026] [::1]:50966 [200]: GET /manifest.webmanifest
+[Wed Apr 22 01:28:30 2026] [::1]:50966 Closing
+[Wed Apr 22 01:28:30 2026] [::1]:50967 Accepted
+[Wed Apr 22 01:28:30 2026] [::1]:50967 [200]: GET /favicon-192.png
+[Wed Apr 22 01:28:30 2026] [::1]:50967 Closing
+[Wed Apr 22 01:28:34 2026] [::1]:50971 Accepted
+[Wed Apr 22 01:28:34 2026] [::1]:50971 [200]: GET /?generate=1&n=3
+[Wed Apr 22 01:28:34 2026] [::1]:50971 Closing
+[Wed Apr 22 01:28:34 2026] [::1]:50972 Accepted
+[Wed Apr 22 01:28:34 2026] [::1]:50973 Accepted
+[Wed Apr 22 01:28:34 2026] [::1]:50972 [200]: GET /style.css
+[Wed Apr 22 01:28:34 2026] [::1]:50974 Accepted
+[Wed Apr 22 01:28:34 2026] [::1]:50972 Closing
+[Wed Apr 22 01:28:34 2026] [::1]:50975 Accepted
+[Wed Apr 22 01:28:34 2026] [::1]:50973 [200]: GET /ui.js
+[Wed Apr 22 01:28:34 2026] [::1]:50974 [200]: GET /sprites/normal/popplio.webp
+[Wed Apr 22 01:28:34 2026] [::1]:50975 [200]: GET /sprites/normal/pancham.webp
+[Wed Apr 22 01:28:34 2026] [::1]:50973 Closing
+[Wed Apr 22 01:28:34 2026] [::1]:50974 Closing
+[Wed Apr 22 01:28:34 2026] [::1]:50975 Closing
+[Wed Apr 22 01:28:34 2026] [::1]:50976 Accepted
+[Wed Apr 22 01:28:34 2026] [::1]:50976 [200]: GET /sprites/normal/glameow.webp
+[Wed Apr 22 01:28:34 2026] [::1]:50976 Closing
+[Wed Apr 22 01:28:34 2026] [::1]:50977 Accepted
+[Wed Apr 22 01:28:34 2026] [::1]:50977 [200]: GET /?generate=1&n=3
+[Wed Apr 22 01:28:34 2026] [::1]:50977 Closing
+[Wed Apr 22 01:28:34 2026] [::1]:50978 Accepted
+[Wed Apr 22 01:28:34 2026] [::1]:50979 Accepted
+[Wed Apr 22 01:28:34 2026] [::1]:50978 [200]: GET /style.css
+[Wed Apr 22 01:28:34 2026] [::1]:50979 [200]: GET /ui.js
+[Wed Apr 22 01:28:34 2026] [::1]:50978 Closing
+[Wed Apr 22 01:28:34 2026] [::1]:50980 Accepted
+[Wed Apr 22 01:28:34 2026] [::1]:50979 Closing
+[Wed Apr 22 01:28:34 2026] [::1]:50981 Accepted
+[Wed Apr 22 01:28:34 2026] [::1]:50980 [200]: GET /sprites/normal/seaking.webp
+[Wed Apr 22 01:28:34 2026] [::1]:50981 [200]: GET /sprites/normal/masquerain.webp
+[Wed Apr 22 01:28:34 2026] [::1]:50980 Closing
+[Wed Apr 22 01:28:34 2026] [::1]:50981 Closing
+[Wed Apr 22 01:28:34 2026] [::1]:50982 Accepted
+[Wed Apr 22 01:28:34 2026] [::1]:50982 [200]: GET /sprites/normal/claydol.webp
+[Wed Apr 22 01:28:34 2026] [::1]:50982 Closing
+[Wed Apr 22 01:28:49 2026] [::1]:50992 Accepted
+[Wed Apr 22 01:28:49 2026] [::1]:50992 [200]: GET /?generate=1&n=3&regions%5B%5D=kanto&regions%5B%5D=johto&regions%5B%5D=hoenn&regions%5B%5D=sinnoh&regions%5B%5D=unova&regions%5B%5D=kalos&regions%5B%5D=alola&regions%5B%5D=galar&regions%5B%5D=hisui&regions%5B%5D=paldea&types%5B%5D=normal&types%5B%5D=fire&types%5B%5D=water&types%5B%5D=electric&types%5B%5D=grass&types%5B%5D=ice&types%5B%5D=fighting&types%5B%5D=poison&types%5B%5D=ground&types%5B%5D=flying&types%5B%5D=psychic&types%5B%5D=bug&types%5B%5D=rock&types%5B%5D=ghost&types%5B%5D=dragon&types%5B%5D=dark&types%5B%5D=steel&types%5B%5D=fairy&sublegendaries=true&legendaries=true&mythicals=true&paradoxes=true&ultraBeasts=true&evolutionCounts%5B%5D=0&evolutionCounts%5B%5D=1&evolutionCounts%5B%5D=2&nfes=true&fullyEvolved=true&display=both
+[Wed Apr 22 01:28:49 2026] [::1]:50992 Closing
+[Wed Apr 22 01:28:49 2026] [::1]:50993 Accepted
+[Wed Apr 22 01:28:49 2026] [::1]:50994 Accepted
+[Wed Apr 22 01:28:49 2026] [::1]:50995 Accepted
+[Wed Apr 22 01:28:49 2026] [::1]:50996 Accepted
+[Wed Apr 22 01:28:49 2026] [::1]:50993 [200]: GET /sprites/normal/tinkatink.webp
+[Wed Apr 22 01:28:49 2026] [::1]:50994 [200]: GET /style.css
+[Wed Apr 22 01:28:49 2026] [::1]:50995 [200]: GET /sprites/normal/chespin.webp
+[Wed Apr 22 01:28:49 2026] [::1]:50996 [200]: GET /ui.js
+[Wed Apr 22 01:28:49 2026] [::1]:50997 Accepted
+[Wed Apr 22 01:28:49 2026] [::1]:50997 [200]: GET /sprites/normal/dusclops.webp
+[Wed Apr 22 01:28:49 2026] [::1]:50993 Closing
+[Wed Apr 22 01:28:49 2026] [::1]:50994 Closing
+[Wed Apr 22 01:28:49 2026] [::1]:50995 Closing
+[Wed Apr 22 01:28:49 2026] [::1]:50996 Closing
+[Wed Apr 22 01:28:49 2026] [::1]:50997 Closing
+[Wed Apr 22 01:28:50 2026] [::1]:50999 Accepted
+[Wed Apr 22 01:28:50 2026] [::1]:50999 [200]: GET /?generate=1&n=3&regions%5B%5D=kanto&regions%5B%5D=johto&regions%5B%5D=hoenn&regions%5B%5D=sinnoh&regions%5B%5D=unova&regions%5B%5D=kalos&regions%5B%5D=alola&regions%5B%5D=galar&regions%5B%5D=hisui&regions%5B%5D=paldea&types%5B%5D=normal&types%5B%5D=fire&types%5B%5D=water&types%5B%5D=electric&types%5B%5D=grass&types%5B%5D=ice&types%5B%5D=fighting&types%5B%5D=poison&types%5B%5D=ground&types%5B%5D=flying&types%5B%5D=psychic&types%5B%5D=bug&types%5B%5D=rock&types%5B%5D=ghost&types%5B%5D=dragon&types%5B%5D=dark&types%5B%5D=steel&types%5B%5D=fairy&sublegendaries=true&legendaries=true&mythicals=true&paradoxes=true&ultraBeasts=true&evolutionCounts%5B%5D=0&evolutionCounts%5B%5D=1&evolutionCounts%5B%5D=2&nfes=true&fullyEvolved=true&display=both
+[Wed Apr 22 01:28:50 2026] [::1]:50999 Closing
+[Wed Apr 22 01:28:50 2026] [::1]:51000 Accepted
+[Wed Apr 22 01:28:50 2026] [::1]:51001 Accepted
+[Wed Apr 22 01:28:50 2026] [::1]:51002 Accepted
+[Wed Apr 22 01:28:50 2026] [::1]:51003 Accepted
+[Wed Apr 22 01:28:50 2026] [::1]:51000 [200]: GET /sprites/normal/parasect.webp
+[Wed Apr 22 01:28:50 2026] [::1]:51001 [200]: GET /style.css
+[Wed Apr 22 01:28:50 2026] [::1]:51002 [200]: GET /sprites/normal/kilowattrel.webp
+[Wed Apr 22 01:28:50 2026] [::1]:51003 [200]: GET /ui.js
+[Wed Apr 22 01:28:50 2026] [::1]:51004 Accepted
+[Wed Apr 22 01:28:50 2026] [::1]:51000 Closing
+[Wed Apr 22 01:28:50 2026] [::1]:51001 Closing
+[Wed Apr 22 01:28:50 2026] [::1]:51002 Closing
+[Wed Apr 22 01:28:50 2026] [::1]:51003 Closing
+[Wed Apr 22 01:28:50 2026] [::1]:51004 [200]: GET /sprites/normal/kabutops.webp
+[Wed Apr 22 01:28:50 2026] [::1]:51004 Closing
+[Wed Apr 22 01:28:51 2026] [::1]:51005 Accepted
+[Wed Apr 22 01:28:51 2026] [::1]:51005 [200]: GET /?generate=1&n=3&regions%5B%5D=kanto&regions%5B%5D=johto&regions%5B%5D=hoenn&regions%5B%5D=sinnoh&regions%5B%5D=unova&regions%5B%5D=kalos&regions%5B%5D=alola&regions%5B%5D=galar&regions%5B%5D=hisui&regions%5B%5D=paldea&types%5B%5D=normal&types%5B%5D=fire&types%5B%5D=water&types%5B%5D=electric&types%5B%5D=grass&types%5B%5D=ice&types%5B%5D=fighting&types%5B%5D=poison&types%5B%5D=ground&types%5B%5D=flying&types%5B%5D=psychic&types%5B%5D=bug&types%5B%5D=rock&types%5B%5D=ghost&types%5B%5D=dragon&types%5B%5D=dark&types%5B%5D=steel&types%5B%5D=fairy&sublegendaries=true&legendaries=true&mythicals=true&paradoxes=true&ultraBeasts=true&evolutionCounts%5B%5D=0&evolutionCounts%5B%5D=1&evolutionCounts%5B%5D=2&nfes=true&fullyEvolved=true&display=both
+[Wed Apr 22 01:28:51 2026] [::1]:51005 Closing
+[Wed Apr 22 01:28:51 2026] [::1]:51006 Accepted
+[Wed Apr 22 01:28:51 2026] [::1]:51007 Accepted
+[Wed Apr 22 01:28:51 2026] [::1]:51006 [200]: GET /style.css
+[Wed Apr 22 01:28:51 2026] [::1]:51007 [200]: GET /ui.js
+[Wed Apr 22 01:28:51 2026] [::1]:51006 Closing
+[Wed Apr 22 01:28:51 2026] [::1]:51007 Closing
+[Wed Apr 22 01:28:51 2026] [::1]:51008 Accepted
+[Wed Apr 22 01:28:51 2026] [::1]:51009 Accepted
+[Wed Apr 22 01:28:51 2026] [::1]:51010 Accepted
+[Wed Apr 22 01:28:51 2026] [::1]:51008 [200]: GET /sprites/normal/rookidee.webp
+[Wed Apr 22 01:28:51 2026] [::1]:51009 [200]: GET /sprites/normal/mudsdale.webp
+[Wed Apr 22 01:28:51 2026] [::1]:51010 [200]: GET /sprites/normal/palossand.webp
+[Wed Apr 22 01:28:51 2026] [::1]:51008 Closing
+[Wed Apr 22 01:28:51 2026] [::1]:51009 Closing
+[Wed Apr 22 01:28:51 2026] [::1]:51010 Closing
+[Wed Apr 22 01:28:51 2026] [::1]:51011 Accepted
+[Wed Apr 22 01:28:51 2026] [::1]:51011 [200]: GET /?generate=1&n=3&regions%5B%5D=kanto&regions%5B%5D=johto&regions%5B%5D=hoenn&regions%5B%5D=sinnoh&regions%5B%5D=unova&regions%5B%5D=kalos&regions%5B%5D=alola&regions%5B%5D=galar&regions%5B%5D=hisui&regions%5B%5D=paldea&types%5B%5D=normal&types%5B%5D=fire&types%5B%5D=water&types%5B%5D=electric&types%5B%5D=grass&types%5B%5D=ice&types%5B%5D=fighting&types%5B%5D=poison&types%5B%5D=ground&types%5B%5D=flying&types%5B%5D=psychic&types%5B%5D=bug&types%5B%5D=rock&types%5B%5D=ghost&types%5B%5D=dragon&types%5B%5D=dark&types%5B%5D=steel&types%5B%5D=fairy&sublegendaries=true&legendaries=true&mythicals=true&paradoxes=true&ultraBeasts=true&evolutionCounts%5B%5D=0&evolutionCounts%5B%5D=1&evolutionCounts%5B%5D=2&nfes=true&fullyEvolved=true&display=both
+[Wed Apr 22 01:28:51 2026] [::1]:51011 Closing
+[Wed Apr 22 01:28:51 2026] [::1]:51012 Accepted
+[Wed Apr 22 01:28:51 2026] [::1]:51013 Accepted
+[Wed Apr 22 01:28:51 2026] [::1]:51014 Accepted
+[Wed Apr 22 01:28:51 2026] [::1]:51015 Accepted
+[Wed Apr 22 01:28:51 2026] [::1]:51012 [200]: GET /style.css
+[Wed Apr 22 01:28:51 2026] [::1]:51013 [200]: GET /sprites/normal/vaporeon.webp
+[Wed Apr 22 01:28:51 2026] [::1]:51014 [200]: GET /sprites/normal/slaking.webp
+[Wed Apr 22 01:28:51 2026] [::1]:51016 Accepted
+[Wed Apr 22 01:28:51 2026] [::1]:51015 [200]: GET /ui.js
+[Wed Apr 22 01:28:51 2026] [::1]:51016 [200]: GET /sprites/normal/giratina.webp
+[Wed Apr 22 01:28:51 2026] [::1]:51012 Closing
+[Wed Apr 22 01:28:51 2026] [::1]:51013 Closing
+[Wed Apr 22 01:28:51 2026] [::1]:51014 Closing
+[Wed Apr 22 01:28:51 2026] [::1]:51015 Closing
+[Wed Apr 22 01:28:51 2026] [::1]:51016 Closing
+[Wed Apr 22 01:28:51 2026] [::1]:51017 Accepted
+[Wed Apr 22 01:28:51 2026] [::1]:51017 [200]: GET /?generate=1&n=3&regions%5B%5D=kanto&regions%5B%5D=johto&regions%5B%5D=hoenn&regions%5B%5D=sinnoh&regions%5B%5D=unova&regions%5B%5D=kalos&regions%5B%5D=alola&regions%5B%5D=galar&regions%5B%5D=hisui&regions%5B%5D=paldea&types%5B%5D=normal&types%5B%5D=fire&types%5B%5D=water&types%5B%5D=electric&types%5B%5D=grass&types%5B%5D=ice&types%5B%5D=fighting&types%5B%5D=poison&types%5B%5D=ground&types%5B%5D=flying&types%5B%5D=psychic&types%5B%5D=bug&types%5B%5D=rock&types%5B%5D=ghost&types%5B%5D=dragon&types%5B%5D=dark&types%5B%5D=steel&types%5B%5D=fairy&sublegendaries=true&legendaries=true&mythicals=true&paradoxes=true&ultraBeasts=true&evolutionCounts%5B%5D=0&evolutionCounts%5B%5D=1&evolutionCounts%5B%5D=2&nfes=true&fullyEvolved=true&display=both
+[Wed Apr 22 01:28:51 2026] [::1]:51017 Closing
+[Wed Apr 22 01:28:51 2026] [::1]:51018 Accepted
+[Wed Apr 22 01:28:51 2026] [::1]:51019 Accepted
+[Wed Apr 22 01:28:51 2026] [::1]:51020 Accepted
+[Wed Apr 22 01:28:51 2026] [::1]:51021 Accepted
+[Wed Apr 22 01:28:51 2026] [::1]:51018 [200]: GET /sprites/normal/klink.webp
+[Wed Apr 22 01:28:51 2026] [::1]:51019 [200]: GET /style.css
+[Wed Apr 22 01:28:51 2026] [::1]:51020 [200]: GET /sprites/normal/articuno.webp
+[Wed Apr 22 01:28:51 2026] [::1]:51021 [200]: GET /ui.js
+[Wed Apr 22 01:28:51 2026] [::1]:51022 Accepted
+[Wed Apr 22 01:28:51 2026] [::1]:51022 [200]: GET /sprites/normal/roselia.webp
+[Wed Apr 22 01:28:51 2026] [::1]:51018 Closing
+[Wed Apr 22 01:28:51 2026] [::1]:51019 Closing
+[Wed Apr 22 01:28:51 2026] [::1]:51020 Closing
+[Wed Apr 22 01:28:51 2026] [::1]:51021 Closing
+[Wed Apr 22 01:28:51 2026] [::1]:51022 Closing
+[Wed Apr 22 01:28:51 2026] [::1]:51023 Accepted
+[Wed Apr 22 01:28:51 2026] [::1]:51023 [200]: GET /?generate=1&n=3&regions%5B%5D=kanto&regions%5B%5D=johto&regions%5B%5D=hoenn&regions%5B%5D=sinnoh&regions%5B%5D=unova&regions%5B%5D=kalos&regions%5B%5D=alola&regions%5B%5D=galar&regions%5B%5D=hisui&regions%5B%5D=paldea&types%5B%5D=normal&types%5B%5D=fire&types%5B%5D=water&types%5B%5D=electric&types%5B%5D=grass&types%5B%5D=ice&types%5B%5D=fighting&types%5B%5D=poison&types%5B%5D=ground&types%5B%5D=flying&types%5B%5D=psychic&types%5B%5D=bug&types%5B%5D=rock&types%5B%5D=ghost&types%5B%5D=dragon&types%5B%5D=dark&types%5B%5D=steel&types%5B%5D=fairy&sublegendaries=true&legendaries=true&mythicals=true&paradoxes=true&ultraBeasts=true&evolutionCounts%5B%5D=0&evolutionCounts%5B%5D=1&evolutionCounts%5B%5D=2&nfes=true&fullyEvolved=true&display=both
+[Wed Apr 22 01:28:51 2026] [::1]:51023 Closing
+[Wed Apr 22 01:28:51 2026] [::1]:51024 Accepted
+[Wed Apr 22 01:28:51 2026] [::1]:51025 Accepted
+[Wed Apr 22 01:28:51 2026] [::1]:51026 Accepted
+[Wed Apr 22 01:28:51 2026] [::1]:51027 Accepted
+[Wed Apr 22 01:28:51 2026] [::1]:51024 [200]: GET /sprites/normal/roggenrola.webp
+[Wed Apr 22 01:28:51 2026] [::1]:51025 [200]: GET /style.css
+[Wed Apr 22 01:28:51 2026] [::1]:51026 [200]: GET /sprites/normal/drampa.webp
+[Wed Apr 22 01:28:51 2026] [::1]:51027 [200]: GET /ui.js
+[Wed Apr 22 01:28:51 2026] [::1]:51028 Accepted
+[Wed Apr 22 01:28:51 2026] [::1]:51028 [200]: GET /sprites/normal/naganadel.webp
+[Wed Apr 22 01:28:51 2026] [::1]:51024 Closing
+[Wed Apr 22 01:28:51 2026] [::1]:51025 Closing
+[Wed Apr 22 01:28:51 2026] [::1]:51026 Closing
+[Wed Apr 22 01:28:51 2026] [::1]:51027 Closing
+[Wed Apr 22 01:28:51 2026] [::1]:51028 Closing
+[Wed Apr 22 01:28:51 2026] [::1]:51029 Accepted
+[Wed Apr 22 01:28:51 2026] [::1]:51029 [200]: GET /?generate=1&n=3&regions%5B%5D=kanto&regions%5B%5D=johto&regions%5B%5D=hoenn&regions%5B%5D=sinnoh&regions%5B%5D=unova&regions%5B%5D=kalos&regions%5B%5D=alola&regions%5B%5D=galar&regions%5B%5D=hisui&regions%5B%5D=paldea&types%5B%5D=normal&types%5B%5D=fire&types%5B%5D=water&types%5B%5D=electric&types%5B%5D=grass&types%5B%5D=ice&types%5B%5D=fighting&types%5B%5D=poison&types%5B%5D=ground&types%5B%5D=flying&types%5B%5D=psychic&types%5B%5D=bug&types%5B%5D=rock&types%5B%5D=ghost&types%5B%5D=dragon&types%5B%5D=dark&types%5B%5D=steel&types%5B%5D=fairy&sublegendaries=true&legendaries=true&mythicals=true&paradoxes=true&ultraBeasts=true&evolutionCounts%5B%5D=0&evolutionCounts%5B%5D=1&evolutionCounts%5B%5D=2&nfes=true&fullyEvolved=true&display=both
+[Wed Apr 22 01:28:51 2026] [::1]:51029 Closing
+[Wed Apr 22 01:28:51 2026] [::1]:51030 Accepted
+[Wed Apr 22 01:28:51 2026] [::1]:51031 Accepted
+[Wed Apr 22 01:28:51 2026] [::1]:51032 Accepted
+[Wed Apr 22 01:28:51 2026] [::1]:51033 Accepted
+[Wed Apr 22 01:28:51 2026] [::1]:51030 [200]: GET /sprites/normal/palafin.webp
+[Wed Apr 22 01:28:51 2026] [::1]:51034 Accepted
+[Wed Apr 22 01:28:51 2026] [::1]:51031 [200]: GET /style.css
+[Wed Apr 22 01:28:51 2026] [::1]:51032 [200]: GET /sprites/normal/simipour.webp
+[Wed Apr 22 01:28:51 2026] [::1]:51033 [200]: GET /ui.js
+[Wed Apr 22 01:28:51 2026] [::1]:51034 [200]: GET /sprites/normal/staraptor.webp
+[Wed Apr 22 01:28:51 2026] [::1]:51030 Closing
+[Wed Apr 22 01:28:51 2026] [::1]:51031 Closing
+[Wed Apr 22 01:28:51 2026] [::1]:51032 Closing
+[Wed Apr 22 01:28:51 2026] [::1]:51033 Closing
+[Wed Apr 22 01:28:51 2026] [::1]:51034 Closing
+[Wed Apr 22 01:38:04 2026] [::1]:51183 Accepted
+[Wed Apr 22 01:38:04 2026] [::1]:51183 [200]: GET /
+[Wed Apr 22 01:38:04 2026] [::1]:51183 Closing
+[Wed Apr 22 01:38:04 2026] [::1]:51184 Accepted
+[Wed Apr 22 01:38:04 2026] [::1]:51184 [200]: GET /style.css
+[Wed Apr 22 01:38:04 2026] [::1]:51184 Closing
+[Wed Apr 22 01:38:04 2026] [::1]:51185 Accepted
+[Wed Apr 22 01:38:04 2026] [::1]:51186 Accepted
+[Wed Apr 22 01:38:04 2026] [::1]:51185 [200]: GET /sprites/normal/mantyke.webp
+[Wed Apr 22 01:38:04 2026] [::1]:51186 [200]: GET /ui.js
+[Wed Apr 22 01:38:04 2026] [::1]:51185 Closing
+[Wed Apr 22 01:38:04 2026] [::1]:51186 Closing
+[Wed Apr 22 01:38:04 2026] [::1]:51187 Accepted
+[Wed Apr 22 01:38:04 2026] [::1]:51187 [200]: GET /manifest.webmanifest
+[Wed Apr 22 01:38:04 2026] [::1]:51187 Closing
+[Wed Apr 22 01:38:04 2026] [::1]:51188 Accepted
+[Wed Apr 22 01:38:04 2026] [::1]:51188 [200]: GET /favicon-192.png
+[Wed Apr 22 01:38:04 2026] [::1]:51188 Closing
+[Wed Apr 22 01:38:08 2026] [::1]:51192 Accepted
+[Wed Apr 22 01:38:08 2026] [::1]:51192 [200]: GET /?history=next
+[Wed Apr 22 01:38:08 2026] [::1]:51192 Closing
+[Wed Apr 22 01:38:08 2026] [::1]:51193 Accepted
+[Wed Apr 22 01:38:08 2026] [::1]:51193 [200]: GET /style.css
+[Wed Apr 22 01:38:08 2026] [::1]:51193 Closing
+[Wed Apr 22 01:38:08 2026] [::1]:51194 Accepted
+[Wed Apr 22 01:38:08 2026] [::1]:51195 Accepted
+[Wed Apr 22 01:38:08 2026] [::1]:51194 [200]: GET /sprites/normal/pinsir.webp
+[Wed Apr 22 01:38:08 2026] [::1]:51195 [200]: GET /ui.js
+[Wed Apr 22 01:38:08 2026] [::1]:51194 Closing
+[Wed Apr 22 01:38:08 2026] [::1]:51195 Closing
+[Wed Apr 22 01:38:08 2026] [::1]:51196 Accepted
+[Wed Apr 22 01:38:08 2026] [::1]:51196 [200]: GET /manifest.webmanifest
+[Wed Apr 22 01:38:08 2026] [::1]:51196 Closing
+[Wed Apr 22 01:38:08 2026] [::1]:51197 Accepted
+[Wed Apr 22 01:38:08 2026] [::1]:51197 [200]: GET /favicon-192.png
+[Wed Apr 22 01:38:08 2026] [::1]:51197 Closing
+[Wed Apr 22 01:38:08 2026] [::1]:51198 Accepted
+[Wed Apr 22 01:38:08 2026] [::1]:51198 [200]: GET /?history=next
+[Wed Apr 22 01:38:08 2026] [::1]:51198 Closing
+[Wed Apr 22 01:38:08 2026] [::1]:51199 Accepted
+[Wed Apr 22 01:38:08 2026] [::1]:51200 Accepted
+[Wed Apr 22 01:38:08 2026] [::1]:51199 [200]: GET /style.css
+[Wed Apr 22 01:38:08 2026] [::1]:51199 Closing
+[Wed Apr 22 01:38:08 2026] [::1]:51200 [200]: GET /ui.js
+[Wed Apr 22 01:38:08 2026] [::1]:51200 Closing
+[Wed Apr 22 01:38:08 2026] [::1]:51201 Accepted
+[Wed Apr 22 01:38:08 2026] [::1]:51201 [200]: GET /sprites/normal/seel.webp
+[Wed Apr 22 01:38:08 2026] [::1]:51201 Closing
+[Wed Apr 22 01:38:08 2026] [::1]:51202 Accepted
+[Wed Apr 22 01:38:08 2026] [::1]:51202 [200]: GET /manifest.webmanifest
+[Wed Apr 22 01:38:08 2026] [::1]:51202 Closing
+[Wed Apr 22 01:38:08 2026] [::1]:51203 Accepted
+[Wed Apr 22 01:38:08 2026] [::1]:51203 [200]: GET /favicon-192.png
+[Wed Apr 22 01:38:08 2026] [::1]:51203 Closing
+[Wed Apr 22 01:38:08 2026] [::1]:51204 Accepted
+[Wed Apr 22 01:38:09 2026] [::1]:51204 [200]: GET /?history=next
+[Wed Apr 22 01:38:09 2026] [::1]:51204 Closing
+[Wed Apr 22 01:38:09 2026] [::1]:51205 Accepted
+[Wed Apr 22 01:38:09 2026] [::1]:51206 Accepted
+[Wed Apr 22 01:38:09 2026] [::1]:51205 [200]: GET /style.css
+[Wed Apr 22 01:38:09 2026] [::1]:51205 Closing
+[Wed Apr 22 01:38:09 2026] [::1]:51207 Accepted
+[Wed Apr 22 01:38:09 2026] [::1]:51206 [200]: GET /ui.js
+[Wed Apr 22 01:38:09 2026] [::1]:51206 Closing
+[Wed Apr 22 01:38:09 2026] [::1]:51207 [200]: GET /sprites/normal/naganadel.webp
+[Wed Apr 22 01:38:09 2026] [::1]:51207 Closing
+[Wed Apr 22 01:38:09 2026] [::1]:51208 Accepted
+[Wed Apr 22 01:38:09 2026] [::1]:51208 [200]: GET /manifest.webmanifest
+[Wed Apr 22 01:38:09 2026] [::1]:51208 Closing
+[Wed Apr 22 01:38:09 2026] [::1]:51209 Accepted
+[Wed Apr 22 01:38:09 2026] [::1]:51209 [200]: GET /favicon-192.png
+[Wed Apr 22 01:38:09 2026] [::1]:51209 Closing
+[Wed Apr 22 01:38:11 2026] [::1]:51210 Accepted
+[Wed Apr 22 01:38:11 2026] [::1]:51210 [200]: GET /?history=previous
+[Wed Apr 22 01:38:11 2026] [::1]:51210 Closing
+[Wed Apr 22 01:38:11 2026] [::1]:51211 Accepted
+[Wed Apr 22 01:38:11 2026] [::1]:51212 Accepted
+[Wed Apr 22 01:38:11 2026] [::1]:51211 [200]: GET /style.css
+[Wed Apr 22 01:38:11 2026] [::1]:51211 Closing
+[Wed Apr 22 01:38:11 2026] [::1]:51212 [200]: GET /ui.js
+[Wed Apr 22 01:38:11 2026] [::1]:51212 Closing
+[Wed Apr 22 01:38:11 2026] [::1]:51213 Accepted
+[Wed Apr 22 01:38:11 2026] [::1]:51213 [200]: GET /sprites/normal/seel.webp
+[Wed Apr 22 01:38:11 2026] [::1]:51213 Closing
+[Wed Apr 22 01:38:11 2026] [::1]:51214 Accepted
+[Wed Apr 22 01:38:11 2026] [::1]:51214 [200]: GET /manifest.webmanifest
+[Wed Apr 22 01:38:11 2026] [::1]:51214 Closing
+[Wed Apr 22 01:38:11 2026] [::1]:51215 Accepted
+[Wed Apr 22 01:38:11 2026] [::1]:51215 [200]: GET /favicon-192.png
+[Wed Apr 22 01:38:11 2026] [::1]:51215 Closing
+[Wed Apr 22 01:38:11 2026] [::1]:51216 Accepted
+[Wed Apr 22 01:38:11 2026] [::1]:51216 [200]: GET /?history=previous
+[Wed Apr 22 01:38:11 2026] [::1]:51216 Closing
+[Wed Apr 22 01:38:11 2026] [::1]:51217 Accepted
+[Wed Apr 22 01:38:11 2026] [::1]:51217 [200]: GET /style.css
+[Wed Apr 22 01:38:11 2026] [::1]:51217 Closing
+[Wed Apr 22 01:38:11 2026] [::1]:51218 Accepted
+[Wed Apr 22 01:38:11 2026] [::1]:51219 Accepted
+[Wed Apr 22 01:38:11 2026] [::1]:51218 [200]: GET /ui.js
+[Wed Apr 22 01:38:11 2026] [::1]:51219 [200]: GET /sprites/normal/pinsir.webp
+[Wed Apr 22 01:38:11 2026] [::1]:51218 Closing
+[Wed Apr 22 01:38:11 2026] [::1]:51219 Closing
+[Wed Apr 22 01:38:11 2026] [::1]:51220 Accepted
+[Wed Apr 22 01:38:11 2026] [::1]:51220 [200]: GET /manifest.webmanifest
+[Wed Apr 22 01:38:11 2026] [::1]:51220 Closing
+[Wed Apr 22 01:38:11 2026] [::1]:51221 Accepted
+[Wed Apr 22 01:38:11 2026] [::1]:51221 [200]: GET /favicon-192.png
+[Wed Apr 22 01:38:11 2026] [::1]:51221 Closing
+[Wed Apr 22 01:38:12 2026] [::1]:51222 Accepted
+[Wed Apr 22 01:38:12 2026] [::1]:51222 [200]: GET /?history=previous
+[Wed Apr 22 01:38:12 2026] [::1]:51222 Closing
+[Wed Apr 22 01:38:12 2026] [::1]:51223 Accepted
+[Wed Apr 22 01:38:12 2026] [::1]:51223 [200]: GET /style.css
+[Wed Apr 22 01:38:12 2026] [::1]:51223 Closing
+[Wed Apr 22 01:38:12 2026] [::1]:51224 Accepted
+[Wed Apr 22 01:38:12 2026] [::1]:51225 Accepted
+[Wed Apr 22 01:38:12 2026] [::1]:51224 [200]: GET /sprites/normal/mantyke.webp
+[Wed Apr 22 01:38:12 2026] [::1]:51225 [200]: GET /ui.js
+[Wed Apr 22 01:38:12 2026] [::1]:51224 Closing
+[Wed Apr 22 01:38:12 2026] [::1]:51225 Closing
+[Wed Apr 22 01:38:12 2026] [::1]:51226 Accepted
+[Wed Apr 22 01:38:12 2026] [::1]:51226 [200]: GET /manifest.webmanifest
+[Wed Apr 22 01:38:12 2026] [::1]:51226 Closing
+[Wed Apr 22 01:38:12 2026] [::1]:51227 Accepted
+[Wed Apr 22 01:38:12 2026] [::1]:51227 [200]: GET /favicon-192.png
+[Wed Apr 22 01:38:12 2026] [::1]:51227 Closing
+[Wed Apr 22 01:38:12 2026] [::1]:51228 Accepted
+[Wed Apr 22 01:38:12 2026] [::1]:51228 [200]: GET /?history=previous
+[Wed Apr 22 01:38:12 2026] [::1]:51228 Closing
+[Wed Apr 22 01:38:12 2026] [::1]:51229 Accepted
+[Wed Apr 22 01:38:12 2026] [::1]:51229 [200]: GET /style.css
+[Wed Apr 22 01:38:12 2026] [::1]:51229 Closing
+[Wed Apr 22 01:38:12 2026] [::1]:51230 Accepted
+[Wed Apr 22 01:38:12 2026] [::1]:51231 Accepted
+[Wed Apr 22 01:38:12 2026] [::1]:51230 [200]: GET /sprites/normal/vespiquen.webp
+[Wed Apr 22 01:38:12 2026] [::1]:51231 [200]: GET /ui.js
+[Wed Apr 22 01:38:12 2026] [::1]:51230 Closing
+[Wed Apr 22 01:38:12 2026] [::1]:51231 Closing
+[Wed Apr 22 01:38:12 2026] [::1]:51232 Accepted
+[Wed Apr 22 01:38:12 2026] [::1]:51232 [200]: GET /manifest.webmanifest
+[Wed Apr 22 01:38:12 2026] [::1]:51232 Closing
+[Wed Apr 22 01:38:12 2026] [::1]:51233 Accepted
+[Wed Apr 22 01:38:12 2026] [::1]:51233 [200]: GET /favicon-192.png
+[Wed Apr 22 01:38:12 2026] [::1]:51233 Closing
+[Wed Apr 22 01:38:12 2026] [::1]:51234 Accepted
+[Wed Apr 22 01:38:12 2026] [::1]:51234 [200]: GET /?history=previous
+[Wed Apr 22 01:38:12 2026] [::1]:51234 Closing
+[Wed Apr 22 01:38:12 2026] [::1]:51235 Accepted
+[Wed Apr 22 01:38:12 2026] [::1]:51235 [200]: GET /style.css
+[Wed Apr 22 01:38:12 2026] [::1]:51235 Closing
+[Wed Apr 22 01:38:12 2026] [::1]:51236 Accepted
+[Wed Apr 22 01:38:12 2026] [::1]:51237 Accepted
+[Wed Apr 22 01:38:12 2026] [::1]:51236 [200]: GET /sprites/normal/minun.webp
+[Wed Apr 22 01:38:12 2026] [::1]:51237 [200]: GET /ui.js
+[Wed Apr 22 01:38:12 2026] [::1]:51236 Closing
+[Wed Apr 22 01:38:12 2026] [::1]:51237 Closing
+[Wed Apr 22 01:38:12 2026] [::1]:51238 Accepted
+[Wed Apr 22 01:38:12 2026] [::1]:51238 [200]: GET /manifest.webmanifest
+[Wed Apr 22 01:38:12 2026] [::1]:51238 Closing
+[Wed Apr 22 01:38:12 2026] [::1]:51239 Accepted
+[Wed Apr 22 01:38:12 2026] [::1]:51239 [200]: GET /favicon-192.png
+[Wed Apr 22 01:38:12 2026] [::1]:51239 Closing
+[Wed Apr 22 01:38:16 2026] [::1]:51240 Accepted
+[Wed Apr 22 01:38:16 2026] [::1]:51240 [200]: GET /
+[Wed Apr 22 01:38:16 2026] [::1]:51240 Closing
+[Wed Apr 22 01:38:16 2026] [::1]:51241 Accepted
+[Wed Apr 22 01:38:16 2026] [::1]:51242 Accepted
+[Wed Apr 22 01:38:16 2026] [::1]:51241 [200]: GET /style.css
+[Wed Apr 22 01:38:16 2026] [::1]:51241 Closing
+[Wed Apr 22 01:38:16 2026] [::1]:51243 Accepted
+[Wed Apr 22 01:38:16 2026] [::1]:51242 [200]: GET /ui.js
+[Wed Apr 22 01:38:16 2026] [::1]:51243 [200]: GET /sprites/normal/minun.webp
+[Wed Apr 22 01:38:16 2026] [::1]:51242 Closing
+[Wed Apr 22 01:38:16 2026] [::1]:51243 Closing
+[Wed Apr 22 01:38:16 2026] [::1]:51244 Accepted
+[Wed Apr 22 01:38:16 2026] [::1]:51244 [200]: GET /manifest.webmanifest
+[Wed Apr 22 01:38:16 2026] [::1]:51244 Closing
+[Wed Apr 22 01:38:16 2026] [::1]:51245 Accepted
+[Wed Apr 22 01:38:16 2026] [::1]:51245 [200]: GET /favicon-192.png
+[Wed Apr 22 01:38:16 2026] [::1]:51245 Closing
+[Wed Apr 22 01:48:39 2026] [::1]:51454 Accepted
+[Wed Apr 22 01:48:39 2026] [::1]:51454 [200]: GET /
+[Wed Apr 22 01:48:39 2026] [::1]:51454 Closing
+[Wed Apr 22 01:48:39 2026] [::1]:51455 Accepted
+[Wed Apr 22 01:48:39 2026] [::1]:51456 Accepted
+[Wed Apr 22 01:48:39 2026] [::1]:51455 [404]: GET /pokemon/style.css - No such file or directory
+[Wed Apr 22 01:48:39 2026] [::1]:51455 Closing
+[Wed Apr 22 01:48:39 2026] [::1]:51457 Accepted
+[Wed Apr 22 01:48:39 2026] [::1]:51456 [404]: GET /pokemon/ui.js - No such file or directory
+[Wed Apr 22 01:48:39 2026] [::1]:51457 [404]: GET /pokemon/sprites/normal/minun.webp - No such file or directory
+[Wed Apr 22 01:48:39 2026] [::1]:51456 Closing
+[Wed Apr 22 01:48:39 2026] [::1]:51457 Closing
+[Wed Apr 22 01:48:39 2026] [::1]:51458 Accepted
+[Wed Apr 22 01:48:39 2026] [::1]:51459 Accepted
+[Wed Apr 22 01:48:39 2026] [::1]:51458 [404]: GET /pokemon/manifest.webmanifest - No such file or directory
+[Wed Apr 22 01:48:39 2026] [::1]:51459 [404]: GET /pokemon/favicon.svg - No such file or directory
+[Wed Apr 22 01:48:39 2026] [::1]:51458 Closing
+[Wed Apr 22 01:48:39 2026] [::1]:51459 Closing
+[Wed Apr 22 01:48:39 2026] [::1]:51460 Accepted
+[Wed Apr 22 01:48:39 2026] [::1]:51460 [404]: GET /pokemon/favicon.ico - No such file or directory
+[Wed Apr 22 01:48:39 2026] [::1]:51460 Closing
+[Wed Apr 22 01:48:41 2026] [::1]:51461 Accepted
+[Wed Apr 22 01:48:41 2026] [::1]:51462 Accepted
+[Wed Apr 22 01:48:41 2026] [::1]:51461 [200]: GET /
+[Wed Apr 22 01:48:41 2026] [::1]:51461 Closing
+[Wed Apr 22 01:48:41 2026] [::1]:51462 [404]: GET /pokemon/style.css - No such file or directory
+[Wed Apr 22 01:48:41 2026] [::1]:51462 Closing
+[Wed Apr 22 01:48:41 2026] [::1]:51463 Accepted
+[Wed Apr 22 01:48:41 2026] [::1]:51464 Accepted
+[Wed Apr 22 01:48:41 2026] [::1]:51463 [404]: GET /pokemon/sprites/normal/minun.webp - No such file or directory
+[Wed Apr 22 01:48:41 2026] [::1]:51464 [404]: GET /pokemon/ui.js - No such file or directory
+[Wed Apr 22 01:48:41 2026] [::1]:51463 Closing
+[Wed Apr 22 01:48:41 2026] [::1]:51464 Closing
+[Wed Apr 22 01:48:41 2026] [::1]:51465 Accepted
+[Wed Apr 22 01:48:41 2026] [::1]:51465 [404]: GET /pokemon/manifest.webmanifest - No such file or directory
+[Wed Apr 22 01:48:41 2026] [::1]:51465 Closing
+[Wed Apr 22 01:48:46 2026] [::1]:51468 Accepted
+[Wed Apr 22 01:48:46 2026] [::1]:51468 [200]: GET /?history=previous
+[Wed Apr 22 01:48:46 2026] [::1]:51468 Closing
+[Wed Apr 22 01:48:46 2026] [::1]:51469 Accepted
+[Wed Apr 22 01:48:46 2026] [::1]:51470 Accepted
+[Wed Apr 22 01:48:46 2026] [::1]:51469 [404]: GET /pokemon/sprites/normal/litleo.webp - No such file or directory
+[Wed Apr 22 01:48:46 2026] [::1]:51469 Closing
+[Wed Apr 22 01:48:46 2026] [::1]:51471 Accepted
+[Wed Apr 22 01:48:46 2026] [::1]:51471 [404]: GET /pokemon/manifest.webmanifest - No such file or directory
+[Wed Apr 22 01:48:46 2026] [::1]:51471 Closing
+[Wed Apr 22 01:48:54 2026] [::1]:51470 [200]: GET /pokemon/?generate=1&n=1&regions%5B%5D=kanto&regions%5B%5D=johto&regions%5B%5D=hoenn&regions%5B%5D=sinnoh&regions%5B%5D=unova&regions%5B%5D=kalos&regions%5B%5D=alola&regions%5B%5D=galar&regions%5B%5D=hisui&regions%5B%5D=paldea&types%5B%5D=normal&types%5B%5D=fire&types%5B%5D=water&types%5B%5D=electric&types%5B%5D=grass&types%5B%5D=ice&types%5B%5D=fighting&types%5B%5D=poison&types%5B%5D=ground&types%5B%5D=flying&types%5B%5D=psychic&types%5B%5D=bug&types%5B%5D=rock&types%5B%5D=ghost&types%5B%5D=dragon&types%5B%5D=dark&types%5B%5D=steel&types%5B%5D=fairy&sublegendaries=true&legendaries=true&mythicals=true&paradoxes=true&ultraBeasts=true&evolutionCounts%5B%5D=0&evolutionCounts%5B%5D=1&evolutionCounts%5B%5D=2&nfes=true&fullyEvolved=true&display=both
+[Wed Apr 22 01:48:54 2026] [::1]:51470 Closing
+[Wed Apr 22 01:48:54 2026] [::1]:51474 Accepted
+[Wed Apr 22 01:48:54 2026] [::1]:51474 [404]: GET /pokemon/style.css - No such file or directory
+[Wed Apr 22 01:48:54 2026] [::1]:51474 Closing
+[Wed Apr 22 01:48:54 2026] [::1]:51475 Accepted
+[Wed Apr 22 01:48:54 2026] [::1]:51476 Accepted
+[Wed Apr 22 01:48:54 2026] [::1]:51475 [404]: GET /pokemon/sprites/normal/totodile.webp - No such file or directory
+[Wed Apr 22 01:48:54 2026] [::1]:51476 [404]: GET /pokemon/ui.js - No such file or directory
+[Wed Apr 22 01:48:54 2026] [::1]:51475 Closing
+[Wed Apr 22 01:48:54 2026] [::1]:51476 Closing
+[Wed Apr 22 01:48:54 2026] [::1]:51477 Accepted
+[Wed Apr 22 01:48:54 2026] [::1]:51477 [404]: GET /pokemon/manifest.webmanifest - No such file or directory
+[Wed Apr 22 01:48:54 2026] [::1]:51477 Closing
+[Wed Apr 22 01:50:19 2026] [::1]:51517 Accepted
+[Wed Apr 22 01:50:19 2026] [::1]:51517 [200]: GET /
+[Wed Apr 22 01:50:19 2026] [::1]:51517 Closing
+[Wed Apr 22 01:50:19 2026] [::1]:51518 Accepted
+[Wed Apr 22 01:50:19 2026] [::1]:51519 Accepted
+[Wed Apr 22 01:50:19 2026] [::1]:51518 [200]: GET /style.css
+[Wed Apr 22 01:50:19 2026] [::1]:51518 Closing
+[Wed Apr 22 01:50:19 2026] [::1]:51520 Accepted
+[Wed Apr 22 01:50:19 2026] [::1]:51519 [200]: GET /sprites/normal/totodile.webp
+[Wed Apr 22 01:50:19 2026] [::1]:51520 [200]: GET /ui.js
+[Wed Apr 22 01:50:19 2026] [::1]:51519 Closing
+[Wed Apr 22 01:50:19 2026] [::1]:51520 Closing
+[Wed Apr 22 01:50:19 2026] [::1]:51521 Accepted
+[Wed Apr 22 01:50:19 2026] [::1]:51521 [200]: GET /manifest.webmanifest
+[Wed Apr 22 01:50:19 2026] [::1]:51521 Closing
+[Wed Apr 22 01:50:19 2026] [::1]:51522 Accepted
+[Wed Apr 22 01:50:19 2026] [::1]:51522 [200]: GET /favicon.svg
+[Wed Apr 22 01:50:19 2026] [::1]:51522 Closing
+[Wed Apr 22 01:50:19 2026] [::1]:51523 Accepted
+[Wed Apr 22 01:50:19 2026] [::1]:51523 [200]: GET /favicon-192.png
+[Wed Apr 22 01:50:19 2026] [::1]:51523 Closing

@@ -1,2 +1,2 @@
-public/random.js
-node_modules/
+vendor/
+.phpunit.result.cache
